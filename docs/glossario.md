@@ -17,19 +17,17 @@ Casos de uso
 </div>
 
 
-<div align="center">
 
 ### Histórico da revisão
-| Data | Versão |Descrição| Autor
-|--|--|--|--|
-| 01/07/2022 | v1.0 | Documentando todos os casos de uso da aplicação. | [Tonny Weslley](https://github.com/Tonny-Weslley) - [Ruan Franklin](https://github.com/Ruan-Franklin) 
+	
+| Data  | Versão   | Descrição| Autor
+| ------- | -------- | -------| -------|
+| 01/07/2022|  v1.0  |Documentando todos os casos de uso da aplicação.|[Tonny Weslley](https://github.com/Tonny-Weslley) - [Ruan Franklin](https://github.com/Ruan-Franklin) 
+| 22/10/2022   | v2.0    |  Atualizando  os casos de uso da aplicação.      | [Tonny Weslley](https://github.com/Tonny-Weslley) - [Ruan Franklin](https://github.com/Ruan-Franklin)   
+	
 
-| Data | Versão |Descrição| Autor
-|--|--|--|--|
-| 22/10/2022 | v2.0 | Atualizando  os casos de uso da aplicação. | [Tonny Weslley](https://github.com/Tonny-Weslley) - [Ruan Franklin](https://github.com/Ruan-Franklin) 
 
-
-## Player
+## Casos de uso planejados
 ### UCP 01 - Criar Conta
 |  |  |
 |--|--|
@@ -45,7 +43,7 @@ Casos de uso
 | **Ator Principal** | Player. |
 | **Descrição** | Utilizando de credenciais já cadastradas no sistema, o player deve conseguir realizar sua autenticação. |
 | **Pré-condição** | O player deve estar cadastrado no banco de dados da aplicação.|
-| **Pós-condição** | O player está autenticado e pronto pra utilizar a aplicação.|
+| **Pós-condição** | O player estará autenticado e pronto pra utilizar a aplicação.|
 | **Fluxo** | 1 - Acessar tela de Login, 2 - Informar suas Credenciais, 3 - clicar em Login.|
 
 
@@ -81,7 +79,7 @@ Casos de uso
 |  |  |
 |--|--|
 | **Ator Principal** | Player. |
-| **Descrição** | O jogador deve excluir sua conta, deixando ela com status de inativa por 4 anos antes de ser apagada do banco de dados. |
+| **Descrição** | O jogador deve excluir sua conta, deixando-a com status de inativa por 4 anos antes de ser apagada do banco de dados. |
 | **Pré-condição** | Estar autenticado no sistema, estar na tela de configuração de conta. |
 | **Pós-condição** | O player não terá mais acesso a sua conta nem será mais visualizada publicamente. |
 | **Fluxo** | 1 - Acessar tela de configuração de conta, 2 - Selecionar opção de excluir conta, 3 - Se autenticar novamente, 4 - Confirmar. |
@@ -101,7 +99,7 @@ Casos de uso
 | **Ator Principal** | Sistema. |
 | **Descrição** | O sistema deve mostrar para o player suas fichas de jogo cadastradas. | 
 | **Pré-condição** | Estar autenticado no sistema, estar na tela de fichas de jogo. |
-| **Pós-condição** | O player está visualizando suas fichas de jogo. |
+| **Pós-condição** | O player estar visualizando suas fichas de jogo. |
 | **Fluxo** | 1 - Acessar tela de fichas de jogo. |
 
 ### UCP 04.2 - Criar Ficha de Jogo
@@ -132,7 +130,6 @@ Casos de uso
 | **Fluxo** |  1 - O player acessa interface de adicionar amigo, 2 - busca por id ou nick, 3 - clica no botão de enviar solicitação que aparecerá ao lado dos perfis encontrados.|
 
 
-
 ### UCP 6 - Avaliar Player
 |  |  |
 |--|--|
@@ -140,7 +137,7 @@ Casos de uso
 | **Descrição** | Um player pode avaliar outro player, sempre levando em consideração as características de gameplay e de comportamento do outro player. |
 | **Pré-condição** | Ambos os Jogadores precisam estar ativos na plataforma, o jogador avaliador deve estar autenticado.|
 | **Pós-condição** | O Player avaliado terá suas estatísticas ajustadas de acordo com a avaliação de outro player|
-| **Fluxo** | 1 - visualizar o perfil de um Player, 2 - Clicar em avaliar, 3 - preencher informações, 4 - clicar em enviar analise.|
+| **Fluxo** | 1 - Visualizar o perfil de um Player, 2 - Clicar em avaliar, 3 - preencher informações, 4 - clicar em enviar analise.|
 
 ### UCP 7 - Criar grupo
 |  |  |
@@ -149,8 +146,8 @@ Casos de uso
 | **Descrição** | O jogador deve ser capaz de criar um grupo para se comunicar com outros jogadores. |
 | **Pré-condição** | Player autenticado no sistema. |
 | **Pós-condição** | O sistema irá criar um novo grupo e adicionar o jogador criador como administrador. |
-| **Fluxo** | 1 - o player acessa a interface de criar grupo, 2 - coloca um nome para o grupo, 3-seleciona a quantidade de pessoas.|
-
+| **Fluxo** | 1 - O player acessa a interface de criar grupo, 2 - coloca um nome para o grupo, 3-seleciona a quantidade de pessoas.|
+	
 # Instalação
 para  a execução do projeto sem problemas, se faz recomendado a preparação do ambiente.
 
