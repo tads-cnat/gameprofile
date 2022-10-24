@@ -6,18 +6,19 @@
 | Player | Usuário do sistema GameProfile|
 | Lol | Gíria usada para abreviar o nome do jogo League of Legends, o qual nossa plataforma propõe conectar "Players" |
 | Nome de invocador | Seu nome(nick) dentro do Lol |
-| Campeões | Personaveis jogáveis na partida |
+| Campeões | Personagens jogáveis na partida |
 | Nexus | Torre fixada na área inicial de cada time e que representa o objetivo central de alguns modos de jogo |
 | 5v5 ou 5x5 | Modo de jogo onde 2 grupos de 5 campeões se enfrentam |
-| Summoner’s Rift | Modo de jogo mais popular, onde temos um confrontos 5v5 com o objetivo de destruir o Nexus inimigo |
+| Summoner’s Rift | Modo de jogo mais popular, onde temos um confronto 5v5 com o objetivo de destruir o Nexus inimigo |
 | ARAM | Modo de jogo mais rápido com mesmo objetivo Summoner’s Rift |
-| TFT | Abreviação usada para outro modo de jogo mais estratégico(teamfight tactics), onde apenas duas pessoas se enfrentam em cada partida |
+| TFT | Abreviação usada para outro modo de jogo mais estratégico (teamfight tactics), onde apenas duas pessoas se enfrentam em cada partida |
 | Top | Rota superior do modo Summoner’s Rift |
 | Mid | Rota do meio do modo Summoner’s Rift |
 | Bot | Rota inferior do modo Summoner’s Rift |
-| ADC | Posição com foco em aumentar a força do seu campão na partida |
+| ADC | Posição com foco em aumentar a força do seu campeão na partida |
 | Suporte | Posição onde o jogador tenta manter o ADC vivo |
-| Jungle | Rota do modo Summoner’s Rift onde encontramos "bichos" que não pertecem aos times, mas que permitem através de batalhas a melhora do personagem na partida |
+| Jungle | Rota do modo Summoner’s Rift onde encontramos "bichos" que não pertencem aos times, mas que permitem através de batalhas a melhora do personagem na partida |
+
 
 </div>
 <div align="center">
