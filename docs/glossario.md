@@ -24,15 +24,12 @@
 <div align="center">
 
 ### Tecnologias Utilizadas
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
-![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white
-)
-![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
-)
+![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Typecript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Postgresql](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white
-)
-</div>  
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![Spring_Boot](https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 
 <div align="center">
 Casos de uso
@@ -170,7 +167,7 @@ Casos de uso
 | **Pós-condição** | O sistema irá criar um novo grupo e adicionar o jogador criador como administrador. |
 | **Fluxo** | 1 - O player acessa a interface de criar grupo, 2 - coloca um nome para o grupo, 3-seleciona a quantidade de pessoas.|
 	
-# Instalação
+# Instalação nas versões anteriores
 para  a execução do projeto sem problemas, se faz recomendado a preparação do ambiente.
 
 1. Programas que utilizamos para o desenvolvimento do projeto:
