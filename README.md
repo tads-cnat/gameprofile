@@ -32,7 +32,10 @@ ___
 >Descrever os comandos iniciais para começar a colaborar com o desenvolvimento do projeto
 
 
+___
+
+# Figma do projeto
+[Figma do projeto](https://www.figma.com/files/project/57606455/Game-Profile?fuid=1108816848484226550)
 
 # Documentação
-
 [Link para os documentos do projeto](https://github.com/tads-cnat/gameprofile/tree/main/docs)
