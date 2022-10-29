@@ -22,13 +22,13 @@ Um fator crucial para um bom desempenho e uma boa experiência em jogos competit
 |--|--|
 | O Problema | O matchmaking implementado pelos Jogos competitivos eletrônicos não é eficiente o suficiente para fornecer aos seus jogadores as informações necessárias para que os seus usuários possam estabelecer estratégias de jogo e falham na filtargem de jogadores tóxicos. |
 | Quem afeta | Os Jogadores de esportes eletrônicos. |
-| O Impacto é | O desperdício de uma oportunidade que poderia mudar a experiência do jogador naquele jogo. |
+| O Impacto é | O desempenho e experiência do usuário na partida é comprometida, fazendo com que o jogador não posso extrair 100% do seu potêncial. |
 | A solução seria | A criação de uma rede social com foco no perfilamento e na transparência de seus usuários que buscam outros usuários para completar seus respectivos times.|
 
 ## 3 - Descrição dos Usuários
 | Nome | Descrição | Responsabilidade|
 |--|--|--|
-| Player | O player é o usuário que interage com o sistema abastecendo ele com informações suas e interagindo com outros players via mensagem/chat | Cadastrar informações na plataforma - Interagir com outros jogadores. |
+| Player | O player é o usuário que interage com o sistema abastecendo ele com informações suas, interagindo com outros players (Avaliar e Inspecionar) e criando grupos. | Cadastrar informações na plataforma - Interagir com outros jogadores - Criar e Entrar em grupos. |
 
 ## 4 - Descrição do Ambiente dos Usuários
 ### Player
@@ -58,11 +58,12 @@ Um fator crucial para um bom desempenho e uma boa experiência em jogos competit
 ## 5 - Principais necessidades dos usuários
 
 ### Player
-- Sistema de interação/comunicação com outros players.
+- Sistema de criação de grupo.
+- Lobby com salas onde possa ingressar para jogar com outros jogadores.
 - Perfil próprio com informações úteis que facilitam o processo de ser mais visível.
+- Visualição do perfil de terceiros.
 
 ## 6 - Alternativas concorrentes
-* Linkedin
 * Facebook
 * Alvanista
 
