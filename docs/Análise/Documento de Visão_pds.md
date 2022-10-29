@@ -13,18 +13,17 @@
 
 # GameProfile
 ## 1 - Objetivo do Projeto
-A GameProfile é uma plataforma/rede social que busca conectar jogadores de Esports (Jogos eletrônicos) para que haja uma interação entre eles. 
+O objetivo da equipe é desenvolver uma plataforma web/rede social que conecte jogadores de *e-sports* (Esportes Eletrônicos) de forma simples e inteligente, visando uma melhor experiência *in-game* (Dentro do Jogo) dos usuários da plataforma. 
 
 
 ## 2 - Descrição do problema
-### Jogadores
-Encontrar pessoas/jogadores para interagir e jogar aquela partida com você acaba sendo algo difícil nos dias de hoje com os jogos rodeados e disseminados de ''trolls', o que dificulta uma boa experiência para o jogador, que, as vezes, só procura jogar uma partida casual sem estresse.
+Um fator crucial para um bom desempenho e uma boa experiência em jogos competitivos é o time, e confiar no sistema de matchmaking (sistema prórpio de cada jogo em que uma das funções é busca outros jogadores da plataforma os unindo em um time) nem sempre é a melhor solução para completar o seu time, essa tipo de estratégia expõe o jogador a situações longe do ideal, como por exemplo, unir jogadores que exercem a mesma função em um mesmo time, e até mesmo selecionar jogadores tóxicos para o seu time, o que atrapalha a experiência do jogo e principalmente o desempenho na partida.
 |  |  |
 |--|--|
-| O Problema | Estabelece-se em jogadores dos jogos digitais possuem dificuldade para realizar amizades e integrar uma comunicação social entre eles. |
-| Quem afeta | Os Jogadores de esportes eletrônicos |
+| O Problema | O matchmaking implementado pelos Jogos competitivos eletrônicos não é eficiente o suficiente para fornecer aos seus jogadores as informações necessárias para que os seus usuários possam estabelecer estratégias de jogo e falham na filtargem de jogadores tóxicos. |
+| Quem afeta | Os Jogadores de esportes eletrônicos. |
 | O Impacto é | O desperdício de uma oportunidade que poderia mudar a experiência do jogador naquele jogo. |
-| A solução seria | A criação de uma rede social com foco na interação e comunicação dos jogadores.|
+| A solução seria | A criação de uma rede social com foco no perfilamento e na transparência de seus usuários que buscam outros usuários para completar seus respectivos times.|
 
 ## 3 - Descrição dos Usuários
 | Nome | Descrição | Responsabilidade|
