@@ -31,7 +31,7 @@ Por fim, indicadores de prioridade Alta são aqueles com alto risco de atrasos e
 ### 2.4 - Indicadores
 1. Acompanhamento via calendário
 2. Verificar através da dificuldade/atraso dos integrantes na entrega das atividades
-3. Comunicado dos proprios integrantes da equipe
+3. Comunicado dos proprios integrantes da equipe sobre desistência
 4. Senso comum dos integrantes e orientadores sobre quem está participando
 
 ### 2.5 - Estratégia de Mitigação
