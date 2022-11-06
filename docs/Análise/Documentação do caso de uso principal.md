@@ -3,7 +3,6 @@
 #  Documentação do caso de uso principal
 
 ### UCP  - Criar grupo
-|  |  |
 |--|--|
 | **Ator Principal** | Player. |
 | **Descrição** | O player deve ser capaz de criar um grupo para se comunicar com outros jogadores. |
