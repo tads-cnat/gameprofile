@@ -1,20 +1,24 @@
-# GameProfile - Riscos
+<div align="center">
+
+# Documento de Risco - GameProfile
+
+</div>
 
 ## 1. Resumo
 Este documento foi criado com o intuito de descrever os riscos que possam impedir ou atrasar a conclusão de alguma etapa do projeto. Nela estarão contidas formas de mitigar as falhas ou atrasos nas entregas parciais ou totais (completas). De acordo com as necessidades, este documento passará por atualizações.
 
 ## 2. Lista de Riscos
 ### 2.1 - Identificador de Risco - número ou nome descritivo 
-Os riscos neste documento serão divididos em ordem de prioridade “baixa”, “média” e “alta” complexidade. O identificador de risco com prioridade Baixa, serão considerados com pouco impacto, sendo aqueles capazes de gerar nenhum atraso nas entregas parciais ou totais, sendo consideradas eventualidades ou ocasionais que não acontecem com frequência.
+Os riscos neste documento serão divididos em ordem de prioridade “Baixa”, “Média” e “Alta”. O identificador de risco com prioridade Baixa, serão considerados com pouco impacto, sendo aqueles capazes de gerar nenhum atraso nas entregas parciais ou totais, sendo consideradas eventualidades ou ocasionais que não acontecem com frequência.
 
 Indicadores de prioridade Média serão considerados problemas que acontecem com certa frequência, sendo um pouco ocasionalmente, podendo ser contornada havendo engajamento da equipe e trabalho em equipe bem definida.
 
 Por fim, indicadores de prioridade Alta são aqueles com alto risco de atrasos e a não finalização do projeto, serão desconfortáveis para o cliente final e a equipe de desenvolvimento. Caso o cliente decida por prorrogar o prazo, então deverão ser consideradas novas medidas de mitigação, caso contrário, todo o projeto será perdido.
 
 ### 2.2 - Classificação ou Gravidade do Risco
-- Baixa: Risco de pouco atraso na entrega do projeto e facilidade de contornar.
-- Média: Eventualidade impactante que pode ser contornada, mas irá gerar atraso, caso não sejam dedicadas horas extras para reparo.
-- Alta: Risco de atraso, com probabilidade de não entregar projeto a tempo.
+- **Baixa:** Risco de pouco atraso na entrega do projeto e facilidade de contornar.
+- **Média:** Eventualidade impactante que pode ser contornada, mas irá gerar atraso, caso não sejam dedicadas horas extras para reparo.
+- **Alta:** Risco de atraso, com probabilidade de não entregar projeto a tempo.
 
 ### 2.3 - Descrição
 1. Atividades síncronas durante a Copa do Mundo (Alta)
@@ -32,7 +36,7 @@ Por fim, indicadores de prioridade Alta são aqueles com alto risco de atrasos e
 1. Acompanhamento via calendário
 2. Verificar através da dificuldade/atraso dos integrantes na entrega das atividades
 3. Comunicado dos proprios integrantes da equipe sobre desistência
-4. Senso comum dos integrantes e orientadores sobre quem está participando
+4. Senso comum dos integrantes e orientador sobre quem está participando
 
 ### 2.5 - Estratégia de Mitigação
 1. Verificar atividades com menor complexidade para serem feitas nesse período
