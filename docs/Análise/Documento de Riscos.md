@@ -45,10 +45,9 @@ Por fim, indicadores de prioridade Alta são aqueles com alto risco de atrasos e
 4. Manter boa comunicaçãp em equipe de forma a evitar atrasos em casos de ausência de ambiente e/ou equipamento
 5. Aderir a pair programming (programação em pares)
 6. Defina um canal principal de comunicação com toda a equipe
-7. 
-8. Sempre tirar duvidas nas reuniões semanais para evitar duvidas
-9. Realocar atibuições a outros integrantes
-10. Manter comunicação, via principal canal, e dialogar a fim de evitar ausências não comunicadas.
+7. Sempre tirar duvidas nas reuniões semanais para evitar duvidas
+8. Realocar atibuições a outros integrantes
+9. Manter comunicação, via principal canal, e dialogar a fim de evitar ausências não comunicadas.
 
 ### 2.6 - Plano de Contingência
 1. Fazer programação em pares para realizarem as atividades/entregas, a fim de não sobrecarregar cada integrante
@@ -56,11 +55,10 @@ Por fim, indicadores de prioridade Alta são aqueles com alto risco de atrasos e
 3. Realizar as atribuições em equipe (todos os integrantes) de forma remota em horário possível para todos
 4. Realocar atribuições a outro integrante
 5. Concluir as atividades/entregas em equipe (todos os integrantes)
-6. Estabelecer diálogos e envolver os integrantes nas tarefas semanais
-7. 
-8. Fazer pair programming (programação em pares) para corrigir erros e conserguir entregar as atividades em tempo habil
-9. Realizar as atribuiçoes em equipe (todos os integrantes)
-10. Distribuir as atribuições aos demais integrantes da equipe
+6. Estabelecer diálogos e envolver os integrantes nas tarefas semanais 
+7. Fazer pair programming (programação em pares) para corrigir erros e conserguir entregar as atividades em tempo habil
+8. Realizar as atribuiçoes em equipe (todos os integrantes)
+9. Distribuir as atribuições aos demais integrantes da equipe
 
 ### 2.7 - Tabela resumida da Análise de Risco
 
