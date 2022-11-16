@@ -20,8 +20,8 @@ Será avaliado semanalmente os riscos do projeto
 ## Issues criadas semanalmente:
 
 - Criar issues toda segunda;
-- Apresentar na segunda para o gerente as tarefas realizadas durante a semana
-- Quinta momento de se reunir para tirar dúvidas com a equipe toda, das tarefas para ser entregue.
+- Apresentar na segunda para o gerente as tarefas realizadas durante a semana;
+- Quinta: momento de se reunir para tirar dúvidas com a equipe toda, das tarefas para ser entregue.
 
 ---
 
