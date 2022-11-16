@@ -27,10 +27,11 @@ Será avaliado semanalmente os riscos do projeto
 
 ## Issues serão criadas para equipes espécificas
 
-- equipe do front-end
-- equipe do back-end
-- equipe do marketing
-- equipe de documentação
+- equipe do front-end: Dina e Tonny.
+- equipe do back-end: Patrick e Lázaro.
+- equipe full-stack: Ruan e Franklin.
+- equipe do marketing: Todos
+- equipe de documentação: Todos
 
 ---
 
