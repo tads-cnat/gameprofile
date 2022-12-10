@@ -11,6 +11,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+//css import
+import './App.css';
+
 const router = createBrowserRouter([
   {
       path: "/",
@@ -34,9 +37,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="App">
-      <Sidebar />
-      <RouterProvider router={router} />
+    <div className="App flex flex-row">
+      <Sidebar className="sidebar" />
+      <RouterProvider router={router} className="content"/>
     </div>
   );
 }

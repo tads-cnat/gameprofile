@@ -21,10 +21,6 @@
     background-color: var(--background-color);
     color: var(--main-ligth);
     height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
     transition: 0.2s;
     padding: 20px;
     box-sizing: border-box;
