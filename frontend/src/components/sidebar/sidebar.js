@@ -25,28 +25,28 @@ function Sidebar() {
             <nav className="flex w-100 mb-36">
                 <ul className="w-11/12 m-auto">
                     <li className="w-full justify-start p-2 mb-6">
-                        <a href="#" className="flex flex-row align-middle">
+                        <a href="/" className="flex flex-row align-middle">
                             <HomeRoundedIcon className="mr-5" sx={{ fontSize: 40 }}/>
                             <span className="text-xl align-middle my-auto">Home</span>
                         </a>
                     </li>
 
                     <li className="w-full justify-start p-2 mb-6">
-                        <a href="#" className="flex flex-row align-middle">
+                        <a href="/salas" className="flex flex-row align-middle">
                             <MeetingRoomRoundedIcon className="mr-5" sx={{ fontSize: 40 }}/>
                             <span className="text-xl align-middle my-auto">Salas</span>
                         </a>
                     </li>
 
                     <li className="w-full justify-start p-2 mb-6">
-                        <a href="#" className="flex flex-row align-middle">
+                        <a href="/perfil" className="flex flex-row align-middle">
                             <PersonRoundedIcon className="mr-5" sx={{ fontSize: 40 }}/>
                             <span className="text-xl align-middle my-auto">Perfil</span>
                         </a>
                     </li>
                     
                     <li className="w-full justify-start p-2">
-                        <a href="#" className="flex flex-row align-middle">
+                        <a href="/ajustes" className="flex flex-row align-middle">
                             <SettingsRoundedIcon className="mr-5" sx={{ fontSize: 40 }}/>
                             <span className="text-xl align-middle my-auto">Ajustes</span>
                         </a>

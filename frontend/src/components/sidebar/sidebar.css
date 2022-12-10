@@ -20,7 +20,6 @@
 .sidebar{
     background-color: var(--background-color);
     color: var(--main-ligth);
-    width: 300px;
     height: 100%;
     position: fixed;
     top: 0;
