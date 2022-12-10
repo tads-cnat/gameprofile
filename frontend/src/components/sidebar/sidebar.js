@@ -1,9 +1,6 @@
 import React from 'react';
 import Logo from '../../assets/logo.png';
 import './sidebar.css';
-// ajustando tema
-import { createTheme } from '@mui/material/styles';
-
 // icons import
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import MeetingRoomRoundedIcon from '@mui/icons-material/MeetingRoomRounded';
