@@ -70,7 +70,7 @@ function Sidebar() {
                     
                     <div className=" m-auto create-group flex flex-row justify-center align-middle">
                         <DarkModeRoundedIcon className="mr-5" sx={{ fontSize: 40 }} />
-                        <span className="text-xl align-middle my-auto">Dark mode</span>
+                        <span className="text-base align-middle my-auto">Dark mode</span>
                         <Switch color="secondary" defaultChecked/>
                     </div>
                 </div>
