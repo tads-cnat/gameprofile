@@ -4,7 +4,7 @@ import Salas from './pages/salas';
 import Perfil from './pages/perfil';
 import Ajustes from './pages/ajustes';
 import Sidebar from './components/sidebar/sidebar';
-
+import CreateGroup from './pages/create-group';
 //router import
 import {
   createBrowserRouter,
@@ -30,7 +30,11 @@ const router = createBrowserRouter([
   {
       path: "/ajustes",
       element: <Ajustes />,
-  }
+  },
+  {
+      path: "/create-group",
+      element: <CreateGroup />,
+  },
   
   ]);
 
@@ -39,7 +43,7 @@ function App() {
   return (
     <div className="App flex flex-row">
       <Sidebar className="sidebar" />
-      <RouterProvider router={router} className="content"/>
+      <RouterProvider router={router} />
     </div>
   );
 }

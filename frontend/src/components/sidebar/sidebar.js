@@ -12,7 +12,8 @@ import DarkModeRoundedIcon from '@mui/icons-material/DarkModeRounded';
 import Switch from '@mui/material/Switch';
 
 
-function Sidebar() {
+function Sidebar(props) {
+
     return (
         <div className="sidebar pl-9 flex flex-col justify-between">
             <header>
@@ -52,13 +53,14 @@ function Sidebar() {
                 </ul>
             </nav>
 
+            <a href="/create-group">
+                <div className="w-11/12 m-auto create-group flex flex-col justify-center align-middle">
 
-            <div className="w-11/12 m-auto create-group flex flex-col justify-center align-middle">
+                    <AddRoundedIcon className="mx-auto" sx={{ fontSize: 40 }}/>
+                    <span className="text-xl align-middle my-auto">Criar Grupo</span>
 
-                <AddRoundedIcon className="mx-auto" sx={{ fontSize: 40 }}/>
-                <span className="text-xl align-middle my-auto">Criar Grupo</span>
-
-            </div>
+                </div>
+            </a>
 
             <footer className="border-t flex w-100 flex-col pt-3">
                 <div className="w-full justify-start p-2 my-2">
@@ -70,11 +72,14 @@ function Sidebar() {
                     
                     <div className=" m-auto create-group flex flex-row justify-center align-middle">
                         <DarkModeRoundedIcon className="mr-5" sx={{ fontSize: 40 }} />
-                        <span className="text-xl align-middle my-auto">Dark mode</span>
+                        <span className="text-base align-middle my-auto">Dark mode</span>
                         <Switch color="secondary" defaultChecked/>
                     </div>
                 </div>
             </footer>
+
+            
+
 
         </div>
     )
