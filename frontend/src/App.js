@@ -4,10 +4,10 @@ import CreateRoutes from './router';
 //css import
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App flex flex-row">
-      <Sidebar className="sidebar" />
+    <div className="App">
+      <Sidebar className="sidebar"/>
       <CreateRoutes />
     </div>
   );

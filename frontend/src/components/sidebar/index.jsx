@@ -65,15 +65,16 @@ const Sidebar = () => {
             <footer className="border-t flex w-100 flex-col pt-3">
                 <div className="w-full justify-start p-2 my-2">
 
-                    <a href="#" className="flex flex-row align-middle p-2 logout">
+                    {/* alterar componente para funçãod e logout assim que implementada */}
+                    <button  className="flex flex-row align-middle p-2 logout w-full">
                         <LogoutRoundedIcon className="mr-5" sx={{ fontSize: 40 }}/>
                         <span className="text-xl align-middle my-auto">Logout</span>
-                    </a>
+                    </button>
                     
                     <div className=" m-auto create-group flex flex-row justify-center align-middle">
                         <DarkModeRoundedIcon className="mr-5" sx={{ fontSize: 40 }} />
                         <span className="text-base align-middle my-auto">Dark mode</span>
-                        <Switch color="secondary" defaultChecked/>
+                        <Switch color="secondary"/>
                     </div>
                 </div>
             </footer>
