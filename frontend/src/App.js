@@ -1,49 +1,14 @@
-//aplications pages
-import Home from './pages/home';
-import Salas from './pages/salas';
-import Perfil from './pages/perfil';
-import Ajustes from './pages/ajustes';
-import Sidebar from './components/sidebar/sidebar';
-import CreateGroup from './pages/create-group';
+import Sidebar from './components/Sidebar';
 //router import
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-
+import CreateRoutes from './router';
 //css import
 import './App.css';
 
-const router = createBrowserRouter([
-  {
-      path: "/",
-      element: <Home />,
-  },
-  {
-      path: "/salas",
-      element: <Salas />,
-  },
-  {
-      path: "/perfil",
-      element: <Perfil />,
-  },
-  {
-      path: "/ajustes",
-      element: <Ajustes />,
-  },
-  {
-      path: "/create-group",
-      element: <CreateGroup />,
-  },
-  
-  ]);
-
-
-function App() {
+const App = () => {
   return (
-    <div className="App flex flex-row">
-      <Sidebar className="sidebar" />
-      <RouterProvider router={router} />
+    <div className="App">
+      <Sidebar className="sidebar"/>
+      <CreateRoutes />
     </div>
   );
 }

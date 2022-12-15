@@ -1,15 +1,10 @@
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
-import TextField from '@mui/material/TextField';
 import Switch from '@mui/material/Switch';
 
-import CardLane from '../components/create-group/card-lane';
+import CardLane from '../../components/CardLane';
 
 
-function CreateGroup(){
-
-
+const CreateGroup = () =>{
     return(
         <div className="w-full h-full p-14">
             <Box sx={{ display: 'flex', alignItems: 'center' }} className='bg-gray-200 rounded p-10 w-full h-full'>
@@ -33,7 +28,7 @@ function CreateGroup(){
 
                 <div className='flex justify-around mt-10'>   
 
-                <CardLane lane='top' name='top' />
+                <CardLane lane='top' name='top'/>
                 <CardLane lane='jungle' name='jungle' />
                 <CardLane lane='mid' name='mid' />
                 <CardLane lane='adc' name='adc' />

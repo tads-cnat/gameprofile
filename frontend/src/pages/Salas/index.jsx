@@ -1,4 +1,4 @@
-function Salas() {
+const Salas = () => {
     return (
         <div>
             <h1>Salas</h1>

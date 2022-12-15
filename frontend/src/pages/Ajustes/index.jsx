@@ -1,4 +1,4 @@
-function Ajustes() {
+const Ajustes = () => {
     return (
         <div>
             <h1>Ajustes</h1>

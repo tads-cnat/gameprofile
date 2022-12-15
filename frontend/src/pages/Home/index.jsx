@@ -1,8 +1,7 @@
 import Skeleton from '@mui/material/Skeleton';
-import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 
-function Home() {
+const Home = () => {
     return (
         <div className='w-full h-full p-10'>
             <Box sx={{ display: 'flex', alignItems: 'center' }} className='bg-gray-200 rounded p-10 w-full'>
