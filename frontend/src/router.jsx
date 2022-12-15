@@ -1,9 +1,9 @@
 //aplications pages
-import Home from '../pages/Home';
-import Salas from '../pages/Salas';
-import Perfil from '../pages/Perfil';
-import Ajustes from '../pages/Ajustes';
-import CreateGroup from '../pages/CreateGroup';
+import Home from './pages/Home';
+import Salas from './pages/Salas';
+import Perfil from './pages/Perfil';
+import Ajustes from './pages/Ajustes';
+import CreateGroup from './pages/CreateGroup';
 
 //router import
 import {createBrowserRouter,RouterProvider} from "react-router-dom";
