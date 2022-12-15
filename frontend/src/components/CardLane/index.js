@@ -7,7 +7,7 @@ import supportLane from '../../assets/support.png';
 
 import Switch from '@mui/material/Switch';
 
-function CardLane(props){
+const CardLane = (props) => {
     let selected = null;
 
     if(props.lane === "top"){
@@ -28,7 +28,7 @@ function CardLane(props){
         <div className="card-lane bg-slate-800 rounded text-white p-6">
             
             <div className="lane-id flex flex-col justify-center w-full">
-                <img src={selected} width='60px' className='m-auto'/>
+                <img src={selected} alt={props.name} width='60px' className='m-auto'/>
                 <span className='mx-auto my-2'>{props.name}</span>
             </div>
             <hr />

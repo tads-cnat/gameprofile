@@ -12,7 +12,7 @@ import DarkModeRoundedIcon from '@mui/icons-material/DarkModeRounded';
 import Switch from '@mui/material/Switch';
 
 
-function Sidebar(props) {
+const Sidebar = () => {
 
     return (
         <div className="sidebar pl-9 flex flex-col justify-between">

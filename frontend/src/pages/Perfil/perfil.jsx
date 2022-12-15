@@ -1,4 +1,4 @@
-function Perfil() {
+const Perfil = () => {
     return (
         <div>
             <h1>Salas</h1>

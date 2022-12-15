@@ -1,10 +1,10 @@
 //aplications pages
-import Home from './pages/home';
-import Salas from './pages/salas';
-import Perfil from './pages/perfil';
-import Ajustes from './pages/ajustes';
-import Sidebar from './components/sidebar/sidebar';
-import CreateGroup from './pages/create-group';
+import Home from './pages/Home';
+import Salas from './pages/Salas';
+import Perfil from './pages/Perfil/perfil';
+import Ajustes from './pages/Ajustes';
+import Sidebar from './components/Sidebar';
+import CreateGroup from './pages/CreateGroup';
 //router import
 import {
   createBrowserRouter,
