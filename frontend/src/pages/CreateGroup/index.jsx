@@ -28,7 +28,7 @@ const CreateGroup = () =>{
 
                 <div className='flex justify-around mt-10'>   
 
-                <CardLane lane='top' name='top' />
+                <CardLane lane='top' name='top'/>
                 <CardLane lane='jungle' name='jungle' />
                 <CardLane lane='mid' name='mid' />
                 <CardLane lane='adc' name='adc' />
