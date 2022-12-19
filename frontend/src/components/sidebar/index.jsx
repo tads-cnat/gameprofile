@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Logo from '../../assets/logo.png';
 import './sidebar.css';
 // icons import
@@ -9,34 +9,41 @@ import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
 import AddRoundedIcon from '@mui/icons-material/AddRounded';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import DarkModeRoundedIcon from '@mui/icons-material/DarkModeRounded';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import Switch from '@mui/material/Switch';
 
 
 const Sidebar = () => {
 
+    const [isOpened, setIsOpened] = useState(true);
+
     return (
-        <div className="sidebar pl-9 flex flex-col justify-between">
+        <div className={`sidebar pl-9 flex flex-col justify-between ${isOpened && 'closed'}`}>
             <header>
                 <img src={Logo} alt="GameProfile logo" className="logo mx-auto mb-9"/>    
             </header>
 
             <nav className="flex w-100 mb-36">
+                <button id="menu-toggle" onClick={() => setIsOpened(!isOpened)}>
+                    { isOpened ? <ArrowForwardIosIcon /> : <ArrowBackIosNewIcon /> }
+                </button>
                 <ul className="w-11/12 m-auto">
-                    <li className="w-full justify-start p-2 mb-6">
+                    <li className="w-full justify-start mb-6">
                         <a href="/" className="flex flex-row align-middle">
                             <HomeRoundedIcon className="mr-5" sx={{ fontSize: 40 }}/>
                             <span className="text-xl align-middle my-auto">Home</span>
                         </a>
                     </li>
 
-                    <li className="w-full justify-start p-2 mb-6">
+                    <li className="w-full justify-start mb-6">
                         <a href="/salas" className="flex flex-row align-middle">
                             <MeetingRoomRoundedIcon className="mr-5" sx={{ fontSize: 40 }}/>
                             <span className="text-xl align-middle my-auto">Salas</span>
                         </a>
                     </li>
 
-                    <li className="w-full justify-start p-2 mb-6">
+                    <li className="w-full justify-start mb-6">
                         <a href="/perfil" className="flex flex-row align-middle">
                             <PersonRoundedIcon className="mr-5" sx={{ fontSize: 40 }}/>
                             <span className="text-xl align-middle my-auto">Perfil</span>

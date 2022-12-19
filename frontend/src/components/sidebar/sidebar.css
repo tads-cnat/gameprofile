@@ -25,6 +25,27 @@
     padding: 20px;
     box-sizing: border-box;
 }
+
+.opened {
+    width: 250px;
+}
+
+.closed {
+    width: 80px;
+}
+
+#menu-toggle {
+    background-color: #5A2E98;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 215px;
+    top: 50px;
+}
 li{
     border-radius: 15px;
 }
