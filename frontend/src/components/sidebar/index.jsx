@@ -19,41 +19,41 @@ const Sidebar = () => {
     const [isOpened, setIsOpened] = useState(true);
 
     return (
-        <div className={`sidebar pl-9 flex flex-col justify-between ${isOpened && 'closed'}`}>
+        <div className={`sidebar pl-9 flex flex-col justify-between ${isOpened ? 'opened' : 'closed'}`}>
             <header>
                 <img src={Logo} alt="GameProfile logo" className="logo mx-auto mb-9"/>    
             </header>
 
             <nav className="flex w-100 mb-36">
-                <button id="menu-toggle" onClick={() => setIsOpened(!isOpened)}>
-                    { isOpened ? <ArrowForwardIosIcon /> : <ArrowBackIosNewIcon /> }
+                <button className={`menu-toggle ${isOpened ? 'menu-toggle-opened' : 'menu-toggle-closed'}`} onClick={() => setIsOpened(!isOpened)}>
+                    { isOpened ? <ArrowBackIosNewIcon /> : <ArrowForwardIosIcon /> }
                 </button>
                 <ul className="w-11/12 m-auto">
                     <li className="w-full justify-start mb-6">
-                        <a href="/" className="flex flex-row align-middle">
+                        <a href="/" className="flex flex-row align-middle p-2">
                             <HomeRoundedIcon className="mr-5" sx={{ fontSize: 40 }}/>
-                            <span className="text-xl align-middle my-auto">Home</span>
+                            {isOpened && <span className="text-xl align-middle my-auto">Home</span>}
                         </a>
                     </li>
 
                     <li className="w-full justify-start mb-6">
-                        <a href="/salas" className="flex flex-row align-middle">
+                        <a href="/salas" className="flex flex-row align-middle p-2">
                             <MeetingRoomRoundedIcon className="mr-5" sx={{ fontSize: 40 }}/>
-                            <span className="text-xl align-middle my-auto">Salas</span>
+                            {isOpened && <span className="text-xl align-middle my-auto">Salas</span>}
                         </a>
                     </li>
 
                     <li className="w-full justify-start mb-6">
-                        <a href="/perfil" className="flex flex-row align-middle">
+                        <a href="/perfil" className="flex flex-row align-middle p-2">
                             <PersonRoundedIcon className="mr-5" sx={{ fontSize: 40 }}/>
-                            <span className="text-xl align-middle my-auto">Perfil</span>
+                            {isOpened && <span className="text-xl align-middle my-auto">Perfil</span>}
                         </a>
                     </li>
                     
-                    <li className="w-full justify-start p-2">
-                        <a href="/ajustes" className="flex flex-row align-middle">
+                    <li className="w-full justify-start">
+                        <a href="/ajustes" className="flex flex-row align-middle p-2">
                             <SettingsRoundedIcon className="mr-5" sx={{ fontSize: 40 }}/>
-                            <span className="text-xl align-middle my-auto">Ajustes</span>
+                            {isOpened && <span className="text-xl align-middle my-auto">Ajustes</span>}
                         </a>
                     </li>
 
@@ -64,7 +64,7 @@ const Sidebar = () => {
                 <div className="w-11/12 m-auto create-group flex flex-col justify-center align-middle">
 
                     <AddRoundedIcon className="mx-auto" sx={{ fontSize: 40 }}/>
-                    <span className="text-xl align-middle my-auto">Criar Grupo</span>
+                    <span className="text-xl align-middle my-auto">{isOpened && "Criar Grupo"}</span>
 
                 </div>
             </a>
@@ -75,13 +75,17 @@ const Sidebar = () => {
                     {/* alterar componente para funçãod e logout assim que implementada */}
                     <button  className="flex flex-row align-middle p-2 logout w-full">
                         <LogoutRoundedIcon className="mr-5" sx={{ fontSize: 40 }}/>
-                        <span className="text-xl align-middle my-auto">Logout</span>
+                        <span className="text-xl align-middle my-auto">{isOpened && "Logout"}</span>
                     </button>
                     
                     <div className=" m-auto create-group flex flex-row justify-center align-middle">
                         <DarkModeRoundedIcon className="mr-5" sx={{ fontSize: 40 }} />
-                        <span className="text-base align-middle my-auto">Dark mode</span>
-                        <Switch color="secondary"/>
+                        {isOpened &&
+                            <>
+                                <span className="text-base align-middle my-auto">Dark mode</span>
+                                <Switch color="secondary"/>
+                            </>
+                        }
                     </div>
                 </div>
             </footer>

@@ -22,7 +22,7 @@
     color: var(--main-ligth);
     height: 100%;
     transition: 0.2s;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -34,7 +34,7 @@
     width: 80px;
 }
 
-#menu-toggle {
+.menu-toggle {
     background-color: #5A2E98;
     height: 40px;
     width: 40px;
@@ -43,9 +43,19 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    left: 215px;
     top: 50px;
+    transition: 0.2s;
 }
+
+.menu-toggle-opened {
+    position: absolute;
+    left: 196px;
+}
+.menu-toggle-closed {
+    position: absolute;
+    left: 60px;
+}
+
 li{
     border-radius: 15px;
 }
