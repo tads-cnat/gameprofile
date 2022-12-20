@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Logo from '../../assets/logo.png';
 import './sidebar.css';
 // icons import
@@ -9,76 +9,90 @@ import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
 import AddRoundedIcon from '@mui/icons-material/AddRounded';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import DarkModeRoundedIcon from '@mui/icons-material/DarkModeRounded';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import Switch from '@mui/material/Switch';
 
 
 const Sidebar = () => {
 
+    const [isOpened, setIsOpened] = useState(true);
+
     return (
-        <div className="sidebar pl-9 flex flex-col justify-between">
+        <div className={`sidebar pl-9 flex flex-col ${isOpened ? 'opened' : 'closed'}`}>
             <header>
                 <img src={Logo} alt="GameProfile logo" className="logo mx-auto mb-9"/>    
             </header>
 
-            <nav className="flex w-100 mb-36">
-                <ul className="w-11/12 m-auto">
-                    <li className="w-full justify-start p-2 mb-6">
-                        <a href="/" className="flex flex-row align-middle">
-                            <HomeRoundedIcon className="mr-5" sx={{ fontSize: 40 }}/>
-                            <span className="text-xl align-middle my-auto">Home</span>
-                        </a>
-                    </li>
+            <button className={`menu-toggle ${isOpened ? 'menu-toggle-opened' : 'menu-toggle-closed'}`} onClick={() => setIsOpened(!isOpened)}>
+                { isOpened ? <ArrowBackIosNewIcon /> : <ArrowForwardIosIcon /> }
+            </button>
 
-                    <li className="w-full justify-start p-2 mb-6">
-                        <a href="/salas" className="flex flex-row align-middle">
-                            <MeetingRoomRoundedIcon className="mr-5" sx={{ fontSize: 40 }}/>
-                            <span className="text-xl align-middle my-auto">Salas</span>
-                        </a>
-                    </li>
+            <div className='flex flex-col justify-between h-full mt-10'>
 
-                    <li className="w-full justify-start p-2 mb-6">
-                        <a href="/perfil" className="flex flex-row align-middle">
-                            <PersonRoundedIcon className="mr-5" sx={{ fontSize: 40 }}/>
-                            <span className="text-xl align-middle my-auto">Perfil</span>
-                        </a>
-                    </li>
-                    
-                    <li className="w-full justify-start p-2">
-                        <a href="/ajustes" className="flex flex-row align-middle">
-                            <SettingsRoundedIcon className="mr-5" sx={{ fontSize: 40 }}/>
-                            <span className="text-xl align-middle my-auto">Ajustes</span>
-                        </a>
-                    </li>
+                <nav className="flex w-full mb-36">
+                    <ul className="w-11/12 m-auto">
+                        <li className="w-full justify-start mb-6">
+                            <a href="/" className="flex p-2">
+                                <HomeRoundedIcon className={`${isOpened ? '': 'mx-auto'}`} sx={{ fontSize: 30 }}/>
+                                {isOpened && <span className="text-lg align-middle my-auto ml-5">Home</span>}
+                            </a>
+                        </li>
 
-                </ul>
-            </nav>
+                        <li className="w-full justify-start mb-6">
+                            <a href="/salas" className="flex flex-row align-middle p-2">
+                                <MeetingRoomRoundedIcon className={`${isOpened ? '': 'mx-auto'}`} sx={{ fontSize: 30 }}/>
+                                {isOpened && <span className="text-lg align-middle my-auto ml-5"> Salas</span>}
+                            </a>
+                        </li>
 
-            <a href="/create-group">
-                <div className="w-11/12 m-auto create-group flex flex-col justify-center align-middle">
+                        <li className="w-full justify-start mb-6">
+                            <a href="/perfil" className="flex flex-row align-middle p-2">
+                                <PersonRoundedIcon className={`${isOpened ? '': 'mx-auto'}`} sx={{ fontSize: 30 }}/>
+                                {isOpened && <span className="text-lg align-middle my-auto ml-5">Perfil</span>}
+                            </a>
+                        </li>
+                        
+                        <li className="w-full justify-start">
+                            <a href="/ajustes" className="flex flex-row align-middle p-2">
+                                <SettingsRoundedIcon className={`${isOpened ? '': 'mx-auto'}`} sx={{ fontSize: 30 }}/>
+                                {isOpened && <span className="text-xl align-middle my-auto ml-5"> Ajustes</span>}
+                            </a>
+                        </li>
 
-                    <AddRoundedIcon className="mx-auto" sx={{ fontSize: 40 }}/>
-                    <span className="text-xl align-middle my-auto">Criar Grupo</span>
+                    </ul>
+                </nav>
 
-                </div>
-            </a>
+                <a href="/create-group">
+                    <div className="flex flex-col align-middle p-2 logout w-full create-group">
 
-            <footer className="border-t flex w-100 flex-col pt-3">
-                <div className="w-full justify-start p-2 my-2">
+                        <AddRoundedIcon className="mx-auto" sx={{ fontSize: 30 }}/>
+                        <span className="text-xl align-middle my-auto">{isOpened && "Criar Grupo"}</span>
 
-                    {/* alterar componente para funçãod e logout assim que implementada */}
-                    <button  className="flex flex-row align-middle p-2 logout w-full">
-                        <LogoutRoundedIcon className="mr-5" sx={{ fontSize: 40 }}/>
-                        <span className="text-xl align-middle my-auto">Logout</span>
-                    </button>
-                    
-                    <div className=" m-auto create-group flex flex-row justify-center align-middle">
-                        <DarkModeRoundedIcon className="mr-5" sx={{ fontSize: 40 }} />
-                        <span className="text-base align-middle my-auto">Dark mode</span>
-                        <Switch color="secondary"/>
                     </div>
-                </div>
-            </footer>
+                </a>
 
+                <footer className="border-t flex w-full flex-col pt-3">
+                    <div className="w-full justify-start p-2 my-2">
+
+                        {/* alterar componente para funçãod e logout assim que implementada */}
+                        <button  className="flex flex-row align-middle p-2 logout w-full">
+                            <LogoutRoundedIcon  sx={{ fontSize: 30 }}/>
+                            <span className="text-lg align-middle my-auto ml-5">{isOpened && "Logout"}</span>
+                        </button>
+                        
+                        <div className=" m-auto create-group flex flex-row justify-center align-middle p-2 mt-4">
+                            <DarkModeRoundedIcon  sx={{ fontSize: 30 }} />
+                            {isOpened &&
+                                <>
+                                    <span className="text-base align-middle my-auto">Dark mode</span>
+                                    <Switch color="secondary"/>
+                                </>
+                            }
+                        </div>
+                    </div>
+                </footer>
+            </div>
             
 
 

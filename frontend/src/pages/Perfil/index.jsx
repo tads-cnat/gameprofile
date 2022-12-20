@@ -1,6 +1,6 @@
 const Perfil = () => {
     return (
-        <div>
+        <div className='w-full h-full p-10'>
             <h1>Perfil</h1>
         </div>
     );
