@@ -1,5 +1,5 @@
 //aplications pages
-import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
 import Salas from './pages/Salas';
 import Perfil from './pages/Perfil';
 import Ajustes from './pages/Ajustes';
