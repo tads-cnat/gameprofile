@@ -26,4 +26,4 @@ const Dashboard = () => {
     );
 }
 
-export default Home;
+export default Dashboard;

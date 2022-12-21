@@ -2,9 +2,9 @@ import Sidebar from "./components/Sidebar";
 //router import
 import CreateRoutes from "./router";
 //css import
-import "./App.css";
+import "./Main.css";
 
-const App = () => {
+const Main = () => {
   return (
     <div className="App">
       <Sidebar />
@@ -13,4 +13,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Main;

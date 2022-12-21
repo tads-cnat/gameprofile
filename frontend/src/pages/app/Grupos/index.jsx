@@ -1,4 +1,4 @@
-const Salas = () => {
+const Grupos = () => {
     return (
         <div className='w-full h-full p-10'>
             <h1>Salas</h1>
@@ -6,4 +6,4 @@ const Salas = () => {
     );
 }
 
-export default Salas;
+export default Grupos;

@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import Switch from '@mui/material/Switch';
 
-import CardLane from '../../components/CardLane';
+import CardLane from '../../../components/CardLane';
 
 
 const CreateGroup = () =>{

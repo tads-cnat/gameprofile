@@ -1,9 +1,16 @@
-//aplications pages
-import Dashboard from './pages/Dashboard';
-import Salas from './pages/Salas';
-import Perfil from './pages/Perfil';
-import Ajustes from './pages/Ajustes';
-import CreateGroup from './pages/CreateGroup';
+// Importando paginas da aplicação
+// paginas publicas
+import LandingPage from "./pages/public/LandingPage";
+import Cadastro from "./pages/public/Cadastro";
+import Login from "./pages/public/Login";
+
+//paginas de APP
+import Dashboard from "./pages/app/Dashboard";
+import Ajustes from "./pages/app/Ajustes";
+import Perfil from "./pages/app/Perfil";
+import Salas from "./pages/app/Grupos";
+import CreateGroup from "./pages/app/CreateGroup";
+
 
 //router import
 import {createBrowserRouter,RouterProvider} from "react-router-dom";
@@ -12,24 +19,13 @@ const CreateRoutes = () =>{
     const routes = createBrowserRouter([
         {
             path: "/",
-            element: <Home />,
+            element: <LandingPage />,
+            children: [
+                { path: "/login", element: <Login /> },
+                { path: "/cadastro", element: <Cadastro /> },
+            ],
         },
-        {
-            path: "/salas",
-            element: <Salas />,
-        },
-        {
-            path: "/perfil",
-            element: <Perfil />,
-        },
-        {
-            path: "/ajustes",
-            element: <Ajustes />,
-        },
-        {
-            path: "/create-group",
-            element: <CreateGroup />,
-        },
+        
         
         ]);
 
