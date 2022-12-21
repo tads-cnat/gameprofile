@@ -24,12 +24,11 @@ ___
 * Fundada em Natal (RN), a rede social Gameprofile tem como ênfase permitir a interação entre jogadores de games em geral. 
 * O Gameprofile é uma rede social que busca conectar jogadores com outros jogadores, de forma simples, pretendendo proporcionar aos jogadores uma forma fácil de encontrar colegas para formar grupos para jogarem juntos.
 
-# Requisitos
-
 
 # Instalação
 
->Descrever os comandos iniciais para começar a colaborar com o desenvolvimento do projeto
+[Back-end](https://github.com/tads-cnat/gameprofile/blob/dev/docs/guiaBack.md)
+
 
 
 ___
