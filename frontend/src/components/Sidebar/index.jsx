@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Logo from '../../assets/logo.png';
 import './sidebar.css';
-import { Outlet, Link } from "react-router-dom";
 // icons import
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import MeetingRoomRoundedIcon from '@mui/icons-material/MeetingRoomRounded';
