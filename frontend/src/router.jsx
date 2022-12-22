@@ -1,4 +1,6 @@
 // Importando paginas da aplicação
+// pagina de erro
+import ErrorPage from "./pages/public/ErrorPage";
 // paginas publicas
 import LandingPage from "./pages/public/LandingPage";
 import Cadastro from "./pages/public/Cadastro";
@@ -20,10 +22,17 @@ const CreateRoutes = () =>{
         {
             path: "/",
             element: <LandingPage />,
-            children: [
-                { path: "/login", element: <Login /> },
-                { path: "/cadastro", element: <Cadastro /> },
-            ],
+            errorElement: <ErrorPage />,
+        },
+        {
+            path: "/cadastro",
+            element: <Cadastro />,
+            errorElement: <ErrorPage />,
+        },
+        {
+            path: "/login",
+            element: <Login />,
+            errorElement: <ErrorPage />,
         },
         
         
