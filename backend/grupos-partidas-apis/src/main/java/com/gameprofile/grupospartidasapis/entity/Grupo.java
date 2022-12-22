@@ -1,33 +1,25 @@
 package com.gameprofile.grupospartidasapis.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
-import lombok.experimental.Accessors;
-import org.hibernate.annotations.Type;
 
-import java.io.Serial;
-import java.text.DateFormat;
-@Accessors(chain = true)
+@Entity(name = "grupos")
 @Data
-@Entity(name = "gruposteste")
-
 public class Grupo {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    //@Type(type = Integer)
-    @Column(name="id_grupo")
+    @Column(name = "id_grupo")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idGrupo;
-    private String nome;
-    private Integer top;
-    private Integer bot;
-    private Integer mid;
-    private Integer adc;
-    private Integer jungle;
+
+    @Column(name = "nome_grupo")
+    @NotNull(message="{NotNull.Task.nomeGrupo}")
+    private String nomeGrupo;
+
+    @Column
     private Integer bloqueado;
-    @Column(name="criado_por")
-    private Integer criadoPor;
-    @Column(name="criado_em")
-    private String criadoEm;
-    @Column(name="editado_em")
-    private String editadoEm;
+
+    @Column
+    @NotNull(message="{NotNull.Task.criador}")
+    private Integer criador;
 }
