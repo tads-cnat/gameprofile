@@ -13,13 +13,13 @@ public class Grupo {
     private Integer idGrupo;
 
     @Column(name = "nome_grupo")
-    @NotNull(message="{NotNull.Task.nomeGrupo}")
+    @NotNull(message="{NotNull.Grupo.nomeGrupo}")
     private String nomeGrupo;
 
     @Column
     private Integer bloqueado;
 
     @Column
-    @NotNull(message="{NotNull.Task.criador}")
+    @NotNull(message="{NotNull.Grupo.criador}")
     private Integer criador;
 }
