@@ -7,10 +7,11 @@ import Cadastro from "./pages/public/Cadastro";
 import Login from "./pages/public/Login";
 
 //paginas de APP
+import App from "./pages/app";
 import Dashboard from "./pages/app/Dashboard";
 import Ajustes from "./pages/app/Ajustes";
 import Perfil from "./pages/app/Perfil";
-import Salas from "./pages/app/Grupos";
+import Grupos from "./pages/app/Grupos";
 import CreateGroup from "./pages/app/CreateGroup";
 
 
@@ -34,9 +35,39 @@ const CreateRoutes = () =>{
             element: <Login />,
             errorElement: <ErrorPage />,
         },
-        
-        
-        ]);
+        {
+            path: "/app",
+            element: <App />,
+            errorElement: <ErrorPage />,
+            children: [
+                {
+                    path: "",
+                    element: <Dashboard />,
+                    errorElement: <ErrorPage />,
+                },
+                {
+                    path: "ajustes",
+                    element: <Ajustes />,
+                    errorElement: <ErrorPage />,
+                },
+                {
+                    path: "perfil",
+                    element: <Perfil />,
+                    errorElement: <ErrorPage />,
+                },
+                {
+                    path: "grupos",
+                    element: <Grupos />,
+                    errorElement: <ErrorPage />,
+                },
+                {
+                    path: "criar-sala",
+                    element: <CreateGroup />,
+                    errorElement: <ErrorPage />,
+                },
+            ],
+        },
+    ]);
 
     return <RouterProvider router={routes} />;
 }

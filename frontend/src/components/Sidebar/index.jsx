@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Logo from '../../assets/logo.png';
 import './sidebar.css';
+import { Outlet, Link } from "react-router-dom";
 // icons import
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import MeetingRoomRoundedIcon from '@mui/icons-material/MeetingRoomRounded';
@@ -33,28 +34,28 @@ const Sidebar = () => {
                 <nav className="flex w-full mb-36">
                     <ul className="w-11/12 m-auto">
                         <li className="w-full justify-start mb-6">
-                            <a href="/" className="flex p-2">
+                            <a href="/app" className="flex p-2">
                                 <HomeRoundedIcon className={`${isOpened ? '': 'mx-auto'}`} sx={{ fontSize: 30 }}/>
                                 {isOpened && <span className="text-lg align-middle my-auto ml-5">Home</span>}
                             </a>
                         </li>
 
                         <li className="w-full justify-start mb-6">
-                            <a href="/salas" className="flex flex-row align-middle p-2">
+                            <a href="/app/grupos" className="flex flex-row align-middle p-2">
                                 <MeetingRoomRoundedIcon className={`${isOpened ? '': 'mx-auto'}`} sx={{ fontSize: 30 }}/>
-                                {isOpened && <span className="text-lg align-middle my-auto ml-5"> Salas</span>}
+                                {isOpened && <span className="text-lg align-middle my-auto ml-5"> Grupos</span>}
                             </a>
                         </li>
 
                         <li className="w-full justify-start mb-6">
-                            <a href="/perfil" className="flex flex-row align-middle p-2">
+                            <a href="/app/perfil" className="flex flex-row align-middle p-2">
                                 <PersonRoundedIcon className={`${isOpened ? '': 'mx-auto'}`} sx={{ fontSize: 30 }}/>
                                 {isOpened && <span className="text-lg align-middle my-auto ml-5">Perfil</span>}
                             </a>
                         </li>
                         
                         <li className="w-full justify-start">
-                            <a href="/ajustes" className="flex flex-row align-middle p-2">
+                            <a href="/app/ajustes" className="flex flex-row align-middle p-2">
                                 <SettingsRoundedIcon className={`${isOpened ? '': 'mx-auto'}`} sx={{ fontSize: 30 }}/>
                                 {isOpened && <span className="text-xl align-middle my-auto ml-5"> Ajustes</span>}
                             </a>
@@ -63,7 +64,7 @@ const Sidebar = () => {
                     </ul>
                 </nav>
 
-                <a href="/create-group">
+                <a href="/app/create-group">
                     <div className="flex flex-col align-middle p-2 logout w-full create-group">
 
                         <AddRoundedIcon className="mx-auto" sx={{ fontSize: 30 }}/>
