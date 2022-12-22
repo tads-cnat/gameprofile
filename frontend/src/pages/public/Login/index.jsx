@@ -28,11 +28,11 @@ const Login = () => {
   console.log({email, password})
 
     return (
-        <div className="container">
+        <div className="container m-auto">
             <div>
               <img src={Logo} alt="GameProfile logo" className="logo mx-auto mb-9"/>    
             </div>
-            <div className='contaiver-login'>
+            <div className='container-login'>
                 <div className='wrap-input'>
                   <input 
                     className='input' 
@@ -55,13 +55,13 @@ const Login = () => {
                   {passwordErr && <p>Por favor digite uma senha mais segura!</p>}
                 </div>
                 
-                <div className='container-login-form-btn'>
+                <div className='container-login-form-btn p-3'>
                   <button onClick={validate}>Login</button>
                 </div>
 
                 <div className='text-center'>
                   <span className='txt1'>Não possui conta? </span>
-                  <Link className='txt2' to='/register'>
+                  <Link className='txt2' to='/cadastro'>
                     Cadastre-se
                   </Link>
                 </div>

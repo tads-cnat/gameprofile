@@ -6,20 +6,21 @@
 }
 
 .container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
     width: 45%;
-    margin-top: 50px;
     text-align: center;
 }
 
-.container img {
-    width: 40%;
-}
 
-.contaiver-login {
-    width: 100%;
+.container-login {
+    width: 600px;
     padding: 50px;
     border-radius: 15px;
     background-color: #F5F5F5;
+    margin: auto;
 }
 
 .wrap-input {
@@ -69,4 +70,8 @@ p {
 
 .login-form-title {
     background-color: #F5F5F5;
+}
+
+.logo{
+    width: 250px;
 }
