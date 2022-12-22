@@ -4,10 +4,10 @@
 
 </div>
 
-## 2 Reuniões semanais:
+## 4 Reuniões semanais:
 
 - Segunda presencial
-- Quinta pelo Discord
+- Terça, quarta e quinta pelo Discord
 
 ---
 
@@ -21,7 +21,9 @@ Será avaliado semanalmente os riscos do projeto
 
 - Criar issues toda segunda;
 - Apresentar na segunda para o gerente as tarefas realizadas durante a semana;
-- Quinta: momento de se reunir para tirar dúvidas com a equipe toda, das tarefas para ser entregue.
+- Terça: momento da equipe do front-end se reunir para alinhar os interesses da semana;
+- Quarta: momento da equipe do back-end se reunir;
+- Quinta: momento de toda a equipe se reunir para tirar dúvidas sobre as  tarefas semanais.
 
 ---
 
