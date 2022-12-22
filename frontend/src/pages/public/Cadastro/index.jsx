@@ -1,10 +1,10 @@
 import React, { useState } from "react"
-import Logo from '../../assets/logo.png';
+import Logo from '../../../assets/logo.png';
 import {Link} from 'react-router-dom';
 import './styles.css'
 
 
-export const Cadastro = () => {
+const Cadastro = () => {
     const [email, setEmail] = useState('')
     const [password, setPasseword] = useState('')
     const [name, setName] = useState('')
@@ -75,3 +75,5 @@ export const Cadastro = () => {
         </div>
     )
 };
+
+export default Cadastro;

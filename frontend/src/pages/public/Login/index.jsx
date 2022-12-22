@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
-import Logo from '../../assets/logo.png';
+import Logo from '../../../assets/logo.png';
 import './styles.css'
-import {validateEmail, validatePassword} from '../../utils/regex';
+import {validateEmail, validatePassword} from '../../../utils/regex';
 
-export const Login = () => {
+const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPasseword] = useState('')
 
@@ -69,3 +69,5 @@ export const Login = () => {
         </div>
     );
 }
+
+export default Login;
