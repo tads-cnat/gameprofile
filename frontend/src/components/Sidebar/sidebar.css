@@ -51,7 +51,7 @@
 
 .menu-toggle-opened {
     position: absolute;
-    left: 210px;
+    left: 220px;
     transition: 0.6s;
 }
 .menu-toggle-closed {
