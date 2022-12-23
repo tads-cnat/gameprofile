@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
-import Logo from '../../../assets/logo.png';
+import Logo from '../../../assets/logo.svg';
 import './styles.css'
 import {validateEmail, validatePassword} from '../../../utils/regex';
 
@@ -28,6 +28,7 @@ const Login = () => {
   console.log({email, password})
 
     return (
+      <div className="w-full content">
         <div className="container m-auto">
             <div>
               <img src={Logo} alt="GameProfile logo" className="logo mx-auto mb-9"/>    
@@ -40,7 +41,7 @@ const Login = () => {
                     placeholder="E-mail ou usuário"
                     value={email}
                     onChange={event => setEmail(event.target.value)}
-                  />
+                    />
                   {emailErr && <p>Por favor digite um e-mail válido!</p>}
                 </div>
 
@@ -51,7 +52,7 @@ const Login = () => {
                     placeholder="Senha"
                     value={password}
                     onChange={event => setPasseword(event.target.value)}
-                  />
+                    />
                   {passwordErr && <p>Por favor digite uma senha mais segura!</p>}
                 </div>
                 
@@ -67,6 +68,7 @@ const Login = () => {
                 </div>
             </div>
         </div>
+      </div>
     );
 }
 

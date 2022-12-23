@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Logo from '../../assets/logo.png';
+import Logo from '../../assets/logo.svg';
 import './sidebar.css';
 // icons import
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
