@@ -1,5 +1,4 @@
 import DarkLogo from '../../../assets/logoDark.png';
-import Link from "react-router-dom"
 import './errorPage.css';
 
 export default function ErrorPage() {
