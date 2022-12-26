@@ -34,7 +34,7 @@ ___
 ___
 
 # Figma do projeto
-[Figma do projeto](https://www.figma.com/files/project/57606455/Game-Profile?fuid=1108816848484226550)
+[Figma do projeto](https://www.figma.com/file/dSRnqVj6y8ODgOGTLHax9r/Prototipos?node-id=0%3A1&t=BJKo6lfCw5KZHLYS-1)
 
 # Documentação
 [Link para os documentos do projeto](https://github.com/tads-cnat/gameprofile/tree/main/docs)
