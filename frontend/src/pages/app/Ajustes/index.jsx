@@ -1,6 +1,6 @@
-function Ajustes() {
+const Ajustes = () => {
     return (
-        <div>
+        <div className='w-full h-full p-10'>
             <h1>Ajustes</h1>
         </div>
     );
