@@ -69,7 +69,7 @@ const Cadastro = () => {
                         <br />
                         <div className='text-center'>
                             <span className='txt1'>Já possui conta? </span>
-                            <Link className='txt2' to='/'>Login</Link>
+                            <Link className='txt2 text-blue-800 underline' to='/'>Login</Link>
                         </div>
                     </div>
                 </form>

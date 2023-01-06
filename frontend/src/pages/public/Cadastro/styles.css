@@ -5,14 +5,17 @@
   
 }
 .container-register {
-    width: 90%;
+    width: 80%;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
     display: flex;
 }
 .login-form {
     width: 50%;
     margin-left: 150px;
-    background-color: F5F5F5;
+
 }
 .logo-img img{
     width: 300px;

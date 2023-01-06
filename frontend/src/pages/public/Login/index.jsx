@@ -62,7 +62,7 @@ const Login = () => {
 
                 <div className='text-center'>
                   <span className='txt1'>Não possui conta? </span>
-                  <Link className='txt2' to='/cadastro'>
+                  <Link className='txt2 text-blue-800 underline' to='/cadastro'>
                     Cadastre-se
                   </Link>
                 </div>
