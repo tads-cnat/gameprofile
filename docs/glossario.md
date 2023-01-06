@@ -3,7 +3,7 @@
 # Glossário
 | Palavra | Significado|
 |---------|------------|
-| Player | Usuário do sistema GameProfile|
+| Jogador | Usuário do sistema GameProfile|
 | Lol | Gíria usada para abreviar o nome do jogo League of Legends, o qual nossa plataforma propõe conectar "Players" |
 | Nome de invocador | Seu nome(nick) dentro do Lol |
 | Campeões | Personagens jogáveis na partida |
@@ -12,12 +12,12 @@
 | Summoner’s Rift | Modo de jogo mais popular, onde temos um confronto 5v5 com o objetivo de destruir o Nexus inimigo |
 | ARAM | Modo de jogo mais rápido com mesmo objetivo Summoner’s Rift |
 | TFT | Abreviação usada para outro modo de jogo mais estratégico (teamfight tactics), onde apenas duas pessoas se enfrentam em cada partida |
-| Top | Rota superior do modo Summoner’s Rift |
-| Mid | Rota do meio do modo Summoner’s Rift |
+| Topo | Rota superior do modo Summoner’s Rift |
+| Meio | Rota do meio do modo Summoner’s Rift |
 | Bot | Rota inferior do modo Summoner’s Rift |
-| ADC | Posição com foco em aumentar a força do seu campeão na partida |
+| Atirador | Posição com foco em aumentar a força do seu campeão na partida |
 | Suporte | Posição onde o jogador tenta manter o ADC vivo |
-| Jungle | Rota do modo Summoner’s Rift onde encontramos "bichos" que não pertencem aos times, mas que permitem através de batalhas a melhora do personagem na partida |
+| Selva | Rota do modo Summoner’s Rift onde encontramos "bichos" que não pertencem aos times, mas que permitem através de batalhas a melhora do personagem na partida |
 
 
 </div>
@@ -50,31 +50,34 @@ Casos de uso
 ### UCP 01 - Criar Conta
 |  |  |
 |--|--|
-| **Ator Principal** | Player. |
-| **Descrição** | O player deve ser capaz de realizar o cadastro na plataforma.|
-| **Pré-condição** | O player não pode possuir uma conta ativa no sistema.|
-| **Pós-condição** | O player deve possuir um cadastro persistente no banco de dados. |
-| **Fluxo** | 1 - Clicar em cadastrar-se, 2 - Informar os dados necessários, 3 - Aceitar os termos de privacidade, 4 - Clicar em cadastro.|
+| **Ator Principal** | Jogador. |
+| **Descrição** | O jogador deve ser capaz de realizar o cadastro na plataforma.|
+| **Pré-condição** | O jogador não pode possuir uma conta ativa no sistema.|
+| **Pós-condição** | O jogador deve possuir um cadastro persistente no banco de dados. |
+| **Fluxo** | 1 - O jogador clicar em "cadastrar-se", 2 - Informar os dados necessários, 3 - Aceitar os termos de privacidade, 4 - Clicar em cadastro.|
+| **Fluxo alternativo**        | 1-  O usuário clica em "cadastra-se" 2- O usuário informa os dados necessários, 3- O usuário não aceita os termos 4- O sistema informa que é necessário aceitar os termos.
 
 ### UCP 02 - Fazer Login
 |  |  |
 |--|--|
-| **Ator Principal** | Player. |
+| **Ator Principal** | Jogador. |
 | **Descrição** | Utilizando de credenciais já cadastradas no sistema, o player deve conseguir realizar sua autenticação. |
-| **Pré-condição** | O player deve estar cadastrado no banco de dados da aplicação.|
-| **Pós-condição** | O player estará autenticado e pronto pra utilizar a aplicação.|
-| **Fluxo** | 1 - Acessar tela de Login, 2 - Informar suas Credenciais, 3 - clicar em Login.|
+| **Pré-condição** | O jogador deve estar cadastrado no banco de dados da aplicação.|
+| **Pós-condição** | O jogador estará autenticado e pronto pra utilizar a aplicação.|
+| **Fluxo** | 1 - O jogador acessar a tela de Login, 2 - O usuário informar suas Credenciais, 3 - O jogador clica em "Login".|
+| **Fluxo alternativo**        | 1-  O jogador informa os dados solicitados " 2- O jogador clica em "Login", 3- O sistema informa que o login não pôde ser realizado porque o jogador não está cadastrado. 
 
 
 
-### UCP 03 - Gerenciar Conta
+## UCP 03 - Gerenciar Conta
 |  |  |
 |--|--|
-| **Ator Principal** | Player. |
-| **Descrição** | O player deve ser capaz de gerenciar sua conta como por exemplo alterar informações e excluir conta.|
+| **Ator Principal** | Jogador. |
+| **Descrição** | O jogador deve ser capaz de gerenciar sua conta como por exemplo alterar informações e excluir conta.|
 | **Pré-condição** | Estar autenticado no sistema. |
-| **Pós-condição** | A conta do player sofreu alterações de informações|
-| **Fluxo** | 1 - Acessar o menu de configurações, 2 - selecionar operação, 3 - salvar informações|
+| **Pós-condição** | A conta do jogador sofreu alterações de informações|
+| **Fluxo** | 1 - O jogador acessa o menu de configurações, 2 - o jogador seleciona operação, 3 - o jogador clica em salvar informações|
+| **Fluxo alternativo**        | 1 - O jogador acessa o menu de configurações, 2 - o jogador seleciona operação, 3- O jogador clica no botão do navegador de voltar, 4- O sistema pergunta se o jogador quer mesmo sair sem salvar. 
 
 ### UCP 03.1 - Exibir Informações
 |  |  |
@@ -103,14 +106,16 @@ Casos de uso
 | **Pós-condição** | O player não terá mais acesso a sua conta nem será mais visualizada publicamente. |
 | **Fluxo** | 1 - Acessar tela de configuração de conta, 2 - Selecionar opção de excluir conta, 3 - Se autenticar novamente, 4 - Confirmar. |
 
-### UCP 04 - Gerenciar Fichas de Jogo
+## UCP 04 - Gerenciar Fichas de Jogo
 |  |  |
 |--|--|
-| **Ator Principal** | Player. |
-| **Descrição** | O player deve visualizar, adicionar e excluir suas fichas de jogo. |
-| **Pré-condição** | Estar autenticado no sistema. |
+| **Ator Principal** | Jogador. |
+| **Descrição** | O jogador deve visualizar, adicionar e excluir suas fichas de jogo. |
+| **Pré-condição** | O jogador deve estar autenticado no sistema. |
 | **Pós-condição** | |
-| **Fluxo** | 1 - Acessar tela de fichas de jogo. |
+| **Fluxo** | 1 - O jogador acessar a tela de fichas de jogo. |
+| **Fluxo alternativo**        | 1 - O sistema não encontra nenhuma ficha de jogo. 
+
 
 ### UCP 04.1 - Exibir Fichas de Jogo
 |  |  |
@@ -124,90 +129,58 @@ Casos de uso
 ### UCP 04.2 - Criar Ficha de Jogo
 |  |  |
 |--|--|
-| **Ator Principal** | Player. |
+| **Ator Principal** | Jogador. |
 | **Descrição** | O player deve criar uma ficha de jogo selecionando o jogo desejado e adicionando informações . | 
 | **Pré-condição** | Estar autenticado no sistema, estar na tela de fichas de jogo. |
-| **Pós-condição** | O player deve possuir uma ficha de jogo ligada a seu perfil. |
+| **Pós-condição** | O jogador deve possuir uma ficha de jogo ligada a seu perfil. |
 | **Fluxo** | 1 - Acessar tela de fichas de jogo, 2 - Clicar em adicionar ficha, 3 - Escolher jogo, 4 - Inserir informações, 5 - Salvar. |
 
 ### UCP 04.3 - Excluir Ficha de Jogo
 |  |  |
 |--|--|
-| **Ator Principal** | Player. |
+| **Ator Principal** | Jogador. |
 | **Descrição** | O jogador deve excluir sua ficha, deixando ela com status de inativa por 3 anos antes de ser apagada do banco de dados. |
 | **Pré-condição** | Estar autenticado no sistema, estar na tela de fichas de jogo. |
-| **Pós-condição** | O player não terá mais acesso a sua ficha de jogo nem será mais visualizada publicamente. |
+| **Pós-condição** | O jogador não terá mais acesso a sua ficha de jogo nem será mais visualizada publicamente. |
 | **Fluxo** | 1 - Acessar tela de ficha de jogo, 2 - Selecionar opção de excluir ficha, 3 - Se autenticar novamente, 4 - Confirmar. |
+
 
 ### UCP 5 - Adicionar Amigo
 |  |  |
 |--|--|
-| **Ator Principal** | Player. |
-| **Descrição** | Criação de uma tela onde o Player pode procurar por outro player (por id ou nick) e enviar uma solicitação de amizade. |
-| **Pré-condição** | Player autenticado no sistema, Player amigo cadastrado no sistema e com conta ativa. |
-| **Pós-condição** | Os dois players estarão conectados no sistema com um relacionamento de amizade. |
-| **Fluxo** |  1 - O player acessa interface de adicionar amigo, 2 - busca por id ou nick, 3 - clica no botão de enviar solicitação que aparecerá ao lado dos perfis encontrados.|
+| **Ator Principal** | Jogador. |
+| **Descrição** | Criação de uma tela onde o jogador pode procurar por outro jogador (por id ou nick) e enviar uma solicitação de amizade. |
+| **Pré-condição** | Jogador autenticado no sistema, jogador amigo cadastrado no sistema e com conta ativa. |
+| **Pós-condição** | Os dois jogadores estarão conectados no sistema com um relacionamento de amizade. |
+| **Fluxo** |  1 - O jogador  acessa a interface de adicionar amigo, 2 - busca por id ou nick, 3 - o jogador clica no botão de enviar solicitação que aparecerá ao lado dos perfis encontrados.|
+| **Fluxo alternativo**        | 1 -  O jogador  acessa a interface de adicionar amigo, 2 - busca por id ou nick, 3 - O sistema não encontra o id ou nick digitado.
 
 
-### UCP 6 - Avaliar Player
+### UCP 6 - Avaliar Jogador
+
 |  |  |
 |--|--|
-| **Ator Principal** | Player |
-| **Descrição** | Um player pode avaliar outro player, sempre levando em consideração as características de gameplay e de comportamento do outro player. |
-| **Pré-condição** | Ambos os Jogadores precisam estar ativos na plataforma, o jogador avaliador deve estar autenticado.|
-| **Pós-condição** | O Player avaliado terá suas estatísticas ajustadas de acordo com a avaliação de outro player|
-| **Fluxo** | 1 - Visualizar o perfil de um Player, 2 - Clicar em avaliar, 3 - preencher informações, 4 - clicar em enviar analise.|
+| **Ator Principal** | Jogador |
+| **Descrição** | Um jogador pode avaliar outro jogador, sempre levando em consideração as características de gameplay e de comportamento do outro jogador. |
+| **Pré-condição** | Ambos os jogadores precisam estar ativos na plataforma, o jogador avaliador deve estar autenticado.|
+| **Pós-condição** | O jogador avaliado terá suas estatísticas ajustadas de acordo com a avaliação de outro player|
+| **Fluxo** | 1 - O jogador deve visualizar o perfil de um outro jogador, 2 - O jogador deve clicar em avaliar, 3 - O jogador deve preencher informações, 4 - o jogador deve clicar em enviar análise.|
+| **Fluxo alternativo**        | 1 - O jogador  visualiza o perfil de um outro jogador, 2 - O jogador  clica em avaliar, 3 - O jogador  preenche informações, 4 - o jogador deve clica em enviar análise, 5 - O sistema diz que a avaliação não pode ocorrer porque os jogadores nunca jogaram juntos.
 
 ### UCP 7 - Criar grupo
 |  |  |
 |--|--|
-| **Ator Principal** | Player. |
+| **Ator Principal** | Jogador. |
 | **Descrição** | O jogador deve ser capaz de criar um grupo para se comunicar com outros jogadores. |
-| **Pré-condição** | Player autenticado no sistema. |
+| **Pré-condição** | Jogador autenticado no sistema. |
 | **Pós-condição** | O sistema irá criar um novo grupo e adicionar o jogador criador como administrador. |
-| **Fluxo** | 1 - O player acessa a interface de criar grupo, 2 - coloca um nome para o grupo, 3-seleciona a quantidade de pessoas.|
+| **Fluxo** | 1 - O jogador acessa a interface de criar grupo, "Criar sala", 2 - coloca um nome para o grupo, 3-seleciona a quantidade de pessoas, 4- Coloca as posições.|
+| **Fluxo alternativo** | 1 - O jogador acessa a interface de criar grupo, "Criar sala", 2 - coloca um nome para o grupo, 3-seleciona a quantidade de pessoas, 4-Coloca posições,  5-O sistema informa que o limite máximo de caracteres foi atingido no nome do grupo.|
+
 	
-# Instalação nas versões anteriores
-para  a execução do projeto sem problemas, se faz recomendado a preparação do ambiente.
+# Guias de Instalação
+Tutoriais para configurar os ambientes de front-end e back-end.
+## Instalação
+[Front-end](https://github.com/tads-cnat/gameprofile/blob/dev/docs/guiaFront.md)
 
-1. Programas que utilizamos para o desenvolvimento do projeto:
-	- [Python 3.10](https://www.python.org/downloads/)
-	- [Git](https://git-scm.com/)
-	- [Visual Studio Code](https://code.visualstudio.com/Download)
-2. Clonando o projeto:
-	- Via HTTP
-		 ```bash
-		 git clone https://github.com/tads-cnat/game-profile.git
-		 ```
-	- Via SSH
-		```bash
-		git clone git@github.com:tads-cnat/game-profile.git
-		```
-3. Criando e preparando ambiente virtual python
-	- Criando um ambiente virtual
-		- por questões praticas, vamos criar um ambiente virtual chamado "venv" 
-		```bash
-		python -m venv venv
-		``` 
-	- Iniciando ambiente virtual
-		```bash
-		venv\Scripts\activate
-		```
-		o retorno esperado é:
-		```bash
-		(venv) C:/<path>
-		```
-	- Instalando Django no ambiente virtual
-		```bash
-		(venv) pip install django
-		```
-4. Executando o projeto
-	- Dentro dos arquivos do projeto, em "projeto", digite:
-		```bash 
-		python3 manage.py runserver
-		```
-	- Abrir o navegador e acessar o endereço:
-	[http://127.0.0.1:8000](http://127.0.0.1:8000)
-___
-</div>  
-
+[Back-end](https://github.com/tads-cnat/gameprofile/blob/main/docs/guiaBack.md)
