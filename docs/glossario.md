@@ -42,7 +42,8 @@ Casos de uso
 | Data  | Versão   | Descrição| Autor
 | ------- | -------- | -------| -------|
 | 01/07/2022|  v1.0  |Documentando todos os casos de uso da aplicação.|[Tonny Weslley](https://github.com/Tonny-Weslley) - [Ruan Franklin](https://github.com/Ruan-Franklin) 
-| 22/10/2022   | v2.0    |  Atualizando  os casos de uso da aplicação.      | [Tonny Weslley](https://github.com/Tonny-Weslley) - [Ruan Franklin](https://github.com/Ruan-Franklin)   
+| 22/10/2022   | v2.0    |  Atualizando  os casos de uso da aplicação.      | [Tonny Weslley](https://github.com/Tonny-Weslley) - [Ruan Franklin](https://github.com/Ruan-Franklin)  
+| 26/12/2022   | v3.0    |  Atualizando  os casos de uso da aplicação e adicionando protótipos.      | [Dina Gomes](https://github.com/dinapgomes) - [ Ruan Franklin](https://github.com/Ruan-Franklin)    
 	
 
 
