@@ -68,8 +68,19 @@ Um fator crucial para um bom desempenho e uma boa experiência em jogos competit
 * Alvanista
 
 ## 7 - Visão geral do Produto
+A GameProfile é uma plataforma web/rede social que busca conectar jogadores de e-sports (Esportes Eletrônicos) para que possam interagir entre eles de forma simples e inteligente, trazendo uma melhor dinâmica e jogabilidade para suas partidas.
 
-A gameprofile é uma rede social que busca conectar jogadores para que possam interagir entre eles, trazendo uma melhor dinâmica e jogabilidade para suas partidas.
+### 7.1 - A GameProfile é...
+Uma plataforma web/rede social que conecte jogadores de e-sports de forma simples e inteligente.
+
+### 7.2 - A GameProfile não é...
+Uma plataforma de jogos, pois na plataforma os jogadores/players interagem com o sistema abastecendo-o com informações suas, interagindo com outros players e criando grupos.
+
+### 7.3 - A GameProfile faz...
+Deixa a cargo do próprio jogador/player busca e montar seu time para a partida, baseado em informações de cada usuário e avaliações de partidas anteriores.
+
+### 7.4 - A GameProfile não faz...
+Matchmaking (sistema próprio de cada jogo em que uma das funções é busca outros jogadores da plataforma os unindo em um time) pois essa estratégia pode gerar maiores problemas, como unir jogadores que exercem a mesma função em um mesmo time e/ou selecionar jogadores considerados tóxicos
 
 ## 8 - Requisitos
 ### 8.1 - Requisitos Funcionais
