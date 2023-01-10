@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Logo from '../../../assets/logo.svg';
 import {Link} from 'react-router-dom';
-import './styles.css'
+import './cadastro.css'
 
 
 const Cadastro = () => {
