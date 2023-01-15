@@ -1,3 +1,18 @@
+:root{
+
+    /* colors */
+    --background-color: #2C004B;
+    --main-color: #5A2E98;
+    --main-color-dark: #381d5f;
+    --main-dark: #342E37;
+    --main-ligth: #FFFFFF;
+    --util-green: #a0f1a8;
+    --util-red: #ff6d6d;
+    --util-yellow: #f7fa73;
+
+
+}
+
 *{
     font-family: 'Saira', sans-serif;
 }

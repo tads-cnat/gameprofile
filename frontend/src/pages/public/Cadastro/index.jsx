@@ -37,7 +37,7 @@ const Cadastro = () => {
                             <input
                                 className={name !== "" ? "has-val input" : "input"}
                                 type="email"
-                                placeholder="Usário"
+                                placeholder="Usuário"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
                                 />

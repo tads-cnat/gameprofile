@@ -9,91 +9,88 @@ import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
 import AddRoundedIcon from '@mui/icons-material/AddRounded';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import DarkModeRoundedIcon from '@mui/icons-material/DarkModeRounded';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import Switch from '@mui/material/Switch';
+import Tooltip from '@mui/material/Tooltip';
 
 
-const Sidebar = () => {
 
-    const [isOpened, setIsOpened] = useState(true);
+const Sidebar = (props) => {
+    var url_atual = window.location.pathname;
+    const service = url_atual.split("/")[2];
+
 
     return (
-        <div className={`sidebar pl-9 flex flex-col ${isOpened ? 'opened' : 'closed'}`}>
+        <div className="sidebar pl-9 flex flex-col">
             <header>
-                <img src={Logo} alt="GameProfile logo" className="logo mx-auto mb-9"/>    
+                <img src={Logo} alt="GameProfile logo" className="mx-auto logo" />
             </header>
-
-            <button className={`menu-toggle ${isOpened ? 'menu-toggle-opened' : 'menu-toggle-closed'}`} onClick={() => setIsOpened(!isOpened)}>
-                { isOpened ? <ArrowBackIosNewIcon /> : <ArrowForwardIosIcon /> }
-            </button>
 
             <div className='flex flex-col justify-between h-full mt-10'>
 
-                <nav className="flex w-full mb-36">
+                <nav className="flex w-full ">
                     <ul className="w-11/12 m-auto">
-                        <li className="w-full justify-start mb-6">
-                            <a href="/app" className="flex p-2">
-                                <HomeRoundedIcon className={`${isOpened ? '': 'mx-auto'}`} sx={{ fontSize: 30 }}/>
-                                {isOpened && <span className="text-lg align-middle my-auto ml-5">Home</span>}
-                            </a>
-                        </li>
+                        <Tooltip title="Home" placement="left" arrow>
+                                <li className={`w-full justify-start mb-6 ${service === undefined ? 'selecionado': ""}`} >
+                                <a href="/app" className="flex p-2">
+                                    <HomeRoundedIcon className="mx-auto" sx={{ fontSize: 30 }} />
+                                </a>
+                            </li>
+                        </Tooltip>
 
-                        <li className="w-full justify-start mb-6">
-                            <a href="/app/grupos" className="flex flex-row align-middle p-2">
-                                <MeetingRoomRoundedIcon className={`${isOpened ? '': 'mx-auto'}`} sx={{ fontSize: 30 }}/>
-                                {isOpened && <span className="text-lg align-middle my-auto ml-5"> Grupos</span>}
-                            </a>
-                        </li>
+                        <Tooltip title="Grupos" placement="left" arrow>
+                            <li className={`w-full justify-start mb-6 ${service === "grupos" ? 'selecionado': ""}`}>
+                                <a href="/app/grupos" className="flex flex-row align-middle p-2">
+                                    <MeetingRoomRoundedIcon className="mx-auto" sx={{ fontSize: 30 }} />
+                                </a>
+                            </li>
+                        </Tooltip>
 
-                        <li className="w-full justify-start mb-6">
-                            <a href="/app/perfil" className="flex flex-row align-middle p-2">
-                                <PersonRoundedIcon className={`${isOpened ? '': 'mx-auto'}`} sx={{ fontSize: 30 }}/>
-                                {isOpened && <span className="text-lg align-middle my-auto ml-5">Perfil</span>}
-                            </a>
-                        </li>
-                        
-                        <li className="w-full justify-start">
-                            <a href="/app/ajustes" className="flex flex-row align-middle p-2">
-                                <SettingsRoundedIcon className={`${isOpened ? '': 'mx-auto'}`} sx={{ fontSize: 30 }}/>
-                                {isOpened && <span className="text-xl align-middle my-auto ml-5"> Ajustes</span>}
-                            </a>
-                        </li>
+                        <Tooltip title="Perfil" placement="left" arrow>
+                            <li className={`w-full justify-start mb-6 ${service === "perfil" ? 'selecionado': ""}`}>
+                                <a href="/app/perfil" className="flex flex-row align-middle p-2">
+                                    <PersonRoundedIcon className="mx-auto" sx={{ fontSize: 30 }} />
+                                </a>
+                            </li>
+                        </Tooltip>
+
+                        <Tooltip title="Ajustes" placement="left" arrow>
+                            <li className={`w-full justify-start mb-6 ${service === "ajustes" ? 'selecionado': ""}`}>
+                                <a href="/app/ajustes" className="flex flex-row align-middle p-2">
+                                    <SettingsRoundedIcon className="mx-auto" sx={{ fontSize: 30 }} />
+                                </a>
+                            </li>
+                        </Tooltip>
 
                     </ul>
                 </nav>
 
-                <a href="/app/create-group">
-                    <div className="flex flex-col align-middle p-2 logout w-full create-group">
+                <Tooltip title="Criar Grupo" placement="left" arrow>
+                    <a href="/app/create-group">
+                        <div className="flex flex-col align-middle p-2 logout w-full create-group">
+                            <AddRoundedIcon className="mx-auto" sx={{ fontSize: 30 }} />
 
-                        <AddRoundedIcon className="mx-auto" sx={{ fontSize: 30 }}/>
-                        <span className="text-xl align-middle my-auto">{isOpened && "Criar Grupo"}</span>
-
-                    </div>
-                </a>
+                        </div>
+                    </a>
+                </Tooltip>
 
                 <footer className="border-t flex w-full flex-col pt-3">
                     <div className="w-full justify-start p-2 my-2">
 
-                        {/* alterar componente para funçãod e logout assim que implementada */}
-                        <button  className="flex flex-row align-middle p-2 logout w-full">
-                            <LogoutRoundedIcon  sx={{ fontSize: 30 }}/>
-                            <span className="text-lg align-middle my-auto ml-5">{isOpened && "Logout"}</span>
-                        </button>
-                        
-                        <div className=" m-auto create-group flex flex-row justify-center align-middle p-2 mt-4">
-                            <DarkModeRoundedIcon  sx={{ fontSize: 30 }} />
-                            {isOpened &&
-                                <>
-                                    <span className="text-base align-middle my-auto">Dark mode</span>
-                                    <Switch color="secondary"/>
-                                </>
-                            }
-                        </div>
+
+                        <Tooltip title="Logout" placement="left" arrow>
+                            <button className="flex flex-row align-middle p-2 logout w-full">
+                                <LogoutRoundedIcon className='mx-auto' sx={{ fontSize: 30 }} />
+                            </button>
+                        </Tooltip>
+
+                        <Tooltip title={`${props.darkTheme ? "Modo Claro" : "Modo Escuro"}`} placement="left" arrow>
+                            <div className="darkTheme-Button m-auto flex flex-row justify-center align-middle p-2 mt-4">
+                                <DarkModeRoundedIcon className="mx-auto" sx={{ fontSize: 30 }} />
+                            </div>
+                        </Tooltip>
                     </div>
                 </footer>
             </div>
-            
+
 
 
         </div>
