@@ -1,15 +1,3 @@
-:root{
-
-    /* colors */
-    --background-color: #2C004B;
-    --main-color: #5A2E98;
-    --main-color-dark: #381d5f;
-    --main-dark: #342E37;
-    --main-ligth: #FFFFFF;
-
-
-}
-
 *{
     margin: 0;
     padding: 0;
