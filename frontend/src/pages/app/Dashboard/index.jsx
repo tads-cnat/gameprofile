@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 
 const Dashboard = () => {
     return (
-        <div className='w-full h-full p-10'>
+        <div className='p-10'>
             <Box sx={{ display: 'flex', alignItems: 'center' }} className='bg-gray-200 rounded p-10 w-full'>
                 <Skeleton variant="circular" width={150} height={150} />
                 <Skeleton variant="rectangular"  width={250} height={25} className='ml-10'/>
