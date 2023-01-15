@@ -65,3 +65,15 @@
     border-radius: 50%;
     background-color: var(--util-green); 
 }
+
+.pesquisa-filtro{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin: 2vh auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.349);
+    transition: all 0.3s ease;
+}

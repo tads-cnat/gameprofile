@@ -1,4 +1,6 @@
 import GrupoCard from '../../../components/GrupoCard';
+
+
 import mock from '../../../mock/grupos.json';
 
 const Grupos = () => {
