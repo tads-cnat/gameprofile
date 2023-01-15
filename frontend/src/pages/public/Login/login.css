@@ -25,8 +25,8 @@
 
 
 .container-login {
-    width: 600px;
-    padding: 50px;
+    width: 40vw;
+    padding: 3vh 4vw;
     border-radius: 15px;
     background-color: #F5F5F5;
     margin: auto;
@@ -34,7 +34,7 @@
 
 .wrap-input {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 3vh;
     background-color: #F5F5F5;
 }
 
@@ -42,7 +42,7 @@
     width: 100%;
     background-color: #D9D9D9;
     border-radius: 10px;
-    padding: 15px;
+    padding: 1vw;
     border: none;
 }
 
@@ -52,7 +52,7 @@
 .container-login-form-btn button {
     width: 50%;
     border-radius: 10px;
-    padding: 10px;
+    padding: 0.8vw;
     color: white;
     margin-bottom: 20px;
     background-color: #5A2E98;
@@ -60,9 +60,6 @@
     border: none;
 } 
 
-.text-center {
-    background-color: #F5F5F5;
-}
 .txt1 {
     background-color: #F5F5F5;
 }
@@ -71,7 +68,6 @@
 }
 
 p {
-    color: red;
     text-align: left;
     font-size: 12px;
 }
@@ -80,6 +76,6 @@ p {
     background-color: #F5F5F5;
 }
 
-.logo{
-    width: 250px;
+.logo-login{
+    width: 35%;
 }

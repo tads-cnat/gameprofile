@@ -21,7 +21,7 @@
 }
 .card-group h1 {
     color: #ffffff;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 .lanes-section{
@@ -37,6 +37,9 @@
     margin: 0 0.5vw;
 }
 
+.lanes-section img{
+    width: 80%;
+}
 .submenu{
     display: flex;
     flex-direction: row;

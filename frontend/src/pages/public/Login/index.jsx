@@ -31,7 +31,7 @@ const Login = () => {
       <div className="w-full content">
         <div className="container m-auto">
             <div>
-              <img src={Logo} alt="GameProfile logo" className="logo mx-auto mb-9"/>    
+              <img src={Logo} alt="GameProfile logo" className="logo-login mx-auto mb-9"/>    
             </div>
             <div className='container-login'>
                 <div className='wrap-input'>
