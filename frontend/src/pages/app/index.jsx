@@ -2,10 +2,10 @@ import Sidebar from "../../components/Sidebar";
 import { Outlet } from "react-router-dom";
 
 const App = () => {
+
     return(
         <>
-        
-            <Sidebar />
+            <Sidebar/>
             <div className="w-full">
                 <Outlet />
             </div>

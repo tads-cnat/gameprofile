@@ -26,8 +26,9 @@ ___
 
 
 # Instalação
+[Front-end](https://github.com/tads-cnat/gameprofile/blob/dev/docs/guiaFront.md)
 
-[Back-end](https://github.com/tads-cnat/gameprofile/blob/dev/docs/guiaBack.md)
+[Back-end](https://github.com/tads-cnat/gameprofile/blob/main/docs/guiaBack.md)
 
 
 

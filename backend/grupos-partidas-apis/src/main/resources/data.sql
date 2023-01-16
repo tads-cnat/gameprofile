@@ -1,19 +1,19 @@
-drop table if exists jogador_grupo;
 drop table if exists grupos;
 drop table if exists partidas;
 drop table if exists jogadores;
 
-create table jogador_grupo(
-id_jogador int2 not null,
-id_grupo int2 not null,
-funcao varchar(7) not null,--'TOPO' ou 'MEIO' ou 'SELVA' ou 'ADC ' ou 'SUPORTE'
-adm int2 null);
+
 
 create table grupos(
 id_grupo serial not null,
 nome_grupo varchar(20) not null,
 bloqueado int2 null,
-criador int2 not null);
+criador int2 not null,
+topo int2,
+atirador int2,
+suporte int2,
+selva int2,
+meio int2);
 
 create table partidas(
 id_partida serial not null,

@@ -1,0 +1,82 @@
+.card-group{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin: 2vh auto;
+    height: 9vh;
+    padding: 0px 2vw;
+    background-color: var(--main-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.349);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.card-group p {
+    color: #ffffff;
+    margin: 0px 0.2vw;
+}
+.card-group h1 {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.lanes-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.lanes-section a{
+    margin: 0 0.5vw;
+}
+
+.lanes-section img{
+    width: 80%;
+}
+.submenu{
+    display: flex;
+    flex-direction: row;
+}
+
+.indicador{
+    width: 0.5vw;
+    height: 0.5vw;
+    margin: 1vh auto 0px auto;
+    border-radius: 50%;
+    background-color: var(--util-green);
+}
+
+.indicador-off{
+    width: 0.5vw;
+    height: 0.5vw;
+    margin: 1vh auto 0px auto;
+    border-radius: 50%;
+    visibility: hidden;
+}
+
+.indicador-header{
+    width: 0.7vw;
+    height: 0.7vw;
+    margin: auto ;
+    border-radius: 50%;
+    background-color: var(--util-green); 
+}
+
+.pesquisa-filtro{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin: 2vh auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.349);
+    transition: all 0.3s ease;
+}
