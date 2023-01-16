@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import Logo from '../../assets/logo.svg';
 import './sidebar.css';
 // icons import
@@ -73,9 +72,7 @@ const Sidebar = (props) => {
                 </Tooltip>
 
                 <footer className="border-t flex w-full flex-col pt-3">
-                    <div className="w-full justify-start p-2 my-2">
-
-
+                    <div className="w-full justify-start my-2">
                         <Tooltip title="Logout" placement="left" arrow>
                             <button className="flex flex-row align-middle p-2 logout w-full">
                                 <LogoutRoundedIcon className='mx-auto' sx={{ fontSize: 30 }} />
@@ -83,7 +80,7 @@ const Sidebar = (props) => {
                         </Tooltip>
 
                         <Tooltip title={`${props.darkTheme ? "Modo Claro" : "Modo Escuro"}`} placement="left" arrow>
-                            <div className="darkTheme-Button m-auto flex flex-row justify-center align-middle p-2 mt-4">
+                            <div className="darkTheme-Button flex flex-row justify-center align-middle mt-4 py-2 px-4 w-full">
                                 <DarkModeRoundedIcon className="mx-auto" sx={{ fontSize: 30 }} />
                             </div>
                         </Tooltip>
