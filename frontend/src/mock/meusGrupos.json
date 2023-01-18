@@ -1,0 +1,19 @@
+{
+
+    "grupos":[{
+        "id": 1,
+        "nome": "Grupo de Tonny",
+        "data": "15-01-23",
+        "horario": "15:00",
+        "status": 0,
+        "ranqueada": true,
+        "id_criador": 1,
+        "topo": [true, null, false],
+        "selva": [true, 2, true],
+        "meio": [true, 3, false],
+        "suporte": [false, null, false],
+        "atirador": [false, null, false]
+    }]
+
+
+}
