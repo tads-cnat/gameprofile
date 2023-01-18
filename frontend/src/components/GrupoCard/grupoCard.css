@@ -25,6 +25,7 @@
 }
 
 .lanes-section{
+    width: 15%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -33,9 +34,6 @@
     align-content: center;
 }
 
-.lanes-section a{
-    margin: 0 0.5vw;
-}
 
 .lanes-section img{
     width: 80%;
@@ -46,8 +44,8 @@
 }
 
 .indicador{
-    width: 0.5vw;
-    height: 0.5vw;
+    width: 0.3vw;
+    height: 0.3vw;
     margin: 1vh auto 0px auto;
     border-radius: 50%;
     background-color: var(--util-green);
