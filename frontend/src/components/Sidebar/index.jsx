@@ -63,7 +63,7 @@ const Sidebar = (props) => {
                 </nav>
 
                 <Tooltip title="Criar Grupo" placement="left" arrow>
-                    <a href="/app/create-group">
+                    <a href="/app/criar-sala">
                         <div className="flex flex-col align-middle p-2 logout w-full create-group">
                             <AddRoundedIcon className="mx-auto" sx={{ fontSize: 30 }} />
 

@@ -4,6 +4,7 @@ import junglane from '../../assets/jungle.png';
 import midLane from '../../assets/mid.png';
 import adcLane from '../../assets/adc.png';
 import supportLane from '../../assets/support.png';
+import "./index.css"
 
 import Switch from '@mui/material/Switch';
 
