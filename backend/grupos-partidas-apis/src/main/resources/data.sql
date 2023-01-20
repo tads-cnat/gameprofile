@@ -1,28 +1,39 @@
-drop table if exists grupos;
-drop table if exists partidas;
-drop table if exists jogadores;
+/*CREATE TABLE grupos (
+	id_grupo int2 NOT NULL,
+	nome varchar(20) NOT NULL,
+	bloqueada bool NOT NULL,
+	id_criador int2 NOT NULL,
+	topo int2 NULL,
+	selva int2 NULL,
+	meio int2 NULL,
+	suporte int2 NULL,
+	atirador int2 NULL,
+	CONSTRAINT grupos_pk PRIMARY KEY (id_grupo)
+);
+CREATE TABLE mov_grupos (
+	id_grupo serial4 NOT NULL,
+	nome varchar(20) NOT NULL,
+	"data" varchar(8) NULL,
+	horario varchar(5) NULL,
+	bloqueada bool NOT NULL,
+	ranqueada bool NOT NULL,
+	id_criador int2 NOT NULL,
+	topo int2 NULL,
+	selva int2 NULL,
+	meio int2 NULL,
+	suporte int2 NULL,
+	atirador int2 NULL
+);
 
-
-
-create table grupos(
-id_grupo serial not null,
-nome_grupo varchar(20) not null,
-bloqueado int2 null,
-criador int2 not null,
-topo int2,
-atirador int2,
-suporte int2,
-selva int2,
-meio int2);
-
-create table partidas(
-id_partida serial not null,
-tipo varchar(9) not null,-- 'CASUAL' ou 'RANQUEADA'
-status varchar(12) not null,-- 'NAO_INICIADA' ou 'INICIADA' ou 'FINALIZADA'
-horario time not null,
-data_partida date not null,
-id_grupo int2 not null);
-
+CREATE TABLE partidas (
+	id_partida serial4 NOT NULL,
+	id_grupo int2 NOT NULL,
+	"data" varchar(8) NOT NULL,
+	horario varchar(5) NOT NULL,
+	status varchar(12) NOT NULL,-- 'NAO_INICIADA' ou 'INICIADA' ou 'FINALIZADA'
+	ranqueada bool NOT NULL,
+	CONSTRAINT partidas_pk PRIMARY KEY (id_partida)
+);
 
 create table jogadores (
 	id_jogador serial not null,
@@ -51,3 +62,4 @@ VALUES(5, 'lazarod42', 'Lazaro Damasceno', 'lazaro.damasceno@escolar.ifrn.edu.br
 INSERT INTO jogadores
 (id_jogador, nickname, nome, email, senha, nascimento, entrou_em, editado_em, id_lol)
 VALUES(6, 'tonnys82', 'Tonny Souza', 'tonny.souza@escolar.ifrn.edu.br', 'admin5', '1996-12-25', '2022-11-28', '2022-11-28', NULL);
+*/

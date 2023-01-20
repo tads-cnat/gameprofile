@@ -1,4 +1,4 @@
-package com.gameprofile.grupospartidasapis.entity;
+package com.gameprofile.grupospartidasapis.entities;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -16,8 +16,8 @@ public class Partida {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idPartida;
 
-    @Column(name = "tipo")
-    private String tipo;
+    @Column(name = "ranqueada")
+    private Boolean ranqueada;
 
     @Column(name = "status")
     @NotNull(message="{NotNull.Partida.status}")
@@ -34,7 +34,9 @@ public class Partida {
     private Date dataPartida;
 
     @Column(name = "id_grupo")
+    @ManyToOne
+    @JoinColumn(name = "id_grupo")
     @NotNull(message="{NotNull.Partida.idGrupo}")
-    private Integer idGrupo;
+    private Grupo idGrupo;
 
 }
