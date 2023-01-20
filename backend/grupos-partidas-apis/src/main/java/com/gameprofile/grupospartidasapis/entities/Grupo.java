@@ -1,4 +1,4 @@
-package com.gameprofile.grupospartidasapis.entity;
+package com.gameprofile.grupospartidasapis.entities;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
