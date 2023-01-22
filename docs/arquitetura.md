@@ -100,7 +100,6 @@
 <div align="center">
 
 
-</div>
 
 
 | CDU | Objetivo | Ator primário | Implementado|
@@ -111,5 +110,30 @@
 |UCP 04  Adicionar amigo | Permitir que jogadores diferentes criem um vinculo dentro da plataforma |  Jogador | Não
 |UCP 05  Avaliar jogador | Jogador poder avaliar outro jogador, sempre levando em consideração as características de gameplay e de comportamento do outro jogador. | Jogador | Não
 |UCP 06 Criar Grupo | Jogador  ser capaz de criar um grupo para se comunicar com outros jogadores. |  Jogador | Sim
+
+
+## 6. Diagramas Conceituais
+
+### 6.1 - Diagrama de Classes de Domínio - visão lógica
+![image](/docs/An%C3%A1lise/Diagrama%20de%20classes%20pds.png)
+
+</div>
+
+* As classes presentes no sistema dão ênfase a nossa classe principal, que é a de jogador. Cada uma possui seus próprios atributos. A ligação entre as classes ocorre graças ao uso de chaves estrangeiras.
+
+<div align="center">
+
+| Conceito  |  Descrição  |
+| -- | -- |
+| Jogador | Mantém informações sobre o jogador |
+| Grupo  |  Mantém informações sobre um grupo e seus jogadores | 
+| Partida | Mantém informações sobre uma partida e o grupo participante |
+
+
+
+
+
+
+</div>
 
 
