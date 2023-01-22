@@ -47,13 +47,4 @@ public class Jogador{
     private Integer idLol;
 
 
-
-    
-
-
-
-
-
-
-
 }
