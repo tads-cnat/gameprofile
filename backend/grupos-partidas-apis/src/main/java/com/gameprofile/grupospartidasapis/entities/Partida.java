@@ -29,14 +29,12 @@ public class Partida {
     private Date horario;
 
     @DateTimeFormat(pattern = "dd/mm/yyyy")
-    @Column(name = "data_partida")
-    @NotNull(message="{NotNull.Partida.dataPartida}")
-    private Date dataPartida;
+    @Column(name = "data")
+    @NotNull(message="{NotNull.Partida.data}")
+    private Date data;
 
     @Column(name = "id_grupo")
-    @ManyToOne
-    @JoinColumn(name = "id_grupo")
     @NotNull(message="{NotNull.Partida.idGrupo}")
-    private Grupo idGrupo;
+    private Integer idGrupo;
 
 }

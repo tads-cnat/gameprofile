@@ -20,7 +20,7 @@ public class Mov {
     private String horario;
     @Column
     @NotNull(message="{NotNull.Mov.bloqueada}")
-    private Boolean bloqueada;
+    private Boolean bloqueado;
     @Column
     @NotNull(message="{NotNull.Mov.ranqueada}")
     private Boolean ranqueada;

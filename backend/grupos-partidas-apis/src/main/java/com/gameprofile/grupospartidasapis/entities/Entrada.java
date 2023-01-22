@@ -10,15 +10,14 @@ public class Entrada {
     @Column(name = "id_solicitacao")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idSolicitacao;
-    @ManyToMany
-    @JoinColumn(name = "id_jogador")
+
     @Column(name = "id_grupo")
-    private Grupo idGrupo;
-    @ManyToMany
-    @JoinColumn(name = "id_jogador")
+    private Integer idGrupo;
+
     @Column(name = "id_jogador")
-    private Jogador idJogador;
+    @NotNull(message="{NotNull.Entrada.idJogador}")
+    private Integer idJogador;
     @Column
-    @NotNull(message="{NotNull.Mov.status}")
+    @NotNull(message="{NotNull.Entrada.status}")
     private Boolean status;
 }
