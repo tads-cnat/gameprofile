@@ -84,6 +84,12 @@
 |RT2 |Sistema operacional compatível com o Java 17 |Sistema operacional |  Para rodar o projeto, é necessário que o sistema operacional seja compatível com a versão do Java 17
 |RT3 | Espaço em disco de pelo menos 124 MB | Hardware | É necessário ter pelo menos 124 MB de espaço no disco para rodar o Java e suas ferramentas 
 
+## 5. Escopo do sistema e Contexto
+
+
+### 5.1 - Diagrama de casos de uso
+
+![image](/docs/An%C3%A1lise/Diagrama%20de%20casos%20de%20uso.png)
 
 </div>
 
