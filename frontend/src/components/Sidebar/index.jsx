@@ -13,6 +13,8 @@ import Tooltip from '@mui/material/Tooltip';
 
 
 const Sidebar = (props) => {
+
+
     var url_atual = window.location.pathname;
     const service = url_atual.split("/")[2];
 

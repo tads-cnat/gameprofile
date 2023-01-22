@@ -5,10 +5,18 @@ import midLane from '../../assets/mid.png';
 import adcLane from '../../assets/adc.png';
 import supportLane from '../../assets/support.png';
 import "./index.css"
+import { useState } from 'react';
 
 import Switch from '@mui/material/Switch';
 
 const CardLane = (props) => {
+
+    const [checked, setChecked] = useState(false);
+    
+    const handleChange = (event) => {
+        setChecked(event.target.checked);
+    };
+
     let selected = null;
 
     if(props.lane === "top"){
@@ -36,11 +44,11 @@ const CardLane = (props) => {
             <div className='lane-options flex flex-col w-full mt-5'>
                 <label className='flex m-auto justify-start'>
                     <p className='my-auto'>Pick</p>
-                    <input type='radio' color="secondary" name='pick' value={props.name} className='ml-3 w-5' required/>
+                    <input type='radio' color="secondary" name='pick' value={props.lane} className='ml-3 w-5' required/>
                 </label>
                 <label  className='flex m-auto justify-start'>
                     <p className='my-auto'>Reservar</p>
-                    <Switch color="secondary" name={props.name}/>
+                    <Switch color="secondary" value={checked} onChange={handleChange} name={props.lane}/>
                 </label>
             </div>
         </div>
