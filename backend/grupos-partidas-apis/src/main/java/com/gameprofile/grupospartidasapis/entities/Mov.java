@@ -4,6 +4,10 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
+import java.sql.Time;
+import java.util.Date;
+import java.util.TimeZone;
+
 @Entity(name = "mov_grupos")
 @Data
 public class Mov {
@@ -15,11 +19,11 @@ public class Mov {
     @NotNull(message="{NotNull.Mov.nome}")
     private String nome;
     @Column
-    private String data;
+    private Date data;
     @Column
-    private String horario;
+    private Time horario;
     @Column
-    @NotNull(message="{NotNull.Mov.bloqueada}")
+    @NotNull(message="{NotNull.Mov.bloqueado}")
     private Boolean bloqueado;
     @Column
     @NotNull(message="{NotNull.Mov.ranqueada}")
