@@ -64,8 +64,52 @@
 | FP07 | Realizar amizade com outros jogadores. |Será adicionado um campo que permite realizar amizade com outros usuários/jogadores. |
 | FP08 | Excluir perfil| O jogador deve ser capaz de excluir o seu perfil (O perfil ficará inativo, mas persistirá no banco de dados por 4 anos).|
 
+### 3.2 - Atributos de qualidade
+
+| ID |Atributo de qualidade|Motivação|
+| -- | -- | -- |
+| 1| O nick do jogador não pode ser alterado | Segurança |
+| 2 | Não é possível um mesmo usuário se conectar em duas contas diferentes ao mesmo tempo| Segurança
+| 3 | O jogador deve conseguir alterar o tema claro para um tema escuro| Usabilidade|
+| 4 | Um jogador só consegue ver informações confidenciais do seu próprio perfil| Segurança e praticidade|
+
+## 4. Descrição de requisitos
+
+### 4.1 - Restrições técnicas
+
+
+| RT | Tipo de restrição | Restrição | Contexto e/ou motivação |
+| -- | -- | -- | -- |
+|RT1 |Restrição de interface e uso do software|Acessibilidade |  Não foi realizada implementação de ferramentas para auxiliar usuários com deficiência visual
+|RT2 |Sistema operacional compatível com o Java 17 |Sistema operacional |  Para rodar o projeto, é necessário que o sistema operacional seja compatível com a versão do Java 17
+|RT3 | Espaço em disco de pelo menos 124 MB | Hardware | É necessário ter pelo menos 124 MB de espaço no disco para rodar o Java e suas ferramentas 
+
+## 5. Escopo do sistema e Contexto
+
+
+### 5.1 - Diagrama de casos de uso
+
+![image](/docs/An%C3%A1lise/Diagrama%20de%20casos%20de%20uso.png)
+
 </div>
 
 
+* Toda a aplicação gira em torno do Player. Para que tenha uma autenticação segura, são necessários os casos de uso de Cadastrar, Fazer login e gerenciar conta. Para que haja uma melhor comunicação e experiência durante jogos, são necessários os casos de uso de Adicionar amigo, avaliar jogador, criar grupo e entrar em um grupo.
+
+
+<div align="center">
+
+
+</div>
+
+
+| CDU | Objetivo | Ator primário | Implementado|
+| -- | -- | -- | -- |
+|UCP 01  Criar conta| Garantir que o jogador seja registrado no sistema  | Jogador | Sim |
+|UCP 02  Fazer login  | Garantir que o jogador acesse a parte principal do sistema apenas se estiver registrado  | Jogador   | Sim |  
+|UCP 03 Gerenciar conta |  Permitir que o jogador veja detalhes sobre sua conta e consiga alterar informações dela | Jogador   | Não |
+|UCP 04  Adicionar amigo | Permitir que jogadores diferentes criem um vinculo dentro da plataforma |  Jogador | Não
+|UCP 05  Avaliar jogador | Jogador poder avaliar outro jogador, sempre levando em consideração as características de gameplay e de comportamento do outro jogador. | Jogador | Não
+|UCP 06 Criar Grupo | Jogador  ser capaz de criar um grupo para se comunicar com outros jogadores. |  Jogador | Sim
 
 
