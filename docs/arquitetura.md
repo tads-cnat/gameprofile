@@ -129,11 +129,26 @@
 | Grupo  |  Mantém informações sobre um grupo e seus jogadores | 
 | Partida | Mantém informações sobre uma partida e o grupo participante |
 
-
-
-
-
-
+### 6.2 - Diagrama de Sequência - modelo comportamental
+![image](/docs/An%C3%A1lise/Diagrama%20de%20sequ%C3%AAncia.png)
 </div>
+
+* A listagem de grupos e criação deles ocorre por uma colaboração entre funções do React e do Spring boot. Os dados de entrada são analisados a partir da classe MovDto.java
+
+<div align="center">
+
+
+## 7. Detalhamento da Implementação e Ambiente Físico
+### 7.1 - Visão de Implementação
+
+| Componente | Responsabilidade  |
+| -- | -- | 
+|    |    |
+|    |    |
+
+
+
+
+
 
 
