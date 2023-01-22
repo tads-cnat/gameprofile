@@ -64,6 +64,27 @@
 | FP07 | Realizar amizade com outros jogadores. |Será adicionado um campo que permite realizar amizade com outros usuários/jogadores. |
 | FP08 | Excluir perfil| O jogador deve ser capaz de excluir o seu perfil (O perfil ficará inativo, mas persistirá no banco de dados por 4 anos).|
 
+### 3.2 - Atributos de qualidade
+
+| ID |Atributo de qualidade|Motivação|
+| -- | -- | -- |
+| 1| O nick do jogador não pode ser alterado | Segurança |
+| 2 | Não é possível um mesmo usuário se conectar em duas contas diferentes ao mesmo tempo| Segurança
+| 3 | O jogador deve conseguir alterar o tema claro para um tema escuro| Usabilidade|
+| 4 | Um jogador só consegue ver informações confidenciais do seu próprio perfil| Segurança e praticidade|
+
+## 4. Descrição de requisitos
+
+### 4.1 - Restrições técnicas
+
+
+| RT | Tipo de restrição | Restrição | Contexto e/ou motivação |
+| -- | -- | -- | -- |
+|RT1 |Restrição de interface e uso do software|Acessibilidade |  Não foi realizada implementação de ferramentas para auxiliar usuários com deficiência visual
+|RT2 |Sistema operacional compatível com o Java 17 |Sistema operacional |  Para rodar o projeto, é necessário que o sistema operacional seja compatível com a versão do Java 17
+|RT3 | Espaço em disco de pelo menos 124 MB | Hardware | É necessário ter pelo menos 124 MB de espaço no disco para rodar o Java e suas ferramentas 
+
+
 </div>
 
 
