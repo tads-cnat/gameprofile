@@ -94,5 +94,22 @@
 </div>
 
 
+* Toda a aplicação gira em torno do Player. Para que tenha uma autenticação segura, são necessários os casos de uso de Cadastrar, Fazer login e gerenciar conta. Para que haja uma melhor comunicação e experiência durante jogos, são necessários os casos de uso de Adicionar amigo, avaliar jogador, criar grupo e entrar em um grupo.
+
+
+<div align="center">
+
+
+</div>
+
+
+| CDU | Objetivo | Ator primário | Implementado|
+| -- | -- | -- | -- |
+|UCP 01  Criar conta| Garantir que o jogador seja registrado no sistema  | Jogador | Sim |
+|UCP 02  Fazer login  | Garantir que o jogador acesse a parte principal do sistema apenas se estiver registrado  | Jogador   | Sim |  
+|UCP 03 Gerenciar conta |  Permitir que o jogador veja detalhes sobre sua conta e consiga alterar informações dela | Jogador   | Não |
+|UCP 04  Adicionar amigo | Permitir que jogadores diferentes criem um vinculo dentro da plataforma |  Jogador | Não
+|UCP 05  Avaliar jogador | Jogador poder avaliar outro jogador, sempre levando em consideração as características de gameplay e de comportamento do outro jogador. | Jogador | Não
+|UCP 06 Criar Grupo | Jogador  ser capaz de criar um grupo para se comunicar com outros jogadores. |  Jogador | Sim
 
 
