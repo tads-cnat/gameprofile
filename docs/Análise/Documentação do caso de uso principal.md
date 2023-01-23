@@ -12,3 +12,6 @@
 | **Fluxo** | 1 - O player acessa a interface de criar grupo, 2 - coloca um nome para o grupo, 3-seleciona a quantidade de pessoas, 4- adiciona posições disponíveis|
 | **Fluxo de exceção**   | 1- Os campos obrigatórios não foram preenchidos, 2- Não há nenhuma posição disponível no grupo, 3 - O grupo não foi criado porque o jogador foi banido. |
   
+### Figma do projeto
+[Figma do projeto](https://www.figma.com/file/dSRnqVj6y8ODgOGTLHax9r/Prototipos?node-id=0%3A1&t=BJKo6lfCw5KZHLYS-1)
+  

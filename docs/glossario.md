@@ -107,46 +107,9 @@ Casos de uso
 | **Pós-condição** | O player não terá mais acesso a sua conta nem será mais visualizada publicamente. |
 | **Fluxo** | 1 - Acessar tela de configuração de conta, 2 - Selecionar opção de excluir conta, 3 - Se autenticar novamente, 4 - Confirmar. |
 
-## UCP 04 - Gerenciar Fichas de Jogo
-|  |  |
-|--|--|
-| **Ator Principal** | Jogador. |
-| **Descrição** | O jogador deve visualizar, adicionar e excluir suas fichas de jogo. |
-| **Pré-condição** | O jogador deve estar autenticado no sistema. |
-| **Pós-condição** | |
-| **Fluxo** | 1 - O jogador acessar a tela de fichas de jogo. |
-| **Fluxo alternativo**        | 1 - O sistema não encontra nenhuma ficha de jogo. 
 
 
-### UCP 04.1 - Exibir Fichas de Jogo
-|  |  |
-|--|--|
-| **Ator Principal** | Sistema. |
-| **Descrição** | O sistema deve mostrar para o player suas fichas de jogo cadastradas. | 
-| **Pré-condição** | Estar autenticado no sistema, estar na tela de fichas de jogo. |
-| **Pós-condição** | O player estar visualizando suas fichas de jogo. |
-| **Fluxo** | 1 - Acessar tela de fichas de jogo. |
-
-### UCP 04.2 - Criar Ficha de Jogo
-|  |  |
-|--|--|
-| **Ator Principal** | Jogador. |
-| **Descrição** | O player deve criar uma ficha de jogo selecionando o jogo desejado e adicionando informações . | 
-| **Pré-condição** | Estar autenticado no sistema, estar na tela de fichas de jogo. |
-| **Pós-condição** | O jogador deve possuir uma ficha de jogo ligada a seu perfil. |
-| **Fluxo** | 1 - Acessar tela de fichas de jogo, 2 - Clicar em adicionar ficha, 3 - Escolher jogo, 4 - Inserir informações, 5 - Salvar. |
-
-### UCP 04.3 - Excluir Ficha de Jogo
-|  |  |
-|--|--|
-| **Ator Principal** | Jogador. |
-| **Descrição** | O jogador deve excluir sua ficha, deixando ela com status de inativa por 3 anos antes de ser apagada do banco de dados. |
-| **Pré-condição** | Estar autenticado no sistema, estar na tela de fichas de jogo. |
-| **Pós-condição** | O jogador não terá mais acesso a sua ficha de jogo nem será mais visualizada publicamente. |
-| **Fluxo** | 1 - Acessar tela de ficha de jogo, 2 - Selecionar opção de excluir ficha, 3 - Se autenticar novamente, 4 - Confirmar. |
-
-
-### UCP 5 - Adicionar Amigo
+### UCP 04 - Adicionar Amigo
 |  |  |
 |--|--|
 | **Ator Principal** | Jogador. |
@@ -157,7 +120,7 @@ Casos de uso
 | **Fluxo alternativo**        | 1 -  O jogador  acessa a interface de adicionar amigo, 2 - busca por id ou nick, 3 - O sistema não encontra o id ou nick digitado.
 
 
-### UCP 6 - Avaliar Jogador
+### UCP 05 - Avaliar Jogador
 
 |  |  |
 |--|--|
@@ -168,7 +131,7 @@ Casos de uso
 | **Fluxo** | 1 - O jogador deve visualizar o perfil de um outro jogador, 2 - O jogador deve clicar em avaliar, 3 - O jogador deve preencher informações, 4 - o jogador deve clicar em enviar análise.|
 | **Fluxo alternativo**        | 1 - O jogador  visualiza o perfil de um outro jogador, 2 - O jogador  clica em avaliar, 3 - O jogador  preenche informações, 4 - o jogador deve clica em enviar análise, 5 - O sistema diz que a avaliação não pode ocorrer porque os jogadores nunca jogaram juntos.
 
-### UCP 7 - Criar grupo
+### UCP 06 - Criar grupo
 |  |  |
 |--|--|
 | **Ator Principal** | Jogador. |
@@ -178,10 +141,19 @@ Casos de uso
 | **Fluxo** | 1 - O jogador acessa a interface de criar grupo, "Criar sala", 2 - coloca um nome para o grupo, 3-seleciona a quantidade de pessoas, 4- Coloca as posições.|
 | **Fluxo alternativo** | 1 - O jogador acessa a interface de criar grupo, "Criar sala", 2 - coloca um nome para o grupo, 3-seleciona a quantidade de pessoas, 4-Coloca posições,  5-O sistema informa que o limite máximo de caracteres foi atingido no nome do grupo.|
 
+## UCP 07 - Entrar em um grupo
+|  |  |
+|--|--|
+| **Ator Principal** | Jogador. |
+| **Descrição** | O jogador deve ser capaz de entrar um grupo para se comunicar com outros jogadores. |
+| **Pré-condição** | Jogador autenticado no sistema. |
+| **Pós-condição** | O sistema irá direcionar o jogador para uma sala com outros jogadores. |
+| **Fluxo** | 1 - O jogador acessa a interface principal e procura uma sala com posições em que ele joga disponíveis, 2 - , 3-Aperta em cima da posição|
+| **Fluxo alternativo** | 1 - O jogador acessa a interface principal e procura uma sala,  2 - Clica em cima de uma posição, 3-O sistema informa que não foi possível colocar o jogador no grupo, pois a posição não está disponível.|
 	
 # Guias de Instalação
 Tutoriais para configurar os ambientes de front-end e back-end.
 ## Instalação
-[Front-end](https://github.com/tads-cnat/gameprofile/blob/dev/docs/guiaFront.md)
+[Front-end](https://github.com/tads-cnat/gameprofile/blob/main/docs/guiaFront.md)
 
 [Back-end](https://github.com/tads-cnat/gameprofile/blob/main/docs/guiaBack.md)

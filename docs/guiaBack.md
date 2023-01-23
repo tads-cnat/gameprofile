@@ -40,3 +40,8 @@ para  a execução do projeto sem problemas, se faz recomendado a preparação d
 - Passo 2: Clicar em "File", no canto superior esquerdo -> Import -> Maven Project -> Existing Maven Projects 
 - Passo 3: Selecionar a pasta em que o projeto foi clonado -> backend -> grupos-partidas-apis -> e clicar no arquivo "pom.xml"
 - Passo 4: Clicar em "Finish"
+
+
+# Padrões de projeto
+
+* Atualmente, usamos o padrão de projeto Factory no back-end.

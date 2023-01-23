@@ -1,20 +1,49 @@
-import api  from './api.json'
+import api from "./api.json";
+import axios from "axios";
 
-export async function createGroup (grupo) {
-    const response = await fetch(`${api.api_url}/group`, {
-        method: 'POST',
+export async function createGroup(grupo) {
+  try {
+    axios
+      .post(api.api_url + "grupos", grupo, {
         headers: {
-            'Content-Type': 'application/json'
+          "Content-Type": "application/json",
+          "Transfer-Encoding": "chunked",
         },
-        body: JSON.stringify(grupo)
-    }).then(response =>{
-        if(response.status === 200){
-            return response.json()
-        }else{
-            throw new Error('Não foi possível cadastrar o grupo')
+      })
+      .then((response) => {
+        if (response.status === 200) {
+          return response.json();
+        } else {
+          throw new Error("Não foi possível criar o grupo");
         }
-    }).catch(error => {
-        return error
+      })
+      .catch((error) => {
+        console.log(error);
+        return error;
+      });
+  } catch (error) {
+    return error;
+  }
+}
+
+export async function getGroups() {
+  return axios({
+    method: "get",
+    url: api.api_url + "grupos",
+    mode: "no-cors",
+    headers: {
+      "Content-Type": "application/json",
+      "Transfer-Encoding": "chunked",
+    },
+  })
+    .then((response) => {
+      if (response.status === 200) {
+        return response.data;
+      } else {
+        throw new Error("Não foi possível buscar os grupos");
+      }
     })
-    return response
+    .catch((error) => {
+      return error;
+    });
 }

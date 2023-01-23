@@ -19,15 +19,15 @@ const CardLane = (props) => {
 
     let selected = null;
 
-    if(props.lane === "top"){
+    if(props.lane === "topo"){
         selected = topLane;
-    }else if(props.lane === "jungle"){
+    }else if(props.lane === "selva"){
         selected = junglane;
-    }else if(props.lane === "mid"){
+    }else if(props.lane === "meio"){
         selected = midLane;
-    }else if(props.lane === "adc"){
+    }else if(props.lane === "atirador"){
         selected = adcLane;
-    }else if(props.lane === "sup"){
+    }else if(props.lane === "suporte"){
         selected = supportLane;
     }
 

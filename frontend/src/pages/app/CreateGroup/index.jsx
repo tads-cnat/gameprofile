@@ -8,43 +8,76 @@ import CardLane from '../../../components/CardLane';
 
 import {createGroup} from '../../../services/api/group';
 
+import { useNavigate } from 'react-router-dom';
+
+
 //Guardar os dados do grupo com UseStates
 
 
 
 
 const CreateGroup = () =>{
+    const navigate = useNavigate();
 
     const [grupo, setGrupo] = useState({
-        id_criador: player.id,
-        nome: '',
-        data: '',
-        horario: '',
-        posicao_selecionada: '',
-        posicoes_reservadas: [],
-        posicoes_abertas: [],
-        ranqueada: false
+        idCriador: player.id,
+        nome: null,
+        data: null,
+        horario: null,
+        bloqueado: false,
+        ranqueada: false,
+        topo: null,
+        selva: null,
+        meio: null,
+        atirador: null,
+        suporte: null
     });
 
     function switchRanked(){
         setGrupo({...grupo, ranqueada: !grupo.ranqueada});
     }
 
+    function resetLanes(){
+        setGrupo({...grupo, topo: null, selva: null, meio: null, atirador: null, suporte: null})
+    }
+
+    function ajustHour(){
+        setGrupo(grupo.horario = grupo.horario+":00");
+    }
+
+    function resetStates(){
+        setGrupo({
+            idCriador: player.id,
+            nome: '',
+            data: '',
+            horario: '',
+            bloqueado: false,
+            ranqueada: false,
+            topo: '',
+            selva: '',
+            meio: '',
+            atirador: '',
+            suporte: ''
+        });
+    }
+
     function handlerSubmmit(e){
         e.preventDefault();
-        const lanes = ["top", "jungle", "mid", "adc", "sup"];
-        setGrupo({...grupo, posicoes_reservadas: grupo.posicoes_reservadas.length = 0, posicoes_abertas: grupo.posicoes_abertas.length = 0});
+        resetLanes();
+        ajustHour();
+        const lanes = ["topo", "selva", "meio", "atirador", "suporte"]
         lanes.forEach(lane => {
-            if(e.target[lane].checked || lane === grupo.posicao_selecionada){
-                setGrupo({...grupo, posicoes_reservadas: grupo.posicoes_reservadas.push(lane)});
-            }else{
-                setGrupo({...grupo, posicoes_abertas: grupo.posicoes_abertas.push(lane)});
+            if(e.target[lane].checked){
+                setGrupo({...grupo, [lane]: player.id})
             }
         });
-        setGrupo({...grupo, posicao_selecionada: e.target.pick.value})
         
-        createGroup(grupo);
-
+        try{
+            createGroup(grupo)
+        }catch(err){
+            console.log("chegamos aqui")
+        }
+        resetStates();
 
 
     }
@@ -85,8 +118,8 @@ const CreateGroup = () =>{
                     <input 
                     type="time" 
                     name="hora" 
-                    value={grupo.hora}
-                    onChange={(e) => setGrupo({...grupo, hora: e.target.value})}
+                    value={grupo.horario}
+                    onChange={(e) => setGrupo({...grupo, horario: e.target.value})}
                     id="hora-grupo" 
                     className='text-xl ml-5 p-3 bg-gray-700 rounded text-gray-200'
                     required/>
@@ -95,19 +128,19 @@ const CreateGroup = () =>{
                 <div className='flex justify-around mt-10'>   
 
                     <CardLane 
-                    lane='top' 
+                    lane='topo' 
                     name='Topo'/>
                     <CardLane 
-                    lane='jungle' 
+                    lane='selva' 
                     name='Selva'/>
                     <CardLane 
-                    lane='mid' 
+                    lane='meio' 
                     name='Meio'/>
                     <CardLane 
-                    lane='adc' 
+                    lane='atirador' 
                     name='Atirador'/>
                     <CardLane 
-                    lane='sup' 
+                    lane='suporte' 
                     name='Suporte'/>
 
 
