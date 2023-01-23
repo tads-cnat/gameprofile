@@ -1,30 +1,39 @@
 import api  from './api.json'
+import axios from 'axios'; 
 
 export async function createGroup (grupo) {
-    const response = await fetch(`${api.api_url}/grupos`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(grupo)
-    }).then(response =>{
-        if(response.status === 200){
-            return response.json()
-        }else{
-            throw new Error('Não foi possível cadastrar o grupo')
-        }
-    }).catch(error => {
+
+    try{
+        axios.post( api.api_url + 'grupos', grupo, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Transfer-Encoding': 'chunked'
+                }
+        }).then(response =>{
+            if(response.status === 200){
+                return response.json()
+            }else{
+                throw new Error('Não foi possível criar o grupo')
+            }
+        }).catch(error => {
+            console.log(error)
+            return error
+        })
+    }catch(error){
         return error
-    })
-    return response
+    }
+
 }
 
 export async function getGroups () {
-    const response = await fetch(`${api.api_url}/grupos`,{mode: 'no-cors'}, {
-        method: 'GET',
+    axios({
+        method: 'get',
+        url: api.api_url + 'grupos',
+        mode: 'no-cors',
         headers: {
             'Content-Type': 'application/json',
-        }
+            'Transfer-Encoding': 'chunked'
+          }
     }).then(response =>{
         if(response.status === 200){
             return response.json()
@@ -34,5 +43,4 @@ export async function getGroups () {
     }).catch(error => {
         return error
     })
-    return response
 }

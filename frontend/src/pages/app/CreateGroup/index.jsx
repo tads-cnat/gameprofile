@@ -8,12 +8,16 @@ import CardLane from '../../../components/CardLane';
 
 import {createGroup} from '../../../services/api/group';
 
+import { useNavigate } from 'react-router-dom';
+
+
 //Guardar os dados do grupo com UseStates
 
 
 
 
 const CreateGroup = () =>{
+    const navigate = useNavigate();
 
     const [grupo, setGrupo] = useState({
         idCriador: player.id,
@@ -39,9 +43,23 @@ const CreateGroup = () =>{
 
     function ajustHour(){
         setGrupo(grupo.horario = grupo.horario+":00");
-        console.log(typeof(grupo.horario));
     }
 
+    function resetStates(){
+        setGrupo({
+            idCriador: player.id,
+            nome: '',
+            data: '',
+            horario: '',
+            bloqueado: false,
+            ranqueada: false,
+            topo: '',
+            selva: '',
+            meio: '',
+            atirador: '',
+            suporte: ''
+        });
+    }
 
     function handlerSubmmit(e){
         e.preventDefault();
@@ -54,8 +72,12 @@ const CreateGroup = () =>{
             }
         });
         
-        createGroup(grupo);
-
+        try{
+            createGroup(grupo)
+        }catch(err){
+            console.log("chegamos aqui")
+        }
+        resetStates();
 
 
     }
@@ -96,7 +118,7 @@ const CreateGroup = () =>{
                     <input 
                     type="time" 
                     name="hora" 
-                    value={grupo.hora}
+                    value={grupo.horario}
                     onChange={(e) => setGrupo({...grupo, horario: e.target.value})}
                     id="hora-grupo" 
                     className='text-xl ml-5 p-3 bg-gray-700 rounded text-gray-200'
