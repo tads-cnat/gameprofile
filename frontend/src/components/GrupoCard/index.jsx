@@ -30,7 +30,7 @@ const GrupoCard = ({ grupo }) => {
               <img src={Topo} alt="topo" />
             </span>
 
-            <div className={`${topo[0] ? "indicador-off" : "indicador"}`}></div>
+            <div className={`${topo ? "indicador-off" : "indicador"}`}></div>
 
           </a>
         </Tooltip>
@@ -39,7 +39,7 @@ const GrupoCard = ({ grupo }) => {
             <span>
               <img src={Selva} alt="selva" />
             </span>
-            <div className={`${selva[0] ? "indicador-off" : "indicador"}`}></div>
+            <div className={`${selva ? "indicador-off" : "indicador"}`}></div>
 
           </a>
         </Tooltip>
@@ -48,7 +48,7 @@ const GrupoCard = ({ grupo }) => {
             <span>
               <img src={Meio} alt="meio" />
             </span>
-            <div className={`${meio[0] ? "indicador-off" : "indicador"}`}></div>
+            <div className={`${meio ? "indicador-off" : "indicador"}`}></div>
 
           </a>
         </Tooltip>
@@ -57,7 +57,7 @@ const GrupoCard = ({ grupo }) => {
             <span>
               <img src={Suporte} alt="suporte" />
             </span>
-            <div className={`${suporte[0] ? "indicador-off" : "indicador"}`}></div>
+            <div className={`${suporte ? "indicador-off" : "indicador"}`}></div>
 
           </a>
         </Tooltip>
@@ -66,7 +66,7 @@ const GrupoCard = ({ grupo }) => {
             <span>
               <img src={Atirador} alt="atirador" />
             </span>
-            <div className={`${atirador[0] ? "indicador-off" : "indicador"}`}></div>
+            <div className={`${atirador ? "indicador-off" : "indicador"}`}></div>
           </a>
         </Tooltip>
       </div>
