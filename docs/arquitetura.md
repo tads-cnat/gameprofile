@@ -139,12 +139,32 @@
 
 
 ## 7. Detalhamento da Implementação e Ambiente Físico
-### 7.1 - Visão de Implementação
+### 7.1 - Visão de Distribuição
+
+![image](/docs/An%C3%A1lise/Diagrama%20de%20componentes%20pds.png)
+
+![image](/docs/An%C3%A1lise/Diagrama%20de%20implanta%C3%A7%C3%A3o.png)
 
 | Componente | Responsabilidade  |
 | -- | -- | 
-|    |    |
-|    |    |
+| Sgbd - Postgresql  |  Sistema de banco de dados da aplicação  |
+| Computador do Cliente    | Máquina do usuário |
+| Aplicação Gameprofile          | Junção de regras de negócios, endpoints, classes, páginas de aplicações e implementações de usabilidade  |
+
+
+### 7.2 - Persistência
+
+| Classe  |  Tabela  | Significado  |
+| -- | -- | -- |
+|  Entrada  |  Entrada  |  Classe para permitir que um jogador entre em um grupo  |
+|  Mvo        |  mov_grupos | Classe para controlar o movimento de jogadores em um grupo |
+|  Partida    |  Partidas | Classe para armazenar dados sobre uma partida |
+|  Jogador    | Jogadores | Classe para guardar informações sobre jogadores |
+
+
+
+
+
 
 
 
