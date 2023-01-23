@@ -129,11 +129,83 @@
 | Grupo  |  Mantém informações sobre um grupo e seus jogadores | 
 | Partida | Mantém informações sobre uma partida e o grupo participante |
 
+### 6.2 - Diagrama de Sequência - modelo comportamental
+![image](/docs/An%C3%A1lise/Diagrama%20de%20sequ%C3%AAncia.png)
+</div>
+
+* A listagem de grupos e criação deles ocorre por uma colaboração entre funções do React e do Spring boot. Os dados de entrada são analisados a partir da classe MovDto.java
+
+<div align="center">
 
 
+## 7. Detalhamento da Implementação e Ambiente Físico
+### 7.1 - Visão de Distribuição
+
+![image](/docs/An%C3%A1lise/Diagrama%20de%20componentes%20pds.png)
+
+![image](/docs/An%C3%A1lise/Diagrama%20de%20implanta%C3%A7%C3%A3o.png)
+
+| Componente | Responsabilidade  |
+| -- | -- | 
+| Sgbd - Postgresql  |  Sistema de banco de dados da aplicação  |
+| Computador do Cliente    | Máquina do usuário |
+| Aplicação Gameprofile          | Junção de regras de negócios, endpoints, classes, páginas de aplicações e implementações de usabilidade  |
 
 
+### 7.2 - Persistência
+
+| Classe  |  Tabela  | Significado  |
+| -- | -- | -- |
+|  Entrada  |  Entrada  |  Classe para permitir que um jogador entre em um grupo  |
+|  Mvo        |  mov_grupos | Classe para controlar o movimento de jogadores em um grupo |
+|  Partida    |  Partidas | Classe para armazenar dados sobre uma partida |
+|  Jogador    | Jogadores | Classe para guardar informações sobre jogadores |
+
+### 7.3 - Interface do usuário
 
 </div>
+
+* A interface do usuário foi prototipada por meio do Figma, depois, foi implementada com o auxílio do React e do Typescript. Essas tecnologias foram escolhidas por questão de praticidade, visto que estão em alta no momento.
+
+<div align="center">
+
+
+## 8. Anexos
+### 8.1. API do Projeto
+
+</div>
+
+* URL: [https://ruan-franklin-automatic-barnacle-676wxv54gxq3rvwq-8080.preview.app.github.dev/grupos]
+* Descrição: [Requisição que listará todos os grupos.]
+* Método HTTP: [GET]
+* Tipo de retorno: String, boolean, date, DateTime, int
+* Exemplo de retorno: 
+{
+    "nome": "Gameprofile",
+    "data": "15-01-23",
+    "horario": "15:00",
+    "bloqueado": false,
+    "ranqueada": false,
+    "idCriador": 5,
+    "topo": 2,
+    "selva": 3,
+    "meio": null,
+    "suporte": 4,
+    "atirador": 5
+}
+
+
+### 8.2. API usada como base para o projeto
+
+http://br1.api.riotgames.com
+
+
+
+
+
+
+
+
+
 
 
