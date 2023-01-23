@@ -1,0 +1,18 @@
+.fundo{
+    background-color: var(--main-color);
+}
+.highlight{
+    color: var(--main-color-dark);
+}
+.btn{
+    background-color: var(--main-color-dark);
+    color: var(--main-ligth);
+    border: none;
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    margin: 4vh 2vw;
+}

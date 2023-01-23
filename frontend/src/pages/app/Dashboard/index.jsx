@@ -1,12 +1,26 @@
 import Skeleton from '@mui/material/Skeleton';
 import Box from '@mui/material/Box';
 
+import { useState } from 'react';
+
+
+
+
 const Dashboard = () => {
+    const [user, setUser] = useState({
+        nome: 'Tonny Souza',
+        nickname: 'tonnys82',
+        email: 'tonny.weslley@escolar.ifrn.edu.br'
+    });
+    //carregando dados do usuário aqui
     return (
         <div className='p-10'>
             <Box sx={{ display: 'flex', alignItems: 'center' }} className='bg-gray-200 rounded p-10 w-full'>
                 <Skeleton variant="circular" width={150} height={150} />
-                <Skeleton variant="rectangular"  width={250} height={25} className='ml-10'/>
+                <Box className='ml-2'> 
+                    <h1 className='flex'> {user.nome} </h1>
+                    <h1> AKA: {user.nickname}</h1>
+                </Box>
             </Box>
 
             <Box sx={{ display: 'flex', alignItems: 'center', direction: 'row'}} className='mt-10 h-4/6'>

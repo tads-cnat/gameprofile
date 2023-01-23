@@ -1,44 +1,30 @@
-{
-    "grupos":[{
-        "id": 1,
-        "nome": "Grupo de Tonny",
-        "data": "15-01-23",
-        "horario": "15:00",
-        "status": 0,
-        "ranqueada": true,
-        "id_criador": 1,
-        "topo": [true, null, false],
-        "selva": [true, 2, true],
-        "meio": [true, 3, false],
-        "suporte": [false, null, false],
-        "atirador": [false, null, false]
-    },
-    {
-        "id": 2,
-        "nome": "Grupo de Dina",
-        "data": "30-01-23",
-        "horario": "15:00",
-        "status": 0,
-        "ranqueada": false,
-        "id_criador": 1,
-        "topo": [true, null, false],
-        "selva": [true, 2, true],
-        "meio": [false, null, false],
-        "suporte": [true, 3, false],
-        "atirador": [false, null, false]
-    },
-    {
-        "id": 3,
-        "nome": "Grupo de Patrick",
-        "data": "02-02-23",
-        "horario": "15:00",
-        "status": 0,
-        "ranqueada": true,
-        "id_criador": 1,
-        "topo": [true, null, false],
-        "selva": [true, 2, true],
-        "meio": [false, null, false],
-        "suporte": [false, null, false],
-        "atirador": [true, 3, false]
-    }]
-}
+[
+	{
+		"idGrupo": 5,
+		"nome": "Lendas da Rua",
+		"data": "2023-01-14T03:00:00.000+00:00",
+		"horario": "15:00:00",
+		"bloqueado": false,
+		"ranqueada": false,
+		"idCriador": 4,
+		"topo": 2,
+		"selva": 3,
+		"meio": null,
+		"suporte": 4,
+		"atirador": 5
+	},
+	{
+		"idGrupo": 6,
+		"nome": "grupo do Tonny",
+		"data": "2023-01-29T03:00:00.000+00:00",
+		"horario": "16:30:00",
+		"bloqueado": false,
+		"ranqueada": false,
+		"idCriador": 3,
+		"topo": 2,
+		"selva": 2,
+		"meio": null,
+		"suporte": null,
+		"atirador": null
+	}
+]
