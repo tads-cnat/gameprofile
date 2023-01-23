@@ -1,17 +1,28 @@
 import Skeleton from '@mui/material/Skeleton';
 import Box from '@mui/material/Box';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
-
+import {getPlayer} from "../../../services/api/player"
 
 const Dashboard = () => {
     const [user, setUser] = useState({
-        nome: 'Tonny Souza',
-        nickname: 'tonnys82',
-        email: 'tonny.weslley@escolar.ifrn.edu.br'
+        nome: '',
+        nickname: '',
+        email: ''
     });
+
+    useEffect(() => {
+        getPlayer(2).then((response) => {
+            console.log(response)
+            setUser({
+                nome: response.nome,
+                nickname: response.nickname,
+                email: response.email
+            });
+        });
+    }, [])
     //carregando dados do usuário aqui
     return (
         <div className='p-10'>
@@ -20,6 +31,7 @@ const Dashboard = () => {
                 <Box className='ml-2'> 
                     <h1 className='flex'> {user.nome} </h1>
                     <h1> AKA: {user.nickname}</h1>
+                    <h1>{user.email}</h1>
                 </Box>
             </Box>
 
