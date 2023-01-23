@@ -1,4 +1,4 @@
-# Documentação de caso de uso
+# Documentação de caso de uso - Caso de uso desativado temporariamente
 
 
 ### UCP 04 - Gerenciar Fichas de Jogo

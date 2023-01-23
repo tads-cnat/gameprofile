@@ -1,7 +1,7 @@
 # Documentação de caso de uso
 
 
-### UCP 5 - Adicionar Amigo
+### UCP 4 - Adicionar Amigo
 |  |  |
 |--|--|
 | **Ator Principal** | Jogador. |

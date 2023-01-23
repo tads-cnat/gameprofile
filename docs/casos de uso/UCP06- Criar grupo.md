@@ -1,7 +1,7 @@
 # Documentação de caso de uso
 
 
-## UCP 7 - Criar grupo
+## UCP 6 - Criar grupo
 |  |  |
 |--|--|
 | **Ator Principal** | Jogador. |

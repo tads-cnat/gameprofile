@@ -1,7 +1,7 @@
 # Documentação de caso de uso
 
 
-### UCP 6 - Avaliar Jogador
+### UCP 5 - Avaliar Jogador
 
 |  |  |
 |--|--|
