@@ -1,8 +1,6 @@
 import { useState, useEffect, Component } from 'react';
 import GrupoCard from '../../../components/GrupoCard';
 
-import mock from '../../../mock/grupos.json';
-
 import {getGroups} from '../../../services/api/group';
 
 const Grupos = () => {
@@ -10,11 +8,12 @@ const Grupos = () => {
     const [grupos, setGrupos] = useState([]);
 
     useEffect(() => {
-        // getGroups().then((response) => {
-        //     setGrupos(response.data);
-        // });
+        getGroups().then((response) => {
+            console.log(response)
+            setGrupos(response);
+        });
 
-        setGrupos(mock);
+        // setGrupos(mock);
 
     }, []); 
 
