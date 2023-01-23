@@ -12,7 +12,7 @@
 
 
 ### Links importantes 
-- [Diagrama de casos de uso](https://github.com/tads-cnat/gameprofile/blob/main/docs/An%C3%A1lise/Caso%20de%20uso%20PDS%20distribuido%2001.drawio%20(1).png)
+- [Diagrama de casos de uso](https://github.com/tads-cnat/gameprofile/blob/main/docs/An%C3%A1lise/Diagrama%20de%20casos%20de%20uso.png)
 
 - [Protótipo](https://imgur.com/a/W6GyWY6)
 

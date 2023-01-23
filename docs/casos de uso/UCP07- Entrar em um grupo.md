@@ -12,7 +12,7 @@
 | **Fluxo alternativo** | 1 - O jogador acessa a interface principal e procura uma sala,  2 - Clica em cima de uma posição, 3-O sistema informa que não foi possível colocar o jogador no grupo, pois a posição não está disponível.|
 
 ### Links importantes 
-- [Diagrama de casos de uso](https://github.com/tads-cnat/gameprofile/blob/main/docs/An%C3%A1lise/Caso%20de%20uso%20PDS%20distribuido%2001.drawio%20(1).png)
+- [Diagrama de casos de uso](https://github.com/tads-cnat/gameprofile/blob/main/docs/An%C3%A1lise/Diagrama%20de%20casos%20de%20uso.png)
 
 - [Protótipo](https://imgur.com/3T4rwnl)
 

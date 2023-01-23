@@ -14,7 +14,7 @@
 ### Links importantes 
 
 
-- [Diagrama de casos de uso](https://github.com/tads-cnat/gameprofile/blob/main/docs/An%C3%A1lise/Caso%20de%20uso%20PDS%20distribuido%2001.drawio%20(1).png)
+- [Diagrama de casos de uso](https://github.com/tads-cnat/gameprofile/blob/main/docs/An%C3%A1lise/Diagrama%20de%20casos%20de%20uso.png)
 
 
 - [Figma do projeto](https://www.figma.com/file/dSRnqVj6y8ODgOGTLHax9r/Prototipos?node-id=0%3A1&t=BJKo6lfCw5KZHLYS-1)
