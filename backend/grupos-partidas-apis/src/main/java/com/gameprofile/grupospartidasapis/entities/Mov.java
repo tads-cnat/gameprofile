@@ -3,10 +3,10 @@ package com.gameprofile.grupospartidasapis.entities;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.sql.Time;
 import java.util.Date;
-import java.util.TimeZone;
 
 @Entity(name = "mov_grupos")
 @Data
@@ -19,6 +19,7 @@ public class Mov {
     @NotNull(message="{NotNull.Mov.nome}")
     private String nome;
     @Column
+    @DateTimeFormat(pattern = "dd/mm/yyyy")
     private Date data;
     @Column
     private Time horario;
