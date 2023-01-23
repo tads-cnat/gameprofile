@@ -10,11 +10,11 @@ const Grupos = () => {
     const [grupos, setGrupos] = useState([]);
 
     useEffect(() => {
-        // getGroups().then((response) => {
-        //     setGrupos(response.data);
-        // });
+        getGroups().then((response) => {
+            console.log (response);
+        });
 
-        setGrupos(mock);
+        // setGrupos(mock);
 
     }, []); 
 

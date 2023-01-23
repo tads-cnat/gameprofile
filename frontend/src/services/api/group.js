@@ -7,7 +7,6 @@ export async function createGroup (grupo) {
         axios.post( api.api_url + 'grupos', grupo, {
             headers: {
                 'Content-Type': 'application/json',
-                'Transfer-Encoding': 'chunked'
                 }
         }).then(response =>{
             if(response.status === 200){
@@ -26,15 +25,8 @@ export async function createGroup (grupo) {
 }
 
 export async function getGroups () {
-    axios({
-        method: 'get',
-        url: api.api_url + 'grupos',
-        mode: 'no-cors',
-        headers: {
-            'Content-Type': 'application/json',
-            'Transfer-Encoding': 'chunked'
-          }
-    }).then(response =>{
+    axios.get(api.api_url + 'grupos/').then(response =>{
+        console.log(response)
         if(response.status === 200){
             return response.json()
         }else{
