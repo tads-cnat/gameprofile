@@ -1,0 +1,70 @@
+.content{
+    background-color: #5A2E98;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    text-align: center;
+}
+
+
+.container-login {
+    width: 40vw;
+    padding: 5vh 4vw;
+    border-radius: 15px;
+    background-color: var(--light-white);
+    margin: auto;
+}
+
+.wrap-input {
+    width: 100%;
+    margin-bottom: 3vh;
+    background-color: var(--light-white);
+}
+
+.input-text-login {
+    width: 100%;
+    background-color: var(--light-grey);
+    border-radius: 10px;
+    padding: 1vw;
+    border: none;
+    font-family : 'Saira', sans-serif;
+}
+
+.input-text:focus {
+    outline: none;
+}
+
+.logo-login{
+    width: 18vw;
+    margin-bottom: 3vh;
+}
+
+.cadastro-link{
+    margin-top: 2vh;
+}
+
+.txt1, .txt2{
+    font-family : 'Inter', sans-serif;
+}
+
+.txt2{
+    color: var(--main-secondary);
+}
+
+.login-error-input{
+    border: var(--util-red) 1px solid;
+}
+
+.login-error-label{
+    color: var(--util-red);
+}

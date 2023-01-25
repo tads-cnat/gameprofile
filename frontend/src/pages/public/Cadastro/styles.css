@@ -1,0 +1,42 @@
+.container-register {
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+}
+.login-form {
+    width: 50%;
+    margin-left: 150px;
+
+}
+.logo-img img{
+    width: 300px;
+    margin-left: 150px
+}
+.txt {
+    background-color: #F5F5F5;
+    font-size: 1.5rem;
+    font-family: 'Inter', sans-serif;
+}
+.login-link{
+    margin-top: 2vh;
+}
+.input-text-cadastro {
+    width: 100%;
+    background-color: var(--light-grey);
+    border-radius: 10px;
+    padding: 0.8vw 1vw;
+    border: none;
+    font-family : 'Saira', sans-serif;
+}
+input:focus {
+    outline: none;
+}
+
+hr{
+    border: 1px solid var(--dark-grey);
+    width: 100%;
+    margin: 4vh 0px;
+}

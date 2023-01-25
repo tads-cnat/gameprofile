@@ -1,0 +1,16 @@
+
+.grupos-header{
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    padding: 0 1vw;
+    font-family: 'Saira', sans-serif;
+}
+
+.indicador-header{
+    width: 0.7vw;
+    height: 0.7vw;
+    margin: auto 1vw auto 0px;
+    border-radius: 50%;
+    background-color: var(--util-green); 
+}
