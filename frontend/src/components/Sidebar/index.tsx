@@ -1,13 +1,13 @@
 import Logo from "../../assets/logo/logo.svg";
 
 // importando icones
-import Home from "../../assets/sidebaricons/Home.svg";
-import Grupos from "../../assets/sidebaricons/Grupos.svg";
-import Perfil from "../../assets/sidebaricons/Perfil.svg";
-import Ajustes from "../../assets/sidebaricons/Ajustes.svg";
-import CriarGrupo from "../../assets/sidebaricons/CriarGrupo.svg";
-import Sair from "../../assets/sidebaricons/Sair.svg";
-import Noturno from "../../assets/sidebaricons/Noturno.svg";
+import Home from "../../assets/sidebarIcons/Home.svg";
+import Grupos from "../../assets/sidebarIcons/Grupos.svg";
+import Perfil from "../../assets/sidebarIcons/Perfil.svg";
+import Ajustes from "../../assets/sidebarIcons/Ajustes.svg";
+import CriarGrupo from "../../assets/sidebarIcons/CriarGrupo.svg";
+import Sair from "../../assets/sidebarIcons/Sair.svg";
+import Noturno from "../../assets/sidebarIcons/Noturno.svg";
 
 import Tooltip from "@mui/material/Tooltip";
 
