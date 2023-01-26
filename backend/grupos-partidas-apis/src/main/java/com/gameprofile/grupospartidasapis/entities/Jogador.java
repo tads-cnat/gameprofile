@@ -12,7 +12,7 @@ import java.util.Date;
 public class Jogador{
     @Id
     @Column(name = "id_jogador")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idJogador; 
     
     @Column(name = "nickname")
