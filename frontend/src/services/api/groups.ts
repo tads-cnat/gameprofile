@@ -2,7 +2,7 @@ import api from "./api.json";
 import axios from "axios";
 import { Group } from "../../entities/group";
 
-export async function createGroup(group: Omit<Group, "idCriador" | "idGrupo">): Promise<void> {
+export async function createGroup(group: Omit<Group, "idGrupo">): Promise<void> {
     try {
         const response = await axios.post(api.api_url + "grupos", group, {
             headers: {

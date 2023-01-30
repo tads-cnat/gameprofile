@@ -1,33 +1,43 @@
 //importando imagens das lanes
-import topLane from '../../assets/top.png';
-import junglane from '../../assets/jungle.png';
-import midLane from '../../assets/mid.png';
-import adcLane from '../../assets/adc.png';
-import supportLane from '../../assets/support.png';
+import topLane from '../../assets/lanes/light/topo.svg';
+import junglane from '../../assets/lanes/light/selva.svg';
+import midLane from '../../assets/lanes/light/meio.svg';
+import adcLane from '../../assets/lanes/light/atirador.svg';
+import supportLane from '../../assets/lanes/light/suporte.svg';
 import "./styles.css"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Switch from '@mui/material/Switch';
 
 const CardLane = (props:any) => {
 
     const [checked, setChecked] = useState(false);
-    const [select , setSelect] = useState('');
+    const [selected , setSelected] = useState('');
 
 
     const handleChange = (event:any) => {
         setChecked(event.target.checked);
     };
 
-    setSelect(`../../assets/lanes/light/${props.name}.svg`)
-
-
+    useEffect(() => {
+        if(props.lane === "topo"){
+            setSelected(topLane);
+        }else if(props.lane === "selva"){
+            setSelected(junglane);
+        }else if(props.lane === "meio"){
+            setSelected(midLane);
+        }else if(props.lane === "atirador"){
+            setSelected(adcLane);
+        }else if(props.lane === "suporte"){
+            setSelected(supportLane);
+        }
+    })
 
     return(
         <div className="card-lane bg-slate-800 rounded text-white p-6">
             
             <div className="lane-id flex flex-col justify-center w-full">
-                <img src={select} alt={props.name} width='60px' className='m-auto'/>
+                <img src={selected} alt={props.name} width='60px' className='m-auto'/>
                 <span className='mx-auto my-2'>{props.name}</span>
             </div>
             <hr />
