@@ -10,6 +10,7 @@ import Ajustes from './pages/app/Ajustes'
 
 //router import
 import {createBrowserRouter,RouterProvider} from "react-router-dom";
+import CreateGroup from './pages/app/CreateGroup'
 
 const Routes = () => {
 
@@ -34,6 +35,7 @@ const Routes = () => {
                 {path: 'grupos', element: <Grupos/>},
                 {path: 'perfil', element: <Perfil/>},
                 {path: 'ajustes', element: <Ajustes/>},
+                {path: 'criar-grupo', element: <CreateGroup/>},
             ]
         },
     ]);
