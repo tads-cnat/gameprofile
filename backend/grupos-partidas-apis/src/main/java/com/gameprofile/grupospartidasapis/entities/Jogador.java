@@ -1,5 +1,6 @@
 package com.gameprofile.grupospartidasapis.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
@@ -12,7 +13,7 @@ import java.util.Date;
 public class Jogador{
     @Id
     @Column(name = "id_jogador")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idJogador; 
     
     @Column(name = "nickname")
@@ -29,6 +30,7 @@ public class Jogador{
 
     @Column(name = "senha")
     @NotNull(message="{NotNull.Jogador.senha}")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String senha;
 
     @DateTimeFormat(pattern = "dd/mm/yyyy")
