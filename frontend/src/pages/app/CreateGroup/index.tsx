@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import Switch from '@mui/material/Switch';
-// import './index.css'
+import './index.css'
 import { useState } from 'react';
 
 import CardLane from '../../../components/CardLane';
@@ -10,7 +10,8 @@ import {createGroup} from '../../../services/api/groups';
 import { useNavigate } from 'react-router-dom';
 import { Group } from '../../../entities/group';
 
-const initialState: Omit<Group, "idCriador" | "idGrupo"> = {
+const initialState: Omit<Group, "idGrupo"> = {
+    idCriador: 2,
     nome: "",
     data: "",
     horario: "",
@@ -26,7 +27,7 @@ const initialState: Omit<Group, "idCriador" | "idGrupo"> = {
 const CreateGroup = () =>{
     const navigate = useNavigate();
 
-    const [grupo, setGrupo] = useState<Omit<Group, "idCriador" | "idGrupo">>(initialState);
+    const [grupo, setGrupo] = useState<Omit<Group, "idGrupo">>(initialState);
 
     function switchRanked(){
         setGrupo({...grupo, ranqueada: !grupo.ranqueada});
@@ -36,20 +37,13 @@ const CreateGroup = () =>{
         setGrupo({...grupo, topo: "", selva: "", meio: "", atirador: "", suporte: ""})
     }
 
-    // function ajustHour(){
-    //     const {horario} = grupo;
-
-    //     setGrupo({...grupo, horario: horario + ":00"});
-    // }
-
     function resetStates(){
         setGrupo(initialState);
     }
 
-    function handlerSubmmit(e: React.FormEvent<HTMLFormElement>){
+    async function handlerSubmmit(e: React.FormEvent<HTMLFormElement>){
         e.preventDefault();
         resetLanes();
-        // ajustHour();
         const lanes = ["topo", "selva", "meio", "atirador", "suporte"]
         lanes.forEach(lane => {
             // @ts-ignore
@@ -59,13 +53,12 @@ const CreateGroup = () =>{
         });
         
         try{
-            createGroup(grupo)
+            await createGroup(grupo)
+            navigate("/app/grupos")
         }catch(err){
             console.log("chegamos aqui")
         }
         resetStates();
-
-
     }
         
     return(

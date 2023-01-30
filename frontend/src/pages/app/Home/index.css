@@ -1,0 +1,26 @@
+#home .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#home .title {
+    color: white;
+}
+
+#home .box {
+    background-color: #2C004B;
+    border-radius: 10px;
+    width: 100%;
+    padding: 20px;
+    margin-left: 20px;
+    color: white;
+}
+
+#home .box .card {
+    background-color: #5A2E98;
+    border-radius: 10px;
+    margin: 15px;
+    width: 100%;
+    padding: 20px;
+}

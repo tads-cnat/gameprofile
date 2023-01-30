@@ -7,7 +7,6 @@ export async function getPlayer(playerId: number): Promise<Player> {
         const response = await axios.get<Player>(api.api_url + "jogadores/" + playerId, {
             headers: {
               "Content-Type": "application/json",
-              "Transfer-Encoding": "chunked",
             },
         })
         
