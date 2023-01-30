@@ -15,6 +15,10 @@ const GrupoCard = ({ grupo }:any) => {
   const databack = new Date(data);
   let dataFormatada = databack.toLocaleDateString('pt-BR', { timeZone: 'UTC' });
 
+  //remove the last 3 characters from the string
+  let horaFormatada = horario.substring(0, horario.length - 3);
+  
+
 
 
   return (
@@ -24,7 +28,7 @@ const GrupoCard = ({ grupo }:any) => {
         <div className='submenu'>
           <p>{dataFormatada
       }</p>
-          {/* <p>{horario}h</p> */}
+          <p>{horaFormatada}h</p>
           <p>-</p>
           <p>{`${ranqueada ? "Competitivo" : "Casual"}`}</p>
         </div>
