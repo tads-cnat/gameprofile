@@ -12,13 +12,19 @@ import './styles.css';
 const GrupoCard = ({ grupo }:any) => {
   const { nome, data, horario, ranqueada, topo, selva, meio, suporte, atirador } = grupo;
 
+  const databack = new Date(data);
+  let dataFormatada = databack.toLocaleDateString('pt-BR', { timeZone: 'UTC' });
+
+
+
   return (
     <div className="card-group mt-5">
       <div>
         <h1>{nome}</h1>
         <div className='submenu'>
-          <p>{data}</p>
-          <p>{horario}h</p>
+          <p>{dataFormatada
+      }</p>
+          {/* <p>{horario}h</p> */}
           <p>-</p>
           <p>{`${ranqueada ? "Competitivo" : "Casual"}`}</p>
         </div>

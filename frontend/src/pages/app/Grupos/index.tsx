@@ -1,12 +1,23 @@
-import grupos_mock from '../../../mock/grupos.json';
 import { useState, useEffect, Component } from 'react';
 import GrupoCard from '../../../components/GrupoCard';
+import axios from 'axios';
 
 import './styles.css'
 
+
 const Grupos = () => {
 
-    const [grupos, setGrupos] = useState(grupos_mock);
+    const [grupos, setGrupos] = useState([]);
+
+    useEffect(() => {
+        axios.get('http://localhost:8080/grupos')
+            .then((response) => {
+                setGrupos(response.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }, []);
 
     return(
         <div className="app-area" id="grupos">
