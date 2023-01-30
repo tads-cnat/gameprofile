@@ -36,9 +36,11 @@ const CreateGroup = () =>{
         setGrupo({...grupo, topo: "", selva: "", meio: "", atirador: "", suporte: ""})
     }
 
-    function ajustHour(){
-        setGrupo({...grupo, horario: grupo.horario + ":00"});
-    }
+    // function ajustHour(){
+    //     const {horario} = grupo;
+
+    //     setGrupo({...grupo, horario: horario + ":00"});
+    // }
 
     function resetStates(){
         setGrupo(initialState);
@@ -47,7 +49,7 @@ const CreateGroup = () =>{
     function handlerSubmmit(e: React.FormEvent<HTMLFormElement>){
         e.preventDefault();
         resetLanes();
-        ajustHour();
+        // ajustHour();
         const lanes = ["topo", "selva", "meio", "atirador", "suporte"]
         lanes.forEach(lane => {
             // @ts-ignore
@@ -67,7 +69,7 @@ const CreateGroup = () =>{
     }
         
     return(
-        <div className="w-full h-full p-14">
+        <div className="app-area" id="create-group">
             <Box sx={{ display: 'flex' }} className='bg-gray-200 rounded p-10 w-full h-full'>
 
                 <form method='POST' onSubmit={handlerSubmmit} className="w-full flex flex-col justify-between">
@@ -103,7 +105,7 @@ const CreateGroup = () =>{
                     type="time" 
                     name="hora" 
                     value={grupo.horario}
-                    onChange={(e) => setGrupo({...grupo, horario: e.target.value})}
+                    onChange={(e) => setGrupo({...grupo, horario: e.target.value + ":00"})}
                     id="hora-grupo" 
                     className='text-xl ml-5 p-3 bg-gray-700 rounded text-gray-200'
                     required/>
@@ -126,8 +128,6 @@ const CreateGroup = () =>{
                     <CardLane 
                     lane='suporte' 
                     name='Suporte'/>
-
-
                 </div>
 
                 <label className='mt-5 flex flex-row align-middle'>

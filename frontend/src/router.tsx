@@ -7,10 +7,10 @@ import Home from './pages/app/Home'
 import Grupos from './pages/app/Grupos'
 import Perfil from './pages/app/Perfil'
 import Ajustes from './pages/app/Ajustes'
+import CreateGroup from './pages/app/CreateGroup'
 
 //router import
 import {createBrowserRouter,RouterProvider} from "react-router-dom";
-import CreateGroup from './pages/app/CreateGroup'
 
 const Routes = () => {
 
