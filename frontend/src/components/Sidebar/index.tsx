@@ -84,13 +84,15 @@ const Sidebar = () => {
         </Tooltip>
       </div>
 
-          <div className="sidebar-menu">
-            <Tooltip title="Criar Grupo" placement="right">
-              <div className="sidebar-menu-item selected">
-                <img src={CriarGrupo} alt="Criar Grupo" className="sidebar-menu-item-icon" />
-              </div>
-            </Tooltip>
+      <div className="sidebar-menu">
+        <Tooltip title="Criar Grupo" placement="right">
+          <div className="sidebar-menu-item selected">
+            <Link to="/app/criar-grupo">
+              <img src={CriarGrupo} alt="Criar Grupo" className="sidebar-menu-item-icon" />
+            </Link>
           </div>
+        </Tooltip>
+      </div>
 
       <div className="sidebar-footer">
         <div className="sidebar-menu-item">
