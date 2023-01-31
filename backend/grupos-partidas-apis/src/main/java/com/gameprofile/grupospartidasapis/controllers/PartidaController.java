@@ -37,9 +37,8 @@ public class PartidaController {
     public List<Object> getCountries(){
         String url = "https://restcountries.com/v3.1/all";
         RestTemplate restTemplate = new RestTemplate();
-        Object [] paises = restTemplate.getForObject(url, Object[].class);
+        Object[] paises = restTemplate.getForObject(url, Object[].class);
         return Arrays.asList(paises);
-
     }
 
     @PostMapping
