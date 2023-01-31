@@ -23,7 +23,7 @@ public class PartidaController {
     public List<Partida> findAll() {
         try {
             return repository.findAll();
-        } catch(Exception e) {
+        } catch(IllegalStateException e) {
             return Collections.emptyList();
         }
     }

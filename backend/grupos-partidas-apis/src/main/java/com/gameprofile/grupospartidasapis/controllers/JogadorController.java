@@ -19,7 +19,7 @@ public class JogadorController {
         public List<Jogador> findAll() {
             try {
                 return repository.findAll();
-            } catch(Exception e) {
+            } catch(IllegalStateException e) {
                 return Collections.emptyList();
             }
         }

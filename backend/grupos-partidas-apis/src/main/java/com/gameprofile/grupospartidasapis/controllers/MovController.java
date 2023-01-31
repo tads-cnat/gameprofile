@@ -25,7 +25,7 @@ public class MovController {
     public List<Mov> findAll() {
         try {
             return repository.findAll();
-        } catch(Exception e) {
+        } catch(IllegalStateException e) {
             return Collections.emptyList();
         }
     }
