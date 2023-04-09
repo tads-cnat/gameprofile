@@ -20,7 +20,7 @@ public class EntradaController {
     public List<Entrada> findAll() {
         try {
             return repository.findAll();
-        } catch(IllegalStateException e) {
+        } catch (IllegalStateException e) {
             return Collections.emptyList();
         }
     }
