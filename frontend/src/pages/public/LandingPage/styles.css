@@ -1,4 +1,237 @@
-#content{
-    height: 100vh;
-    background-color: var(--main-secondary);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+    width: 100%;
+}
+  .logo {
+    font-weight: bold;
+  }
+
+  .lading-page-container {
+    padding-left: 80px;
+    padding-right: 80px;
+    display: flex;
+  }
+  
+  .section {
+    padding: 110px 0;
+  }
+  
+  .section .title {
+    margin-bottom: 16px;
+    color: #9600FF;
+    text-align: center;
+  }
+  
+  .section .subtitle {
+    font-size: 16px;
+    color: gray;
+    text-align: center;
+  }
+  
+  .section header {
+    margin-bottom: 64px;
+  }
+  
+  .section header strong {
+    color: #9600FF;
+  } 
+  
+  nav {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  nav .menu ul {
+    display: flex;
+  }
+  
+  nav .menu li {
+    margin-left: 20px;
+  }
+  
+  #header {
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 32px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: white;
+    width: 100%;
+  }
+  #header {
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 32px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: white;
+    width: 100%;
+  }
+  #home {
+    background-color: #342E37;
+  }
+  
+  #home .lading-page-container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  
+  #home .image img{
+    position: relative;
+    right: 47px;
+    height: 400px;
+  }
+  
+  #home .text {
+    margin-left: 34px;
+    margin-right: 34px;
+    margin-top: 60px;
+    max-width: 384px;
+    text-align: left;
+  }
+  
+  #home .text h1 {
+    margin-bottom: 16px;
+    text-align: start;
+    color: #9600FF;
+    font-size: 50px;
+  }
+  #home .text h1 span {
+    color: #C297FF;
+    
+  }
+  
+  #home .text p {
+    margin-bottom: 32px;
+    color: #AEAEAE;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    color: gray;
+  }
+  
+  .logo span {
+    color: #9600FF;
+  }
+  .logo-alt span {
+    color: white;
+  }
+  
+  #about {
+    background: white;
+  }
+  
+  #about .lading-page-container {
+    margin: 0 auto;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #about .image {
+    position: relative;
+  }
+  
+  #about .image img {
+    border-radius: 4px;
+  }
+
+  #about h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2C004B;
+    
+  }
+  
+  #about .text {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  #register {
+    background-color: gray;
+    background-image: url("../../../assets/img/lol-imagem.png");
+    /* opacity: 0.5; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+  }
+  
+  #register li {
+    margin-top: 20px;
+  }
+  
+  #register .text {
+    max-width: 400px;
+  }
+  
+  #register .text p {
+    margin-bottom: 32px;
+  }
+
+  #register .lading-page-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  #register .lading-page-container button {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
+  
+  footer {
+    background: #342E37;
+  }
+  footer p {
+    color: white;
+  }
+  
+  #background {
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.419);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: none;
+    justify-content: center;
+  }
+ 
