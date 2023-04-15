@@ -41,7 +41,11 @@ a {
   }
   
   .section {
-    padding: 110px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    min-height: 500px;
   }
   
   .section .title {
@@ -78,6 +82,8 @@ a {
   
   nav .menu li {
     margin-left: 20px;
+    display: flex;
+    align-items: center;
   }
   
   #header {
@@ -104,12 +110,15 @@ a {
   }
   #home {
     background-color: #342E37;
+    margin-top: 73px;
   }
   
   #home .lading-page-container {
+    display: flex;
     grid-auto-flow: column;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0 auto;
+    width: 100%;
   }
   
   #home .image img{
@@ -166,40 +175,64 @@ a {
   }
   
   #about .image {
-    position: relative;
+    margin-left: 100px;
+    width: 40%;
   }
   
   #about .image img {
+    width: 100%;
     border-radius: 4px;
+    -webkit-box-shadow: -69px -50px 0px 0px rgba(222,201,252,1);
+    -moz-box-shadow: -69px -50px 0px 0px rgba(222,201,252,1);
+    box-shadow: -69px -50px 0px 0px rgba(222,201,252,1);
+  }
+
+  #about .text{
+    width: 60%;
+    padding-left: 80px;
+    font-family: sans-serif;
+    color: #5F5F5F;
   }
 
   #about h2 {
     font-size: 30px;
     font-weight: bold;
     color: #2C004B;
+    text-align: left;
     
-  }
-  
-  #about .text {
-    margin-left: 24px;
-    margin-right: 24px;
   }
 
   #register {
     background-color: gray;
+    align-items: center;
+    position: relative;
+  }
+
+  #register::before{
     background-image: url("../../../assets/img/lol-imagem.png");
-    /* opacity: 0.5; */
     background-repeat: no-repeat;
     background-size: cover;
-    align-items: center;
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.5;
   }
   
   #register li {
     margin-top: 20px;
   }
-  
+
+  #register h2 {
+    font-weight: bold;
+    font-size: 30px;
+    color: #2C004B;
+    text-align:center ;
+    isolation: isolate;
+  }
+
   #register .text {
-    max-width: 400px;
+    max-width: 500px;
+    isolation: isolate;
   }
   
   #register .text p {
@@ -215,10 +248,12 @@ a {
     display: flex;
     margin: auto;
     justify-content: center;
+    isolation: isolate;
   }
   
   footer {
     background: #342E37;
+    padding: 40px;
   }
   footer p {
     color: white;

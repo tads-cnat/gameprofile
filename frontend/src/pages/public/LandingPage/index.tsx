@@ -84,7 +84,7 @@ const LandingPage = () => {
             </section>
             </main>
 
-            <footer className="section">
+            <footer>
             <div className="lading-page-container">
                 <div>
                 <a className="logo logo-alt" href="#home">Game<span>Profile</span></a>
