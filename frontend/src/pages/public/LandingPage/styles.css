@@ -1,4 +1,272 @@
-#content{
-    height: 100vh;
-    background-color: var(--main-secondary);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+    width: 100%;
+}
+  .logo {
+    font-weight: bold;
+  }
+
+  .lading-page-container {
+    padding-left: 80px;
+    padding-right: 80px;
+    display: flex;
+  }
+  
+  .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    min-height: 500px;
+  }
+  
+  .section .title {
+    margin-bottom: 16px;
+    color: #9600FF;
+    text-align: center;
+  }
+  
+  .section .subtitle {
+    font-size: 16px;
+    color: gray;
+    text-align: center;
+  }
+  
+  .section header {
+    margin-bottom: 64px;
+  }
+  
+  .section header strong {
+    color: #9600FF;
+  } 
+  
+  nav {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  nav .menu ul {
+    display: flex;
+  }
+  
+  nav .menu li {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  #header {
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 32px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: white;
+    width: 100%;
+  }
+  #header {
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 32px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: white;
+    width: 100%;
+  }
+  #home {
+    background-color: #342E37;
+    margin-top: 73px;
+  }
+  
+  #home .lading-page-container {
+    display: flex;
+    grid-auto-flow: column;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  #home .image img{
+    position: relative;
+    right: 47px;
+    height: 400px;
+  }
+  
+  #home .text {
+    margin-left: 34px;
+    margin-right: 34px;
+    margin-top: 60px;
+    max-width: 384px;
+    text-align: left;
+  }
+  
+  #home .text h1 {
+    margin-bottom: 16px;
+    text-align: start;
+    color: #9600FF;
+    font-size: 50px;
+  }
+  #home .text h1 span {
+    color: #C297FF;
+    
+  }
+  
+  #home .text p {
+    margin-bottom: 32px;
+    color: #AEAEAE;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    color: gray;
+  }
+  
+  .logo span {
+    color: #9600FF;
+  }
+  .logo-alt span {
+    color: white;
+  }
+  
+  #about {
+    background: white;
+  }
+  
+  #about .lading-page-container {
+    margin: 0 auto;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #about .image {
+    margin-left: 100px;
+    width: 40%;
+  }
+  
+  #about .image img {
+    width: 100%;
+    border-radius: 4px;
+    -webkit-box-shadow: -69px -50px 0px 0px rgba(222,201,252,1);
+    -moz-box-shadow: -69px -50px 0px 0px rgba(222,201,252,1);
+    box-shadow: -69px -50px 0px 0px rgba(222,201,252,1);
+  }
+
+  #about .text{
+    width: 60%;
+    padding-left: 80px;
+    font-family: sans-serif;
+    color: #5F5F5F;
+  }
+
+  #about h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2C004B;
+    text-align: left;
+    
+  }
+
+  #register {
+    background-color: gray;
+    align-items: center;
+    position: relative;
+  }
+
+  #register::before{
+    background-image: url("../../../assets/img/lol-imagem.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.5;
+  }
+  
+  #register li {
+    margin-top: 20px;
+  }
+
+  #register h2 {
+    font-weight: bold;
+    font-size: 30px;
+    color: #2C004B;
+    text-align:center ;
+    isolation: isolate;
+  }
+
+  #register .text {
+    max-width: 500px;
+    isolation: isolate;
+  }
+  
+  #register .text p {
+    margin-bottom: 32px;
+  }
+
+  #register .lading-page-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  #register .lading-page-container button {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    isolation: isolate;
+  }
+  
+  footer {
+    background: #342E37;
+    padding: 40px;
+  }
+  footer p {
+    color: white;
+  }
+  
+  #background {
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.419);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: none;
+    justify-content: center;
+  }
+ 
