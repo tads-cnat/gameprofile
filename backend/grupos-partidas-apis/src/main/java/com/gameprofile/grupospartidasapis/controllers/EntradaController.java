@@ -3,12 +3,12 @@ package com.gameprofile.grupospartidasapis.controllers;
 import com.gameprofile.grupospartidasapis.entities.Entrada;
 import com.gameprofile.grupospartidasapis.repositories.EntradaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+//import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/entradas")
+@RequestMapping("/entradas")
 public class EntradaController {
     @Autowired
     private EntradaRepository repository;
@@ -18,7 +18,7 @@ public class EntradaController {
         return repository.findAll();
     }
 
-    @GetMapping(value = "/{id}")
+    @GetMapping( "/{id}")
     public Entrada findAll(@PathVariable Integer id) {
         return repository.findById(id).get();
     }

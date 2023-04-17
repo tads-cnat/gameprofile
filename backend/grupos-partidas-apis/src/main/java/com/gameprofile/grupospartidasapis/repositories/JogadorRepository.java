@@ -5,6 +5,6 @@ import java.util.Optional;
 
 
 public interface JogadorRepository extends JpaRepository<Jogador, Integer> {
-    public Optional<Jogador> findByNickname(String nickname);
+    Optional<Jogador> findByNickname(String nickname);
 }
 
