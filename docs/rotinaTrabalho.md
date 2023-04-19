@@ -4,10 +4,10 @@
 
 </div>
 
-## 4 Reuniões semanais:
+##  Reuniões semanais:
 
-- Segunda presencial
-- Terça, quarta e quinta pelo Discord
+- Terça-feira presencial
+- Quinta-feira pelo Discord
 
 ---
 
@@ -19,18 +19,17 @@ Será avaliado semanalmente os riscos do projeto
 
 ## Issues criadas semanalmente:
 
-- Criar issues toda segunda;
-- Apresentar na segunda para o gerente as tarefas realizadas durante a semana;
-- Terça: momento da equipe do front-end se reunir para alinhar os interesses da semana;
-- Quarta: momento da equipe do back-end se reunir;
+- Criar issues a cada sprint;
+- Apresentar na terça-feira para o gerente as tarefas realizadas durante a semana;
 - Quinta: momento de toda a equipe se reunir para tirar dúvidas sobre as  tarefas semanais.
 
 ---
 
 ## Issues serão criadas para equipes espécificas
 
-- equipe do front-end: Dina, Franklin e Tonny.
+- equipe do front-end: Dina, Franklin e Giovanna.
 - equipe do back-end: Ruan, Patrick e Lázaro.
+- equipe de infraestrutura: Ruan e Patrick
 - equipe do marketing: Todos
 - equipe de documentação: Todos
 
@@ -38,7 +37,7 @@ Será avaliado semanalmente os riscos do projeto
 
 ## Todas as atividades serão adicionadas no GitHub, com as seguintes fases:
 
-- Demandas
+- Open
 - To do
-- In Progress
+- Doing
 - Done
