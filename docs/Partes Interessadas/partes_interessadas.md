@@ -1,11 +1,11 @@
-|         **parte interessada**         |        **email**        |         **função**         | **interesse no projeto** | **importância** |
-|:-------------------------------------:|:-----------------------:|:--------------------------:|:------------------------:|:---------------:|
-|             Usuário do LoL            |      não informado      |           Jogador          |           Baixa          |       Alta      |
-| Agência Nacional de Proteção de Dados |      não informado      | Fiscalização legal externa |           Média          |       Alta      |
-|              Gracon Lima              | gracon.lima@ifrn.edu.br |    Professor orientador    |           Média          |       Alta      |
-|                 Lázaro                |  lazaro@gameprofile.io  |    Desenvolvedor backend   |           Alta           |       Alta      |
-|                Patrick                |  patrick@gameprofile.io |    Desenvolvedor backend   |           Alta           |       Alta      |
-|                  Ruan                 |   ruan@gameprofile.io   |    Desenvolvedor backend   |           Alta           |       Alta      |
-|                  Dina                 |   dina@gameprofile.io   |   Desenvolvedora frontend  |           Alta           |       Alta      |
-|                Giovanna               | giovanna@gameprofile.io |   Desenvolvedora frontend  |           Alta           |       Alta      |
-|                Franklin               | franklin@gameprofile.io |   Desenvolvedora frontend  |           Alta           |       Alta      |
+|         **parte interessada**         |        **email**        |         **função**         | **principal responsabilidade** | **responsabilidades complementares** | **interesse no projeto** | **importância** |
+|:-------------------------------------:|:-----------------------:|:--------------------------:|:------------------------------:|:------------------------------------:|:------------------------:|:---------------:|
+|             Usuário do LoL            |      não informado      |           Jogador          |          não informado         |             não informado            |           Baixa          |       Alta      |
+| Agência Nacional de Proteção de Dados |      não informado      | Fiscalização legal externa |          não informado         |             não informado            |           Média          |       Alta      |
+|              Gracon Lima              | gracon.lima@ifrn.edu.br |    Professor orientador    |   Supervisionar as atividades  |             não informado            |           Média          |       Alta      |
+|                 Lázaro                |  lazaro@gameprofile.io  |     Desenvolvedor Java     |   Desenvolver e manter a API   |    definir as partes interessadas    |           Alta           |       Alta      |
+|                Patrick                |  patrick@gameprofile.io |     Desenvolvedor Java     |   Desenvolver e manter a API   |        implementação em nuvem        |           Alta           |       Alta      |
+|                  Ruan                 |   ruan@gameprofile.io   |     Desenvolvedor Java     |   Desenvolver e manter a API   |         liderança do grupo;          |           Alta           |       Alta      |
+|                  Dina                 |   dina@gameprofile.io   |    Desenvolvedora React    |       Desenvolver a UI/UX      |        criação da landing page       |           Alta           |       Alta      |
+|                Giovanna               | giovanna@gameprofile.io |    Desenvolvedora React    |       Desenvolver a UI/UX      |             não informado            |           Alta           |       Alta      |
+|                Franklin               | franklin@gameprofile.io |     Desenvolvedor React    |       Desenvolver a UI/UX      |             não informado            |           Alta           |       Alta      |
