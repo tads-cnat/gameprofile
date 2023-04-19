@@ -197,7 +197,8 @@
 
 ### 8.2. API usada como base para o projeto
 
-http://br1.api.riotgames.com
+[Api do LOL](http://br1.api.riotgames.com)
+
 
 
 
