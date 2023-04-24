@@ -1,0 +1,7 @@
+{"properties": [
+  {
+    "name": "riot.api.key",
+    "type": "java.lang.String",
+    "description": "Indica a chave da API usada no League of Legendsy'"
+  }
+]}

@@ -1,52 +1,53 @@
 package com.gameprofile.grupospartidasapis.configurations.security;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+
+import com.gameprofile.grupospartidasapis.services.JogadorService;
 
 @Configuration
 @EnableWebSecurity // habilita a configuração de segurança baseada em web
 public class WebSecurityConfig {
-
 	@Bean
-	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-		http
-			.authorizeHttpRequests((requests) -> requests
-				.requestMatchers("/", "/home").permitAll() // permite o acesso à home page e à raiz da aplicação
-				.anyRequest().authenticated() // requer autenticação para qualquer outra requisição
-			)
-			.formLogin((form) -> form
-				.loginPage("/login") // define a página de login
-				.permitAll() // permite que todos acessem a página de login
-			)
-			.logout((logout) -> logout.permitAll()); // permite que todos façam logout
-
-		return http.build();
-	}
-
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-
-	@Bean
-	public UserDetailsService userDetailsService() {
-		UserDetails user =
-			 User.withDefaultPasswordEncoder()
-				.username("user")
-				.password("password")
-				.roles("USER")
-				.build();
-
-		return new InMemoryUserDetailsManager(user);
-	}
+	public SecurityFilterChain configure(HttpSecurity http) throws Exception {
+		http.authorizeHttpRequests( (authorize) -> authorize
+           .requestMatchers("/", "/grupos").permitAll()
+           .requestMatchers("/user/cadastro").hasAuthority(ADMIN)
+           .anyRequest().authenticated()
+     ).formLogin( (form) -> form
+           .defaultSuccessUrl("/", true)
+           .failureUrl("/login-error")
+           .permitAll()
+      ).logout( (logout) -> logout
+           .logoutSuccessUrl("/")
+           .deleteCookies("JSESSIONID")
+      ).exceptionHandling( (ex) -> ex
+           .accessDeniedPage("/negado")
+      );
+      return http.build();
 }
 
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+}
+
+	@Bean
+	public AuthenticationManager authenticationManager(HttpSecurity http,PasswordEncoder passwordEncoder,JogadorService userDetailsService) throws Exception {
+		return http.getSharedObject(AuthenticationManagerBuilder.class)
+               .userDetailsService(userDetailsService)
+               .passwordEncoder(passwordEncoder)
+               .and()
+               .build();
+}
+
+public static final String ADMIN = "ADMIN";
+
+}
 
