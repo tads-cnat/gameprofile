@@ -15,7 +15,7 @@
 ### Visão dos Envolvidos
 |Parte interessada|Função	|Principais responsabilidades	|Principais interesses e expectativas	|Poder na empresa	|Interesse no projeto	|Estratégias para ganhar mais suporte ou reduzir resistências|
 |--|--|--|--|--|--|--|
-| Jogadores de League of Legends(LOL)	|	Usuário	| Melhorar a experiência nas partidas	| Reduzir o envolvimento de pessoas tóxicas nas partidas do jogo	| 1-Muito baixo |	5-Muito Alto	| Pesquisas de interesse |
+| Jogadores de League of Legends(LOL)	|	Usuário	| Melhorar a experiência nas partidas	| Reduzir o envolvimento de pessoas tóxicas nas partidas do jogo	| 1-Muito baixo |	5-Muito Alto	| Pesquisas de interesse; Receber, prioritariamente, aviso das novidades; Participar de testes de implementações beta |
 |Clubes de esportes eletrônicos do Brasil | Usuário | Engajar competição na comunidade	| Utilizar a plataforma como seleção para novos jogadores de seus times	| 1-Muito baixo	| 3-Médio	| Testes de uso e perquisas de interesse |
 |Riot Games | Fornecedor	| Fornecer acesso aos dados do jogo de forma segura e confiável	| Fortalecimento e crescimento da comunidade | 2-Baixo | 2-Baixo | Conectar conta Riot no Login/cadastro |
 |Patrick | Analista de Implantação |	Instalar, parametrizar e realizar testes no sistema |	Disponibilidade e observabilidade sobre o sistema	 |3-Médio	| 4-Alto |	Buscar mais envolvimento com a stack |
