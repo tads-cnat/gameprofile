@@ -47,4 +47,7 @@ public class Jogador{
 
     @Column(name = "id_lol")
     private Integer idLol;
+
+    public void setPapel(String papel) {
+    }
 }

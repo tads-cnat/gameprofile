@@ -1,4 +1,5 @@
 package com.gameprofile.grupospartidasapis.services;
+
 import com.gameprofile.grupospartidasapis.entities.Jogador;
 import com.gameprofile.grupospartidasapis.repositories.JogadorRepository;
 
@@ -19,10 +20,19 @@ import org.springframework.stereotype.Service;
 public class JogadorService implements UserDetailsService {
 
     @Autowired
-    private JogadorRepository jogadorRepository;
+    private  JogadorRepository jogadorRepository;
 
     @Autowired
-    private PasswordEncoder passwordEncoder;
+    private  PasswordEncoder passwordEncoder;
+
+    @Autowired
+    public JogadorService(JogadorRepository jogadorRepository, PasswordEncoder passwordEncoder) {
+        this.jogadorRepository = jogadorRepository;
+        this.passwordEncoder = passwordEncoder;
+    }
+
+
+
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
@@ -31,10 +41,10 @@ public class JogadorService implements UserDetailsService {
             throw new UsernameNotFoundException("Jogador não encontrado.");
         }
         return User.builder()
-    .   username(jogador.getEmail())
-    .   password(jogador.getSenha())
-    .   authorities(getAuthorities())
-        .build();
+            .username(jogador.getEmail())
+            .password(jogador.getSenha())
+            .authorities(getAuthorities())
+            .build();
     }
 
     private Collection<? extends GrantedAuthority> getAuthorities() {
@@ -49,5 +59,26 @@ public class JogadorService implements UserDetailsService {
 
     public Jogador findByEmail(String email) {
         return jogadorRepository.findByEmail(email);
+    }
+
+    public  Jogador cadastrarJogador(Jogador jogador) {
+        // verifica se o jogador já existe no banco de dados
+        Jogador jogadorExistente = jogadorRepository.findByEmail(jogador.getEmail());
+        if (jogadorExistente != null) {
+            throw new RuntimeException("Jogador já cadastrado.");
+        }
+        
+        // criptografa a senha antes de salvar o jogador
+        jogador.setSenha(passwordEncoder.encode(jogador.getSenha()));
+        
+        // define o jogador como um usuário comum (ROLE_USER)
+        setPapel(jogador, "ROLE_USER");
+        
+        return jogadorRepository.save(jogador);
+    }
+
+   
+    private static void setPapel(Jogador jogador, String papel) {
+        jogador.setPapel(papel);
     }
 }

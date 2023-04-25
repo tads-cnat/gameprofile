@@ -2,8 +2,10 @@ package com.gameprofile.grupospartidasapis.controllers;
 
 import com.gameprofile.grupospartidasapis.entities.Jogador;
 import com.gameprofile.grupospartidasapis.repositories.JogadorRepository;
+import com.gameprofile.grupospartidasapis.services.JogadorService;
 import org.hibernate.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -49,6 +51,15 @@ public class JogadorController {
             ResponseEntity<?> response = restTemplate.getForEntity(apiUrl, Object.class);
             return response;
 
+}        
+        @Autowired
+        private JogadorService jogadorService;
 
+        @PostMapping("/cadastrar")
+        public ResponseEntity<Jogador> cadastrarJogador(@RequestBody Jogador jogador) {
+            Jogador novoJogador = jogadorService.cadastrarJogador(jogador);
+            return ResponseEntity.status(HttpStatus.CREATED).body(novoJogador);
 }
-}
+
+        }
+    
