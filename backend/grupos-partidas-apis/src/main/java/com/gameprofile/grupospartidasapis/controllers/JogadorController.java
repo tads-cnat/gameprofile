@@ -38,11 +38,6 @@ public class JogadorController {
         public Jogador findAll(@PathVariable Integer id) throws ObjectNotFoundException {
             return repository.findById(id).get();
         }
-        @PostMapping("/salvar")
-        public ResponseEntity<Jogador> salvar (@RequestBody Jogador jogador){
-            return ResponseEntity.ok(repository.save(jogador));
-        }
-        
         
         @GetMapping(value = "/lol/summoner/v4/summoners/by-name/{summonerName}")
         public ResponseEntity<?> buscarJogadorPorNome(@PathVariable String summonerName) {
