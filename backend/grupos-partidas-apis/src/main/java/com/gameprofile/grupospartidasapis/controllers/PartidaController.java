@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/partidas")
+@RequestMapping("/partidas")
 public class PartidaController {
     @Autowired
     private PartidaRepository repository;
@@ -22,12 +22,12 @@ public class PartidaController {
         return repository.findAll();
     }
 
-    @GetMapping(value = "/{id}")
+    @GetMapping("/{id}")
     public Partida findAll(@PathVariable Integer id) {
         return repository.findById(id).get();
     }
 
-    @GetMapping(value = "/paises")
+    @GetMapping("/paises")
     public List<Object> getCountries(){
         String url = "https://restcountries.com/v3.1/all";
         RestTemplate restTemplate = new RestTemplate();

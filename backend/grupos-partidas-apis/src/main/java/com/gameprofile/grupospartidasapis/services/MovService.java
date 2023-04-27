@@ -15,7 +15,6 @@ public class MovService {
     @Transactional(readOnly = true)
     public MovDTO findById(Integer idGrupo) {
         Mov entity = repository.findById(idGrupo).get();
-        MovDTO dto = new MovDTO(entity);
-        return dto;
+        return dto = new MovDTO(entity);
     }
 }

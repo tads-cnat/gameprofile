@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/grupos")
+@RequestMapping("/grupos")
 public class MovController {
     @Autowired
     private MovService service;
@@ -24,7 +24,7 @@ public class MovController {
         return repository.findAll();
     }
 
-    @GetMapping(value = "/{idGrupo}")
+    @GetMapping("/{idGrupo}")
     public MovDTO findById(@PathVariable Integer idGrupo) {
         return service.findById(idGrupo);
     }

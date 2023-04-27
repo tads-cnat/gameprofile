@@ -6,8 +6,9 @@ public class MovDTO {
 
     private Integer idGrupo;
     private String nome;
-/**  Construtor vazio da classe MovDTO*/
+    
     public MovDTO() {
+        // This constructor is intentionally empty. Nothing special is needed here.
     }
 
     public MovDTO(Integer idGrupo, String nome) {

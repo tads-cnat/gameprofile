@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
-@RequestMapping(value = "/jogadores")
+@RequestMapping("/jogadores")
 public class JogadorController {
         @Autowired
         private JogadorRepository repository;
@@ -18,7 +18,7 @@ public class JogadorController {
             return repository.findAll();
         }
 
-        @GetMapping(value = "/{id}")
+        @GetMapping("/{id}")
         public Jogador findAll(@PathVariable Integer id) {
             return repository.findById(id).get();
         }
