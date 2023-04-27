@@ -10,7 +10,7 @@ export async function getMatches(): Promise<Match[]> {
             },
         })
         
-        return Promise.resolve(response.data)
+        return Promise.resolve(response.data);
     } catch (error) {
         return Promise.reject(new Error("Não foi possível buscar as partidas"));
     }
