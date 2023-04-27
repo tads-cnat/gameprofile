@@ -4,7 +4,9 @@ import { Player } from "../../entities/player";
 
 export async function getPlayer(playerId: number): Promise<Player> {
     try {
-        const response = await axios.get<Player>(api.api_url + "jogadores/" + playerId, {
+        const response = await axios.get<Player>(
+            api.api_url + "jogadores/" + playerId,
+        {
             headers: {
               "Content-Type": "application/json",
             },
