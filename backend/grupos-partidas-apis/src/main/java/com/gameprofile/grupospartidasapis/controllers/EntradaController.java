@@ -19,8 +19,8 @@ public class EntradaController extends CustomController<Entrada, Integer, Entrad
 
     @GetMapping("/{id}")
     public Entrada findById(@PathVariable Integer id) {
-        return super.findById(id, getRepository(), null);
-    }
+        return super.findById(id, getRepository(), null);   
+}
     @GetMapping
     public List<Entrada> findAll() {
         return getRepository().findAll();
