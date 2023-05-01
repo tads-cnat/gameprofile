@@ -3,7 +3,7 @@ package com.gameprofile.grupospartidasapis.controllers;
 import com.gameprofile.grupospartidasapis.entities.Entrada;
 import com.gameprofile.grupospartidasapis.repositories.EntradaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
