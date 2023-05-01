@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
-
+import java.time.LocalTime;
 import java.util.Date;
 
 
@@ -27,7 +27,7 @@ public class Partida implements Identifiable <Integer>{
     @DateTimeFormat(pattern = "hh:mm")
     @Column(name = "horario")
     @NotNull(message="{NotNull.Partida.horario}")
-    private Date horario;
+    private final LocalTime horario;
 
     @DateTimeFormat(pattern = "dd/mm/yyyy")
     @Column(name = "data")
