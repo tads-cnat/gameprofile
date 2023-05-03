@@ -9,7 +9,6 @@ import java.sql.Time;
 import java.util.Date;
 
 @Entity(name = "mov_grupos")
-@Data
 public class Mov {
     @Id
     @Column(name = "id_grupo")
@@ -42,4 +41,100 @@ public class Mov {
     private Integer suporte;
     @Column
     private Integer atirador;
+
+    public Integer getIdGrupo() {
+        return idGrupo;
+    }
+
+    public void setIdGrupo(Integer idGrupo) {
+        this.idGrupo = idGrupo;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Date getData() {
+        return data;
+    }
+
+    public void setData(Date data) {
+        this.data = data;
+    }
+
+    public Time getHorario() {
+        return horario;
+    }
+
+    public void setHorario(Time horario) {
+        this.horario = horario;
+    }
+
+    public Boolean getBloqueado() {
+        return bloqueado;
+    }
+
+    public void setBloqueado(Boolean bloqueado) {
+        this.bloqueado = bloqueado;
+    }
+
+    public Boolean getRanqueada() {
+        return ranqueada;
+    }
+
+    public void setRanqueada(Boolean ranqueada) {
+        this.ranqueada = ranqueada;
+    }
+
+    public Integer getIdCriador() {
+        return idCriador;
+    }
+
+    public void setIdCriador(Integer idCriador) {
+        this.idCriador = idCriador;
+    }
+
+    public Integer getTopo() {
+        return topo;
+    }
+
+    public void setTopo(Integer topo) {
+        this.topo = topo;
+    }
+
+    public Integer getSelva() {
+        return selva;
+    }
+
+    public void setSelva(Integer selva) {
+        this.selva = selva;
+    }
+
+    public Integer getMeio() {
+        return meio;
+    }
+
+    public void setMeio(Integer meio) {
+        this.meio = meio;
+    }
+
+    public Integer getSuporte() {
+        return suporte;
+    }
+
+    public void setSuporte(Integer suporte) {
+        this.suporte = suporte;
+    }
+
+    public Integer getAtirador() {
+        return atirador;
+    }
+
+    public void setAtirador(Integer atirador) {
+        this.atirador = atirador;
+    }
 }

@@ -4,7 +4,6 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Entity(name = "entradas")
-@Data
 public class Entrada {
     @Id
     @Column(name = "id_solicitacao")
@@ -20,4 +19,36 @@ public class Entrada {
     @Column
     @NotNull(message="{NotNull.Entrada.status}")
     private Boolean status;
+
+    public Integer getIdSolicitacao() {
+        return idSolicitacao;
+    }
+
+    public void setIdSolicitacao(Integer idSolicitacao) {
+        this.idSolicitacao = idSolicitacao;
+    }
+
+    public Integer getIdGrupo() {
+        return idGrupo;
+    }
+
+    public void setIdGrupo(Integer idGrupo) {
+        this.idGrupo = idGrupo;
+    }
+
+    public Integer getIdJogador() {
+        return idJogador;
+    }
+
+    public void setIdJogador(Integer idJogador) {
+        this.idJogador = idJogador;
+    }
+
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
+    }
 }

@@ -19,7 +19,6 @@ import lombok.Data;
  */
 
 @Entity(name = "grupos")
-@Data
 public class Grupo {
     @Id
     @Column(name = "id_grupo")
@@ -51,4 +50,76 @@ public class Grupo {
 
     @Column
     private Integer atirador;
+
+    public Integer getIdGrupo() {
+        return idGrupo;
+    }
+
+    public void setIdGrupo(Integer idGrupo) {
+        this.idGrupo = idGrupo;
+    }
+
+    public String getNomeGrupo() {
+        return nomeGrupo;
+    }
+
+    public void setNomeGrupo(String nomeGrupo) {
+        this.nomeGrupo = nomeGrupo;
+    }
+
+    public Boolean getBloqueado() {
+        return bloqueado;
+    }
+
+    public void setBloqueado(Boolean bloqueado) {
+        this.bloqueado = bloqueado;
+    }
+
+    public Integer getIdCriador() {
+        return idCriador;
+    }
+
+    public void setIdCriador(Integer idCriador) {
+        this.idCriador = idCriador;
+    }
+
+    public Integer getTopo() {
+        return topo;
+    }
+
+    public void setTopo(Integer topo) {
+        this.topo = topo;
+    }
+
+    public Integer getSelva() {
+        return selva;
+    }
+
+    public void setSelva(Integer selva) {
+        this.selva = selva;
+    }
+
+    public Integer getMeio() {
+        return meio;
+    }
+
+    public void setMeio(Integer meio) {
+        this.meio = meio;
+    }
+
+    public Integer getSuporte() {
+        return suporte;
+    }
+
+    public void setSuporte(Integer suporte) {
+        this.suporte = suporte;
+    }
+
+    public Integer getAtirador() {
+        return atirador;
+    }
+
+    public void setAtirador(Integer atirador) {
+        this.atirador = atirador;
+    }
 }

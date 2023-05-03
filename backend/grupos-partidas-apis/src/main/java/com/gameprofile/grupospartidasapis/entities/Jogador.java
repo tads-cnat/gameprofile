@@ -9,7 +9,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.util.Date;
 
 @Entity(name= "jogadores")
-@Data
 public class Jogador{
     @Id
     @Column(name = "id_jogador")
@@ -47,4 +46,76 @@ public class Jogador{
 
     @Column(name = "id_lol")
     private Integer idLol;
+
+    public Integer getIdJogador() {
+        return idJogador;
+    }
+
+    public void setIdJogador(Integer idJogador) {
+        this.idJogador = idJogador;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public Date getNascimento() {
+        return nascimento;
+    }
+
+    public void setNascimento(Date nascimento) {
+        this.nascimento = nascimento;
+    }
+
+    public Date getEntrouEm() {
+        return entrouEm;
+    }
+
+    public void setEntrouEm(Date entrouEm) {
+        this.entrouEm = entrouEm;
+    }
+
+    public Date getEditadoEm() {
+        return editadoEm;
+    }
+
+    public void setEditadoEm(Date editadoEm) {
+        this.editadoEm = editadoEm;
+    }
+
+    public Integer getIdLol() {
+        return idLol;
+    }
+
+    public void setIdLol(Integer idLol) {
+        this.idLol = idLol;
+    }
 }

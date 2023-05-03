@@ -8,7 +8,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.util.Date;
 
 @Entity(name = "partidas")
-@Data
 public class Partida {
 
     @Id
@@ -37,4 +36,52 @@ public class Partida {
     @NotNull(message="{NotNull.Partida.idGrupo}")
     private Integer idGrupo;
 
+
+    public Integer getIdPartida() {
+        return idPartida;
+    }
+
+    public void setIdPartida(Integer idPartida) {
+        this.idPartida = idPartida;
+    }
+
+    public Boolean getRanqueada() {
+        return ranqueada;
+    }
+
+    public void setRanqueada(Boolean ranqueada) {
+        this.ranqueada = ranqueada;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public Date getHorario() {
+        return horario;
+    }
+
+    public void setHorario(Date horario) {
+        this.horario = horario;
+    }
+
+    public Date getData() {
+        return data;
+    }
+
+    public void setData(Date data) {
+        this.data = data;
+    }
+
+    public Integer getIdGrupo() {
+        return idGrupo;
+    }
+
+    public void setIdGrupo(Integer idGrupo) {
+        this.idGrupo = idGrupo;
+    }
 }
