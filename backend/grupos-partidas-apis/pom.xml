@@ -80,7 +80,7 @@
 						</goals>
 						<configuration>
 						<mainClass>GruposPartidasApisApplication</mainClass>
-						<outputDirectory>${project.basedir}</outputDirectory>
+						<outputDirectory>${project.basedir}/docker</outputDirectory>
 						<excludes>
 							<exclude>
 								<groupId>org.projectlombok</groupId>
