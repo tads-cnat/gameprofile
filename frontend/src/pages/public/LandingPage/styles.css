@@ -108,12 +108,12 @@ a {
     background-color: white;
     width: 100%;
   }
-  #home {
+  #home-lading-page {
     background-color: #342E37;
     margin-top: 73px;
   }
   
-  #home .lading-page-container {
+  #home-lading-page .lading-page-container {
     display: flex;
     grid-auto-flow: column;
     justify-content: space-around;
@@ -121,13 +121,13 @@ a {
     width: 100%;
   }
   
-  #home .image img{
+  #home-lading-page .image img{
     position: relative;
     right: 47px;
     height: 400px;
   }
   
-  #home .text {
+  #home-lading-page .text {
     margin-left: 34px;
     margin-right: 34px;
     margin-top: 60px;
@@ -135,18 +135,18 @@ a {
     text-align: left;
   }
   
-  #home .text h1 {
+  #home-lading-page .text h1 {
     margin-bottom: 16px;
     text-align: start;
     color: #9600FF;
     font-size: 50px;
   }
-  #home .text h1 span {
+  #home-lading-page .text h1 span {
     color: #C297FF;
     
   }
   
-  #home .text p {
+  #home-lading-page .text p {
     margin-bottom: 32px;
     color: #AEAEAE;
   }

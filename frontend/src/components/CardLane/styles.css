@@ -1,3 +1,9 @@
 .card-lane{
+    background-color: #2C004B;
     border-radius: 30px;
+    color: white;
+}
+
+.button{
+    background-color: aquamarine;
 }
