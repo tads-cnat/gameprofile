@@ -1,9 +1,9 @@
-const Perfil = () => {
+const Grupo = () => {
     return(
         <div className="app-area">
-            <h1>perfil</h1>
+            <h1>Grupo</h1>
         </div>
     );
 };
 
-export default Perfil;
+export default Grupo;
