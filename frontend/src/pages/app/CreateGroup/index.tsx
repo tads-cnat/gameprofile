@@ -132,8 +132,8 @@ const CreateGroup = () =>{
 
                 {/* button area */}
                 <div className='flex flex-row-reverse mt-5'>
-                    <button type="submit" className='bg-purple-700 rounded text-gray-200 py-2 px-7'>Criar</button>
-                    <a href="/" className='bg-gray-400 py-2 px-7 rounded mr-5'>Cancelar</a>
+                    <button type="submit" id='button-purple' className='rounded py-2 px-7'>Criar</button>
+                    <a href="/" className='py-2 px-7 rounded mr-5 button-grey'>Cancelar</a>
                 </div>
 
                 </form>

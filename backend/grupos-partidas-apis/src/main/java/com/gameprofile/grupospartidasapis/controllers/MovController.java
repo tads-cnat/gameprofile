@@ -5,9 +5,11 @@ import com.gameprofile.grupospartidasapis.dto.MovDTO;
 import com.gameprofile.grupospartidasapis.entities.Mov;
 import com.gameprofile.grupospartidasapis.repositories.MovRepository;
 import com.gameprofile.grupospartidasapis.services.MovService;
+import org.hibernate.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -21,11 +23,15 @@ public class MovController {
 
     @GetMapping
     public List<Mov> findAll() {
-        return repository.findAll();
+        try {
+            return repository.findAll();
+        } catch(IllegalStateException e) {
+            return Collections.emptyList();
+        }
     }
 
     @GetMapping(value = "/{idGrupo}")
-    public MovDTO findById(@PathVariable Integer idGrupo) {
+    public MovDTO findById(@PathVariable Integer idGrupo) throws ObjectNotFoundException {
         return service.findById(idGrupo);
     }
     @PostMapping
