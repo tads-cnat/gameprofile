@@ -20,6 +20,11 @@ public class PartidaController {
     @Autowired
     private PartidaRepository repository;
 
+    /**
+     * Retorna uma lista de todas as partidas existentes.
+     * 
+     * @return lista de partidas existentes 
+     */
     @GetMapping
     public List<Partida> findAll() {
         try {
