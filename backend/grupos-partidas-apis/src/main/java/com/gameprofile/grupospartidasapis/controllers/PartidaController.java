@@ -25,8 +25,7 @@ public class PartidaController {
      * 
      * @return lista de partidas existentes 
      */
-    @GetMapping
-    public List<Partida> findAll() {
+    @GetMapping public List<Partida> findAll() {
         try {
             return repository.findAll();
         } catch(IllegalStateException e) {
