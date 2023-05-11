@@ -1,3 +1,4 @@
+/*
 package com.gameprofile.grupospartidasapis.configurations;
 
 import org.springframework.context.annotation.Bean;
@@ -10,4 +11,4 @@ public class SwaggerConfiguration {
         return new Docket(DocumentationTypes.SWAGGER_2).select().api()
     }
 }
-
+*/
