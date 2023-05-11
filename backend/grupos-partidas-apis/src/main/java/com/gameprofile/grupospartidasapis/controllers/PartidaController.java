@@ -1,10 +1,7 @@
 package com.gameprofile.grupospartidasapis.controllers;
 
-import com.gameprofile.grupospartidasapis.entities.Entrada;
 import com.gameprofile.grupospartidasapis.entities.Partida;
-import com.gameprofile.grupospartidasapis.repositories.EntradaRepository;
 import com.gameprofile.grupospartidasapis.repositories.PartidaRepository;
-import org.hibernate.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;

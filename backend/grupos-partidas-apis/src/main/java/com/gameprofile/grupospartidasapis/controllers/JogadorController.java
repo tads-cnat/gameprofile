@@ -3,7 +3,6 @@ package com.gameprofile.grupospartidasapis.controllers;
 import com.gameprofile.grupospartidasapis.entities.Jogador;
 import com.gameprofile.grupospartidasapis.repositories.JogadorRepository;
 import org.hibernate.ObjectNotFoundException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -46,7 +45,6 @@ public class JogadorController {
         public ResponseEntity<?> buscarJogadorPorNome(@PathVariable String summonerName) {
             String apiKey="RGAPI-93297058-3a2f-4fc2-a962-c2542408f49b";
             String apiUrl = "https://br1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + summonerName + "?api_key=" + apiKey;
-            ResponseEntity<?> response = restTemplate.getForEntity(apiUrl, Object.class);
             return response;
 
 
