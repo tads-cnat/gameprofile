@@ -197,7 +197,7 @@ a {
   #about h2 {
     font-size: 30px;
     font-weight: bold;
-    color: #2C004B;
+    color: var(--main-dark);
     text-align: left;
     
   }
@@ -225,7 +225,7 @@ a {
   #register h2 {
     font-weight: bold;
     font-size: 30px;
-    color: #2C004B;
+    color:  var(--main-dark);
     text-align:center ;
     isolation: isolate;
   }

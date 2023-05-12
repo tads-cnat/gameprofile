@@ -10,7 +10,7 @@
 }
 
 #home .box {
-    background-color: #2C004B;
+    background-color:  var(--main-dark);
     border-radius: 10px;
     width: 50%;
     padding: 20px;
@@ -24,7 +24,7 @@
 }
 
 #home .box .card {
-    background-color: #5A2E98;
+    background-color: var(--main-primary);
     border-radius: 10px;
     width: 200px;
     margin: 15px;
