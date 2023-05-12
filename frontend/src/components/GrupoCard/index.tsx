@@ -12,7 +12,7 @@ import { Group } from "../../entities/group";
 import { ReactElement } from "react";
 
 const isEmpty = (item: string): boolean => {
-    return item.length > 0;
+    return item === null;
 };
 
 type GrupoCardType = {
