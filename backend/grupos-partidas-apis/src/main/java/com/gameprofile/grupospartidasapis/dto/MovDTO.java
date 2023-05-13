@@ -6,7 +6,7 @@ public class MovDTO {
 
     private Integer idGrupo;
     private String nome;
-
+/**  Construtor vazio da classe MovDTO*/
     public MovDTO() {
     }
 

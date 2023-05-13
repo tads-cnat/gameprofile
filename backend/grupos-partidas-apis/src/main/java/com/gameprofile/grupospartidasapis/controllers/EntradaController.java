@@ -2,6 +2,7 @@ package com.gameprofile.grupospartidasapis.controllers;
 
 import com.gameprofile.grupospartidasapis.entities.Entrada;
 import com.gameprofile.grupospartidasapis.repositories.EntradaRepository;
+
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 

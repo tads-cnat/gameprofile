@@ -30,7 +30,7 @@ const LandingPage = () => {
             </nav>
             </header>
             <main>
-            <section className="section" id="home">
+            <section className="section" id="home-lading-page">
                 <div className="lading-page-container">
                 <div className="text">
                     <h1 className="title">Game<span>Profile</span></h1>

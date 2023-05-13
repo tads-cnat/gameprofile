@@ -1,4 +1,5 @@
 package com.gameprofile.grupospartidasapis.entities;
+
 import com.gameprofile.grupospartidasapis.base.Identifiable;
 
 import jakarta.persistence.*;
@@ -22,10 +23,12 @@ public class Entrada implements Identifiable<Integer>{
     @Column
     @NotNull(message="{NotNull.Entrada.status}")
     private Boolean status;
+
     @Override
     public Integer getId() {
         return idSolicitacao;
     }
+
     @Override
     public void setId(Integer id) {
         this.idSolicitacao=id;

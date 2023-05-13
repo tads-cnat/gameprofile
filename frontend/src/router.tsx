@@ -5,7 +5,7 @@ import Cadastro from './pages/public/Cadastro'
 import App from './pages/app'
 import Home from './pages/app/Home'
 import Grupos from './pages/app/Grupos'
-import Perfil from './pages/app/Perfil'
+import Grupo from './pages/app/Grupo'
 import Ajustes from './pages/app/Ajustes'
 import CreateGroup from './pages/app/CreateGroup'
 
@@ -33,7 +33,7 @@ const Routes = () => {
             children: [
                 {path: '', element: <Home/>},
                 {path: 'grupos', element: <Grupos/>},
-                {path: 'perfil', element: <Perfil/>},
+                {path: 'grupo', element: <Grupo/>},
                 {path: 'ajustes', element: <Ajustes/>},
                 {path: 'criar-grupo', element: <CreateGroup/>},
             ]
