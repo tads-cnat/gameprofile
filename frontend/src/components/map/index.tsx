@@ -7,10 +7,10 @@ import Maplol from "../../assets/img/mapLol.jpg"
 
 import "./styles.css";
 import { Group } from "../../entities/group";
-import { ReactElement } from "react";
+import { FunctionComponent, ReactElement } from "react";
 
 
-const Map = (): ReactElement => {
+const Map: FunctionComponent = (): ReactElement => {
     return(
         <div id="map">
             <img src={Maplol} alt="mapLol" />

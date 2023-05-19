@@ -6,6 +6,7 @@
 #map img{
     height: calc(500px * 0,78);
     width: 500px;
+
 }
 #map .position-box{
     height: 50px;
