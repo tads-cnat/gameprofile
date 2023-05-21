@@ -8,6 +8,9 @@
 
 ___
 
+# Guia de Estilo, Design System e protótipos
+https://www.figma.com/files/project/57606455/Game-Profile
+
 # Requisitos
 * Node >= 6.0.0
 * Npm >= 8
