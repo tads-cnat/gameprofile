@@ -3,6 +3,7 @@ import GrupoCard from '../../../components/GrupoCard';
 import { Group } from '../../../entities/group';
 
 import {getGroups} from '../../../services/api/groups';
+import { Link } from 'react-router-dom';
 
 
 const Grupos = () => {
@@ -24,7 +25,9 @@ const Grupos = () => {
 
             {grupos.map((grupo) => {
                 return (
-                    <GrupoCard key={grupo.idGrupo} grupo={grupo} />
+                    <Link to={`/app/grupo/${grupo.idGrupo}`} key={grupo.idGrupo}>
+                        <GrupoCard key={grupo.idGrupo} grupo={grupo} />
+                    </Link>
                 );
             })}
         </div>
