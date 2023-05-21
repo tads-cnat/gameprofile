@@ -1,0 +1,48 @@
+# Versão do Compose utilizado neste arquivo
+version: '3'
+
+# Serviços definidos neste arquivo
+services:
+  # Definição do serviço frontend
+  frontend:
+    # Configuração do build da imagem do Docker a partir do diretório frontend
+    build:
+      context: ./frontend
+    # Portas mapeadas para o host
+    ports:
+      - "3000:3000"
+    # Mapeamento de volumes para sincronização do código-fonte com o container
+    volumes:
+      - ./frontend:/app
+    # Dependências deste serviço
+    depends_on:
+      - backend
+
+  # Definição do serviço backend
+  backend:
+    # Configuração do build da imagem do Docker a partir do diretório backend
+    build:
+      context: ./backend/grupos-partidas-apis
+      dockerfile: Dockerfile
+    # Portas mapeadas para o host
+    ports:
+      - "8080:8080"
+    # Dependências deste serviço
+    depends_on:
+      - db
+
+  # Definição do serviço de banco de dados
+  db:
+    # Imagem do PostgreSQL utilizada
+    image: postgres
+    # Variáveis de ambiente para configuração do banco de dados
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: mydatabase
+    # Mapeamento de volumes para persistência dos dados do banco
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    # Portas mapeadas para o host
+    ports:
+      - "5432:5432"

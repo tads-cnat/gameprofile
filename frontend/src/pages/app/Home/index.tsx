@@ -67,7 +67,7 @@ const Home = () => {
             <div style={{display: "flex"}}>
                 <div className='box'>
                     <h2 style={{marginBottom: "15px"}}>Minhas Partidas</h2>
-                    <div style={{display: "flex"}}>
+                    <div className="card-wrapper">
                         {matches.map(match => (
                             <div className='card' key={match.idPartida}>
                                 <h3>{new Date(match.data).toLocaleDateString()}</h3>
@@ -78,7 +78,7 @@ const Home = () => {
                 </div>
                 <div className='box'>
                     <h2 style={{marginBottom: "15px"}}>Meus Grupos</h2>
-                    <div style={{display: "flex"}}>
+                    <div className="card-wrapper">
                         {groups.map(group => (
                             <div className='card' key={group.idGrupo}>
                                 <h3>{group.nome}</h3>

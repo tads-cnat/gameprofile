@@ -50,7 +50,7 @@ a {
   
   .section .title {
     margin-bottom: 16px;
-    color: #9600FF;
+    color: var(--main-dark);
     text-align: center;
   }
   
@@ -65,7 +65,7 @@ a {
   }
   
   .section header strong {
-    color: #9600FF;
+    color: var(--main-dark);
   } 
   
   nav {
@@ -108,12 +108,12 @@ a {
     background-color: white;
     width: 100%;
   }
-  #home {
+  #home-lading-page {
     background-color: #342E37;
     margin-top: 73px;
   }
   
-  #home .lading-page-container {
+  #home-lading-page .lading-page-container {
     display: flex;
     grid-auto-flow: column;
     justify-content: space-around;
@@ -121,13 +121,13 @@ a {
     width: 100%;
   }
   
-  #home .image img{
+  #home-lading-page .image img{
     position: relative;
     right: 47px;
     height: 400px;
   }
   
-  #home .text {
+  #home-lading-page .text {
     margin-left: 34px;
     margin-right: 34px;
     margin-top: 60px;
@@ -135,18 +135,18 @@ a {
     text-align: left;
   }
   
-  #home .text h1 {
+  #home-lading-page .text h1 {
     margin-bottom: 16px;
     text-align: start;
-    color: #9600FF;
+    color: var(--main-dark);
     font-size: 50px;
   }
-  #home .text h1 span {
-    color: #C297FF;
+  #home-lading-page .text h1 span {
+    color: var(--main-secondary);
     
   }
   
-  #home .text p {
+  #home-lading-page .text p {
     margin-bottom: 32px;
     color: #AEAEAE;
   }
@@ -157,7 +157,7 @@ a {
   }
   
   .logo span {
-    color: #9600FF;
+    color: var(--main-dark);
   }
   .logo-alt span {
     color: white;
@@ -182,9 +182,9 @@ a {
   #about .image img {
     width: 100%;
     border-radius: 4px;
-    -webkit-box-shadow: -69px -50px 0px 0px rgba(222,201,252,1);
-    -moz-box-shadow: -69px -50px 0px 0px rgba(222,201,252,1);
-    box-shadow: -69px -50px 0px 0px rgba(222,201,252,1);
+    -webkit-box-shadow: -69px -50px 0px 0px #afd7ee;
+    -moz-box-shadow: -69px -50px 0px 0px #afd7ee;
+    box-shadow: -69px -50px 0px 0px #8bc5e7;
   }
 
   #about .text{
@@ -197,7 +197,7 @@ a {
   #about h2 {
     font-size: 30px;
     font-weight: bold;
-    color: #2C004B;
+    color: var(--main-dark);
     text-align: left;
     
   }
@@ -215,7 +215,7 @@ a {
     content: '';
     position: absolute;
     inset: 0;
-    opacity: 0.5;
+    opacity: 0.7;
   }
   
   #register li {
@@ -225,7 +225,7 @@ a {
   #register h2 {
     font-weight: bold;
     font-size: 30px;
-    color: #2C004B;
+    color:  var(--main-light);
     text-align:center ;
     isolation: isolate;
   }
@@ -237,6 +237,8 @@ a {
   
   #register .text p {
     margin-bottom: 32px;
+    font-weight: bold;
+    color: white;
   }
 
   #register .lading-page-container {

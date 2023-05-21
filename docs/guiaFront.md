@@ -38,12 +38,12 @@ para  a execução do projeto sem problemas, se faz recomendado a preparação d
 
     - Execute o comando de instalação do node
         ```bash
-        npm  install
+        yarn  install
         ```
 
     - Em seguida exeute o comando para iniciar o server
         ```bash
-        npm start
+        yarn dev
         ```
 
     O projeto por padrão ira ser executado em:
