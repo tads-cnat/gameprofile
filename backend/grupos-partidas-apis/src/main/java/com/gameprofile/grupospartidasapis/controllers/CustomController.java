@@ -1,5 +1,5 @@
 package com.gameprofile.grupospartidasapis.controllers;
-
+import java.lang.IllegalArgumentException;
 import com.gameprofile.grupospartidasapis.base.BaseController;
 import com.gameprofile.grupospartidasapis.base.Identifiable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -26,6 +26,9 @@ public class CustomController<T extends Identifiable<I>, I, R extends JpaReposit
     
     @Override
     public T findById(I id, R repository, List<T> list) {
+        if(id == null){
+            throw new IllegalArgumentException("O id não pode ser nulo!");
+        }
         return list.stream()
             .filter(entity -> id.equals(entity.getId()))
             .findFirst()
