@@ -9,9 +9,10 @@
 }
 
 :root{
-    --main-primary : #5A2E98;
-    --main-secondary : #9747FF;
-    --main-dark : #2C004B;
+    --main-primary : #247BA0;
+    --main-secondary : #1B98E0;
+    --main-light : #afd7ee;
+    --main-dark : #006494;
     --main-black : #342E37;
 
     --util-green: #A0F1A8;
@@ -28,6 +29,15 @@
     --light-grey: #D9D9D9;
 }
 
+html, body, #root {
+    height: 100%;
+    width: 100%;
+}
+
+#root {
+    background-color: red;
+    min-height: 100%;
+}
 
 ul{
     list-style: none;
