@@ -36,7 +36,7 @@ public class JogadorController {
             return repository.findById(id).get();
         }
         @PostMapping("/salvar")
-        public ResponseEntity<Jogador> salvar (@RequestBody Jogador jogador){
+        public ResponseEntity<Jogador>salvar(@RequestBody Jogador jogador){
             return ResponseEntity.ok(repository.save(jogador));
         }
         

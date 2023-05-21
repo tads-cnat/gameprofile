@@ -21,6 +21,11 @@ public class MovController {
     @Autowired
     private MovRepository repository;
 
+    /**
+    * Busca todos os grupos registrados.
+    *
+    * @return lista de grupos
+    */
     @GetMapping
     public List<Mov> findAll() {
         try {

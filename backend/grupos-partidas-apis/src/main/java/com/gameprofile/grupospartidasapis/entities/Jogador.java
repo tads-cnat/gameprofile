@@ -1,8 +1,11 @@
 package com.gameprofile.grupospartidasapis.entities;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.Date;
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
