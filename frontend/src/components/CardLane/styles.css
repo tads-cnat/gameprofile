@@ -1,5 +1,5 @@
 .card-lane{
-    background-color: #2C004B;
+    background-color: var(--main-dark);
     border-radius: 30px;
     color: white;
 }

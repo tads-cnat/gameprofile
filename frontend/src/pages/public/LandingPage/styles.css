@@ -50,7 +50,7 @@ a {
   
   .section .title {
     margin-bottom: 16px;
-    color: #9600FF;
+    color: var(--main-dark);
     text-align: center;
   }
   
@@ -65,7 +65,7 @@ a {
   }
   
   .section header strong {
-    color: #9600FF;
+    color: var(--main-dark);
   } 
   
   nav {
@@ -138,11 +138,11 @@ a {
   #home-lading-page .text h1 {
     margin-bottom: 16px;
     text-align: start;
-    color: #9600FF;
+    color: var(--main-dark);
     font-size: 50px;
   }
   #home-lading-page .text h1 span {
-    color: #C297FF;
+    color: var(--main-secondary);
     
   }
   
@@ -157,7 +157,7 @@ a {
   }
   
   .logo span {
-    color: #9600FF;
+    color: var(--main-dark);
   }
   .logo-alt span {
     color: white;
@@ -182,9 +182,9 @@ a {
   #about .image img {
     width: 100%;
     border-radius: 4px;
-    -webkit-box-shadow: -69px -50px 0px 0px rgba(222,201,252,1);
-    -moz-box-shadow: -69px -50px 0px 0px rgba(222,201,252,1);
-    box-shadow: -69px -50px 0px 0px rgba(222,201,252,1);
+    -webkit-box-shadow: -69px -50px 0px 0px #afd7ee;
+    -moz-box-shadow: -69px -50px 0px 0px #afd7ee;
+    box-shadow: -69px -50px 0px 0px #8bc5e7;
   }
 
   #about .text{
@@ -197,7 +197,7 @@ a {
   #about h2 {
     font-size: 30px;
     font-weight: bold;
-    color: #2C004B;
+    color: var(--main-dark);
     text-align: left;
     
   }
@@ -215,7 +215,7 @@ a {
     content: '';
     position: absolute;
     inset: 0;
-    opacity: 0.5;
+    opacity: 0.7;
   }
   
   #register li {
@@ -225,7 +225,7 @@ a {
   #register h2 {
     font-weight: bold;
     font-size: 30px;
-    color: #2C004B;
+    color:  var(--main-light);
     text-align:center ;
     isolation: isolate;
   }
