@@ -2,8 +2,8 @@ import Logo from "../../assets/logo/logo.svg";
 
 // importando icones
 import Home from "../../assets/sidebarIcons/Home.svg";
-import Grupos from "../../assets/sidebarIcons/Grupos.svg";
-import Perfil from "../../assets/sidebarIcons/Perfil.svg";
+import Grupos from "../../assets/sidebarIcons/list.svg";
+import Groupo from "../../assets/sidebarIcons/group.svg";
 import Ajustes from "../../assets/sidebarIcons/Ajustes.svg";
 import CriarGrupo from "../../assets/sidebarIcons/CriarGrupo.svg";
 import Sair from "../../assets/sidebarIcons/Sair.svg";
@@ -60,12 +60,12 @@ const Sidebar = () => {
             </Link>
           </div>
         </Tooltip>
-        <Tooltip title="Perfil" placement="right">
-          <div id="Perfil" className={`sidebar-menu-item ${page === "Perfil" ? 'selected' : ''} `} onClick={divClickedHandler}>
-            <Link to="/app/perfil">
+        <Tooltip title="Grupo" placement="right">
+          <div id="Grupo" className={`sidebar-menu-item ${page === "Grupo" ? 'selected' : ''} `} onClick={divClickedHandler}>
+            <Link to="/app/grupo">
               <img
-                src={Perfil}
-                alt="Perfil"
+                src={Groupo}
+                alt="Grupo"
                 className="sidebar-menu-item-icon"
               />
             </Link>

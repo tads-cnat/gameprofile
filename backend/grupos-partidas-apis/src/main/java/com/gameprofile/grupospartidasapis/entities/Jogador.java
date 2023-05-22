@@ -1,12 +1,16 @@
 package com.gameprofile.grupospartidasapis.entities;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.Date;
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity(name= "jogadores")
 @Data
@@ -47,4 +51,7 @@ public class Jogador{
 
     @Column(name = "id_lol")
     private Integer idLol;
+
+    @OneToMany(mappedBy = "jogador")
+    private List<ChatMessage > chatMessages;
 }
