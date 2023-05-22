@@ -16,10 +16,11 @@ const isEmpty = (item: string): boolean => {
 };
 
 type GrupoCardType = {
-    grupo: Group
+    grupo: Group, 
+    onClick(): void
 };
 
-const GrupoCard = ({ grupo }: GrupoCardType): ReactElement => {
+const GrupoCard = ({ grupo, onClick }: GrupoCardType): ReactElement => {
     const { nome, data, horario, ranqueada, topo, selva, meio, suporte, atirador } = grupo;
 
     const databack = new Date(data);
@@ -29,7 +30,7 @@ const GrupoCard = ({ grupo }: GrupoCardType): ReactElement => {
     const horaFormatada = horario.substring(0, horario.length - 3);
 
     return (
-        <div className="card-group mt-5">
+        <div className="card-group mt-5" onClick={onClick}>
             <div>
                 <h1>{nome}</h1>
                 <div className="submenu">

@@ -15,6 +15,10 @@
     border-radius: 4px;
 }
 
+.card-group:hover {
+    cursor: pointer;
+}
+
 .card-group p {
     color: #ffffff;
     margin: 0px 0.2vw;

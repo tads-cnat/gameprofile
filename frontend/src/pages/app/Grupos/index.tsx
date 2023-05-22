@@ -3,11 +3,12 @@ import GrupoCard from '../../../components/GrupoCard';
 import { Group } from '../../../entities/group';
 
 import {getGroups} from '../../../services/api/groups';
-import { Link } from 'react-router-dom';
-
+import { Box, Modal } from '@mui/material';
+import MapEntrar from '../../../components/mapEntrar';
 
 const Grupos = () => {
     const [grupos, setGrupos] = useState<Group[]>([]);
+    const [open, setOpen] =  useState<boolean>(true);
 
     useEffect(() => {
         getGroups().then((response) => {
@@ -15,9 +16,20 @@ const Grupos = () => {
         });
     }, []); 
 
+    const handleClose = ()=> setOpen(false);
+
     return (
         <div className="app-area" id="grupos">
-
+            <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+                >
+                <Box className="box-map">
+                    <MapEntrar />
+                </Box>
+            </Modal>
             <header className='grupos-header'>
                 <div className='indicador-header'></div>
                 <h1 className='ml-3 text-lg'> Posição em Aberto </h1>
@@ -25,9 +37,7 @@ const Grupos = () => {
 
             {grupos.map((grupo) => {
                 return (
-                    <Link to={`/app/grupo/${grupo.idGrupo}`} key={grupo.idGrupo}>
-                        <GrupoCard key={grupo.idGrupo} grupo={grupo} />
-                    </Link>
+                    <GrupoCard onClick={() => setOpen(true)} key={grupo.idGrupo} grupo={grupo} />
                 );
             })}
         </div>

@@ -1,0 +1,65 @@
+#map{
+    position: sticky;
+    width: 500px;
+}
+
+#map img{
+    height: calc(500px * 0,78);
+    width: 500px;
+
+}
+#map .position-box{
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    position: absolute;
+}
+
+#map .position-box-img{
+    height: 50px;
+    width: 50px;
+    background-color: var(--main-black );
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+#map .position-box-input{
+    margin-top: 150px;
+    background-color: black;
+    color: #fff;
+    opacity: 0.8;
+}
+
+#map .position-box:hover{
+    cursor: pointer;
+}
+
+#map .position-box img{
+    height: 30px;
+    width: 30px;
+}
+
+
+#map #topo{
+    left: 12%;
+    top: 10%;
+}
+
+#map #selva{
+    left: 20%;
+    top: 50%;
+}
+#map #meio{
+    left: 45%;
+    top: 50%;
+}
+#map #suporte{
+    left: 60%;
+    top: 70%;
+}
+#map #atirador{
+    left: 80%;
+    top: 70%;
+}
