@@ -8,7 +8,7 @@ import MapEntrar from '../../../components/mapEntrar';
 
 const Grupos = () => {
     const [grupos, setGrupos] = useState<Group[]>([]);
-    const [open, setOpen] =  useState<boolean>(true);
+    const [open, setOpen] =  useState<boolean>(false);
 
     useEffect(() => {
         getGroups().then((response) => {

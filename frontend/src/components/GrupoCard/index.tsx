@@ -9,9 +9,9 @@ import Tooltip from "@mui/material/Tooltip";
 
 import "./styles.css";
 import { Group } from "../../entities/group";
-import { ReactElement } from "react";
+import { ReactElement, useEffect } from "react";
 
-const isEmpty = (item: string): boolean => {
+const isEmpty = (item: number | null): boolean => {
     return item === null;
 };
 
@@ -22,6 +22,10 @@ type GrupoCardType = {
 
 const GrupoCard = ({ grupo, onClick }: GrupoCardType): ReactElement => {
     const { nome, data, horario, ranqueada, topo, selva, meio, suporte, atirador } = grupo;
+
+    useEffect(() => {
+        console.log(grupo)
+    }, [])
 
     const databack = new Date(data);
     const dataFormatada = databack.toLocaleDateString("pt-BR", { timeZone: "UTC" });
@@ -47,7 +51,7 @@ const GrupoCard = ({ grupo, onClick }: GrupoCardType): ReactElement => {
                             <img src={Topo} alt="topo" />
                         </span>
 
-                        <div className={`${!isEmpty(topo) ? "indicador-off" : "indicador"}`}></div>
+                        <div className={`${topo ? "indicador-off" : "indicador"}`}></div>
                     </a>
                 </Tooltip>
                 <Tooltip title="Selva" placement="top" arrow>
@@ -55,7 +59,7 @@ const GrupoCard = ({ grupo, onClick }: GrupoCardType): ReactElement => {
                         <span>
                             <img src={Selva} alt="selva" />
                         </span>
-                        <div className={`${!isEmpty(selva) ? "indicador-off" : "indicador"}`}></div>
+                        <div className={`${selva ? "indicador-off" : "indicador"}`}></div>
                     </a>
                 </Tooltip>
                 <Tooltip title="Meio" placement="top" arrow>
@@ -63,7 +67,7 @@ const GrupoCard = ({ grupo, onClick }: GrupoCardType): ReactElement => {
                         <span>
                             <img src={Meio} alt="meio" />
                         </span>
-                        <div className={`${!isEmpty(meio) ? "indicador-off" : "indicador"}`}></div>
+                        <div className={`${meio ? "indicador-off" : "indicador"}`}></div>
                     </a>
                 </Tooltip>
                 <Tooltip title="Suporte" placement="top" arrow>
@@ -72,7 +76,7 @@ const GrupoCard = ({ grupo, onClick }: GrupoCardType): ReactElement => {
                             <img src={Suporte} alt="suporte" />
                         </span>
                         <div
-                            className={`${!isEmpty(suporte) ? "indicador-off" : "indicador"}`}
+                            className={`${suporte ? "indicador-off" : "indicador"}`}
                         ></div>
                     </a>
                 </Tooltip>
@@ -82,7 +86,7 @@ const GrupoCard = ({ grupo, onClick }: GrupoCardType): ReactElement => {
                             <img src={Atirador} alt="atirador" />
                         </span>
                         <div
-                            className={`${!isEmpty(atirador) ? "indicador-off" : "indicador"}`}
+                            className={`${atirador ? "indicador-off" : "indicador"}`}
                         ></div>
                     </a>
                 </Tooltip>
