@@ -3,11 +3,12 @@
 <div align="center">
 
 ### Histórico de Versões
-| Data | Versão |Descrição| Autor
-|--|--|--|--|
-| 18/04/2023 | v1.0 | Criação da visão inicial com base em outros artefatos do projeto | [Lázaro Damasceno](https://github.com/LazaroDamasceno)|
-| 23/04/2023 | v2.0 | Agrupado pessoas de mesmo papel e acrescentado novos interessados | [Patrick Santos](https://github.com/patrickmf)|
-| 25/04/2023 | v3.0 | Corrigindo as estratégias para ganhar mais suporte ou reduzir resistências | [Lázaro Damasceno](https://github.com/LazaroDamasceno)|  
+| Data       | Versão | Descrição                                                                  | Autor                                                  |
+|------------|--------|----------------------------------------------------------------------------|--------------------------------------------------------|
+| 18/04/2023 | v1.0   | Criação da visão inicial com base em outros artefatos do projeto           | [Lázaro Damasceno](https://github.com/LazaroDamasceno) |
+| 23/04/2023 | v2.0   | Agrupado pessoas de mesmo papel e acrescentado novos interessados          | [Patrick Santos](https://github.com/patrickmf)         |
+| 25/04/2023 | v3.0   | Corrigindo as estratégias para ganhar mais suporte ou reduzir resistências | [Lázaro Damasceno](https://github.com/LazaroDamasceno) |
+| 23/05/2023 | v4.0   | Troca do comando da Gerência do Projeto de Ruan por Dina                   | [Lázaro Damasceno](https://github.com/LazaroDamasceno) |
 </div>
 
 <div align="center">
