@@ -5,10 +5,10 @@
 ### Histórico de Versões
 | Data       | Versão | Descrição                                                                  | Autor                                                  |
 |------------|--------|----------------------------------------------------------------------------|--------------------------------------------------------|
-| 18/04/2023 | v1.0   | Criação da visão inicial com base em outros artefatos do projeto           | [Lázaro Damasceno](https://github.com/LazaroDamasceno) |
-| 23/04/2023 | v2.0   | Agrupado pessoas de mesmo papel e acrescentado novos interessados          | [Patrick Santos](https://github.com/patrickmf)         |
-| 25/04/2023 | v3.0   | Corrigindo as estratégias para ganhar mais suporte ou reduzir resistências | [Lázaro Damasceno](https://github.com/LazaroDamasceno) |
-| 23/05/2023 | v4.0   | Troca do comando da Gerência do Projeto de Ruan por Dina                   | [Lázaro Damasceno](https://github.com/LazaroDamasceno) |
+| 18/04/2023 |  v1.0  | Criação da visão inicial com base em outros artefatos do projeto           | [Lázaro Damasceno](https://github.com/LazaroDamasceno) |
+| 23/04/2023 |  v2.0  | Agrupado pessoas de mesmo papel e acrescentado novos interessados          | [Patrick Santos](https://github.com/patrickmf)         |
+| 25/04/2023 |  v3.0  | Corrigindo as estratégias para ganhar mais suporte ou reduzir resistências | [Lázaro Damasceno](https://github.com/LazaroDamasceno) |
+| 23/05/2023 |  v4.0  | Troca do comando da Gerência do Projeto de Ruan por Dina                   | [Lázaro Damasceno](https://github.com/LazaroDamasceno) |
 </div>
 
 <div align="center">
@@ -23,7 +23,8 @@
 | Dina                                     | Gestor(a) de Projeto	| Gerenciar cerimônias, dividir tarefas e homologar entregas | Criar produtos que tornem o LOL mais justo e desafiador | 5-Muito Alto | 4-Alto | Interagir com os envolvidos e documentar decisões; Receber bônus por bom desempenho; Receber elogios públicos |
 | Ruan                                     | Desenvolvedor(a) Backend	| Criar, manter e customizar ferramentas que contribuam na experiência do jogo	| Entregar APIs que interajam com nossa base de dados	| 4-Alto	| 4-Alto	| Entender melhor o produto e seus requisitos; Receber bônus por bom desempenho; Receber elogios públicos|
 | Lázaro	                                  |	Desenvolvedor(a) Backend	| Criar, manter e customizar ferramentas que contribuam na experiência do jogo	| Entregar APIs que interajam com nossa base de dados	| 4-Alto	| 4-Alto	| Entender melhor o produto e seus requisitos; Receber bônus por bom desempenho; Receber elogios públicos|
-| Franklin e Giovanna                      | Desenvolvedor(a) Frontend	| Criar, manter e customizar ferramentas que contribuam na experiência do jogo	| Tornar nossos produtos visívelmente irresistíveis e facilmente navegáveis	| 4-Alto	| 4-Alto	| Melhorar a integração e consumo das APIs; Receber bônus por bom desempenho; Receber elogios públicos|
+| Giovanna                                 | Desenvolvedor(a) Frontend	| Criar, manter e customizar ferramentas que contribuam na experiência do jogo	| Tornar nossos produtos visívelmente irresistíveis e facilmente navegáveis	| 4-Alto	| 4-Alto	| Melhorar a integração e consumo das APIs; Receber bônus por bom desempenho; Receber elogios públicos|
+| Franklin                                 | Desenvolvedor(a) Frontend	| Criar, manter e customizar ferramentas que contribuam na experiência do jogo	| Tornar nossos produtos visívelmente irresistíveis e facilmente navegáveis	| 4-Alto	| 4-Alto	| Melhorar a integração e consumo das APIs; Receber bônus por bom desempenho; Receber elogios públicos|
 | Professores                              | Orientador(a)	| Acompanhar, orientar e avaliar progresso do projeto ao longo do desenvolvimento | Tornar claro todos os conceitos que envolvem o processo de implementação de um software | 3-Médio | 3-Médio |	Feedback continuo|
 
 
