@@ -86,7 +86,7 @@ const Sidebar = () => {
 
       <div className="sidebar-menu">
         <Tooltip title="Criar Grupo" placement="right">
-          <div className="sidebar-menu-item selected">
+          <div id="criar-grupo" className={`sidebar-menu-item ${page === "criar-grupo" ? 'selected' : ''} `} onClick={divClickedHandler}>
             <Link to="/app/criar-grupo">
               <img src={CriarGrupo} alt="Criar Grupo" className="sidebar-menu-item-icon" />
             </Link>
