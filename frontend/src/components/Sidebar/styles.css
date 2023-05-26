@@ -1,11 +1,12 @@
 .sidebar{
-    width: 5vw;
+    width: 55px;
     height: 100vh;
     background-color: var(--main-dark);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 0vh 0.5vw;
+    position: fixed;
 }
 
 .sidebar-logo{
