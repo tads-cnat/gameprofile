@@ -6,9 +6,9 @@ export interface Group {
     bloqueado: boolean,
     ranqueada: boolean,
     idCriador: number,
-    topo: string,
-    selva: string,
-    meio: string,
-    atirador: string,
-    suporte: string
+    topo: number | null,
+    selva: number | null,
+    meio: number | null,
+    atirador: number | null,
+    suporte: number | null
 }

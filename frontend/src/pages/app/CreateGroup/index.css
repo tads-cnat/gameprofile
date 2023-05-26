@@ -1,6 +1,9 @@
 .red-text{
     color: red;
 }
+.white-text{
+    color: white;
+}
 .button-grey{
     background-color: #7C7C7C;
 }
@@ -8,4 +11,32 @@
 #button-purple{
     background-color: var(--main-primary);
 }
+
+#create-group .form-group{
+    display: flex;
+    flex-direction: row;
+}
+#create-group h1{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: var(--main-dark );
+    text-align: center;
+}
+
+#create-group .container-map{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+#create-group .subTitle{
+    color: #696969;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
+}
+
 

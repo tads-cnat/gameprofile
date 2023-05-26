@@ -33,7 +33,7 @@ const Routes = () => {
             children: [
                 {path: '', element: <Home/>},
                 {path: 'grupos', element: <Grupos/>},
-                {path: 'grupo', element: <Grupo/>},
+                {path: 'grupo/:id', element: <Grupo/>},
                 {path: 'ajustes', element: <Ajustes/>},
                 {path: 'criar-grupo', element: <CreateGroup/>},
             ]
