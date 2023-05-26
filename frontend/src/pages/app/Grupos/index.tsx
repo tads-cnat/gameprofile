@@ -20,15 +20,13 @@ const Grupos = () => {
 
     return (
         <div className="app-area" id="grupos">
-            <Modal
+            <Modal id="modal-entrar"
                 open={open}
                 onClose={handleClose}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
                 >
-                <Box className="box-map">
+                <div style={{display: "flex", justifyContent: "center", alignItems: "center", height: "100%"}} className="box-map">
                     <MapEntrar />
-                </Box>
+                </div>
             </Modal>
             <header className='grupos-header'>
                 <div className='indicador-header'></div>

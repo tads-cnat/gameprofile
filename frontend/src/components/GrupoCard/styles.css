@@ -8,7 +8,7 @@
     margin: 2vh auto;
     height: 9vh;
     padding: 0px 2vw;
-    background-color: var(--main-primary);
+    background-color: var(--main-secondary);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.349);
     overflow: hidden;
     transition: all 0.3s ease;

@@ -15,10 +15,15 @@
     background-color: var(--util-green); 
 }
 
-#grupos .box-map {
+#grupos #modal-entrar .box-map {
     position: absolute;
     left: 50%;
     top: 50%;
     background-color: #fff;
     padding: 20px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
 }
