@@ -1,5 +1,5 @@
 
-.grupos-header{
+#grupos .grupos-header{
     display: flex;
     flex-direction: row;
     height: 5vh;
@@ -7,10 +7,23 @@
     font-family: 'Saira', sans-serif;
 }
 
-.indicador-header{
+#grupos .indicador-header{
     width: 0.7vw;
     height: 0.7vw;
     margin: auto 1vw auto 0px;
     border-radius: 50%;
     background-color: var(--util-green); 
+}
+
+#grupos #modal-entrar .box-map {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
 }
