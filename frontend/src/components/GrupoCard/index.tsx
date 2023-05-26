@@ -23,20 +23,16 @@ type GrupoCardType = {
 const GrupoCard = ({ grupo, onClick }: GrupoCardType): ReactElement => {
     const { nome, data, horario, ranqueada, topo, selva, meio, suporte, atirador } = grupo;
 
-    useEffect(() => {
-        console.log(grupo)
-    }, [])
-
     const databack = new Date(data);
     const dataFormatada = databack.toLocaleDateString("pt-BR", { timeZone: "UTC" });
 
     // remove the last 3 characters from the string
-    const horaFormatada = horario.substring(0, horario.length - 3);
+    const horaFormatada = horario ? horario.substring(0, horario.length - 3) : "";
 
     return (
         <div className="card-group mt-5" onClick={onClick}>
             <div>
-                <h1>{nome}</h1>
+                <h1 className="white-text">{nome}</h1>
                 <div className="submenu">
                     <p>{dataFormatada}</p>
                     <p>{horaFormatada}h</p>
