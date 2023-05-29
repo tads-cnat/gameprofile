@@ -1,10 +1,12 @@
 package com.gameprofile.grupospartidasapis.entities;
 
+import java.io.Serializable;
 import java.util.List;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-import lombok.Data;
+import lombok.*;
+
 /**
  * Grupo is an Entity class that is used to store information about game groups.
  * 
@@ -21,14 +23,23 @@ import lombok.Data;
  */
 
 @Entity(name = "grupos")
-@Data
-public class Grupo {
+@Getter
+@Setter
+@Builder
+@EqualsAndHashCode( of = "nomeGrupo")
+@ToString
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+public class Grupo implements Serializable, Comparable<Grupo> {
+
+    private static final Integer incrementalId = 1;
+
     @Id
     @Column(name = "id_grupo")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idGrupo;
 
-    @Column(name = "nome")
+    @Column(name = "nome",nullable = false, unique = true)
     @NotNull(message="{NotNull.Grupo.nomeGrupo}")
     private String nomeGrupo;
 
@@ -56,6 +67,9 @@ public class Grupo {
 
     @OneToMany(mappedBy = "grupo")
     public List<ChatMessage> chatMessages;
-    
 
+    @Override
+    public int compareTo(Grupo o) {
+        return this.nomeGrupo.compareTo(o.nomeGrupo);
+    }
 }
