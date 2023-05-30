@@ -4,26 +4,46 @@ import com.gameprofile.grupospartidasapis.base.Identifiable;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-import lombok.Data;
+import lombok.*;
+
+import java.util.Comparator;
 
 @Entity(name = "entradas")
 @Data
-public class Entrada implements Identifiable<Integer>{
+@Builder
+@EqualsAndHashCode(of = {"posicao","grupo"})
+@ToString
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+public class Entrada implements Identifiable<Integer>, Comparable<Entrada>{
     @Id
     @Column(name = "id_solicitacao")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idSolicitacao;
 
-    @Column(name = "id_grupo")
-    private Integer idGrupo;
+    @NotNull
+    @ManyToOne
+    @JoinColumn(nullable = false, foreignKey = @ForeignKey(name = "fk_entradas_grupos"))
+    private Grupo grupo;
 
-    @Column(name = "id_jogador")
-    @NotNull(message="{NotNull.Entrada.idJogador}")
-    private Integer idJogador;
+    @NotNull
+    @ManyToOne
+    @JoinColumn(nullable = false, foreignKey = @ForeignKey(name = "fk_entradas_jogadores"))
+    private Jogador idJogador;
+
     @Column
     @NotNull(message="{NotNull.Entrada.status}")
     private Boolean status;
 
+    @Column
+    private String posicao;
+
+    @Override
+    public int compareTo(Entrada o) {
+        return Comparator.comparing(Entrada::getPosicao)
+                .thenComparing(Entrada::getGrupo)
+                .compare(this, o);
+    }
     @Override
     public Integer getId() {
         return idSolicitacao;
