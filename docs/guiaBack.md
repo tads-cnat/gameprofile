@@ -23,7 +23,7 @@ para  a execução do projeto sem problemas, se faz recomendado a preparação d
 1. Programas que utilizamos para o desenvolvimento do projeto:
 	- [Java 17](https://www.oracle.com/java/technologies/downloads/)
 	- [Git](https://git-scm.com/)
-	- [Spring Tool Suite 4](https://spring.io/tools)
+	- [Codespace](https://github.com/features/codespaces)
 2. Clonando o projeto:
 	- Via HTTP
 		 ```bash
@@ -34,12 +34,12 @@ para  a execução do projeto sem problemas, se faz recomendado a preparação d
 		git clone git@github.com:tads-cnat/gameprofile.git
    
 
-3. Passo a passo Spring Tool Suite
+3. Passo a passo após o git clone
 
-- Passo 1: Abrir o Spring Toll Suite 
-- Passo 2: Clicar em "File", no canto superior esquerdo -> Import -> Maven Project -> Existing Maven Projects 
-- Passo 3: Selecionar a pasta em que o projeto foi clonado -> backend -> grupos-partidas-apis -> e clicar no arquivo "pom.xml"
-- Passo 4: Clicar em "Finish"
+   - Abra a pasta raiz do projeto pelo VSCODE ou Codespace
+   - Execute o comando ```docker-compose up --build``` para inicializar tudo automaticamente, incluindo o back-end.
+   - O projeto será executado em: 
+[Nuvem](http://4.246.163.92:8080/)
 
 
 # Padrões de projeto
