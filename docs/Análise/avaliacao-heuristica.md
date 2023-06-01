@@ -5,7 +5,7 @@
 ### Histórico de Versões
 | Data | Versão |Descrição| Autor
 |--|--|--|--|
-| 29/05/2023 | v2.0 | Enumerando erros | [Patrick Santos](https://github.com/patrickmf)|
+| 29/05/2023 | v2.0 | Enumerando erros através da coluna código | [Patrick Santos](https://github.com/patrickmf)|
 | 19/05/2023 | v1.0 | Criação de documento realizado para analise de usabilidade | [Patrick Santos](https://github.com/patrickmf)|
 </div>
 
