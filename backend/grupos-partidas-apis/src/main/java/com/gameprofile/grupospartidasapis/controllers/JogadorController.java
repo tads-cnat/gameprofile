@@ -1,4 +1,4 @@
-package com.gameprofile.grupospartidasapis.controllers;
+/*package com.gameprofile.grupospartidasapis.controllers;
 
 import com.gameprofile.grupospartidasapis.entities.Jogador;
 import com.gameprofile.grupospartidasapis.repositories.JogadorRepository;
@@ -51,3 +51,4 @@ public class JogadorController {
 
 }
 }
+*/

@@ -7,5 +7,4 @@ public interface JogadorService{
     void saveJogador(JogadorDTO jogadorDTO);
     Jogador findJogadorByEmail(String email);
     List<JogadorDTO> findAllJogadores();
-    boolean passwordMatches(String senhaDigitada, String senhaArmazenada);
 }

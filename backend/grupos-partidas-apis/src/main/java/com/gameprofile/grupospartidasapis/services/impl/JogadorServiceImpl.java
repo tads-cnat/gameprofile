@@ -67,10 +67,7 @@ public class JogadorServiceImpl implements JogadorService {
         return papel;
 
 }
-    @Override
-    public boolean passwordMatches(String senhaDigitada, String senhaArmazenada) {
-        return passwordEnconder.matches(senhaDigitada, senhaArmazenada);
-    }
+
 
     
 }

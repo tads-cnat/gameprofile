@@ -22,12 +22,12 @@ public class CustomUserDetailsService implements UserDetailsService{
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException{
         Jogador jogador = jogadorRepository.findByEmail(email);
-        if(jogador == null){
-            throw new UsernameNotFoundException("Usuário não encontrado");
+        if(jogador != null){
+            return new org.springframework.security.core.userdetails.User(jogador.getEmail(),
+            jogador.getSenha(),
+            mapPapeisParaAutoridades(jogador.getPapeis()));
         }else{
-            return new org.springframework.security.core.userdetails.User(
-                jogador.getEmail(), jogador.getSenha(), mapPapeisParaAutoridades(jogador.getPapeis())
-            );
+            throw new UsernameNotFoundException("Jogador não encontrado");
         }
     }
     private Collection < ? extends GrantedAuthority> mapPapeisParaAutoridades(Collection<Papel> papeis){

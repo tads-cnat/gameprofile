@@ -26,13 +26,16 @@ public class WebSecurityConfig{
           http.csrf().disable()
                 .authorizeHttpRequests((authorize) ->
                         authorize.requestMatchers("/registro/**").permitAll()
+                                .requestMatchers("/login/**").permitAll()
                                 .requestMatchers("/index").permitAll()
-                                .requestMatchers("/jogadores").hasRole("ADMIN")
+                                .requestMatchers("/jogadoresre/**").permitAll()
+                               // .requestMatchers("/jogadoresre").hasRole("ADMIN")
+
                 ).formLogin(
                         form -> form
                                 .loginPage("/login")
                                 .loginProcessingUrl("/login")
-                                .defaultSuccessUrl("/jogadores")
+                                .defaultSuccessUrl("/jogadoresre")
                                 .permitAll()
                 ).logout(
                         logout -> logout

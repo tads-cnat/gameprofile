@@ -32,41 +32,29 @@ public class AutenticaController{
     public String login(){
         return "login";
     }
-    @PostMapping("/login")
-    public String processarLogin(@ModelAttribute("jogador") JogadorDTO jogadorDTO, BindingResult result, HttpServletRequest request){
-        Jogador jogador = jogadorService.findJogadorByEmail(jogadorDTO.getEmail());
-        System.out.println("Jogador encontrado: " + jogador);
-        if (jogador == null || !jogador.getSenha().equals(jogadorDTO.getSenha())) {
-            result.rejectValue("email", "", "Email ou senha inválidos");
-            return "login";
-    }
-    HttpSession session = request.getSession();
-    session.setAttribute("jogador", jogador);
-    return "redirect:/jogadoresRegistrados";
-    }
-
+    
     @GetMapping("/registro")
     public String mostrarFormularioDeRegistro(Model model){
-        JogadorDTO jogadorDTO = new JogadorDTO();
-        model.addAttribute("jogador", jogadorDTO);
+        JogadorDTO jogador = new JogadorDTO();
+        model.addAttribute("jogador", jogador);
         return "registro";
     }
     
-    @PostMapping("registro/save")
+    @PostMapping("/registro/save")
     public String registrado(@Valid @ModelAttribute("jogador") JogadorDTO jogadorDTO, BindingResult result, Model model){
         Jogador jogadorExistente = jogadorService.findJogadorByEmail(jogadorDTO.getEmail());
 
         if(jogadorExistente != null && jogadorExistente.getEmail() != null && !jogadorExistente.getEmail().isEmpty()){
-            result.rejectValue("email", "", "Já existe um jogador cadastrado com esse email");
+            result.rejectValue("email", null, "Já existe um jogador cadastrado com esse email");
         } 
         if(result.hasErrors()){
             model.addAttribute("jogador", jogadorDTO);
-            return "/registro";
+            return "registro";
         }
         jogadorService.saveJogador(jogadorDTO);
         return "redirect:/registro?success";
     }
-        @GetMapping("/jogadoresRegistrados")
+        @GetMapping("/jogadoresre")
         public String jogadores(Model model){
             List<JogadorDTO> jogadores = jogadorService.findAllJogadores();
             model.addAttribute("jogadores", jogadores);
