@@ -5,6 +5,7 @@ import jakarta.validation.Valid;
 import com.gameprofile.grupospartidasapis.dto.JogadorDTO;
 import com.gameprofile.grupospartidasapis.entities.Jogador;
 import com.gameprofile.grupospartidasapis.services.JogadorService;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import org.springframework.security.access.method.P;
 import org.springframework.stereotype.Controller;
@@ -41,7 +42,7 @@ public class AutenticaController{
     }
     
     @PostMapping("/registro/save")
-    public String registrado(@Valid @ModelAttribute("jogador") JogadorDTO jogadorDTO, BindingResult result, Model model){
+    public String registrado(@Valid @ModelAttribute("jogador") JogadorDTO jogadorDTO, BindingResult result, Model model, RedirectAttributes redirectAttributes) {
         Jogador jogadorExistente = jogadorService.findJogadorByEmail(jogadorDTO.getEmail());
 
         if(jogadorExistente != null && jogadorExistente.getEmail() != null && !jogadorExistente.getEmail().isEmpty()){
@@ -51,9 +52,18 @@ public class AutenticaController{
             model.addAttribute("jogador", jogadorDTO);
             return "registro";
         }
-        jogadorService.saveJogador(jogadorDTO);
-        return "redirect:/registro?success";
+        try{
+            jogadorService.saveJogador(jogadorDTO);
+            redirectAttributes.addFlashAttribute("success", "Você foi registrado com sucesso!");
+
+
+        } catch (Exception e) {
+            redirectAttributes.addFlashAttribute("error", "Ocorreu um erro ao registrar o jogador");
+        }   
+        
+        return "redirect:/registro";
     }
+
         @GetMapping("/jogadoresre")
         public String jogadores(Model model){
             List<JogadorDTO> jogadores = jogadorService.findAllJogadores();
