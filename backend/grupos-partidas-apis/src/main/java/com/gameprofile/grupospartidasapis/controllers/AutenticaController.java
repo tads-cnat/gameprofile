@@ -69,6 +69,6 @@ public class AutenticaController{
         public String jogadores(Model model){
             List<JogadorDTO> jogadores = jogadorService.findAllJogadores();
             model.addAttribute("jogadores", jogadores);
-            return "jogadores";
+            return "jogadoresre";
         }
     }

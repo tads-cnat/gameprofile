@@ -28,7 +28,7 @@ public class WebSecurityConfig{
                         authorize.requestMatchers("/registro/**").permitAll()
                                 .requestMatchers("/login/**").permitAll()
                                 .requestMatchers("/index").permitAll()
-                                .requestMatchers("/jogadoresre/**").permitAll()
+                                .requestMatchers("/jogadoresre").permitAll()
                                // .requestMatchers("/jogadoresre").hasRole("ADMIN")
 
                 ).formLogin(
