@@ -61,7 +61,8 @@ public class AutenticaController{
             redirectAttributes.addFlashAttribute("error", "Ocorreu um erro ao registrar o jogador");
         }   
         
-        return "redirect:/registro";
+        return "redirect:/registro?success=true";
+
     }
 
         @GetMapping("/jogadoresre")

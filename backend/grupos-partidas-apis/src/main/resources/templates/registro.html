@@ -33,9 +33,8 @@
       <div class="card-header">
           <h2 class="text-center">Registration</h2>
       </div>
-      <div class="alert alert-info"></div>
-         <p th:text="${success}"></p>
-      
+      <div class="alert alert-success" th:if="${param.success}">
+        <p th:text="${param.success}"></p>      
       </div>
       <div class="card-body">
           <form
