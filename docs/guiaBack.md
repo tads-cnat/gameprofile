@@ -41,7 +41,14 @@ para  a execução do projeto sem problemas, se faz recomendado a preparação d
    - O projeto será executado em: 
 [Nuvem](http://4.246.163.92:8080/)
 
+## Passo a passo usando Dockerfile
+
+- Entre nesse  diretório: `backend/grupos-partidas-apis`
+- digite: ```docker build -t back .```
+- após finalizar a build, digite o seguinte comando: ```docker run -p 8080:8080 back```
+
 
 # Padrões de projeto
+
 
 * Atualmente, usamos o padrão de projeto Factory no back-end.

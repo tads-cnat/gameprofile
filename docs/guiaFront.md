@@ -34,3 +34,9 @@ para  a execução do projeto sem problemas, se faz recomendado a preparação d
    - Execute o comando ```docker-compose up --build``` para inicializar tudo automaticamente, incluindo o front-end.
    - O projeto será executado em: 
 [Nuvem](http://4.246.163.92:3000/)
+
+## Passo a passo usando Dockerfile
+
+- Entre nesse  diretório: `frontend`
+- digite: ```docker build -t front .```
+- após finalizar a build, digite o seguinte comando: ```docker run -p 3000:3000 front```
