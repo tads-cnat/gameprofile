@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br"
+<html lang="en"
     xmlns:th="http://www.thymeleaf.org"
 >
 <head>
     <meta charset="UTF-8">
-    <title>Sistema de Login e Registro</title>
+    <title>Registration and Login System</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
           rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
@@ -13,14 +13,14 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" th:href="@{/index}">Sistema de Login e Registro</a>
+        <a class="navbar-brand" th:href="@{/index}">Registration and Login System</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" th:href="@{/registro}">Registro</a>
+                    <a class="nav-link active" aria-current="page" th:href="@{/register}">Register</a>
                 </li>
             </ul>
         </div>
@@ -53,27 +53,27 @@
                             <label class="control-label"> Email</label>
                             <input
                                 type="text"
-                                id="email"
-                                name="email"
+                                id="username"
+                                name="username"
                                 class="form-control"
                                 placeholder="Enter email address"
                             />
                         </div>
 
                         <div class="form-group mb-3">
-                            <label class="control-label"> Senha</label>
+                            <label class="control-label"> Password</label>
                             <input
                                     type="password"
-                                    id="senha"
-                                    name="senha"
+                                    id="password"
+                                    name="password"
                                     class="form-control"
-                                    placeholder="Digite sua senha"
+                                    placeholder="Enter password"
                             />
                         </div>
                         <div class="form-group mb-3">
                             <button type="submit" class="btn btn-primary" >Submit</button>
-                            <span> Ainda não registrado ?
-                                <a th:href="@{/registro}">Registre-se aqui!</a>
+                            <span> Not registered ?
+                                <a th:href="@{/register}">Register/Signup here</a>
                             </span>
                         </div>
                     </form>

@@ -1,4 +1,4 @@
-package com.gameprofile.grupospartidasapis.services.impl;
+/*package com.gameprofile.grupospartidasapis.services.impl;
 import com.gameprofile.grupospartidasapis.dto.JogadorDTO;
 import com.gameprofile.grupospartidasapis.entities.Jogador;
 import com.gameprofile.grupospartidasapis.entities.Papel;
@@ -71,3 +71,4 @@ public class JogadorServiceImpl implements JogadorService {
 
     
 }
+*/

@@ -1,4 +1,4 @@
-/*package com.gameprofile.grupospartidasapis.configurations.security;
+package com.gameprofile.grupospartidasapis.configurations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,29 +13,28 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
 @EnableWebSecurity
-public class WebSecurityConfig{
-     @Autowired
-     private UserDetailsService userDetailsService;
+public class SpringSecurity {
 
-     @Bean
-     public static PasswordEncoder passwordEncoder(){
-         return new BCryptPasswordEncoder();
-     }
-     @Bean
-     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-          http.csrf().disable()
+    @Autowired
+    private UserDetailsService userDetailsService;
+
+    @Bean
+    public static PasswordEncoder passwordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        http.csrf().disable()
                 .authorizeHttpRequests((authorize) ->
-                        authorize.requestMatchers("/registro/**").permitAll()
-                                .requestMatchers("/login/**").permitAll()
+                        authorize.requestMatchers("/register/**").permitAll()
                                 .requestMatchers("/index").permitAll()
-                                .requestMatchers("/jogadoresre").permitAll()
-                               // .requestMatchers("/jogadoresre").hasRole("ADMIN")
-
+                                .requestMatchers("/users").hasRole("ADMIN")
                 ).formLogin(
                         form -> form
                                 .loginPage("/login")
                                 .loginProcessingUrl("/login")
-                                .defaultSuccessUrl("/jogadoresre")
+                                .defaultSuccessUrl("/users")
                                 .permitAll()
                 ).logout(
                         logout -> logout
@@ -44,11 +43,11 @@ public class WebSecurityConfig{
                 );
         return http.build();
     }
+
     @Autowired
-     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception{
-          auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
-     }
-
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+        auth
+                .userDetailsService(userDetailsService)
+                .passwordEncoder(passwordEncoder());
+    }
 }
-
-*/

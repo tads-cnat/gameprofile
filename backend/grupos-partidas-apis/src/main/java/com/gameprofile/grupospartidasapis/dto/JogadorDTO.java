@@ -1,4 +1,4 @@
-package com.gameprofile.grupospartidasapis.dto;
+/*package com.gameprofile.grupospartidasapis.dto;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Data;
@@ -18,4 +18,5 @@ public class JogadorDTO {
     private String email;
     @NotEmpty(message = "O campo senha é obrigatório")
     private String senha;
-}
+}*/
+
