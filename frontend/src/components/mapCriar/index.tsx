@@ -77,7 +77,7 @@ const MapCriar: React.FC<Props> = ({onMapChange}) => {
     }
 
     return(
-        <div id="map">
+        <div id="map-criar">
             <img src={Maplol} alt="mapLol" />
             <div id="topo" className="position-box">
                 <div className="position-box-img">
