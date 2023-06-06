@@ -2,50 +2,40 @@ package com.gameprofile.grupospartidasapis.entities;
 import com.gameprofile.grupospartidasapis.base.Identifiable;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import lombok.Builder;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
+
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
 
 
-@Entity(name = "partidas")
+@Entity
+@Builder
 @Data
 public class Partida implements Identifiable <Integer>{
 
     @Id
-    @Column(name = "id_partida")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer idPartida;
+    private Integer id;
 
-    @Column(name = "ranqueada")
-    private Boolean ranqueada;
-
-    @Column(name = "status")
+    @Column
     @NotNull(message="{NotNull.Partida.status}")
     private String status;
 
-    @DateTimeFormat(pattern = "hh:mm")
-    @Column(name = "horario")
+    @Column
     @NotNull(message="{NotNull.Partida.horario}")
     private final LocalTime horario;
 
-    @DateTimeFormat(pattern = "dd/mm/yyyy")
-    @Column(name = "data")
+
+    @Column
     @NotNull(message="{NotNull.Partida.data}")
-    private Date data;
+    private LocalDate data;
 
-    @Column(name = "id_grupo")
-    @NotNull(message="{NotNull.Partida.idGrupo}")
-    private Integer idGrupo;
-
-    @Override
-    public Integer getId() {
-        return this.idPartida;
-}
-    @Override
-
-    public void setId(Integer id){
-        this.idPartida = id;
-    }
+    //@NotNull(message="{NotNull.Partida.idGrupo}")
+    @ManyToOne
+    @JoinColumn(nullable = false, foreignKey = @ForeignKey(name = "fk_partidas_grupos"))
+    private Grupo grupo;
 
 }

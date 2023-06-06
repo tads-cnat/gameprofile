@@ -1,57 +1,64 @@
 package com.gameprofile.grupospartidasapis.entities;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 import java.util.List;
 
-@Entity(name= "jogadores")
+@Entity
+@Builder
+@ToString
 @Data
-public class Jogador{
+public class Jogador implements Comparable<Jogador>{
     @Id
-    @Column(name = "id_jogador")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idJogador; 
+    @Column
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     
-    @Column(name = "nickname")
+    @Column
     @NotNull(message="{NotNull.Jogador.nickname}")
     private String nickname;
 
-    @Column(name = "nome")
+    @Column
     @NotNull(message="{NotNull.Jogador.nome}")
     private String nome;
 
-    @Column(name = "email")
+    @Column
     @NotNull(message="{NotNull.Jogador.email}")
     private String email;
 
-    @Column(name = "senha")
+    @Column
     @NotNull(message="{NotNull.Jogador.senha}")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String senha;
 
-    @DateTimeFormat(pattern = "dd/mm/yyyy")
-    @Column(name = "nascimento")
-    private Date nascimento;
+    @Column
+    private LocalDate nascimento;
 
-    @DateTimeFormat(pattern = "dd/mm/yyyy")
-    @Column(name = "entrou_em")
-    private Date entrouEm;
+    @Column
+    private LocalDate entrouEm;
 
-    @DateTimeFormat(pattern = "dd/mm/yyyy")
-    @Column(name = "editado_em")
-    private Date editadoEm;
+    @Column
+    private LocalDate editadoEm;
 
-    @Column(name = "id_lol")
+    @Column
     private Integer idLol;
 
-    @OneToMany(mappedBy = "jogador")
-    private List<ChatMessage > chatMessages;
+    @Override
+    public int compareTo(Jogador o) {
+        return 0;
+    }
+
+    //@OneToMany(mappedBy = "jogador")
+    //private List<ChatMessage > chatMessages;
 }

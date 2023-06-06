@@ -22,54 +22,56 @@ import lombok.*;
  *  - atirador: the id of the shooter player
  */
 
-@Entity(name = "grupos")
-@Getter
-@Setter
+@Entity
+@Data
+@Inheritance(strategy = InheritanceType.JOINED)
 @Builder
-@EqualsAndHashCode( of = "nomeGrupo")
+@EqualsAndHashCode( of = "nome")
 @ToString
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class Grupo implements Serializable, Comparable<Grupo> {
-
-    private static final Integer incrementalId = 1;
+public class Grupo implements Comparable<Grupo> {
 
     @Id
-    @Column(name = "id_grupo")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer idGrupo;
+    private Integer id;
 
-    @Column(name = "nome",nullable = false, unique = true)
-    @NotNull(message="{NotNull.Grupo.nomeGrupo}")
-    private String nomeGrupo;
+    @Column(nullable = false, unique = true)
+    @NotNull(message="{NotNull.Grupo.nome}")
+    private String nome;
 
     @Column
     @NotNull(message="{NotNull.Grupo.bloqueado}")
     private Boolean bloqueado;
 
-    @Column(name = "id_criador")
     @NotNull(message="{NotNull.Grupo.idCriador}")
-    private Integer idCriador;
+    @ManyToOne
+    @JoinColumn(nullable = false, foreignKey = @ForeignKey(name = "fk_grupos_jogadores"))
+    private Jogador criador;
 
-    @Column
-    private Integer topo;
+    @ManyToOne
+    private PosicaoGrupo topo;
 
-    @Column
-    private Integer selva;
+    @ManyToOne
+    private PosicaoGrupo selva;
 
-    @Column
-    private Integer meio;
-    @Column
-    private Integer suporte;
+    @ManyToOne
+    private PosicaoGrupo meio;
 
-    @Column
-    private Integer atirador;
+    @ManyToOne
+    private PosicaoGrupo suporte;
 
-    @OneToMany(mappedBy = "grupo")
-    public List<ChatMessage> chatMessages;
+    @ManyToOne
+    private PosicaoGrupo atirador;
+
+    @Column(name = "ranqueada")
+    private Boolean ranqueada;
+
+    //@OneToMany(mappedBy = "grupo")
+    //public List<ChatMessage> chatMessages;
 
     @Override
     public int compareTo(Grupo o) {
-        return this.nomeGrupo.compareTo(o.nomeGrupo);
+        return this.nome.compareTo(o.nome);
     }
 }

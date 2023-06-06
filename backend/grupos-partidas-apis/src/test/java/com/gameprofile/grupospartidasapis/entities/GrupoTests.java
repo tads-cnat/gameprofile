@@ -16,23 +16,23 @@ public class GrupoTests {
 
     @Test
     public void nomeGrupoIgual() {
-        assertThat(Grupo.builder().nomeGrupo(GRUPO1).build())
-                .isEqualTo(Grupo.builder().nomeGrupo(GRUPO1).build());
+        assertThat(Grupo.builder().nome(GRUPO1).build())
+                .isEqualTo(Grupo.builder().nome(GRUPO1).build());
     }
 
     @Test
     public void nomeGrupoDiferente() {
-        assertThat(Grupo.builder().nomeGrupo(GRUPO1).build())
-                .isNotEqualTo(Grupo.builder().nomeGrupo(GRUPO2).build());
+        assertThat(Grupo.builder().nome(GRUPO1).build())
+                .isNotEqualTo(Grupo.builder().nome(GRUPO2).build());
     }
 
     @Test
     public void compareTo() {
         Set<Grupo> grupos = new TreeSet<>();
 
-        Grupo g2 = Grupo.builder().nomeGrupo(GRUPO2).build();
+        Grupo g2 = Grupo.builder().nome(GRUPO2).build();
         grupos.add(g2);
-        Grupo g1 = Grupo.builder().nomeGrupo(GRUPO1).build();
+        Grupo g1 = Grupo.builder().nome(GRUPO1).build();
         grupos.add(g1);
 
         assertThat(grupos.iterator().next()).isEqualTo(g1);
