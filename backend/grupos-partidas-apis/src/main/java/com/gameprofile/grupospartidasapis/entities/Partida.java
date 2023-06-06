@@ -2,16 +2,20 @@ package com.gameprofile.grupospartidasapis.entities;
 import com.gameprofile.grupospartidasapis.base.Identifiable;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-import lombok.Data;
+import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 import java.time.LocalTime;
 import java.util.Date;
 
 
 @Entity(name = "partidas")
-@Data
-public class Partida implements Identifiable <Integer>{
-
+@Getter
+@Setter
+@Builder
+@EqualsAndHashCode(of="idPartida")
+@ToString
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
+public class Partida implements Identifiable<Integer>, Comparable<Partida>{
     @Id
     @Column(name = "id_partida")
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -41,11 +45,15 @@ public class Partida implements Identifiable <Integer>{
     @Override
     public Integer getId() {
         return this.idPartida;
-}
+    }
+    
     @Override
-
     public void setId(Integer id){
         this.idPartida = id;
     }
 
+    @Override
+    public int compareTo(Partida p) {
+        return this.idPartida.compareTo(p.idPartida);
+    }
 }
