@@ -12,7 +12,7 @@ import { FunctionComponent, ReactElement } from "react";
 
 const Map: FunctionComponent = (): ReactElement => {
     return(
-        <div id="map">
+        <div id="map-entrar">
             <img src={Maplol} alt="mapLol" />
             <div id="topo" className="position-box"><img src={Topo} alt="Topo" /></div>
             <div id="selva" className="position-box"><img src={Selva} alt="Selva" /></div>

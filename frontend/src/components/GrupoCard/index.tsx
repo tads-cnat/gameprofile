@@ -9,11 +9,7 @@ import Tooltip from "@mui/material/Tooltip";
 
 import "./styles.css";
 import { Group } from "../../entities/group";
-import { ReactElement, useEffect } from "react";
-
-const isEmpty = (item: number | null): boolean => {
-    return item === null;
-};
+import { ReactElement } from "react";
 
 type GrupoCardType = {
     grupo: Group, 
@@ -21,22 +17,13 @@ type GrupoCardType = {
 };
 
 const GrupoCard = ({ grupo, onClick }: GrupoCardType): ReactElement => {
-    const { nome, data, horario, ranqueada, topo, selva, meio, suporte, atirador } = grupo;
-
-    const databack = new Date(data);
-    const dataFormatada = databack.toLocaleDateString("pt-BR", { timeZone: "UTC" });
-
-    // remove the last 3 characters from the string
-    const horaFormatada = horario ? horario.substring(0, horario.length - 3) : "";
+    const { nome, ranqueada, topo, selva, meio, suporte, atirador } = grupo;
 
     return (
         <div className="card-group mt-5" onClick={onClick}>
             <div>
                 <h1 className="white-text">{nome}</h1>
                 <div className="submenu">
-                    <p>{dataFormatada}</p>
-                    <p>{horaFormatada}h</p>
-                    <p>-</p>
                     <p>{`${ranqueada ? "Competitivo" : "Casual"}`}</p>
                 </div>
             </div>
