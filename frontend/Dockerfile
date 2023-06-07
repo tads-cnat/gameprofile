@@ -11,6 +11,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json ./
 COPY yarn.lock ./
 RUN yarn install
+RUN yarn add vite --dev
 
 # copia todos os arquivos para pasta do container
 COPY . ./
