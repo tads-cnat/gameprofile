@@ -35,34 +35,23 @@ public class Grupo implements Serializable, Comparable<Grupo> {
     private static final Integer incrementalId = 1;
 
     @Id
-    @Column(name = "id_grupo")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer idGrupo;
+    private Integer id;
 
-    @Column(name = "nome",nullable = false, unique = true)
+    @Column(nullable = false, unique = true)
     @NotNull(message="{NotNull.Grupo.nomeGrupo}")
     private String nomeGrupo;
 
-    @Column
     @NotNull(message="{NotNull.Grupo.bloqueado}")
     private Boolean bloqueado;
 
-    @Column(name = "id_criador")
     @NotNull(message="{NotNull.Grupo.idCriador}")
     private Integer idCriador;
 
-    @Column
     private Integer topo;
-
-    @Column
     private Integer selva;
-
-    @Column
     private Integer meio;
-    @Column
     private Integer suporte;
-
-    @Column
     private Integer atirador;
 
     @OneToMany(mappedBy = "grupo")
