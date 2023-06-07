@@ -17,9 +17,8 @@ import java.util.Comparator;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Entrada implements Identifiable<Integer>, Comparable<Entrada>{
     @Id
-    @Column(name = "id_solicitacao")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idSolicitacao;
+    private Integer id;
 
     @NotNull
     @ManyToOne
@@ -31,11 +30,9 @@ public class Entrada implements Identifiable<Integer>, Comparable<Entrada>{
     @JoinColumn(nullable = false, foreignKey = @ForeignKey(name = "fk_entradas_jogadores"))
     private Jogador idJogador;
 
-    @Column
     @NotNull(message="{NotNull.Entrada.status}")
     private Boolean status;
 
-    @Column
     private String posicao;
 
     @Override
@@ -44,13 +41,5 @@ public class Entrada implements Identifiable<Integer>, Comparable<Entrada>{
                 .thenComparing(Entrada::getGrupo)
                 .compare(this, o);
     }
-    @Override
-    public Integer getId() {
-        return idSolicitacao;
-    }
 
-    @Override
-    public void setId(Integer id) {
-        this.idSolicitacao=id;
-    }
 }
