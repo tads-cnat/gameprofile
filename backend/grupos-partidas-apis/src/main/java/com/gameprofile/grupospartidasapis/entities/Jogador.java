@@ -14,6 +14,7 @@ import java.util.List;
 
 @Entity(name= "jogadores")
 @Data
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
 public class Jogador{
     @Id
     @Column(name = "id_jogador")
@@ -54,4 +55,7 @@ public class Jogador{
 
     @OneToMany(mappedBy = "jogador")
     private List<ChatMessage > chatMessages;
+
+    @OneToMany(mappedBy = "jogador")    
+    private List<Entrada> entradas;
 }
