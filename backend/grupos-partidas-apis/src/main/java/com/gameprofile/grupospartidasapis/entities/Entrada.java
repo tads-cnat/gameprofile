@@ -8,21 +8,26 @@ import lombok.Data;
 
 @Entity(name = "entradas")
 @Data
-public class Entrada implements Identifiable<Integer>{
+public class Entrada implements Identifiable<Integer> {
     @Id
     @Column(name = "id_solicitacao")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idSolicitacao;
 
-    @Column(name = "id_grupo")
-    private Integer idGrupo;
+    @ManyToOne
+    @JoinColumn(name = "id_grupo")
+    private Grupo grupo;
 
-    @Column(name = "id_jogador")
+    @ManyToOne
+    @JoinColumn(name = "id_jogador")
     @NotNull(message="{NotNull.Entrada.idJogador}")
-    private Integer idJogador;
+    private Jogador jogador;
+
     @Column
     @NotNull(message="{NotNull.Entrada.status}")
     private Boolean status;
+
+    // ...
 
     @Override
     public Integer getId() {
@@ -31,6 +36,6 @@ public class Entrada implements Identifiable<Integer>{
 
     @Override
     public void setId(Integer id) {
-        this.idSolicitacao=id;
+        this.idSolicitacao = id;
     }
 }
