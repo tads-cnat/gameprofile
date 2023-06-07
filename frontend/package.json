@@ -21,7 +21,8 @@
         "react-router-dom": "^6.7.0",
         "redux": "^4.2.0",
         "styled-components": "^5.3.6",
-        "tailwindcss": "^3.2.4"
+        "tailwindcss": "^3.2.4",
+        "vite": "^4.3.9"
     },
     "devDependencies": {
         "@types/react": "^18.0.26",
@@ -39,8 +40,7 @@
         "eslint-plugin-react": "^7.32.2",
         "postcss": "^8.4.21",
         "prettier": "^2.8.8",
-        "typescript": "*",
-        "vite": "^4.3.5"
+        "typescript": "*"
     },
     "resolutions": {
         "styled-components": "^5"
