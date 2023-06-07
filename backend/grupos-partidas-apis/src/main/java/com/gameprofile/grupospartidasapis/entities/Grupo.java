@@ -22,6 +22,7 @@ import lombok.Data;
 
 @Entity(name = "grupos")
 @Data
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
 public class Grupo {
     @Id
     @Column(name = "id_grupo")
@@ -56,6 +57,7 @@ public class Grupo {
 
     @OneToMany(mappedBy = "grupo")
     public List<ChatMessage> chatMessages;
-    
 
+    @OneToMany(mappedBy = "grupo")    
+    private List<Entrada> entradas;
 }
