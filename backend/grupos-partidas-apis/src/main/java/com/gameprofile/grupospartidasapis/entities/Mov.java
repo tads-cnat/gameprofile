@@ -13,34 +13,33 @@ import java.util.Date;
 @Data
 public class Mov {
     @Id
-    @Column(name = "id_grupo")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idGrupo;
-    @Column
+    private Integer id;
+
     @NotNull(message="{NotNull.Mov.nome}")
     private String nome;
-    @Column
+
     @DateTimeFormat(pattern = "dd/mm/yyyy")
     private Date data;
-    @Column
+
     private Time horario;
-    @Column
+
     @NotNull(message="{NotNull.Mov.bloqueado}")
     private Boolean bloqueado;
-    @Column
+
     @NotNull(message="{NotNull.Mov.ranqueada}")
     private Boolean ranqueada;
-    @Column(name = "id_criador")
+
     @NotNull(message="{NotNull.Mov.idCriador}")
     private Integer idCriador;
-    @Column
+
     private Integer topo;
-    @Column
+
     private Integer selva;
-    @Column
+
     private Integer meio;
-    @Column
+
     private Integer suporte;
-    @Column
+
     private Integer atirador;
 }
