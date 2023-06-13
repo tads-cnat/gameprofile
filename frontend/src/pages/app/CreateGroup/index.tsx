@@ -85,7 +85,7 @@ const CreateGroup: React.FC = () =>{
                     <MapCriar onMapChange={onMapChange} />
                 </div>
 
-                <label className='mt-5 flex flex-row align-middle'>
+                <label className='mt-5 flex flex-row align-middle' id='select-position'>
                     <h1 className="text-xl my-auto">Casual</h1>
                     <Switch name="rank" onChange={switchRanked}/>
                     <h1 className="text-xl my-auto" >Ranqueada</h1>
@@ -98,9 +98,7 @@ const CreateGroup: React.FC = () =>{
                     <a href="/" className='py-2 px-7 rounded mr-5 button-grey'>Cancelar</a>
                 </div>
 
-                </form>
-            
-            
+                </form>            
             </Box>
         </div>
     )
