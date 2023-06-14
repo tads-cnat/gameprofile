@@ -1,4 +1,14 @@
-# Orçamento do Gameprofil
+# Orçamento do Gameprofile
+
+<div align="center">
+
+### Histórico de Versões
+| Data       | Versão | Descrição                                                                  | Autor                                                  |
+|------------|--------|----------------------------------------------------------------------------|--------------------------------------------------------|
+| 14/06/2023 | v1.0   | Criação da visão inicial com base nos artefatos da primeira entrega do projeto corporativo          | [Ruan Franklin](https://github.com/Ruan-Franklin) |
+
+</div>
+
 
 ## Base das Estimativas
 
@@ -34,3 +44,20 @@
 | Teste | Testar unidade | equipe de desenvolvimento, ambiente de teste unitário, software de teste |
 | Teste | Testar sistema | equipe de teste, ambiente de teste do sistema, software de teste |
 | Teste | Teste de aceitação | equipe de teste, usuários finais para testes de aceitação, ambiente de teste do usuário final |
+
+##  Entrega/Fase (Escopo)
+
+### Fase 1: Planejamento
+- Definição do escopo do projeto
+- Desenvolvimento do plano de gerenciamento do projeto
+- Identificação das partes interessadas
+
+### Fase 2: Execução
+- Implementação das atividades planejadas
+- Monitoramento e controle do progresso do projeto
+- Comunicação com as partes interessadas
+
+### Fase 3: Encerramento
+- Entrega dos resultados do projeto
+- Avaliação do desempenho do projeto
+- Documentação das lições aprendidas
