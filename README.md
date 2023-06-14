@@ -60,8 +60,6 @@ ___
         <br />
         <a href="https://github.com/diogoodiego"><b>Giovanna Melo</b></a>
     </td>
-  </tr>
-  <tr>
     <td align="center"><a href="https://github.com/LazaroDamasceno">
         <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/62726118?v=4" width="100px;" alt=""/>
         <br />
