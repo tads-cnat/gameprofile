@@ -7,4 +7,3 @@ import java.util.Optional;
 public interface JogadorRepository extends JpaRepository<Jogador, Integer> {
     Optional<Jogador> findByNickname(String nickname);
 }
-
