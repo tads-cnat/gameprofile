@@ -8,18 +8,17 @@ import lombok.*;
 
 import java.util.Comparator;
 
-@Entity(name = "entradas")
-@Data
+@Entity
+@Getter
+@Setter
 @Builder
-@EqualsAndHashCode(of = {"posicao","grupo"})
-@ToString
+@EqualsAndHashCode(of = {"jogador","grupo"})
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class Entrada implements Identifiable<Integer>, Comparable<Entrada>{
+public class PosicaoGrupo implements Identifiable<Integer>, Comparable<PosicaoGrupo>{
     @Id
-    @Column(name = "id_solicitacao")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idSolicitacao;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
 
     @NotNull
     @ManyToOne
@@ -29,28 +28,16 @@ public class Entrada implements Identifiable<Integer>, Comparable<Entrada>{
     @NotNull
     @ManyToOne
     @JoinColumn(nullable = false, foreignKey = @ForeignKey(name = "fk_entradas_jogadores"))
-    private Jogador idJogador;
+    private Jogador jogador;
 
     @Column
     @NotNull(message="{NotNull.Entrada.status}")
     private Boolean status;
 
-    @Column
-    private String posicao;
-
     @Override
-    public int compareTo(Entrada o) {
-        return Comparator.comparing(Entrada::getPosicao)
-                .thenComparing(Entrada::getGrupo)
+    public int compareTo(PosicaoGrupo o) {
+        return Comparator.comparing(PosicaoGrupo::getGrupo)
+                .thenComparing(PosicaoGrupo::getJogador)
                 .compare(this, o);
-    }
-    @Override
-    public Integer getId() {
-        return idSolicitacao;
-    }
-
-    @Override
-    public void setId(Integer id) {
-        this.idSolicitacao=id;
     }
 }
