@@ -33,21 +33,13 @@ para  a execução do projeto sem problemas, se faz recomendado a preparação d
 
 3. Passo a passo após o git clone
 
-    - Abra a pasta do front-end do projeto
-        ```bash
-        cd gameprofile/frontend
-        ```
-    
+   - Abra a pasta raiz do projeto
+   - Execute o comando ```docker-compose up --build``` para inicializar tudo automaticamente, incluindo o front-end.
+   - O projeto será executado em: 
+[Nuvem](http://4.246.163.92:3000/)
 
-    - Execute o comando de instalação do node
-        ```bash
-        yarn  install
-        ```
+## Passo a passo usando Dockerfile
 
-    - Em seguida exeute o comando para iniciar o server
-        ```bash
-        yarn dev
-        ```
-
-    O projeto por padrão ira ser executado em:
-    [localhost](http://localhost:3000)
+- Entre nesse  diretório: `frontend`
+- digite: ```docker build -t front .```
+- após finalizar a build, digite o seguinte comando: ```docker run -p 3000:3000 front```

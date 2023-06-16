@@ -39,4 +39,9 @@
     
 }
 
+#select-position {
+    display: flex;
+    align-items: center;
+}
+
 

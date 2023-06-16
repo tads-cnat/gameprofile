@@ -1,21 +1,21 @@
-#map{
+#map-criar{
     position: sticky;
     width: 700px;
 }
 
-#map img{
+#map-criar img{
     height: calc(700px * 0,78);
     width: 700px;
 
 }
-#map .position-box{
+#map-criar .position-box{
     display: flex;
     /* align-items: center; */
     /* justify-content: center; */
     position: absolute;
 }
 
-#map .position-box-img{
+#map-criar .position-box-img{
     height: 50px;
     width: 50px;
     background-color: var(--main-black );
@@ -25,8 +25,10 @@
     justify-content: center;
     position: absolute;
 }
-#map .position-box-input{
-    margin-top: 150px;
+#map-criar .position-box-input{
+    position: absolute;
+    margin-left: -45px;
+    margin-top: 50px;
     background-color: black;
     color: #fff;
     opacity: 0.8;
@@ -34,34 +36,34 @@
     padding-top: 5px;
 }
 
-#map .position-box:hover{
+#map-criar .position-box:hover{
     cursor: pointer;
 }
 
-#map .position-box img{
+#map-criar .position-box img{
     height: 30px;
     width: 30px;
 }
 
 
-#map #topo{
+#map-criar #topo{
     left: 12%;
     top: 10%;
 }
 
-#map #selva{
+#map-criar #selva{
     left: 20%;
     top: 50%;
 }
-#map #meio{
+#map-criar #meio{
     left: 45%;
     top: 50%;
 }
-#map #suporte{
+#map-criar #suporte{
     left: 60%;
     top: 70%;
 }
-#map #atirador{
+#map-criar #atirador{
     left: 80%;
     top: 70%;
 }

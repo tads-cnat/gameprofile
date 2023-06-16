@@ -14,6 +14,8 @@
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 ![Spring_Boot](https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
+![Security](https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=Spring-Security&logoColor=white)
   
 
 </div>  
@@ -39,3 +41,39 @@ ___
 
 # Documentação
 [Link para os documentos do projeto](https://github.com/tads-cnat/gameprofile/tree/main/docs)
+
+# Contribuidores
+<table style>
+  <tr>
+    <td align="center"><a href="https://github.com/dinapgomes">
+        <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/74661038?v=4" width="100px;" alt=""/>
+        <br />
+        <a href="https://github.com/alcides07"><b>Dina Gomes</b></a>
+    </td>
+    <td align="center"><a href="https://github.com/Franklin-Barbosa">
+      <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/43481761?v=4" width="100px;" alt=""/>
+      <br />
+      <a href="https://github.com/erick003"><b>Franklin Barbosa</b></a>
+    </td>
+    <td align="center"><a href="https://github.com/150901">
+        <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/126298005?v=4" width="100px;" alt=""/>
+        <br />
+        <a href="https://github.com/diogoodiego"><b>Giovanna Melo</b></a>
+    </td>
+    <td align="center"><a href="https://github.com/LazaroDamasceno">
+        <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/62726118?v=4" width="100px;" alt=""/>
+        <br />
+        <a href="https://github.com/IsraelKleber"><b>Lazaro Damasceno</b></a>
+    </td>
+    <td align="center"><a href="https://github.com/patrickmf">
+        <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/61290998?v=4" width="100px;" alt=""/>
+        <br />
+        <a href="https://github.com/Livia-Rachell"><b>Patrick Matheus</b></a>
+    </td>
+    <td align="center"><a href="https://github.com/Ruan-Franklin">
+        <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/94229859?v=4" width="100px;" alt=""/>
+        <br />
+        <a href="https://github.com/matRaph"><b>Ruan Franklin</b></a>
+    </td>
+  </tr>
+</table>
