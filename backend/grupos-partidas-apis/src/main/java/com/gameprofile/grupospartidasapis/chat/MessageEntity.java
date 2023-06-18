@@ -4,9 +4,12 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+import com.gameprofile.grupospartidasapis.entities.Jogador;
 
 @Entity
 @Getter
@@ -18,7 +21,10 @@ public class MessageEntity {
     private String sender;
     private String receiver;
     private String message;
-    private LocalDate date;
+    private LocalDateTime date;
     private MessageStatus status;
+
+    @ManyToOne
+    private Jogador jogador;
 
 }

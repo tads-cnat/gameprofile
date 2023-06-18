@@ -1,8 +1,6 @@
 package com.gameprofile.grupospartidasapis.entities;
 
 import java.time.LocalDate;
-import java.util.Date;
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 
@@ -10,16 +8,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
-import org.springframework.format.annotation.DateTimeFormat;
-
-import java.util.Date;
-import java.util.List;
 
 @Entity
 @Builder
 @ToString
 @Data
-public class Jogador implements Comparable<Jogador>{
+public class Jogador implements Comparable<Jogador> {
+
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.AUTO)
