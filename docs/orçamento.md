@@ -36,13 +36,13 @@
 | Projeto | Config Docker compose | Tempo para configurar o Docker Compose e recursos de hardware e software |
 | Projeto | Refatorar back-end parte I | Tempo de desenvolvimento e recursos de software |
 | Projeto | Refatorar back-end parte II | Tempo para desnvolvimento e recursos de software |
-| Integração | Plano de riscos | equipe de gerenciamento de riscos, software de gerenciamento de riscos, tempo para análise e planejamento |
-| Integração | Relatório de status | equipe de gerenciamento de projetos, software de gerenciamento de projetos, informações atualizadas sobre o progresso do projeto |
-| Teste | Testar VM | equipe de teste, ambiente de teste virtualizado, software de teste |
-| Teste | Testar integração | equipe de teste, ambiente de teste integrado, software de teste |
-| Teste | Testar unidade | equipe de desenvolvimento, ambiente de teste unitário, software de teste |
-| Teste | Testar sistema | equipe de teste, ambiente de teste do sistema, software de teste |
-| Teste | Teste de aceitação | equipe de teste, usuários finais para testes de aceitação, ambiente de teste do usuário final |
+| Integração | Plano de riscos | Equipe de gerenciamento de riscos, software de gerenciamento de riscos, tempo para análise e planejamento |
+| Integração | Relatório de status | Equipe de gerenciamento de projetos, software de gerenciamento de projetos, informações atualizadas sobre o progresso do projeto |
+| Teste | Testar VM | Equipe de teste, ambiente de teste virtualizado, software de teste |
+| Teste | Testar integração | Equipe de teste, ambiente de teste integrado, software de teste |
+| Teste | Testar unidade | Equipe de desenvolvimento, ambiente de teste unitário, software de teste |
+| Teste | Testar sistema | Equipe de teste, ambiente de teste do sistema, software de teste |
+| Teste | Teste de aceitação | Equipe de teste, usuários finais para testes de aceitação, ambiente de teste do usuário final |
 
 ## Estimativas dos Custos (diretos/indiretos)
 
