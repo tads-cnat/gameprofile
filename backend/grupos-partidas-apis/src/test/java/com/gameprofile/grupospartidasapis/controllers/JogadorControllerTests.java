@@ -50,5 +50,29 @@ public class JogadorControllerTests{
             assertEquals(jogador.getNascimento(), response.getBody().getNascimento());
             assertEquals(jogador.getEntrouEm(), response.getBody().getEntrouEm());
     }
+    @Test
+    public void testGetJogadorById() {
+        Jogador jogador = Jogador.builder()
+            .nickname("Ruan")
+            .nome("Ruan Franklin")
+            .email("ruan.franklin@outlook.com.com")
+            .senha("654321")
+            .nascimento(LocalDate.of(2002, 5, 6))
+            .entrouEm(LocalDate.now())
+            .build();
+        try{
+            jogadorRepository.save(jogador);
+        }catch(Exception e){
+            fail("O corpo da resposta não pode ser nulo");
+        }
+        ResponseEntity<Jogador> response = restTemplate.getForEntity("/jogadores/" + jogador.getId(), Jogador.class);
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(jogador.getId(), response.getBody().getId());
+        assertEquals(jogador.getNickname(), response.getBody().getNickname());
+        assertEquals(jogador.getNome(), response.getBody().getNome());
+        assertEquals(jogador.getEmail(), response.getBody().getEmail());
+        assertEquals(jogador.getNascimento(), response.getBody().getNascimento());
+        assertEquals(jogador.getEntrouEm(), response.getBody().getEntrouEm());
+    }
 
 }
