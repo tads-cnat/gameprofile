@@ -108,4 +108,22 @@ public class JogadorControllerTests{
         assertEquals(jogador.getEmail(), updatedJogador.get().getEmail());
         assertEquals(jogador.getNascimento(), updatedJogador.get().getNascimento());
     }
+    @Test
+    public void testDeleteJogador() {
+    // given
+    Jogador jogador = Jogador.builder()
+            .nickname("Goku")
+            .nome("Son Goku")
+            .email("goku@gmail.com")
+            .senha("987654")
+            .nascimento(LocalDate.of(1997, 7, 5))
+            .entrouEm(LocalDate.now())
+            .build();
+    jogadorRepository.save(jogador);
+
+    restTemplate.delete("/jogadores/" + jogador.getId());
+
+    Optional<Jogador> deletedJogador = jogadorRepository.findById(jogador.getId());
+    assertFalse(deletedJogador.isPresent());
+}
 }
