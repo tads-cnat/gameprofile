@@ -74,5 +74,38 @@ public class JogadorControllerTests{
         assertEquals(jogador.getNascimento(), response.getBody().getNascimento());
         assertEquals(jogador.getEntrouEm(), response.getBody().getEntrouEm());
     }
+    @Test 
+    public void testUpdateJogador(){
+        Jogador jogador = Jogador.builder()
+            .nickname("Marcelo")
+            .nome("Marcelo Romulo Fernandes")
+            .email("marcelo@gmail.com")
+            .senha("senha123")
+            .nascimento(LocalDate.of(1980,10,18))
+            .entrouEm(LocalDate.now())
+            .build();   
 
+        jogadorRepository.save(jogador);
+        jogador.setNickname("Marcelo");
+        jogador.setNome("Marcelo Romulo Fernandes");
+        jogador.setEmail("marcelo@gmail.com");
+        jogador.setSenha("senha123");
+        jogador.setNascimento(LocalDate.of(1980,10,18));
+        jogador.setEntrouEm(LocalDate.now());
+
+        ResponseEntity<Jogador> response = restTemplate.exchange(
+            "/jogadores/" + jogador.getId(),
+            HttpMethod.PUT,
+            new HttpEntity<>(jogador),
+            Jogador.class
+        );
+
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        Optional<Jogador> updatedJogador = jogadorRepository.findById(jogador.getId());
+        assertTrue(updatedJogador.isPresent());
+        assertEquals(jogador.getNickname(), updatedJogador.get().getNickname());
+        assertEquals(jogador.getNome(), updatedJogador.get().getNome());
+        assertEquals(jogador.getEmail(), updatedJogador.get().getEmail());
+        assertEquals(jogador.getNascimento(), updatedJogador.get().getNascimento());
+    }
 }
