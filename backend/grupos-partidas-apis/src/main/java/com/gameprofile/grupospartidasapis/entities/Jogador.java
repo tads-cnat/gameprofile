@@ -15,7 +15,7 @@ import lombok.ToString;
 @Builder
 @ToString
 @Data
-public class Jogador implements Comparable<Jogador> {
+public class Jogador {
 
     @Id
     @Column
