@@ -3,12 +3,16 @@ package com.gameprofile.chat.controller;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
-
+import lombok.AllArgsConstructor;
 import com.gameprofile.chat.model.MessageModel;
 
+@AllArgsConstructor
 @Controller
 public class ChatController {
+
+    private SimpMessagingTemplate smt;
 
     @MessageMapping("/message")
     @SendTo("/chat-room/public")
@@ -16,6 +20,10 @@ public class ChatController {
         return message;
     }
     
-    // Adicionar método de receber message -> 14:33 do vídeo
+    @MessageMapping("/private-message")
+    public MessageModel receivePrivateMessage(@Payload MessageModel message) {
+        smt.convertAndSendToUser(message.getMessage(), "/private", message);
+        return message;
+    }
 
 }
