@@ -1,8 +1,6 @@
 package com.gameprofile.grupospartidasapis.base;
 import java.util.List;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
 public interface BaseController<T extends Identifiable<I>, I, R> {
     default T findById(I id, R repository, List<T> list) {
         return list.stream()

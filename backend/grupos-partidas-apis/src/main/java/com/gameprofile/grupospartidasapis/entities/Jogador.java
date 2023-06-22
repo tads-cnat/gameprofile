@@ -1,13 +1,11 @@
 package com.gameprofile.grupospartidasapis.entities;
 
 import java.time.LocalDate;
-import java.util.List;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.gameprofile.grupospartidasapis.chat.MessageEntity;
 
 import lombok.Builder;
 import lombok.Data;
@@ -57,7 +55,4 @@ public class Jogador implements Comparable<Jogador> {
     public int compareTo(Jogador o) {
         return 0;
     }
-
-    @OneToMany(mappedBy = "jogador")
-    private List<MessageEntity> listMessages;
 }
