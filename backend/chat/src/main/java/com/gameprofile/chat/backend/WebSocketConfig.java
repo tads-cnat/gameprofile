@@ -1,4 +1,4 @@
-package com.gameprofile.chat.config;
+package com.gameprofile.chat.backend;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;

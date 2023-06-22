@@ -1,4 +1,4 @@
-package com.gameprofile.chat.model;
+package com.gameprofile.chat.backend;
 
 public enum Status {
     JOIN,

@@ -1,4 +1,4 @@
-package com.gameprofile.chat.controller;
+package com.gameprofile.chat.backend;
 
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
@@ -6,7 +6,6 @@ import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
 import lombok.AllArgsConstructor;
-import com.gameprofile.chat.model.MessageModel;
 
 @AllArgsConstructor
 @Controller
