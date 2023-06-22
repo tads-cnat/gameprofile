@@ -50,9 +50,4 @@ public class Jogador implements Comparable<Jogador> {
 
     @Column
     private Integer idLol;
-
-    @Override
-    public int compareTo(Jogador o) {
-        return 0;
-    }
 }
