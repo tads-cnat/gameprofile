@@ -9,6 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/jogadores")
@@ -33,8 +34,16 @@ public class JogadorController {
 
         @GetMapping("/{id}")
         public Jogador findAll(@PathVariable Integer id) throws ObjectNotFoundException {
-            return repository.findById(id).get();
-        }
+            Optional<Jogador> jogadorOptional = repository.findById(id);
+            if(jogadorOptional.isPresent()) {
+                return jogadorOptional.get();
+            }else{
+                throw new ObjectNotFoundException(id, "Jogador não encontrado com o ID " + id);
+
+                }
+            }
+
+        
         @PostMapping("/salvar")
         public ResponseEntity<Jogador>salvar(@RequestBody Jogador jogador){
             return ResponseEntity.ok(repository.save(jogador));
