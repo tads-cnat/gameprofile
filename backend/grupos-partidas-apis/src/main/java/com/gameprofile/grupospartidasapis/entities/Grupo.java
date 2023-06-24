@@ -1,7 +1,5 @@
 package com.gameprofile.grupospartidasapis.entities;
 
-import java.io.Serializable;
-import java.util.List;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -67,8 +65,7 @@ public class Grupo implements Comparable<Grupo> {
     @Column(name = "ranqueada")
     private Boolean ranqueada;
 
-    //@OneToMany(mappedBy = "grupo")
-    //public List<ChatMessage> chatMessages;
+    
 
     @Override
     public int compareTo(Grupo o) {

@@ -12,8 +12,7 @@ import lombok.Data;
 import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import java.util.Date;
-import java.util.List;
+
 
 @Entity
 @Builder
@@ -59,6 +58,6 @@ public class Jogador implements Comparable<Jogador>{
         return 0;
     }
 
-    //@OneToMany(mappedBy = "jogador")
-    //private List<ChatMessage > chatMessages;
+    
+    
 }
