@@ -79,6 +79,17 @@
 | Teste | Testar sistema | Equipe de teste, ambiente de teste do sistema, software de teste | 600 |
 | Teste | Teste de aceitação | Equipe de teste, usuários finais para testes de aceitação, ambiente de teste do usuário final | 500 |
 
+## Custo por papel no mês
+| Recurso                        | Valor               |
+|--------------------------------|---------------------|
+| Desenvolvidor jr               | 7.000,00  por Mês   |
+| Gerente de Produto             | 15.000,00 por Mês   |
+| Analista de Testes             | 6.000,00  por Mês   |
+| UX/UI                          | 5.00,00   por Mês   |
+| Analista de Sistemas           | 8.000,00  por Mês   |
+| Analista de DevOps             | 10.000,00 por Mês   |
+| Analista de Banco de dados     | 4.000,00  por Mês   |
+
 ## Reservas (Contingência/Gerencial)
 
 - Reserva de Contingência: 10% do orçamento total (R$ 10.000) = R$ 1.000
