@@ -17,16 +17,12 @@ public class Partida implements Identifiable <Integer>{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @Column
     @NotNull(message="{NotNull.Partida.status}")
     private String status;
 
-    @Column
     @NotNull(message="{NotNull.Partida.horario}")
     private final LocalTime horario;
 
-
-    @Column
     @NotNull(message="{NotNull.Partida.data}")
     private LocalDate data;
 

@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.gameprofile.grupospartidasapis.models.Message;
 
 import lombok.Builder;
 import lombok.Data;
@@ -18,36 +19,23 @@ import lombok.ToString;
 public class Jogador {
 
     @Id
-    @Column
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    
-    @Column
     @NotNull(message="{NotNull.Jogador.nickname}")
     private String nickname;
-
-    @Column
     @NotNull(message="{NotNull.Jogador.nome}")
     private String nome;
-
-    @Column
     @NotNull(message="{NotNull.Jogador.email}")
     private String email;
-
-    @Column
     @NotNull(message="{NotNull.Jogador.senha}")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String senha;
-
-    @Column
     private LocalDate nascimento;
-
-    @Column
     private LocalDate entrouEm;
-
-    @Column
     private LocalDate editadoEm;
-
-    @Column
     private Integer idLol;
+
+    @OneToMany
+    private Message message;
+
 }
