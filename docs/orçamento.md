@@ -6,6 +6,8 @@
 | Data       | Versão | Descrição                                                                  | Autor                                                  |
 |------------|--------|----------------------------------------------------------------------------|--------------------------------------------------------|
 | 14/06/2023 | v1.0   | Criação da visão inicial com base nos artefatos da primeira entrega do projeto corporativo          | [Ruan Franklin](https://github.com/Ruan-Franklin) |
+| 26/06/2023   |  v1.2 | Adição de custos dos papéis e de integrantes da equipe | [Dina Gomes](https://github.com/dinapgomes) [Ruan Franklin](https://github.com/ruan-franklin) |
+
 
 </div>
 
@@ -82,13 +84,25 @@
 ## Custo por papel no mês
 | Recurso                        | Valor               |
 |--------------------------------|---------------------|
-| Desenvolvidor jr               | 7.000,00  por Mês   |
+| Desenvolvedor jr               | 7.000,00  por Mês   |
 | Gerente de Produto             | 15.000,00 por Mês   |
 | Analista de Testes             | 6.000,00  por Mês   |
 | UX/UI                          | 5.00,00   por Mês   |
 | Analista de Sistemas           | 8.000,00  por Mês   |
 | Analista de DevOps             | 10.000,00 por Mês   |
 | Analista de Banco de dados     | 4.000,00  por Mês   |
+
+## Custo da equipe no mês
+
+| Membro  | Cargo | Salário Mensal | 
+| --- | --- | --- | 
+| Dina Gomes | Gerente de Produto | 15.000,00 por Mês  |
+| Franklin Barbosa | Analista de Testes | 6.000,00  por Mês |
+| Giovanna Melo    |  UX/UI/Analista de Sistemas  |  8.000,00  por Mês  |
+| Lázaro Lawrence  | Desenvolvedor Jr | 7.000,00  por Mês |
+| Patrick Matheus | Analista de Banco de dados |  4.000,00  por Mês  |
+| Ruan Franklin |  Analista de DevOps      |  10.000,00 por Mês  |
+
 
 ## Reservas (Contingência/Gerencial)
 
