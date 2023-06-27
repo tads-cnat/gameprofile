@@ -2,7 +2,10 @@ package com.gameprofile.chat.backend;
 
 import java.time.LocalDateTime;
 
+import com.gameprofile.grupospartidasapis.entities.Jogador;
+
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Entity;
 import lombok.*;
 
 @Getter
@@ -10,7 +13,8 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class MessageModel {
+//@Entity
+public class Message {
 
     private String senderName;
     private String receiverName;
@@ -18,7 +22,7 @@ public class MessageModel {
     private LocalDateTime dateTime;
     private Status status;
 
-    /*@ManyToOne
-    private Jogador jogador;*/
+    @ManyToOne
+    private Jogador jogador;
 
 }

@@ -15,12 +15,12 @@ public class ChatController {
 
     @MessageMapping("/message")
     @SendTo("/chat-room/public")
-    private MessageModel receivePublicMessage(@Payload MessageModel message) {
+    private MessageModel receivePublicMessage(@Payload Message message) {
         return message;
     }
     
     @MessageMapping("/private-message")
-    public MessageModel receivePrivateMessage(@Payload MessageModel message) {
+    public MessageModel receivePrivateMessage(@Payload Message message) {
         smt.convertAndSendToUser(message.getMessage(), "/private", message);
         return message;
     }
