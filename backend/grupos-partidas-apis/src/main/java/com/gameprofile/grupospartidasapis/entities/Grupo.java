@@ -27,7 +27,7 @@ import lombok.*;
 @ToString
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class Grupo implements Comparable<Grupo> {
+public class Grupo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -37,7 +37,6 @@ public class Grupo implements Comparable<Grupo> {
     @NotNull(message="{NotNull.Grupo.nome}")
     private String nome;
 
-    @Column
     @NotNull(message="{NotNull.Grupo.bloqueado}")
     private Boolean bloqueado;
 
@@ -61,14 +60,9 @@ public class Grupo implements Comparable<Grupo> {
     @ManyToOne
     private PosicaoGrupo atirador;
 
-    @Column(name = "ranqueada")
     private Boolean ranqueada;
 
     //@OneToMany(mappedBy = "grupo")
     //public List<ChatMessage> chatMessages;
 
-    @Override
-    public int compareTo(Grupo o) {
-        return this.nome.compareTo(o.nome);
-    }
 }
