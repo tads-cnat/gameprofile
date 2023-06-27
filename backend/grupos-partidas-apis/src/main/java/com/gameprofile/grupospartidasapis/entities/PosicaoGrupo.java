@@ -1,12 +1,8 @@
 package com.gameprofile.grupospartidasapis.entities;
 
-import com.gameprofile.grupospartidasapis.base.Identifiable;
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
-
-import java.util.Comparator;
 
 @Entity
 @Getter
@@ -15,7 +11,7 @@ import java.util.Comparator;
 @EqualsAndHashCode(of = {"jogador","grupo"})
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class PosicaoGrupo implements Identifiable<Integer>, Comparable<PosicaoGrupo>{
+public class PosicaoGrupo{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
@@ -34,10 +30,4 @@ public class PosicaoGrupo implements Identifiable<Integer>, Comparable<PosicaoGr
     @NotNull(message="{NotNull.Entrada.status}")
     private Boolean status;
 
-    @Override
-    public int compareTo(PosicaoGrupo o) {
-        return Comparator.comparing(PosicaoGrupo::getGrupo)
-                .thenComparing(PosicaoGrupo::getJogador)
-                .compare(this, o);
-    }
 }

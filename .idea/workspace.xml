@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d330e35-265b-440a-b2a4-d7eaa928185b" name="Changes" comment="" />
+    <list default="true" id="7ac367b4-603c-408c-9200-05f7e481348b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/backend/chat/src/main/java/com/gameprofile/chat/backend/MessageModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/chat/src/main/java/com/gameprofile/chat/backend/MessageModel.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +25,7 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2RXZE0LFHXsaheWrmVu1IQq4LVe" />
+  <component name="ProjectId" id="2RlbU2iQGkKETfYqUdaruICq2C8" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -36,18 +38,28 @@
     "git-widget-placeholder": "187-implementar-chat",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="GruposPartidasApisApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="grupos-partidas-apis" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.gameprofile.grupospartidasapis.GruposPartidasApisApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2d330e35-265b-440a-b2a4-d7eaa928185b" name="Changes" comment="" />
-      <created>1687398276352</created>
+      <changelist id="7ac367b4-603c-408c-9200-05f7e481348b" name="Changes" comment="" />
+      <created>1687827635916</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1687398276352</updated>
-      <workItem from="1687398289599" duration="156000" />
+      <updated>1687827635916</updated>
+      <workItem from="1687827652913" duration="315000" />
     </task>
     <servers />
   </component>

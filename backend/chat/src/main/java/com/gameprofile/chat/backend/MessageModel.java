@@ -2,6 +2,7 @@ package com.gameprofile.chat.backend;
 
 import java.time.LocalDateTime;
 
+import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,5 +21,8 @@ public class MessageModel {
     private String message;
     private LocalDateTime dateTime;
     private Status status;
-    
+
+    /*@ManyToOne
+    private Jogador jogador;*/
+
 }
