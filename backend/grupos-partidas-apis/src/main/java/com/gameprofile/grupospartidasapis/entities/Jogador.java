@@ -35,7 +35,4 @@ public class Jogador {
     private LocalDate editadoEm;
     private Integer idLol;
 
-    @OneToMany
-    private Message message;
-
 }

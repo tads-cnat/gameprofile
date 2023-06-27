@@ -1,8 +1,6 @@
-package com.gameprofile.chat.backend;
+package com.gameprofile.grupospartidasapis.entities;
 
 import java.time.LocalDateTime;
-
-import com.gameprofile.grupospartidasapis.entities.Jogador;
 
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Entity;
@@ -23,6 +21,7 @@ public class Message {
     private Status status;
 
     @ManyToOne
+    @JoinColumn(nullable = false)
     private Jogador jogador;
 
 }

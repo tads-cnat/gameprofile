@@ -1,4 +1,4 @@
-package com.gameprofile.chat.backend;
+package com.gameprofile.grupospartidasapis.entities;
 
 public enum Status {
     JOIN,
