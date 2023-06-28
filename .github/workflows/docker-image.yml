@@ -49,7 +49,7 @@ jobs:
         tags: ruanfk2023/grupos-partidas-apis:latest
     - name: Run unit tests in Docker container
       run: |
-        docker run --rm my-app:test mvn test # Run the tests inside the container.
+        docker run --rm ruanfk2023/grupos-partidas-apis:latest mvn test # Run the tests inside the container.
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
       with:
