@@ -11,5 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build gameprofile/backend/grupos-partidas-apis --file gameprofile/backend/grupos-partidas-apis/Dockerfile --tag grupos-partidas-apis:$(date +%s)
+    - name: Pull and tag the Docker image
+      run: |
+        docker pull ruanfk2023/grupos-partidas-apis:tagname
+        docker tag ruanfk2023/grupos-partidas-apis:tagname grupos-partidas-apis:$(date +%s)
