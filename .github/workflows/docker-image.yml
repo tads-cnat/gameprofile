@@ -1,0 +1,15 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build gameprofile/backend/grupos-partidas-apis --file gameprofile/backend/grupos-partidas-apis/Dockerfile --tag grupos-partidas-apis:$(date +%s)
