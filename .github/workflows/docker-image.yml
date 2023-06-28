@@ -28,4 +28,4 @@ jobs:
     - name: Pull and tag the Docker image
       run: |
         docker pull ruanfk2023/grupos-partidas-apis
-        docker tag ruanfk2023/grupos-partidas-apis grupos-partidas-apis:$(date +%s
+        docker tag ruanfk2023/grupos-partidas-apis grupos-partidas-apis:$(date +%s)
