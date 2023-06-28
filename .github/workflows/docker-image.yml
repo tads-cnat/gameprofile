@@ -19,7 +19,7 @@ jobs:
         context: ./backend/grupos-partidas-apis
         file: ./backend/grupos-partidas-apis/Dockerfile
         push: true
-        tags: user/repo:latest
+        tags: ruanfk2023/grupos-partidas-apis:latest
     - name: Pull and tag the Docker image
       run: |
         docker pull ruanfk2023/grupos-partidas-apis
