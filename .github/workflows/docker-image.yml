@@ -13,5 +13,5 @@ jobs:
     - uses: actions/checkout@v3
     - name: Pull and tag the Docker image
       run: |
-        docker pull ruanfk2023/grupos-partidas-apis:tagname
-        docker tag ruanfk2023/grupos-partidas-apis:tagname grupos-partidas-apis:$(date +%s)
+        docker pull ruanfk2023/grupos-partidas-apis
+        docker tag ruanfk2023/grupos-partidas-apis grupos-partidas-apis:$(date +%s)
