@@ -50,10 +50,6 @@ jobs:
     - name: Run unit tests in Docker container
       run: |
         docker run --rm my-app:test mvn test # Run the tests inside the container.
-
-      run: |
-        chmod +x ./backend/grupos-partidas-apis/mvnw
-        cd ./backend/grupos-partidas-apis && ./mvnw test
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
       with:
