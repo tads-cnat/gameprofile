@@ -40,6 +40,9 @@ jobs:
       run: |
         docker pull ruanfk2023/frontend
         docker tag ruanfk2023/frontend frontend:$(date +%s)
+    - name: Run Spring unit tests
+      run: |
+        .backend/grupos-partidas-apis/ mvn test
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
       with:
