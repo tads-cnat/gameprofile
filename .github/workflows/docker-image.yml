@@ -13,6 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v2
+      with:
+        context: ./backend/grupos-partidas-apis
+        file: ./backend/grupos-partidas-apis/Dockerfile
+        push: true
+        tags: user/repo:latest
     - name: Pull and tag the Docker image
       run: |
         docker pull ruanfk2023/grupos-partidas-apis
