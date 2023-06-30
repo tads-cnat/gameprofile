@@ -34,6 +34,23 @@ public class PosicaoGrupo implements Identifiable<Integer>, Comparable<PosicaoGr
     @NotNull(message="{NotNull.Entrada.status}")
     private Boolean status;
 
+    public Boolean isDisponivel(){
+        return jogador == null && status;
+    }
+
+    public Boolean atribuirJogador(Jogador novoJogador){
+        if(isDisponivel()){
+            jogador = novoJogador;
+            return true;
+       }else{
+            return false;
+        }
+
+        
+
+
+
+    }
     @Override
     public int compareTo(PosicaoGrupo o) {
         return Comparator.comparing(PosicaoGrupo::getGrupo)
