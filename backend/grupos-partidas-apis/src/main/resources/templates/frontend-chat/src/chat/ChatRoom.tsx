@@ -2,8 +2,10 @@ import { useState } from "react"
 import { over } from 'stompjs'
 import SockJs from 'sockjs-client'
 
+var stompClient = null
+
 export default function ChatRoom() {
-    
+
     const [userData, setUserData] = useState({
         username: "",
         receivername: "",
@@ -11,13 +13,28 @@ export default function ChatRoom() {
         message: ""
     })
 
-    const handleUserName = (event) => {
+    const handleUserName = (event: { target: { value: any } }) => {
         const {value} = event.target
         setUserData({...userData, "username": value})
     }
 
     const registerUser = () => {
+        let Sock = new Sock('http://localhost:8080/ws')
+        stompClient = over(Sock)
+        stompClient.connect({}, onConnected, onError)
+    }
 
+    const onConnected = () => {
+        setUserData({...userData, "connected": true})
+        stompClient.subscribe('/chatroom/public', onPublicMessageReceived)
+        stompClient.subscribe('/user'+userData.username+'/private', onPrivateMessageReceived)
+    }
+
+    const onPublicMessageReceived = (payload: { body: string }) => {
+        let payloadData = JSON.parse(payload.body)
+        switch(payloadData.status) {
+            
+        }
     }
 
     return (
