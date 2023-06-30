@@ -6,6 +6,10 @@ var stompClient = null
 
 export default function ChatRoom() {
 
+    const [publicChats, setPublicChats] = useState([])
+
+    const [privateChats, setPrivateChats] = useState(new Map())
+
     const [userData, setUserData] = useState({
         username: "",
         receivername: "",
@@ -33,8 +37,28 @@ export default function ChatRoom() {
     const onPublicMessageReceived = (payload: { body: string }) => {
         let payloadData = JSON.parse(payload.body)
         switch(payloadData.status) {
+            case 'JOIN':
+                break;
+            case 'MESSAGE':
+                publicChats.push(payloadData);
+                setPublicChats({...publicChats})
+                break;
+        }
+    }
+
+    const onPrivateMessageReceived = (payload) => {
+        let payloadData = JSON.parse(payload)
+        if (privateChats.get(payloadData.senderName)) {
+            privateChats.get(payloadData.senderName).push(payloadData)
+            setPrivateChats(new Map(privateChats))
+        }
+        else {
             
         }
+    } 
+
+    const onError = (err) => {
+
     }
 
     return (
