@@ -10,7 +10,7 @@ export default function Router() {
         <>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<ChatRoom />} />
+                    <Route path="/chat-romm" element={<ChatRoom />} />
                 </Routes>
             </BrowserRouter>
         </>
