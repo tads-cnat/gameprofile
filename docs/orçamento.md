@@ -82,15 +82,15 @@
 | Teste | Teste de aceitação | Equipe de teste, usuários finais para testes de aceitação, ambiente de teste do usuário final | 500 |
 
 ## Custo por papel no mês
-| Recurso                        | Valor               |
-|--------------------------------|---------------------|
-| Desenvolvedor jr               | 7.000,00  por Mês   |
-| Gerente de Produto             | 15.000,00 por Mês   |
-| Analista de Testes             | 6.000,00  por Mês   |
-| UX/UI                          | 5.00,00   por Mês   |
-| Analista de Sistemas           | 8.000,00  por Mês   |
-| Analista de DevOps             | 10.000,00 por Mês   |
-| Analista de Banco de dados     | 4.000,00  por Mês   |
+| Recurso                        | Valor por Mês       |Valor por Dia        |
+|--------------------------------|---------------------|---------------------|
+| Desenvolvedor jr               | 7.000,00  por Mês   | 233,33 por Dia      |
+| Gerente de Produto             | 15.000,00 por Mês   | 500,00 por Dia      |
+| Analista de Testes             | 6.000,00  por Mês   | 200,00 por Dia      |
+| UX/UI                          | 5.00,00   por Mês   | 166,00 por Dia      | 
+| Analista de Sistemas           | 8.000,00  por Mês   | 266,00 por Dia      |        
+| Analista de DevOps             | 10.000,00 por Mês   | 333,30 por Dia      |
+| Analista de Banco de dados     | 4.000,00  por Mês   | 133,30 por Dia      |
 
 ## Custo da equipe no mês
 
