@@ -48,8 +48,8 @@
 
 ## Estimativas dos Custos (diretos/indiretos)
 
-| Tópico EAP | Item | Recursos Necessários | Custo Estimado (R$) |
-| --- | --- | --- | --- |
+| Tópico EAP | Item | Recursos Necessários | Papéis Necessários |Dias de trabalho | Custo Estimado por dia (R$) |
+| --- | --- | --- | --- | --- | --- |
 | Gerenciamento | Redefinir ideia do projeto | Tempo de reunião com a equipe e outras partes interessadas | 500 |
 | Gerenciamento | Rever doc de visão | Tempo de revisão do documento | 200 |
 | Gerenciamento | Reunião geral | Tempo de reunião com a equipe | 200 |
