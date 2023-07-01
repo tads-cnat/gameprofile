@@ -21,30 +21,30 @@
 | Gerenciamento | Reunião back-end | Tempo de reunião com a equipe de back-end |
 | Gerenciamento | Reunião front-end | Tempo de reunião com a equipe de front-end |
 | Gerenciamento | Cronograma de marcos | Tempo para planejar e criar o cronograma |
-| Requisitos | Reestruturar BD | Tempo de desenvolvimento e recursos de hardware e software |
-| Requisitos | Definir requisitos API | Tempo para definir os requisitos |
-| Requisitos | Prototipagem | Tempo para criar protótipos e recursos de software |
-| Requisitos | Editar doc. de Caso de uso | Tempo para editar o documento |
-| Requisitos | Atualizar diagrama ER | Tempo para atualizar o diagrama e recursos de software |
-| Requisitos | Guia de instalação do back-end | Tempo para escrever o guia |
-| Requisitos | Guia de instalação do front-end | Tempo para escrever o guia |
-| Projeto | Atualizar rotas do front-end | Tempo de desenvolvimento e recursos de software |
-| Projeto | Alterar diagrama de implantação | Tempo para alterar o diagrama e recursos de software |
-| Projeto | Desenvolver tela de grupo  | Tempo de desenvolvimento e recursos de software 
-| Projeto | Desenvolver tela de Jogador | Tempo de desenvolvimento e recursos de software |
-| Projeto | Configurar VM | Tempo para configurar a VM e recursos de hardware e software |
-| Projeto | Config. Docker front-end | Tempo para configurar o Docker e recursos de hardware e software |
-| Projeto | Config Docker back-end | Tempo para configurar o Docker e recursos de hardware e software |
-| Projeto | Config Docker compose | Tempo para configurar o Docker Compose e recursos de hardware e software |
-| Projeto | Refatorar back-end parte I | Tempo de desenvolvimento e recursos de software |
-| Projeto | Refatorar back-end parte II | Tempo para desnvolvimento e recursos de software |
-| Integração | Plano de riscos | Equipe de gerenciamento de riscos, software de gerenciamento de riscos, tempo para análise e planejamento |
-| Integração | Relatório de status | Equipe de gerenciamento de projetos, software de gerenciamento de projetos, informações atualizadas sobre o progresso do projeto |
-| Teste | Testar VM | Equipe de teste, ambiente de teste virtualizado, software de teste |
-| Teste | Testar integração | Equipe de teste, ambiente de teste integrado, software de teste |
-| Teste | Testar unidade | Equipe de desenvolvimento, ambiente de teste unitário, software de teste |
-| Teste | Testar sistema | Equipe de teste, ambiente de teste do sistema, software de teste |
-| Teste | Teste de aceitação | Equipe de teste, usuários finais para testes de aceitação, ambiente de teste do usuário final |
+| Análise e Requisitos | Reestruturar BD | Tempo de desenvolvimento e recursos de hardware e software |
+| Análise e Requisitos | Definir requisitos API | Tempo para definir os requisitos |
+| Análise e Requisitos | Prototipagem | Tempo para criar protótipos e recursos de software |
+| Análise e Requisitos | Editar doc. de Caso de uso | Tempo para editar o documento |
+| Análise e Requisitos | Atualizar diagrama ER | Tempo para atualizar o diagrama e recursos de software |
+| Análise e Requisitos | Guia de instalação do back-end | Tempo para escrever o guia |
+| Análise e Requisitos | Guia de instalação do front-end | Tempo para escrever o guia |
+| Dev - Front-end| Atualizar rotas do front-end | Tempo de desenvolvimento e recursos de software |
+| Análise e Requisitos | Alterar diagrama de implantação | Tempo para alterar o diagrama e recursos de software |
+| Dev - Front-end | Desenvolver tela de grupo  | Tempo de desenvolvimento e recursos de software 
+| Dev - Front-end | Desenvolver tela de Jogador | Tempo de desenvolvimento e recursos de software |
+| Dev - Integração| Configurar VM | Tempo para configurar a VM e recursos de hardware e software |
+| Dev - Integração | Config. Docker front-end | Tempo para configurar o Docker e recursos de hardware e software |
+| Dev - Integração | Config Docker back-end | Tempo para configurar o Docker e recursos de hardware e software |
+| Dev - Integração | Config Docker compose | Tempo para configurar o Docker Compose e recursos de hardware e software |
+| Dev - Back-end | Refatorar back-end parte I | Tempo de desenvolvimento e recursos de software |
+| Dev - Back-end | Refatorar back-end parte II | Tempo para desnvolvimento e recursos de software |
+| Gerenciamento | Plano de riscos | Equipe de gerenciamento de riscos, software de gerenciamento de riscos, tempo para análise e planejamento |
+| Gerenciamento | Relatório de status | Equipe de gerenciamento de projetos, software de gerenciamento de projetos, informações atualizadas sobre o progresso do projeto |
+| Dev - Teste | Testar VM | Equipe de teste, ambiente de teste virtualizado, software de teste |
+| Dev - Teste | Testar integração | Equipe de teste, ambiente de teste integrado, software de teste |
+| Dev - Teste | Testar unidade | Equipe de desenvolvimento, ambiente de teste unitário, software de teste |
+| Dev - Teste | Testar sistema | Equipe de teste, ambiente de teste do sistema, software de teste |
+| Dev - Teste | Teste de aceitação | Equipe de teste, usuários finais para testes de aceitação, ambiente de teste do usuário final |
 
 ## Estimativas dos Custos (diretos/indiretos)
 
@@ -56,30 +56,30 @@
 | Gerenciamento | Reunião back-end | Tempo de reunião com a equipe de back-end | 150 |
 | Gerenciamento | Reunião front-end | Tempo de reunião com a equipe de front-end | 150 |
 | Gerenciamento | Cronograma de marcos | Tempo para planejar e criar o cronograma | 300 |
-| Requisitos | Reestruturar BD | Tempo de desenvolvimento e recursos de hardware e software | 800 |
-| Requisitos | Definir requisitos API | Tempo para definir os requisitos | 400 |
-| Requisitos | Prototipagem | Tempo para criar protótipos e recursos de software | 600 |
-| Requisitos | Editar doc. de Caso de uso | Tempo para editar o documento | 200 |
-| Requisitos | Atualizar diagrama ER | Tempo para atualizar o diagrama e recursos de software | 400 |
-| Requisitos | Guia de instalação do back-end | Tempo para escrever o guia | 300 |
-| Requisitos | Guia de instalação do front-end | Tempo para escrever o guia | 300 |
-| Projeto | Atualizar rotas do front-end | Tempo de desenvolvimento e recursos de software | 500 |
-| Projeto | Alterar diagrama de implantação | Tempo para alterar o diagrama e recursos de software | 400 |
-| Projeto | Desenvolver tela de grupo  | Tempo de desenvolvimento e recursos de software | 800 |
-| Projeto | Desenvolver tela de Jogador | Tempo de desenvolvimento e recursos de software | 800 |
-| Projeto | Configurar VM | Tempo para configurar a VM e recursos de hardware e software | 500 |
-| Projeto | Config. Docker front-end | Tempo para configurar o Docker e recursos de hardware e software | 500 |
-| Projeto | Config Docker back-end | Tempo para configurar o Docker e recursos de hardware e software | 500 |
-| Projeto | Config Docker compose | Tempo para configurar o Docker Compose e recursos de hardware e software | 500 |
-| Projeto | Refatorar back-end parte I | Tempo de desenvolvimento e recursos de software | 800 |
-| Projeto | Refatorar back-end parte II | Tempo para desenvolvimento e recursos de software | 800 |
-| Integração | Plano de riscos | Equipe de gerenciamento de riscos, software de gerenciamento de riscos, tempo para análise e planejamento | 600 |
-| Integração | Relatório de status | Equipe de gerenciamento de projetos, software de gerenciamento de projetos, informações atualizadas sobre o progresso do projeto | 400 |
-| Teste | Testar VM | Equipe de teste, ambiente de teste virtualizado, software de teste | 500 |
-| Teste | Testar integração | Equipe de teste, ambiente de teste integrado, software de teste | 600 |
-| Teste | Testar unidade | Equipe de desenvolvimento, ambiente de teste unitário, software de teste | 400 |
-| Teste | Testar sistema | Equipe de teste, ambiente de teste do sistema, software de teste | 600 |
-| Teste | Teste de aceitação | Equipe de teste, usuários finais para testes de aceitação, ambiente de teste do usuário final | 500 |
+| Análise e Requisitos | Reestruturar BD | Tempo de desenvolvimento e recursos de hardware e software | 800 |
+| Análise e Requisitos | Definir requisitos API | Tempo para definir os requisitos | 400 |
+| Análise e Requisitos | Prototipagem | Tempo para criar protótipos e recursos de software | 600 |
+| Análise e Requisitos | Editar doc. de Caso de uso | Tempo para editar o documento | 200 |
+| Análise e Requisitos | Atualizar diagrama ER | Tempo para atualizar o diagrama e recursos de software | 400 |
+| Análise e Requisitos | Guia de instalação do back-end | Tempo para escrever o guia | 300 |
+| Análise e Requisitos | Guia de instalação do front-end | Tempo para escrever o guia | 300 |
+| Dev - Front-end | Atualizar rotas do front-end | Tempo de desenvolvimento e recursos de software | 500 |
+| Análise e Requisitos | Alterar diagrama de implantação | Tempo para alterar o diagrama e recursos de software | 400 |
+| Dev - Front-end | Desenvolver tela de grupo  | Tempo de desenvolvimento e recursos de software | 800 |
+| Dev - Front-end | Desenvolver tela de Jogador | Tempo de desenvolvimento e recursos de software | 800 |
+| Dev - Integração | Configurar VM | Tempo para configurar a VM e recursos de hardware e software | 500 |
+| Dev - Integração | Config. Docker front-end | Tempo para configurar o Docker e recursos de hardware e software | 500 |
+| Dev - Integração | Config Docker back-end | Tempo para configurar o Docker e recursos de hardware e software | 500 |
+| Dev - Integração | Config Docker compose | Tempo para configurar o Docker Compose e recursos de hardware e software | 500 |
+| Dev - Back-end | Refatorar back-end parte I | Tempo de desenvolvimento e recursos de software | 800 |
+| Dev - Back-end| Refatorar back-end parte II | Tempo para desenvolvimento e recursos de software | 800 |
+| Gerenciamento | Plano de riscos | Equipe de gerenciamento de riscos, software de gerenciamento de riscos, tempo para análise e planejamento | 600 |
+| Gerenciamento | Relatório de status | Equipe de gerenciamento de projetos, software de gerenciamento de projetos, informações atualizadas sobre o progresso do projeto | 400 |
+| Dev - Teste | Testar VM | Equipe de teste, ambiente de teste virtualizado, software de teste | 500 |
+| Dev - Teste | Testar integração | Equipe de teste, ambiente de teste integrado, software de teste | 600 |
+| Dev - Teste | Testar unidade | Equipe de desenvolvimento, ambiente de teste unitário, software de teste | 400 |
+| Dev - Teste | Testar sistema | Equipe de teste, ambiente de teste do sistema, software de teste | 600 |
+| Dev - Teste | Teste de aceitação | Equipe de teste, usuários finais para testes de aceitação, ambiente de teste do usuário final | 500 |
 
 ## Custo por papel no mês
 | Recurso                        | Valor por Mês       |Valor por Dia        |
