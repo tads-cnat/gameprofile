@@ -53,33 +53,33 @@
 | Gerenciamento | Redefinir ideia do projeto | Tempo de reunião com a equipe e outras partes interessadas | Gerente de Produto | 7  | 3500
 | Gerenciamento | Rever doc de visão | Tempo de revisão do documento | Gerente de Produto, Analista de Sistemas e Desenvolvedor | 7 | 6995,31  | 
 | Gerenciamento | Reunião geral | Tempo de reunião com a equipe | Gerente de Produto, seis Desenvolvedores | 24 (1h/dia) | 5699,94 | 
-| Gerenciamento | Reunião back-end | Tempo de reunião com a equipe de back-end | 150 |
-| Gerenciamento | Reunião front-end | Tempo de reunião com a equipe de front-end | 150 |
-| Gerenciamento | Cronograma de marcos | Tempo para planejar e criar o cronograma | 300 |
-| Análise e Requisitos | Reestruturar BD | Tempo de desenvolvimento e recursos de hardware e software | 800 |
-| Análise e Requisitos | Definir requisitos API | Tempo para definir os requisitos | 400 |
-| Análise e Requisitos | Prototipagem | Tempo para criar protótipos e recursos de software | 600 |
-| Análise e Requisitos | Editar doc. de Caso de uso | Tempo para editar o documento | 200 |
-| Análise e Requisitos | Atualizar diagrama ER | Tempo para atualizar o diagrama e recursos de software | 400 |
-| Análise e Requisitos | Guia de instalação do back-end | Tempo para escrever o guia | 300 |
-| Análise e Requisitos | Guia de instalação do front-end | Tempo para escrever o guia | 300 |
-| Dev - Front-end | Atualizar rotas do front-end | Tempo de desenvolvimento e recursos de software | 500 |
-| Análise e Requisitos | Alterar diagrama de implantação | Tempo para alterar o diagrama e recursos de software | 400 |
-| Dev - Front-end | Desenvolver tela de grupo  | Tempo de desenvolvimento e recursos de software | 800 |
-| Dev - Front-end | Desenvolver tela de Jogador | Tempo de desenvolvimento e recursos de software | 800 |
-| Dev - Integração | Configurar VM | Tempo para configurar a VM e recursos de hardware e software | 500 |
-| Dev - Integração | Config. Docker front-end | Tempo para configurar o Docker e recursos de hardware e software | 500 |
-| Dev - Integração | Config Docker back-end | Tempo para configurar o Docker e recursos de hardware e software | 500 |
-| Dev - Integração | Config Docker compose | Tempo para configurar o Docker Compose e recursos de hardware e software | 500 |
-| Dev - Back-end | Refatorar back-end parte I | Tempo de desenvolvimento e recursos de software | 800 |
-| Dev - Back-end| Refatorar back-end parte II | Tempo para desenvolvimento e recursos de software | 800 |
-| Gerenciamento | Plano de riscos | Equipe de gerenciamento de riscos, software de gerenciamento de riscos, tempo para análise e planejamento | 600 |
-| Gerenciamento | Relatório de status | Equipe de gerenciamento de projetos, software de gerenciamento de projetos, informações atualizadas sobre o progresso do projeto | 400 |
-| Dev - Teste | Testar VM | Equipe de teste, ambiente de teste virtualizado, software de teste | 500 |
-| Dev - Teste | Testar integração | Equipe de teste, ambiente de teste integrado, software de teste | 600 |
-| Dev - Teste | Testar unidade | Equipe de desenvolvimento, ambiente de teste unitário, software de teste | 400 |
-| Dev - Teste | Testar sistema | Equipe de teste, ambiente de teste do sistema, software de teste | 600 |
-| Dev - Teste | Teste de aceitação | Equipe de teste, usuários finais para testes de aceitação, ambiente de teste do usuário final | 500 |
+| Gerenciamento | Reunião back-end | Tempo de reunião com a equipe de back-end | Três Desenvolvedores |  48  (1h/dia) | 4199,94 |
+| Gerenciamento | Reunião front-end | Tempo de reunião com a equipe de front-end | Três Desenvolvedores |  48  (1h/dia) | 4199,94 |
+| Gerenciamento | Cronograma de marcos | Tempo para planejar e criar o cronograma | Gerente de Produto | 2 | 1000 |
+| Análise e Requisitos | Reestruturar BD | Tempo de desenvolvimento e recursos de hardware e software |  Analista de Banco de Dados | 15 | 1999,50 | 
+| Análise e Requisitos | Definir requisitos API | Tempo para definir os requisitos |  Gerente de Produto | 6 | 3000 |
+| Análise e Requisitos | Prototipagem | Tempo para criar protótipos e recursos de software | UI/UX | 16  | 2656 |  
+| Análise e Requisitos | Editar doc. de Caso de uso | Tempo para editar o documento |   Analista de Sistema  | 15 | 3990 |
+| Análise e Requisitos | Atualizar diagrama ER | Tempo para atualizar o diagrama e recursos de software | Analista de Sistema e Analista de Banco de Dados  | 15 | 5989,5 |
+| Análise e Requisitos | Guia de instalação do back-end | Tempo para escrever o guia | Analista de DevOPS | 1 | 333,30 |
+| Análise e Requisitos | Guia de instalação do front-end | Tempo para escrever o guia | Analista de DevOPS | 1 | 333,30 |
+| Dev - Front-end | Atualizar rotas do front-end | Tempo de desenvolvimento e recursos de software | Desenvolvedor Jr  | 15 | 3499,95 | 
+| Análise e Requisitos | Alterar diagrama de implantação | Tempo para alterar o diagrama e recursos de software |  Analista de Sistema | 2 | 232 |
+| Dev - Front-end | Desenvolver tela de grupo  | Tempo de desenvolvimento e recursos de software | Desenvolvedor Jr | 7 |  1633 | 
+| Dev - Front-end | Desenvolver tela de Jogador | Tempo de desenvolvimento e recursos de software | Desenvolvedor Jr | 7 | 1633 |  
+| Dev - Integração | Configurar VM | Tempo para configurar a VM e recursos de hardware e software | Analista De DevOPS | 1 | 333,30 | 
+| Dev - Integração | Config. Docker front-end | Tempo para configurar o Docker e recursos de hardware e software |  Analista De DevOPS | 1 | 333,30 | 
+| Dev - Integração | Config Docker back-end | Tempo para configurar o Docker e recursos de hardware e software |  Analista De DevOPS | 1 | 333,30 | 
+| Dev - Integração | Config Docker compose | Tempo para configurar o Docker Compose e recursos de hardware e software | Analista De DevOPS | 1 | 333,30 | 
+| Dev - Back-end | Refatorar back-end parte I | Tempo de desenvolvimento e recursos de software | Desenvolvedor Jr | 15 | 3499,50 |
+| Dev - Back-end| Refatorar back-end parte II | Tempo para desenvolvimento e recursos de software | Desenvolvedor Jr | 15 | 3499,50 |
+| Gerenciamento | Plano de riscos | Equipe de gerenciamento de riscos, software de gerenciamento de riscos, tempo para análise e planejamento | Gerente do Produto  | 3 | 1500 | 
+| Gerenciamento | Relatório de status | Equipe de gerenciamento de projetos, software de gerenciamento de projetos, informações atualizadas sobre o progresso do projeto | Gerente do Produto | 1  | 500 |
+| Dev - Teste | Testar VM | Equipe de teste, ambiente de teste virtualizado, software de teste | Analista de Teste | 1 | 200 |
+| Dev - Teste | Testar integração | Equipe de teste, ambiente de teste integrado, software de teste | Analista de Teste | 3 | 600 |
+| Dev - Teste | Testar unidade | Equipe de desenvolvimento, ambiente de teste unitário, software de teste | Analista de Teste | 3 | 600 |
+| Dev - Teste | Testar sistema | Equipe de teste, ambiente de teste do sistema, software de teste | Analista de Teste | 3 | 600 |
+| Dev - Teste | Teste de aceitação | Equipe de teste, usuários finais para testes de aceitação, ambiente de teste do usuário final | Analista de Teste | 3 | 600 |
 
 ## Custo por papel no mês
 | Recurso                        | Valor por Mês       |Valor por Dia        |
