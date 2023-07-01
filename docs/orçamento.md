@@ -46,13 +46,13 @@
 | Dev - Teste | Testar sistema | Equipe de teste, ambiente de teste do sistema, software de teste |
 | Dev - Teste | Teste de aceitação | Equipe de teste, usuários finais para testes de aceitação, ambiente de teste do usuário final |
 
-## Estimativas dos Custos (diretos/indiretos)
+## Estimativas dos Custos (diretos/indiretos) para os seis meses de projeto
 
 | Tópico EAP | Item | Recursos Necessários | Papéis Necessários |Dias de trabalho | Custo Estimado por dia (R$) |
 | --- | --- | --- | --- | --- | --- |
-| Gerenciamento | Redefinir ideia do projeto | Tempo de reunião com a equipe e outras partes interessadas | 500 |
-| Gerenciamento | Rever doc de visão | Tempo de revisão do documento | 200 |
-| Gerenciamento | Reunião geral | Tempo de reunião com a equipe | 200 |
+| Gerenciamento | Redefinir ideia do projeto | Tempo de reunião com a equipe e outras partes interessadas | Gerente de Produto | 7  | 3500
+| Gerenciamento | Rever doc de visão | Tempo de revisão do documento | Gerente de Produto, Analista de Sistemas e Desenvolvedor | 7 | 6995,31  | 
+| Gerenciamento | Reunião geral | Tempo de reunião com a equipe | Gerente de Produto, seis Desenvolvedores | 24 (1h/dia) | 5699,94 | 
 | Gerenciamento | Reunião back-end | Tempo de reunião com a equipe de back-end | 150 |
 | Gerenciamento | Reunião front-end | Tempo de reunião com a equipe de front-end | 150 |
 | Gerenciamento | Cronograma de marcos | Tempo para planejar e criar o cronograma | 300 |
