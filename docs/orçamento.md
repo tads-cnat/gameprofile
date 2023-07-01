@@ -106,8 +106,8 @@
 
 ## Reservas (Contingência/Gerencial)
 
-- Reserva de Contingência: 10% do orçamento total (R$ 10.000) = R$ 1.000
-- Reserva Gerencial: 5% do orçamento total (R$ 10.000) = R$ 500
+- Reserva de Contingência: 10% do orçamento total (R$ 64.000) = R$ 6.400
+- Reserva Gerencial: 5% do orçamento total (R$ 64.000) = R$ 3.200
 
 ##  Entrega/Fase (Escopo)
 
