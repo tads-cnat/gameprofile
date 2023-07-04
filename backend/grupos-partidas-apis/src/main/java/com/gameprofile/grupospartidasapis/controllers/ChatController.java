@@ -1,4 +1,4 @@
-package com.gameprofile.chat.backend;
+package com.gameprofile.grupospartidasapis.controllers;
 
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
