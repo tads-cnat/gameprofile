@@ -4,10 +4,8 @@ import Logo from "../../assets/logo/logo.svg";
 import Home from "../../assets/sidebarIcons/Home.svg";
 import Grupos from "../../assets/sidebarIcons/list.svg";
 import Groupo from "../../assets/sidebarIcons/group.svg";
-import Ajustes from "../../assets/sidebarIcons/Ajustes.svg";
 import CriarGrupo from "../../assets/sidebarIcons/CriarGrupo.svg";
 import Sair from "../../assets/sidebarIcons/Sair.svg";
-import Noturno from "../../assets/sidebarIcons/Noturno.svg";
 import Chat from "../../assets/sidebarIcons/Chat.svg";
 
 import Tooltip from "@mui/material/Tooltip";
@@ -72,17 +70,6 @@ const Sidebar = () => {
             </Link>
           </div>
         </Tooltip>
-        <Tooltip title="Ajustes" placement="right">
-          <div id="Ajustes" className={`sidebar-menu-item ${page === "Ajustes" ? 'selected' : ''} `} onClick={divClickedHandler}>
-            <Link to="/app/ajustes">
-              <img
-                src={Ajustes}
-                alt="Ajustes"
-                className="sidebar-menu-item-icon"
-              />
-            </Link>
-          </div>
-        </Tooltip>
       </div>
 
       <div className="sidebar-menu">
@@ -98,9 +85,6 @@ const Sidebar = () => {
       <div className="sidebar-footer">
         <div className="sidebar-menu-item">
           <img src={Sair} alt="Sair" className="sidebar-menu-item-icon" />
-        </div>
-        <div className="sidebar-menu-item">
-          <img src={Noturno} alt="Noturno" className="sidebar-menu-item-icon" />
         </div>
       </div>
     </div>
