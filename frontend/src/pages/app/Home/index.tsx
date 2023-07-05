@@ -51,7 +51,7 @@ const Home = () => {
                     <img className="profile-image" src="https://img.ibxk.com.br/2019/07/26/26171514413327.jpg" alt="" />
                     <Box className='ml-2'> 
                         <h1 className='flex'> {user.nome} </h1>
-                        <h1> AKA: {user.nickname}</h1>
+                        <h1> Nickname: {user.nickname}</h1>
                         <h1>{user.email}</h1>
                     </Box>
                 </Box>
