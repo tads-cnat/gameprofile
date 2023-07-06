@@ -7,6 +7,9 @@ import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
 import lombok.AllArgsConstructor;
 
+import com.gameprofile.grupospartidasapis.entities.Message;
+import com.gameprofile.grupospartidasapis.entities.Message;
+
 @AllArgsConstructor
 @Controller
 public class ChatController {
@@ -15,12 +18,12 @@ public class ChatController {
 
     @MessageMapping("/message")
     @SendTo("/chat-room/public")
-    private MessageModel receivePublicMessage(@Payload Message message) {
+    private Message receivePublicMessage(@Payload Message message) {
         return message;
     }
     
     @MessageMapping("/private-message")
-    public MessageModel receivePrivateMessage(@Payload Message message) {
+    public Message receivePrivateMessage(@Payload Message message) {
         smt.convertAndSendToUser(message.getMessage(), "/private", message);
         return message;
     }

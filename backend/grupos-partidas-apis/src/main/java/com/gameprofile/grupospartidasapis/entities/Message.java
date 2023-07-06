@@ -2,8 +2,7 @@ package com.gameprofile.grupospartidasapis.entities;
 
 import java.time.LocalDateTime;
 
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Getter

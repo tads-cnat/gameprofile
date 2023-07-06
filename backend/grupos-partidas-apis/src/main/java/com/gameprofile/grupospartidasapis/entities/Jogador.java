@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.gameprofile.grupospartidasapis.models.Message;
+import com.gameprofile.grupospartidasapis.entities.Message;
 
 import lombok.Builder;
 import lombok.Data;
