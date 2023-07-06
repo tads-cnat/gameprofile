@@ -7,6 +7,8 @@
 |------------|--------|----------------------------------------------------------------------------|--------------------------------------------------------|
 | 14/06/2023 | v1.0   | Criação da visão inicial com base nos artefatos da primeira entrega do projeto corporativo          | [Ruan Franklin](https://github.com/Ruan-Franklin) |
 | 26/06/2023   |  v1.2 | Adição de custos dos papéis e de integrantes da equipe | [Dina Gomes](https://github.com/dinapgomes) [Ruan Franklin](https://github.com/ruan-franklin) |
+| 06/06/2023   |  v2.0 | Adição de forma de pagamento| [Dina Gomes](https://github.com/dinapgomes) [Ruan Franklin](https://github.com/ruan-franklin) |
+
 
 
 </div>
@@ -103,7 +105,13 @@
 | Patrick Matheus | Analista de Banco de dados |  4.000,00  por Mês  |
 | Ruan Franklin |  Analista de DevOps      |  10.000,00 por Mês  |
 
+## Forma de Pagamento 
 
+A forma de pagamento para este projeto é por meio de transferência via PIX para as tarefas realizadas durante a Sprint (a cada 15 dias). Essa escolha se baseia em considerações sobre praticidade, velocidade e ausência de taxas.
+
+O PIX é uma solução de pagamento eletrônico que oferece transferências instântaneas e seguras. Uma das principais vantagens do PIX é que não são cobradas taxas adicionais pelas transações realizadas. Isso significa que tanto o contrante, quanto os membros da equipe podem realizar pagamentos e receber seus salários sem preocupação.
+
+Além da gratuidade, o PIX também se destaca pela agilidade nas transações financeiras. Os pagamentos por meio do PIX são processados em tempo real, permitindo que os membros da equipe tenham acesso aos seus salários de forma imediata, sem a necessidade de aguardar o tempo de compensação de transfências bancárias convencionais.
 ## Reservas (Contingência/Gerencial)
 
 - Reserva de Contingência: 10% do orçamento total (R$ 64.000) = R$ 6.400
