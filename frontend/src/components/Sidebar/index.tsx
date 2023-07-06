@@ -83,9 +83,13 @@ const Sidebar = () => {
       </div>
 
       <div className="sidebar-footer">
-        <div className="sidebar-menu-item">
-          <img src={Sair} alt="Sair" className="sidebar-menu-item-icon" />
-        </div>
+        <Tooltip title="Sair" placement="right">
+          <div id="criar-grupo" className={`sidebar-menu-item ${page === "Sair" ? 'selected' : ''} `} onClick={divClickedHandler}>
+            <Link to="/">
+              <img src={Sair} alt="Sair" className="sidebar-menu-item-icon" />
+            </Link>
+          </div>
+        </Tooltip>
       </div>
     </div>
   );
