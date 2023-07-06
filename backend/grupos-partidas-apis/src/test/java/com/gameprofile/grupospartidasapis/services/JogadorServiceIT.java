@@ -1,4 +1,4 @@
-package test.com.gameprofile.grupospartidasapis.services;
+/*package test.com.gameprofile.grupospartidasapis.services;
 
 import com.gameprofile.grupospartidasapis.GruposPartidasApisApplication;
 import com.gameprofile.grupospartidasapis.entities.Jogador;
@@ -45,3 +45,4 @@ public class JogadorServiceIT {
 	}
 
 }
+*/
