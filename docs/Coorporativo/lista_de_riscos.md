@@ -1,2 +1,6 @@
-|Descrição|Pro|Impacto|Risco|Estratégia|Resposta|Responsável|Status|
+|Versão|Descrição|
+|:-:|:-:|
+|1|Criação da tabela|
+
+|Descrição|Probabilidade|Impacto|Risco|Estratégia|Resposta|Responsável|Status|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
