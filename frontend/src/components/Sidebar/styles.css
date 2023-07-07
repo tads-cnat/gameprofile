@@ -1,7 +1,7 @@
 .sidebar{
     width: 55px;
     height: 100vh;
-    background-color: var(--main-secondary);
+    background-color: var(--main-dark);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -43,5 +43,5 @@
 }
 
 .selected{
-    background-color: var(--util-blue);
+    background-color: var(--main-secondary);
 }
