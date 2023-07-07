@@ -12,6 +12,11 @@
     background-color: var(--main-primary);
 }
 
+#button-create{
+    display: flex;
+    justify-content: center;
+}
+
 #create-group .form-group{
     display: flex;
     flex-direction: row;
@@ -42,6 +47,7 @@
 #select-position {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 

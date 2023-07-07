@@ -93,7 +93,7 @@ const CreateGroup: React.FC = () =>{
 
 
                 {/* button area */}
-                <div className='flex flex-row-reverse mt-5'>
+                <div className='flex flex-row-reverse mt-5' id='button-create'>
                     <button type="submit" id='button-purple' className='rounded py-2 px-7'>Criar</button>
                     <a href="/" className='py-2 px-7 rounded mr-5 button-grey'>Cancelar</a>
                 </div>

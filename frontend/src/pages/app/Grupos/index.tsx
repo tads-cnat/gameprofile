@@ -35,7 +35,7 @@ const Grupos = () => {
             </Modal>
             <header className='grupos-header'>
                 <div className='indicador-header'></div>
-                <h1 className='ml-3 text-lg'> Posição em Aberto </h1>
+                <h1 className='ml-3 text-lg' style={{paddingTop: "20px"}}> Posição em Aberto </h1>
             </header>
 
             {grupos.map((grupo) => {
