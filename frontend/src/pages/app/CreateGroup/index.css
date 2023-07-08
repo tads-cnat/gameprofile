@@ -34,7 +34,7 @@
 #create-group .form-group{
     display: flex;
     flex-direction: column;
-    width: 150%;
+    width: 100%;
 }
 #create-group h1{
     margin-top: 30px;
@@ -67,6 +67,7 @@
 
 .img-description{
     display: flex;
+    justify-content: space-between;
     margin-top: 20px;
 }
 

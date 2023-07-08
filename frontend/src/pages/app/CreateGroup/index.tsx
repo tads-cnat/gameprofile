@@ -73,7 +73,7 @@ const CreateGroup: React.FC = () =>{
                 <form method='POST' onSubmit={handlerSubmmit} className="w-full flex flex-col justify-between">
 
                 <h1 className="text-3xl font-bold">Crie seu grupo!</h1>
-                <p className="subTitle text-gray-100">Escolher pelo menos uma Posição e o Tipo de Partida.</p>
+                <p className="subTitle text-gray-100">Escolher sua Posição e o Tipo de Partida.</p>
                 <div className="form-group">
                     <label className="text-2xl text-dark">Nome do Grupo:<span className="red-text">*</span></label>
                     <input 
@@ -81,7 +81,7 @@ const CreateGroup: React.FC = () =>{
                         name="nome" 
                         placeholder='Insira o nome do grupo...' 
                         id="nome-grupo" 
-                        className='text-xl ml-5 bg-gray-700 rounded text-gray-200 p-3 w-2/4' 
+                        className='text-xl bg-gray-700 rounded text-gray-200 p-3 w-100' 
                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setGrupo({...grupo, nome: e.target.value})}
                         required/>
                 </div>
