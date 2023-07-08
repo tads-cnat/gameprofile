@@ -33,7 +33,8 @@
 
 #create-group .form-group{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 150%;
 }
 #create-group h1{
     margin-top: 30px;
@@ -66,6 +67,7 @@
 
 .img-description{
     display: flex;
+    margin-top: 20px;
 }
 
 .img-description img{
@@ -77,9 +79,13 @@
 }
 
 .img-description img.selected{
-    background-color: #7C7C7C;
+    background-color: #b9b9b9;
+    border-radius: 10%;
 }
 
+.text-description{
+    background-color: #b9b9b9;
+}
 
 
 
