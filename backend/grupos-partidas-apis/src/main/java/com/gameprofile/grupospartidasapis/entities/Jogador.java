@@ -7,9 +7,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Builder;
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 
@@ -18,6 +16,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Builder
 @ToString
 @Data
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Jogador implements Comparable<Jogador>{
     @Id
     @Column
