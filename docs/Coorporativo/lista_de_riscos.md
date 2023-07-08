@@ -18,9 +18,6 @@
 |Não cumprir prazos de entrega                   |MODERADO|MODERADO  |ALTO |EVITAR      |Manter uma boa comunicação e monitorar alterações via GitHub   |Gerente                  |ABERTO|
 |Falha/Erro na Azure                             |MODERADO|MODERADO  |ALTO |MITIGAR     |Realizar testes e monitorar com frequência                     |Equipe de infraestrtutura|ABERTO|
 |Falhas no fluxo do front-end                    |ALTO    |ALTO      |ALTO |MITIGAR     ||Equipe de font-end|ABERTO|
-
-## Lista de riscos futuros
-|Descrição|Probabilidade|Impacto|Risco|Estratégia|Resposta|Responsável|Status|
-|:-------:|:-----------:|:-----:|:---:|:--------:|:------:|:---------:|:----:|
-|Desistencia de membros da equipe|BAIXO|BAIXO|MÉDIO|ACEITAR||Equipe|ABERTO|
+|Feriados e datas comemorativas que possam trazer atrasos ao andamento do projeto|MODERADO|MODERADO|MÉDIO|ACEITAR||Gerente|FECHADO|
+|Desistencia de membros da equipe                |BAIXO   |BAIXO     |MÉDIO|ACEITAR     ||Equipe            |ABERTO|
 
