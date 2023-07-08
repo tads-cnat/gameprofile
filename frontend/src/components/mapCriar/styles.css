@@ -67,3 +67,8 @@
     left: 80%;
     top: 70%;
 }
+
+#map-criar img.selected{
+    scale: 2;
+    background-color: black;
+}

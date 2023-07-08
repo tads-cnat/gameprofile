@@ -43,13 +43,7 @@ const CreateGroup: React.FC = () =>{
     function resetStates(){
         setGrupo(initialState);
     }
-    
-    const onMapChange =(data: onChangeReturn) => {
-        setGrupo({
-            ...grupo, 
-            // @ts-ignore
-            topo: data.topo ? 2 : null,  selva: data.selva ? 2 : null, meio: data.meio ? 2 : null, atirador: data.atirador ? 2 : null, suporte: data.suporte ? 2 : null});
-    }
+
 
     async function handlerSubmmit(e: React.FormEvent<HTMLFormElement>){
         e.preventDefault();
@@ -96,8 +90,8 @@ const CreateGroup: React.FC = () =>{
                     <img className={description === "Topo" ? "selected" : ""} src={Topo} onClick={() => changeDescription("Topo")}/>
                     <img className={description === "Selva" ? "selected" : ""} src={Selva} onClick={() => changeDescription("Selva")}/>
                     <img className={description === "Meio" ? "selected" : ""} src={Meio} onClick={() => changeDescription("Meio")}/>
-                    <img className={description === "Atirador" ? "selected" : ""} src={Atirador} onClick={() => changeDescription("Atirador")}/>                   
                     <img className={description === "Suporte" ? "selected" : ""} src={Suporte} onClick={() => changeDescription("Suporte")}/>
+                    <img className={description === "Atirador" ? "selected" : ""} src={Atirador} onClick={() => changeDescription("Atirador")}/>                   
                 </div>
 
                 <br />
@@ -107,8 +101,8 @@ const CreateGroup: React.FC = () =>{
                     {description === "Topo" && <p>Topo: Campeões na rota topo são os lutadores durões e solitários da equipe. O trabalho deles é proteger a própria rota e focar seu dano nos membros mais fortes da equipe inimiga.</p>}
                     {description === "Selva" && <p>Selva: Caçadores vivem pela caça. Espreitando entre as rotas com furtividade e habilidade, eles ficam atentos aos monstros da selva mais importantes e avançam no momento que o oponente baixar a guarda.</p>}
                     {description === "Meio" && <p>Meio: Campeões da rota do meio são aqueles que possuem alto dano explosivo e podem fazer de tudo, sejam sozinhos ou em equipe. Para eles, o combate é uma dança perigosa, e nela devem sempre buscar oportunidades para superar seu oponente.</p>}
-                    {description === "Atirador" && <p>Atirador: Campeões da rota inferior são a fonte preciosa de dano de cada equipe e precisam ser protegidos no início de jogo até que acumulem ouro e experiência o suficiente para carregar toda a equipe até a vitória.</p>}
                     {description === "Suporte" && <p>Suporte:Campeões Suporte são os guardiões da equipe. Eles ajudam a manter seus aliados vivos e focam primordialmente em armar abates, protegendo seu parceiro na rota inferior até que fique mais forte.</p>}
+                    {description === "Atirador" && <p>Atirador: Campeões da rota inferior são a fonte preciosa de dano de cada equipe e precisam ser protegidos no início de jogo até que acumulem ouro e experiência o suficiente para carregar toda a equipe até a vitória.</p>}
 
                 </div>
 
@@ -128,7 +122,7 @@ const CreateGroup: React.FC = () =>{
             </Box>
 
             <div className='flex justify-around mt-10 map'>   
-                    <MapCriar onMapChange={onMapChange} />
+                        <MapCriar currentPosition={description} onMapChange={(position) => changeDescription(position)} />
             </div>
         </div>
     )
