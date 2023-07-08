@@ -64,7 +64,7 @@ const Home = () => {
                     </Box>
                 </Box>
             </div>
-            <div style={{display: "flex"}}>
+            <div style={{display: "flex"}}> 
                 <div className='box'>
                     <h2 style={{marginBottom: "15px"}}>Meus Grupos</h2>
                     <div className="card-wrapper">

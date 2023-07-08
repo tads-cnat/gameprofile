@@ -1,17 +1,17 @@
 #map-criar{
     position: sticky;
-    width: 700px;
+    width: 100%;
 }
 
 #map-criar img{
-    height: calc(700px * 0,78);
-    width: 700px;
+    height: calc(100% * 0,78);
+    width: 100%;
 
 }
 #map-criar .position-box{
     display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
+    /* align-items: center;
+    justify-content: center; */
     position: absolute;
 }
 

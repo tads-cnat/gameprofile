@@ -1,3 +1,15 @@
+#create-group{
+    display: flex;
+}
+
+#create-box{
+    min-width: 500px;
+    width: 500px;
+}
+#map{
+    width: 100%;
+}
+
 .red-text{
     color: red;
 }
@@ -10,6 +22,8 @@
 
 #button-purple{
     background-color: var(--main-primary);
+    padding-left: 4rem;
+    padding-right: 4rem;
 }
 
 #button-create{
@@ -25,14 +39,14 @@
     margin-top: 30px;
     margin-bottom: 30px;
     color: var(--main-dark );
-    text-align: center;
+    text-align: left;
 }
 
 #create-group .container-map{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
     margin-top: 50px;
     margin-bottom: 30px;
 }
@@ -49,5 +63,23 @@
     align-items: center;
     justify-content: center;
 }
+
+.img-description{
+    display: flex;
+}
+
+.img-description img{
+    padding: 15px;
+}
+
+.img-description img:hover{
+    cursor: pointer;
+}
+
+.img-description img.selected{
+    background-color: #7C7C7C;
+}
+
+
 
 
