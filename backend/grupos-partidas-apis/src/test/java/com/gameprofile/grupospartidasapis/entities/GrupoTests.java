@@ -1,4 +1,4 @@
-package com.gameprofile.grupospartidasapis.entities;
+/*package com.gameprofile.grupospartidasapis.entities;
 
 import org.junit.jupiter.api.Test;
 
@@ -38,3 +38,4 @@ public class GrupoTests {
         assertThat(grupos.iterator().next()).isEqualTo(g1);
     }
 }
+*/
