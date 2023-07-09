@@ -8,6 +8,29 @@ import { Group } from '../../../entities/group';
 import { getMatches } from '../../../services/api/match';
 import { Match } from '../../../entities/match';
 import "./index.css"
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
+
+const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
 
 const initialState: Player = {
     id: 0,
@@ -21,6 +44,34 @@ const initialState: Player = {
     idLol: null,
 }
 
+const carroselList = [
+    {
+        titulo: "Campeões",
+        descricao: "lalala",
+        img: "https://www.gamerinfo.com.br/wp-content/uploads/2017/03/campe%C3%B5es-de-lol-1.png"
+    },
+    {
+        titulo: "Noticias",
+        descricao: "lalala",
+        img: "https://www.gamerinfo.com.br/wp-content/uploads/2017/03/campe%C3%B5es-de-lol-1.png"
+    },{
+        titulo: "Campeões",
+        descricao: "lalala",
+        img: "https://www.gamerinfo.com.br/wp-content/uploads/2017/03/campe%C3%B5es-de-lol-1.png"
+    },{
+        titulo: "Como jogar",
+        descricao: "lalala",
+        img: "https://www.gamerinfo.com.br/wp-content/uploads/2017/03/campe%C3%B5es-de-lol-1.png"
+    },{
+        titulo: "Campeões",
+        descricao: "lalala",
+        img: "https://www.gamerinfo.com.br/wp-content/uploads/2017/03/campe%C3%B5es-de-lol-1.png"
+    },{
+        titulo: "Campeões",
+        descricao: "lalala",
+        img: "https://www.gamerinfo.com.br/wp-content/uploads/2017/03/campe%C3%B5es-de-lol-1.png"
+    },
+]
 
 const Home = () => {
     const [user, setUser] = useState<Player>(initialState);
@@ -64,7 +115,7 @@ const Home = () => {
                     </Box>
                 </Box>
             </div>
-            <div style={{display: "flex"}}> 
+            <div style={{display: "flex", marginBottom: "30px"}}> 
                 <div className='box'>
                     <h2 style={{marginBottom: "15px"}}>Meus Grupos</h2>
                     <div className="card-wrapper">
@@ -77,6 +128,37 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <Carousel 
+                responsive={responsive}
+                swipeable={true}
+                draggable={true}
+                showDots={true}
+                autoPlay={true}
+                infinite={true}
+                containerClass='pb-12'
+            >
+                { carroselList.map(item => (
+                    <Card sx={{ maxWidth: 345 }}>
+                        <CardActionArea>
+                            <CardMedia
+                            component="img"
+                            height="140"
+                            image={item.img}
+                            alt="green iguana"
+                            />
+                            <CardContent>
+                            <Typography gutterBottom variant="h5" component="div">
+                                {item.titulo}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                {item.descricao}
+                            </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                        </Card>
+
+                ))}
+            </Carousel>
         </div>
     );
 };
