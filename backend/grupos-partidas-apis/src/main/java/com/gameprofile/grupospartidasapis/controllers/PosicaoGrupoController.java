@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.http.HttpStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.Optional;
+import java.util.Set;
+import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import com.gameprofile.grupospartidasapis.entities.Grupo;
 import com.gameprofile.grupospartidasapis.entities.Grupo.PosicaoEscolhida;
 import com.gameprofile.grupospartidasapis.entities.PosicaoGrupo;
@@ -97,10 +98,19 @@ public class PosicaoGrupoController {
         if (posicaoGrupo == null) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Posição não encontrada no grupo!");
         }
-    
-        if (posicaoGrupo.getJogador() != null) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("A posição já está ocupada!");
+        Set<PosicaoEscolhida> posicoesOcupadas = new HashSet<>();
+        //Adicionar posições ocupadas ao conjunto
+        if(grupo.getPosicaoEscolhida() != null){
+            posicoesOcupadas.add(grupo.getPosicaoEscolhida());
         }
+
+        //Verificar se a posição escolhida já está ocupada no grupo
+        if (posicoesOcupadas.contains(posicaoGrupo.getPosicaoEscolhida())) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Posição já ocupada!");
+        }
+        
+    
+       
     
         posicaoGrupo.setStatus(true);
         posicaoGrupoRepository.save(posicaoGrupo);

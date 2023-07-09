@@ -47,7 +47,7 @@ public class Grupo implements Comparable<Grupo> {
     @JoinColumn(nullable = false, foreignKey = @ForeignKey(name = "fk_grupos_jogadores"))
     private Jogador criador;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     @Enumerated(EnumType.STRING)
     private PosicaoEscolhida posicaoEscolhida;
     public enum PosicaoEscolhida {
