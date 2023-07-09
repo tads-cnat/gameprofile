@@ -1,6 +1,7 @@
 package com.gameprofile.grupospartidasapis.controllers;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.http.ResponseEntity;
@@ -99,6 +100,19 @@ public class PosicaoGrupoController {
                 return false;
         }
     }
+    @GetMapping("/{posicaoGrupoId}")
+    public ResponseEntity<PosicaoGrupo> buscarPosicaoGrupo(@PathVariable Integer posicaoGrupoId) {
+        Optional<PosicaoGrupo> posicaoGrupoOptional = posicaoGrupoRepository.findById(posicaoGrupoId);
+    
+        if (posicaoGrupoOptional.isEmpty()) {
+            return ResponseEntity.notFound().build();
+    }
+    
+        PosicaoGrupo posicaoGrupo = posicaoGrupoOptional.get();
+        return ResponseEntity.ok(posicaoGrupo);
+}
+
+    
 
 
 }
