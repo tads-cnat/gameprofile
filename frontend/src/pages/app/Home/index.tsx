@@ -47,29 +47,25 @@ const initialState: Player = {
 const carroselList = [
     {
         titulo: "Campeões",
-        descricao: "lalala",
-        img: "https://www.gamerinfo.com.br/wp-content/uploads/2017/03/campe%C3%B5es-de-lol-1.png"
+        descricao: "Com mais de 140 Campeões, você encontrará a combinação perfeita para seu estilo de jogo. Especialize-se em um estilo ou em todos.",
+        img: "https://www.gamerinfo.com.br/wp-content/uploads/2017/03/campe%C3%B5es-de-lol-1.png",
+        link: "https://www.leagueoflegends.com/pt-br/champions/"
     },
     {
         titulo: "Noticias",
-        descricao: "lalala",
-        img: "https://www.gamerinfo.com.br/wp-content/uploads/2017/03/campe%C3%B5es-de-lol-1.png"
-    },{
-        titulo: "Campeões",
-        descricao: "lalala",
-        img: "https://www.gamerinfo.com.br/wp-content/uploads/2017/03/campe%C3%B5es-de-lol-1.png"
+        descricao: "Saiba todas as noticias do jogo clicando aqui!",
+        img: "https://portalcorreio.com.br/portalcorreio/arquivos/2022/09/db7551a9ef5b764a188ac95da726c304.jpg",
+        link: "https://www.leagueoflegends.com/pt-br/news/"
     },{
         titulo: "Como jogar",
-        descricao: "lalala",
-        img: "https://www.gamerinfo.com.br/wp-content/uploads/2017/03/campe%C3%B5es-de-lol-1.png"
+        descricao: "Existe muita coisa para se aprender sobre o League, então começaremos com o básico. Explore o guia clicando aqui para ter um resumo sobre o modo de jogo mais jogado.",
+        img: "https://www.esportelandia.com.br/wp-content/uploads/2019/11/Como-jogar-LOL.jpg",
+        link: "https://www.leagueoflegends.com/pt-br/how-to-play/"
     },{
-        titulo: "Campeões",
-        descricao: "lalala",
-        img: "https://www.gamerinfo.com.br/wp-content/uploads/2017/03/campe%C3%B5es-de-lol-1.png"
-    },{
-        titulo: "Campeões",
-        descricao: "lalala",
-        img: "https://www.gamerinfo.com.br/wp-content/uploads/2017/03/campe%C3%B5es-de-lol-1.png"
+        titulo: "Notas das atualizações",
+        descricao: "Veja sobre última atualização",
+        img: "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltc040386ef2ab37c9/60ad02eab29743655f633928/Patch_11.11_Infographic_v2_por-BR.png",
+        link: "https://www.leagueoflegends.com/pt-br/news/tags/patch-notes/"
     },
 ]
 
@@ -138,7 +134,8 @@ const Home = () => {
                 containerClass='pb-12'
             >
                 { carroselList.map(item => (
-                    <Card sx={{ maxWidth: 345 }}>
+                    <a href={item.link} target='_blank'> 
+                    <Card style={{height: "100%"}} sx={{ maxWidth: 345 }}>
                         <CardActionArea>
                             <CardMedia
                             component="img"
@@ -156,6 +153,7 @@ const Home = () => {
                             </CardContent>
                         </CardActionArea>
                         </Card>
+                    </a>
 
                 ))}
             </Carousel>
