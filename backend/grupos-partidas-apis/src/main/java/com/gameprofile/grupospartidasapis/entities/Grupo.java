@@ -26,8 +26,8 @@ import lombok.*;
 @Builder
 @EqualsAndHashCode( of = "nome")
 @ToString
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
+@AllArgsConstructor
+@NoArgsConstructor
 public class Grupo implements Comparable<Grupo> {
 
     @Id
@@ -47,20 +47,12 @@ public class Grupo implements Comparable<Grupo> {
     @JoinColumn(nullable = false, foreignKey = @ForeignKey(name = "fk_grupos_jogadores"))
     private Jogador criador;
 
-    @ManyToOne
-    private PosicaoGrupo topo;
-
-    @ManyToOne
-    private PosicaoGrupo selva;
-
-    @ManyToOne
-    private PosicaoGrupo meio;
-
-    @ManyToOne
-    private PosicaoGrupo suporte;
-
-    @ManyToOne
-    private PosicaoGrupo atirador;
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private PosicaoEscolhida posicaoEscolhida;
+    public enum PosicaoEscolhida {
+        TOPO, SELVA, MEIO, ATIRADOR, SUPORTE
+    }
 
     @Column(name = "ranqueada")
     private Boolean ranqueada;
