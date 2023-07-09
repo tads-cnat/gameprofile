@@ -1,6 +1,7 @@
 package com.gameprofile.grupospartidasapis.entities;
 
 import com.gameprofile.grupospartidasapis.base.Identifiable;
+import com.gameprofile.grupospartidasapis.entities.Grupo.PosicaoEscolhida;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -12,10 +13,12 @@ import java.util.Comparator;
 @Getter
 @Setter
 @Builder
-@EqualsAndHashCode(of = {"jogador","grupo"})
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
+@EqualsAndHashCode(of = {"jogador","grupo", "posicaoEscolhida"})
+@AllArgsConstructor
+@NoArgsConstructor
 public class PosicaoGrupo implements Identifiable<Integer>, Comparable<PosicaoGrupo>{
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
@@ -27,11 +30,14 @@ public class PosicaoGrupo implements Identifiable<Integer>, Comparable<PosicaoGr
 
     @NotNull
     @ManyToOne
-    @JoinColumn(nullable = false, foreignKey = @ForeignKey(name = "fk_entradas_jogadores"))
+    @JoinColumn(foreignKey = @ForeignKey(name = "fk_entradas_jogadores"))
     private Jogador jogador;
 
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private PosicaoEscolhida posicaoEscolhida;
+
     @Column
-    @NotNull(message="{NotNull.Entrada.status}")
     private Boolean status;
 
     @Override
