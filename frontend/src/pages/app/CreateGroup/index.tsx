@@ -55,7 +55,7 @@ const CreateGroup: React.FC = () =>{
                 },
             })
             
-            navigate("/app")
+            navigate("/app/chat")
         }catch(err){
             console.log(err);
             
