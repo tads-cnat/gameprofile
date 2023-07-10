@@ -9,54 +9,57 @@ import Meio from "../../../assets/lanes/dark/meio.svg";
 import Suporte from "../../../assets/lanes/dark/suporte.svg";
 import Atirador from "../../../assets/lanes/dark/atirador.svg";
 
-import CardLane from '../../../components/CardLane';
-
-import {createGroup} from '../../../services/api/groups';
-
 import { useNavigate } from 'react-router-dom';
-import { Group } from '../../../entities/group';
-import MapCriar, { onChangeReturn } from '../../../components/mapCriar';
-
-const initialState: Omit<Group, "idGrupo" | "data" | "horario"> = {
-    idCriador: 2,
-    nome: "",
-    bloqueado: false,
-    ranqueada: false,
-    topo: "",
-    selva: "",
-    meio: "",
-    atirador: "",
-    suporte: ""
-}
+import MapCriar from '../../../components/mapCriar';
+import axios from 'axios';
+import api from "../../../services/api/api.json"
 
 const CreateGroup: React.FC = () =>{
-    const lanes = ["topo", "selva", "meio", "atirador", "suporte"]
     const navigate = useNavigate();
 
-    const [grupo, setGrupo] = useState<Omit<Group, "idGrupo" | "data" | "horario">>(initialState);
+    const [nome, setNome] = useState<string>("");
+    const [ranked, setRanked] = useState<boolean>(false);
     const [description, setDescription] = useState<string>("Topo");
 
-    function switchRanked(){
-        setGrupo({...grupo, ranqueada: !grupo.ranqueada});
-    }
-
     function resetStates(){
-        setGrupo(initialState);
+        setNome("");
+        setRanked(false);
     }
 
 
     async function handlerSubmmit(e: React.FormEvent<HTMLFormElement>){
         e.preventDefault();
-        // lanes.forEach(lane => {
-        //     if(e.target[lane].checked){
-        //         setGrupo({...grupo, [lane]: 2})
-        //     }
-        // });
+
+        if (nome === "") return;
+        
+        const group = {
+            nome,
+            bloqueado: false,
+            ranqueada: ranked,
+            posicaoEscolhida: description.toUpperCase(),
+            criador: {
+                id: 2,
+                nickname: "dinapgomes",
+                nome: "Dina",
+                email: "dina@gmail.com",
+                nascimento: "2000-10-18",
+                entrouEm: null,
+                editadoEm: null,
+                idLol: null
+            }
+        }
         
         try{
-            await createGroup(grupo)
-            navigate("/app/grupos")
+            await axios.post(api.api_url + "grupos", group, {
+                headers: {
+                  "Content-Type": "application/json",
+                },
+            })
+            
+            navigate("/app")
         }catch(err){
+            console.log(err);
+            
             console.log("chegamos aqui")
         }
         resetStates();
@@ -82,7 +85,7 @@ const CreateGroup: React.FC = () =>{
                         placeholder='Insira o nome do grupo...' 
                         id="nome-grupo" 
                         className='text-xl bg-gray-700 rounded text-gray-200 p-3 w-100' 
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setGrupo({...grupo, nome: e.target.value})}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNome(e.target.value)}
                         required/>
                 </div>
 
@@ -108,7 +111,7 @@ const CreateGroup: React.FC = () =>{
 
                 <label className='mt-5 flex flex-row align-middle' id='select-position'>
                     <h1 className="text-xl my-auto">Casual</h1>
-                    <Switch name="rank" onChange={switchRanked}/>
+                    <Switch name="rank" onChange={(e: React.ChangeEvent<HTMLInputElement>) => setRanked(e.target.checked)}/>
                     <h1 className="text-xl my-auto" >Ranqueada</h1>
                 </label>
 
@@ -122,7 +125,7 @@ const CreateGroup: React.FC = () =>{
             </Box>
 
             <div className='flex justify-around mt-10 map'>   
-                        <MapCriar currentPosition={description} onMapChange={(position) => changeDescription(position)} />
+                <MapCriar currentPosition={description} onMapChange={(position) => changeDescription(position)} />
             </div>
         </div>
     )
