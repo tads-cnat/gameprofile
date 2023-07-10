@@ -1,20 +1,18 @@
-import Skeleton from '@mui/material/Skeleton';
 import Box from '@mui/material/Box';
 import { useEffect, useState } from 'react';
 import { getPlayer } from '../../../services/api/player';
 import { Player } from '../../../entities/player';
 import { getGroups } from '../../../services/api/groups';
 import { Group } from '../../../entities/group';
-import { getMatches } from '../../../services/api/match';
-import { Match } from '../../../entities/match';
 import "./index.css"
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
+import { Card, CardActionArea, CardContent, CardMedia, Modal, Typography } from '@mui/material';
+import HomeGroupCard from '../../../components/HomeGroupCard';
+import MapEntrar from '../../../components/mapEntrar';
 
 const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5
     },
@@ -72,19 +70,24 @@ const carroselList = [
 const Home = () => {
     const [user, setUser] = useState<Player>(initialState);
     const [groups, setGroups] = useState<Group[]>([]);
-    const [matches, setMatches] = useState<Match[]>([]);
+    const [open, setOpen] =  useState<boolean>(false);
+    const [currentGroup, setCurrentGroup] =  useState<Group | null>(null);
+
+    const handleClose = ()=> setOpen(false);
+    const onClick = (group: Group) => {
+        setCurrentGroup(group) 
+        setOpen(true);
+    } 
 
     useEffect(() => {
         const getData = async (): Promise<void> => {
             const [_user, _groups, _matches] = await Promise.all([
                 getPlayer(2),
                 getGroups(),
-                getMatches()
             ])
 
             setUser(_user);
             setGroups(_groups)
-            setMatches(_matches)
         }
 
         getData()
@@ -102,28 +105,20 @@ const Home = () => {
                         <h1>{user.email}</h1>
                     </Box>
                 </Box>
-
-                <Box sx={{ display: 'flex', alignItems: 'center', direction: 'row'}} className='mt-10 h-4/6'>
-                    <Box sx={{ display: 'flex', alignItems: 'center' }} className='bg-gray-200 rounded p-10 w-4/6 mr-2 h-full'>
-                    </Box>
-
-                    <Box sx={{ display: 'flex', alignItems: 'center' }} className='bg-gray-200 rounded p-10  w-2/6 ml-2 h-full'>
-                    </Box>
-                </Box>
             </div>
-            <div style={{display: "flex", marginBottom: "30px"}}> 
-                <div className='box'>
-                    <h2 style={{marginBottom: "15px"}}>Meus Grupos</h2>
-                    <div className="card-wrapper">
-                        {groups.map(group => (
-                            <div className='card' key={group.idGrupo}>
-                                <h3>{group.nome}</h3>
-                                <p>{new Date(group.data).toLocaleDateString()}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
+            <p className="text-2xl text-dark p-3 font-sans">Entre em um grupo</p>
+            <Carousel 
+                responsive={responsive}
+                swipeable={true}
+                draggable={true}
+                showDots={true}
+                containerClass='pb-12 mb-5'
+            >
+                {groups.map(group => (
+                    <HomeGroupCard key={group.idGrupo} group={group} onClick={onClick} />
+                ))}
+            </Carousel>
+            <p className="text-2xl text-dark p-3 font-sans">Outros assuntos</p>
             <Carousel 
                 responsive={responsive}
                 swipeable={true}
@@ -134,29 +129,42 @@ const Home = () => {
                 containerClass='pb-12'
             >
                 { carroselList.map(item => (
-                    <a href={item.link} target='_blank'> 
-                    <Card style={{height: "100%"}} sx={{ maxWidth: 345 }}>
-                        <CardActionArea>
-                            <CardMedia
-                            component="img"
-                            height="140"
-                            image={item.img}
-                            alt="green iguana"
-                            />
-                            <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
-                                {item.titulo}
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                {item.descricao}
-                            </Typography>
-                            </CardContent>
-                        </CardActionArea>
+                    <a key={item.titulo} href={item.link} target='_blank'> 
+                        <Card style={{height: "100%"}} sx={{ maxWidth: 345 }}>
+                            <CardActionArea>
+                                <CardMedia
+                                component="img"
+                                height="140"
+                                image={item.img}
+                                alt="green iguana"
+                                />
+                                <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                    {item.titulo}
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    {item.descricao}
+                                </Typography>
+                                </CardContent>
+                            </CardActionArea>
                         </Card>
                     </a>
 
                 ))}
             </Carousel>
+            <Modal style={{display: "flex", justifyContent: "center"}} id="modal-entrar"
+                open={open}
+                onClose={handleClose}
+                >
+                <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", height: "100%", width: "70%",background: "white"}} className="box-modal">
+                    <h1 style={{color: "var(--main-primary)", paddingTop: "30px"}} className="text-3xl font-bold">Escolha sua posição!</h1>
+                    <p style={{color: "#02A612", paddingTop: "20px", textAlign: "left", width: "70%"}} className="subTitle text-gray-100">Posições em aberto.</p>
+                    <p style={{color: "#FF0000", paddingBottom: "20px", textAlign: "left", width: "70%"}} className="subTitle text-gray-100">Posições preenchidas.</p>
+                    <div style={{display: "flex", justifyContent: "center", alignItems: "center", height: "100%"}} className="box-map">
+                        <MapEntrar group={currentGroup} />
+                    </div>
+                </div>
+            </Modal>
         </div>
     );
 };

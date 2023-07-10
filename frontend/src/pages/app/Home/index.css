@@ -8,25 +8,3 @@
 #home .title {
     color: white;
 }
-
-#home .box {
-    background-color:  var(--main-dark);
-    border-radius: 10px;
-    width: 70%;
-    padding: 20px;
-    margin-left: 20px;
-    color: white;
-}
-
-#home .box .card-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#home .box .card {
-    background-color: var(--main-primary);
-    border-radius: 10px;
-    width: 200px;
-    margin: 15px;
-    padding: 20px;
-}

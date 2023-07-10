@@ -7,12 +7,17 @@ import Maplol from "../../assets/img/mapLol.jpg"
 
 import "./styles.css";
 import { Group } from "../../entities/group";
-import { FunctionComponent, ReactElement } from "react";
+import { ReactElement } from "react";
 
 
-const Map: FunctionComponent = (): ReactElement => {
+type MapEntrarType = {
+    group: Group | null
+}
+
+const MapEntrar = ({group}: MapEntrarType): ReactElement => {
     return(
         <div id="map-entrar">
+            <p>{group?.nome}</p>
             <img src={Maplol} alt="mapLol" />
             <div id="topo" className="position-box"><img src={Topo} alt="Topo" /></div>
             <div id="selva" className="position-box"><img src={Selva} alt="Selva" /></div>
@@ -24,4 +29,4 @@ const Map: FunctionComponent = (): ReactElement => {
     )
 };
 
-export default Map;
+export default MapEntrar;
