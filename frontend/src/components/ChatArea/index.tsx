@@ -1,5 +1,6 @@
 import './styles.css';
 import ChatMessage from '../ChatMessage';
+import { useState } from 'react';
 
 type Message = {
     id: number;
@@ -15,9 +16,12 @@ interface IChatArea {
     name: string;
     avatar: string;
     messages: Message[];
+    onMessage(message: string, id: number): void
 }
 
 const ChatArea = (props: IChatArea) => {
+    const [text, setText] = useState<string>("");
+
     return(
         <div className="chat-area-container">
             <div className="chat-area-header">
@@ -41,8 +45,15 @@ const ChatArea = (props: IChatArea) => {
                 )}
             </div>
             <div className="chat-area-input">
-                <input type="text" placeholder="Digite sua mensagem..." />
-                <button>{'>'}</button>
+                <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Digite sua mensagem..." />
+                <button 
+                    onClick={() => {
+                        props.onMessage(text, props.id)
+                        setText("");
+                    }} 
+                >
+                    {'>'}
+                </button>
             </div>
         </div>
     );
