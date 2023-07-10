@@ -7,7 +7,8 @@
 | Data     | Versão | Descrição       | Autor                                                  |
 |----------|--------|-----------------|--------------------------------------------------------|
 |08/07/2023|  V1.0  |Criação da tabela|[Franklin Barbosa](https://github.com/Franklin-Barbosa) |
-|09/07/2023| V2.0 | Adição de riscos | [Lázaro Damasceno](https://github.com/LazaroDamasceno) |
+|09/07/2023| V2.0 | Adição de risco | [Lázaro Damasceno](https://github.com/LazaroDamasceno) |
+|09/07/2023| V2.0 | Adição de risco e alteração do impacto de sofrer ataque DDOS | [Lázaro Damasceno](https://github.com/LazaroDamasceno) |
 </div>
 
 ## Lista de riscos
@@ -24,4 +25,5 @@
 |Pouca experiência em Docker dentre os membros da equipe|ALTO|ALTO   |ALTO |MITIGAR     |Encontrar bons materiais de estudo que possam servir de guia   |Equipe                   |ABERTO|
 |Mudança de membro da equipe                     |MODERADO|MODERADO  |MÉDIO|ACEITAR     |Ver habilidades e interesse do novo membro para distribuir tarefas|Gerente              |FECHADO|
 |Escopo muito abrangente                         |ALTO    |ALTO      |ALTO |MITIGAR     |Redefinir escopo junto com a equipe e orientadore              |Gerente                 |FECHADO|
-| Ataque de negação de serviço (DDOS) | BAIXO | ALTO | ALTO | MITIGAR | Criar camadas adicionais de segurança para evitar exposição de dados aos invasores | Equipe de segurança cibernética                 |ABERTO|
+| Ataque de negação de serviço (DDOS) | MODERADO | ALTO | ALTO | MITIGAR | Criar camadas adicionais de segurança para evitar exposição de dados aos invasores | Equipe de segurança cibernética                 |ABERTO|
+| Lentidão | MODERADO | ALTO | ALTO | MITIGAR | Aumentar a renderização | Equipe do backend | ABERTO 
