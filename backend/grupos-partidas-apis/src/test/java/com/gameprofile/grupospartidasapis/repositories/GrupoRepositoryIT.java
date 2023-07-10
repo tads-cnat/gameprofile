@@ -1,4 +1,4 @@
-/*package test.com.gameprofile.grupospartidasapis.repositories;
+package com.gameprofile.grupospartidasapis.repositories;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -70,6 +70,4 @@ public class GrupoRepositoryIT {
         assertThat(grupoRecuperado.getId())
             .isEqualTo(grupo.getId());
     }
-
-
-}*/
+}

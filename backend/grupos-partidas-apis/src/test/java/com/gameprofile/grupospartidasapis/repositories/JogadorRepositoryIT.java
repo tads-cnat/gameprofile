@@ -1,7 +1,5 @@
-/*package test.com.gameprofile.grupospartidasapis.repositories;
-
+package com.gameprofile.grupospartidasapis.repositories;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import com.gameprofile.grupospartidasapis.GruposPartidasApisApplication;
 import com.gameprofile.grupospartidasapis.entities.Jogador;
 import org.junit.jupiter.api.Test;
@@ -72,4 +70,4 @@ public class JogadorRepositoryIT {
     }
 
 
-}*/
+}
