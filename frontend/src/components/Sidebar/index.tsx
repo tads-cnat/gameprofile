@@ -48,23 +48,12 @@ const Sidebar = () => {
             </Link>
           </div>
         </Tooltip>
-        <Tooltip title="Grupos" placement="right">
-          <div id="Grupos" className={`sidebar-menu-item ${page === "Grupos" ? 'selected' : ''} `} onClick={divClickedHandler}>
-            <Link to="/app/grupos">
+        <Tooltip title="Chat" placement="right">
+          <div id="Chat" className={`sidebar-menu-item ${page === "Chat" ? 'selected' : ''} `} onClick={divClickedHandler}>
+            <Link to="/app/chat">
               <img
-                src={Grupos}
-                alt="Grupos"
-                className="sidebar-menu-item-icon"
-              />
-            </Link>
-          </div>
-        </Tooltip>
-        <Tooltip title="Grupo" placement="right">
-          <div id="Grupo" className={`sidebar-menu-item ${page === "Grupo" ? 'selected' : ''} `} onClick={divClickedHandler}>
-            <Link to="/app/grupo/1">
-              <img
-                src={Groupo}
-                alt="Grupo"
+                src={Chat}
+                alt="Chat"
                 className="sidebar-menu-item-icon"
               />
             </Link>

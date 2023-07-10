@@ -1,0 +1,21 @@
+#navbar {
+    background-color: white;
+    height: 60px;
+    border-bottom: 2px solid var(--main-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar .image-container {
+    display: flex;
+    align-items: center;
+}
+
+#navbar .image-container #search {
+    height: 10px;
+}
+
+#navbar img {
+    width: 40px;
+}

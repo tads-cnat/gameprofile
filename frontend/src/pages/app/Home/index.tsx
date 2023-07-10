@@ -7,9 +7,10 @@ import { Group } from '../../../entities/group';
 import "./index.css"
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Button, Card, CardActionArea, CardContent, CardMedia, Modal, Typography } from '@mui/material';
+import { Card, CardActionArea, CardContent, CardMedia, Modal, Typography } from '@mui/material';
 import HomeGroupCard from '../../../components/HomeGroupCard';
 import MapEntrar from '../../../components/mapEntrar';
+import { Navbar } from '../../../components/navbar';
 
 const responsive = {
     superLargeDesktop: {
@@ -81,7 +82,7 @@ const Home = () => {
 
     useEffect(() => {
         const getData = async (): Promise<void> => {
-            const [_user, _groups, _matches] = await Promise.all([
+            const [_user, _groups] = await Promise.all([
                 getPlayer(2),
                 getGroups(),
             ])
@@ -95,74 +96,77 @@ const Home = () => {
     //carregando dados do usuário aqui
     
     return (
-        <div className="app-area p-10" id="home">
-            <div>
-                <Box sx={{ display: 'flex', alignItems: 'center' }} className='bg-gray-200 rounded p-10 w-full'>
-                    <img className="profile-image" src="https://img.ibxk.com.br/2019/07/26/26171514413327.jpg" alt="" />
-                    <Box className='ml-2'> 
-                        <h1 className='flex'> {user.nome} </h1>
-                        <h1> Nickname: {user.nickname}</h1>
-                        <h1>{user.email}</h1>
+        <div style={{display: "flex", flexDirection: "column", maxWidth: "100vw"}}>
+            {/* <Navbar /> */}
+            <div className="app-area p-10" id="home">
+                <div>
+                    <Box sx={{ display: 'flex', alignItems: 'center' }} className='bg-gray-200 rounded pb-5 w-full'>
+                        <img className="profile-image" src="https://img.ibxk.com.br/2019/07/26/26171514413327.jpg" alt="" />
+                        <Box className='ml-2'> 
+                            <h1 className='flex'> {user.nome} </h1>
+                            <h1> Nickname: {user.nickname}</h1>
+                            <h1>{user.email}</h1>
+                        </Box>
                     </Box>
-                </Box>
-            </div>
-            <p className="text-2xl text-dark p-3 font-sans">Entre em um grupo</p>
-            <Carousel 
-                responsive={responsive}
-                swipeable={true}
-                draggable={true}
-                showDots={true}
-                containerClass='pb-12 mb-5'
-            >
-                {groups.map(group => (
-                    <HomeGroupCard key={group.idGrupo} group={group} onClick={onClick} />
-                ))}
-            </Carousel>
-            <p className="text-2xl text-dark p-3 font-sans">Outros assuntos</p>
-            <Carousel 
-                responsive={responsive}
-                swipeable={true}
-                draggable={true}
-                showDots={true}
-                autoPlay={true}
-                infinite={true}
-                containerClass='pb-12'
-            >
-                { carroselList.map(item => (
-                    <a key={item.titulo} href={item.link} target='_blank'> 
-                        <Card style={{height: "100%"}} sx={{ maxWidth: 345 }}>
-                            <CardActionArea>
-                                <CardMedia
-                                component="img"
-                                height="140"
-                                image={item.img}
-                                alt="green iguana"
-                                />
-                                <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
-                                    {item.titulo}
-                                </Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                    {item.descricao}
-                                </Typography>
-                                </CardContent>
-                            </CardActionArea>
-                        </Card>
-                    </a>
-
-                ))}
-            </Carousel>
-            <Modal style={{display: "flex", justifyContent: "center", alignItems: "center"}} id="modal-entrar"
-                open={open}
-                onClose={handleClose}
-                >
-                <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", width: "70%",background: "white", height: "700px"}}>
-                    <h1 style={{color: "var(--main-primary)", paddingTop: "30px"}} className="text-3xl font-bold">Escolha sua posição!</h1>
-                    <div style={{display: "flex", justifyContent: "center", alignItems: "center"}} className="box-map">
-                        <MapEntrar group={currentGroup} />
-                    </div>
                 </div>
-            </Modal>
+                <p className="text-2xl text-dark p-3 font-sans">Entre em um grupo</p>
+                <Carousel 
+                    responsive={responsive}
+                    swipeable={true}
+                    draggable={true}
+                    showDots={true}
+                    containerClass='pb-12 mb-5'
+                >
+                    {groups.map(group => (
+                        <HomeGroupCard key={group.id} group={group} onClick={onClick} />
+                    ))}
+                </Carousel>
+                <p className="text-2xl text-dark p-3 font-sans">Outros assuntos</p>
+                <Carousel 
+                    responsive={responsive}
+                    swipeable={true}
+                    draggable={true}
+                    showDots={true}
+                    autoPlay={true}
+                    infinite={true}
+                    containerClass='pb-12'
+                >
+                    { carroselList.map(item => (
+                        <a key={item.titulo} href={item.link} target='_blank'> 
+                            <Card style={{height: "100%"}} sx={{ maxWidth: 345 }}>
+                                <CardActionArea>
+                                    <CardMedia
+                                    component="img"
+                                    height="140"
+                                    image={item.img}
+                                    alt="green iguana"
+                                    />
+                                    <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        {item.titulo}
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        {item.descricao}
+                                    </Typography>
+                                    </CardContent>
+                                </CardActionArea>
+                            </Card>
+                        </a>
+
+                    ))}
+                </Carousel>
+                <Modal style={{display: "flex", justifyContent: "center", alignItems: "center"}} id="modal-entrar"
+                    open={open}
+                    onClose={handleClose}
+                    >
+                    <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", width: "70%",background: "white", height: "700px"}}>
+                        <h1 style={{color: "var(--main-primary)", paddingTop: "30px"}} className="text-3xl font-bold">Escolha sua posição!</h1>
+                        <div style={{display: "flex", justifyContent: "center", alignItems: "center"}} className="box-map">
+                            <MapEntrar group={currentGroup} />
+                        </div>
+                    </div>
+                </Modal>
+            </div>
         </div>
     );
 };
