@@ -8,9 +8,11 @@
 |----------|--------|-----------------|--------------------------------------------------------|
 |08/07/2023|  V1.0  |Criação da tabela|[Franklin Barbosa](https://github.com/Franklin-Barbosa) |
 |09/07/2023| V2.0 | Adição de risco | [Lázaro Damasceno](https://github.com/LazaroDamasceno) |
+|09/07/2023| V3.0 | Correção da tabela | [Lázaro Damasceno](https://github.com/LazaroDamasceno) |
 </div>
 
 ## Lista de riscos
+
 |Descrição                                     |Probabilidade|Impacto|Risco|Estratégia  |Resposta                                                      |Responsável               |Status|
 |:----------------------------------------------:|:------:|:--------:|:---:|:----------:|:------------------------------------------------------------:|:------------------------:|:----:|
 |Atraso na integração quebrada entre front e back|MODERADO|MUITO ALTO|ALTO |COMPARTILHAR|Reunir todo o grupo para encontrar uma melhor solução, e definir prazos|Equipe do back-end|ABERTO|
@@ -26,3 +28,17 @@
 |Escopo muito abrangente                         |ALTO    |ALTO      |ALTO |MITIGAR     |Redefinir escopo junto com a equipe e orientadore              |Gerente                 |FECHADO|
 | Ataque de negação de serviço (DDOS) | MODERADO | ALTO | ALTO | MITIGAR | Criar camadas adicionais de segurança para evitar exposição de dados aos invasores | Equipe de segurança cibernética                 |ABERTO|
 | Lentidão devido a quantidade incomum de acessos| MODERADO | ALTO | ALTO | MITIGAR | Aumentar a renderização | Equipe do backend | ABERTO 
+
+## Metodologia
+
+<div style="text-align: justify"> 
+🔴 <b>Risco Alto</b>: Entendemos como complexo de ser resolvido e com grande chance de comprometer a entrega planejada.
+</div>
+<br>
+<div style="text-align: justify">
+🟠 <b>Risco Médio</b>: Apesar de complexo, podendo ser contornado com adaptações dentro do prazo.
+</div>
+<br>
+<div style="text-align: justify">
+🟢 <b>Risco Baixo</b>: Estima-se que há grande chance de ser solucionado no prazo. Todos os riscos foram alinhados a nossa expectativa e de entrega dentro do prazo e quando comparados a probabilidade de acontecer conseguimos extrair o impacto que ele pode nos causar.
+</div>
