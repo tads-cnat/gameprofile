@@ -8,6 +8,7 @@ import Ajustes from "../../assets/sidebarIcons/Ajustes.svg";
 import CriarGrupo from "../../assets/sidebarIcons/CriarGrupo.svg";
 import Sair from "../../assets/sidebarIcons/Sair.svg";
 import Noturno from "../../assets/sidebarIcons/Noturno.svg";
+import Chat from "../../assets/sidebarIcons/Chat.svg";
 
 import Tooltip from "@mui/material/Tooltip";
 

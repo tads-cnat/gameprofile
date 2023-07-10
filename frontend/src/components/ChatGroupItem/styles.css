@@ -1,0 +1,54 @@
+.chat-sidebar-groups-item {
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: .3s;
+
+    display: flex;
+}
+
+.chat-sidebar-groups-item:hover {
+    background-color: #F9F9F9;
+}
+
+.chat-sidebar-groups-item-image {
+    width: 40px;
+    height: 40px;
+    flex: none;
+    margin-right: 15px;
+    border-radius: 100%;
+}
+
+.chat-sidebar-groups-item-name {
+    font-size: 16px;
+}
+
+.chat-sidebar-groups-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-sidebar-groups-item-message {
+    display: -webkit-box;
+    font-size: 14px;
+    color: #949494;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+            line-clamp: 1; 
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+}
+
+.chat-sidebar-groups-item-time {
+    font-size: 12px;
+    color: #949494;
+    white-space: nowrap;
+}
+
+.chat-sidebar-groups-item-divider {
+    margin: 10px;
+    width: 2px;
+    height: 2px;
+    background-color: black;
+    flex: none;
+}
