@@ -1,5 +1,4 @@
 import Box from '@mui/material/Box';
-import Switch from '@mui/material/Switch';
 import './index.css'
 import React, { useState } from 'react';
 
@@ -89,16 +88,15 @@ const CreateGroup: React.FC = () =>{
                         required/>
                 </div>
 
+                <label className="text-2xl text-dark mt-5">Escolha sua posição:<span className="red-text">*</span></label>
                 <div className='img-description'>
+
                     <img className={description === "Topo" ? "selected" : ""} src={Topo} onClick={() => changeDescription("Topo")}/>
                     <img className={description === "Selva" ? "selected" : ""} src={Selva} onClick={() => changeDescription("Selva")}/>
                     <img className={description === "Meio" ? "selected" : ""} src={Meio} onClick={() => changeDescription("Meio")}/>
                     <img className={description === "Suporte" ? "selected" : ""} src={Suporte} onClick={() => changeDescription("Suporte")}/>
                     <img className={description === "Atirador" ? "selected" : ""} src={Atirador} onClick={() => changeDescription("Atirador")}/>                   
                 </div>
-
-                <br />
-                <br />
 
                 <div className='text-description'>
                     {description === "Topo" && <p>Topo: Campeões na rota topo são os lutadores durões e solitários da equipe. O trabalho deles é proteger a própria rota e focar seu dano nos membros mais fortes da equipe inimiga.</p>}
@@ -109,22 +107,22 @@ const CreateGroup: React.FC = () =>{
 
                 </div>
 
-                <label className='mt-5 flex flex-row align-middle' id='select-position'>
-                    <h1 className="text-xl my-auto">Casual</h1>
-                    <Switch name="rank" onChange={(e: React.ChangeEvent<HTMLInputElement>) => setRanked(e.target.checked)}/>
-                    <h1 className="text-xl my-auto" >Ranqueada</h1>
+                <label className="text-2xl text-dark mt-5">Escolha sua posição:<span className="red-text">*</span></label>
+                <label className='flex flex-row align-middle mt-2' id='select-position'>
+                    <span onClick={() => setRanked(true)} className={`select-position-item ${ranked ? "selected" : ""}`}>Ranqueada</span>
+                    <span onClick={() => setRanked(false)} className={`select-position-item ${!ranked ? "selected" : ""}`}>Casual</span>
                 </label>
 
 
                 {/* button area */}
                 <div className='flex flex-row-reverse mt-5' id='button-create'>
-                    <button type="submit" id='button-purple' className='rounded py-2 px-7'>Criar</button>
+                    <button type="submit" id='button-purple' className='rounded py-2 px-7 button-criar'>Criar</button>
                 </div>
 
                 </form>            
             </Box>
 
-            <div className='flex justify-around mt-10 map'>   
+            <div className='mt-10 map'>   
                 <MapCriar currentPosition={description} onMapChange={(position) => changeDescription(position)} />
             </div>
         </div>
