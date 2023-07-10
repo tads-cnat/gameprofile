@@ -36,7 +36,7 @@
 </div>
 <br>
 <div style="text-align: justify">
-🟠 <b>Risco Médio</b>: Apesar de complexo, podendo ser contornado com adaptações dentro do prazo.
+🟠 <b>Risco Médio</b>: Apesar de complexo, pode ser contornado com adaptações dentro do prazo.
 </div>
 <br>
 <div style="text-align: justify">
