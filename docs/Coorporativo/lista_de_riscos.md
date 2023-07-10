@@ -8,7 +8,7 @@
 |----------|--------|-----------------|--------------------------------------------------------|
 |08/07/2023|  V1.0  |Criação da tabela|[Franklin Barbosa](https://github.com/Franklin-Barbosa) |
 |09/07/2023| V2.0 | Adição de risco | [Lázaro Damasceno](https://github.com/LazaroDamasceno) |
-|09/07/2023| V2.0 | Adição de risco e alteração do impacto de sofrer ataque DDOS | [Lázaro Damasceno](https://github.com/LazaroDamasceno) |
+|09/07/2023| V3.0 | Adição de risco e alteração do impacto de sofrer ataque DDOS | [Lázaro Damasceno](https://github.com/LazaroDamasceno) |
 </div>
 
 ## Lista de riscos
