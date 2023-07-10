@@ -10,7 +10,6 @@ import "react-multi-carousel/lib/styles.css";
 import { Card, CardActionArea, CardContent, CardMedia, Modal, Typography } from '@mui/material';
 import HomeGroupCard from '../../../components/HomeGroupCard';
 import MapEntrar from '../../../components/mapEntrar';
-import { Navbar } from '../../../components/navbar';
 
 const responsive = {
     superLargeDesktop: {
@@ -96,8 +95,7 @@ const Home = () => {
     //carregando dados do usuário aqui
     
     return (
-        <div style={{display: "flex", flexDirection: "column", maxWidth: "100vw"}}>
-            {/* <Navbar /> */}
+        <div style={{display: "flex", flexDirection: "column", maxWidth: "100%"}}>
             <div className="app-area p-10" id="home">
                 <div>
                     <Box sx={{ display: 'flex', alignItems: 'center' }} className='bg-gray-200 rounded pb-5 w-full'>

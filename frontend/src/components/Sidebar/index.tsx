@@ -2,8 +2,6 @@ import Logo from "../../assets/logo/logo.svg";
 
 // importando icones
 import Home from "../../assets/sidebarIcons/Home.svg";
-import Grupos from "../../assets/sidebarIcons/list.svg";
-import Groupo from "../../assets/sidebarIcons/group.svg";
 import CriarGrupo from "../../assets/sidebarIcons/CriarGrupo.svg";
 import Sair from "../../assets/sidebarIcons/Sair.svg";
 import Chat from "../../assets/sidebarIcons/Chat.svg";
