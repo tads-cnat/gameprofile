@@ -1,4 +1,9 @@
 
+#home {
+    width: calc(100% - 100px);
+    margin-left: 100px;
+}
+
 #home .profile-image {
     width: 150px;
     height: 150px;
@@ -7,4 +12,19 @@
 
 #home .title {
     color: white;
+}
+
+.button-navigation {
+    background-color: #B2B2B2;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.button-navigation:hover {
+    cursor: pointer;
+    background-color: #404258;
 }

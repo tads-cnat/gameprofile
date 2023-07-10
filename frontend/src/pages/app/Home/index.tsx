@@ -11,6 +11,9 @@ import { Card, CardActionArea, CardContent, CardMedia, Modal, Typography } from 
 import HomeGroupCard from '../../../components/HomeGroupCard';
 import MapEntrar from '../../../components/mapEntrar';
 
+import CriarGrupo from "../../../assets/sidebarIcons/CriarGrupo.svg";
+import { Link } from 'react-router-dom';
+
 const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -95,8 +98,13 @@ const Home = () => {
     //carregando dados do usuário aqui
     
     return (
-        <div style={{display: "flex", flexDirection: "column", maxWidth: "100%"}}>
-            <div className="app-area p-10" id="home">
+        <div style={{display: "flex", maxWidth: "100%", marginTop: "60px"}}>
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "calc(100% - 60px)", position: "fixed",top: "0", width: "100px", marginTop: "60px" }}>
+                <Link to="/app/criar-grupo" className="button-navigation">
+                    <img src={CriarGrupo} alt="Criar grupo" />
+                </Link>
+            </div>
+            <div className="app-area pr-10 py-10" id="home">
                 <div>
                     <Box sx={{ display: 'flex', alignItems: 'center' }} className='bg-gray-200 rounded pb-5 w-full'>
                         <img className="profile-image" src="https://img.ibxk.com.br/2019/07/26/26171514413327.jpg" alt="" />

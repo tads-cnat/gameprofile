@@ -1,6 +1,8 @@
 #create-group{
     display: flex;
     max-height: 100%;
+    width: calc(100% - 100px);
+    margin-left: 100px;
 }
 
 #create-box{

@@ -5,7 +5,9 @@
 #chat {
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    height: calc(100vh - 60px);
+    width: calc(100% - 100px);
+    margin-left: 100px;
 }
 
 #chat .chat-sidebar {
