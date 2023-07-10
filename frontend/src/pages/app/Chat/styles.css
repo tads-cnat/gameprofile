@@ -1,0 +1,53 @@
+.app-area {
+    padding: 0;
+}
+
+#chat {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+#chat .chat-sidebar {
+    flex: 1;
+    border-right: 1px solid #a5a7ff;
+}
+
+#chat .chat-sidebar-header {
+    padding: 15px 25px;
+    color: #1a0063;
+    font-weight: bold;
+}
+
+#chat .chat-area {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+#chat .chat-area-empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+#chat .chat-area-empty > h3 {
+    font-size: 18px;
+    color: #1a0063;
+    font-weight: bold;
+}
+
+#chat .chat-area-empty > p {
+    font-size: 14px;
+    color: #949494;
+}
+
+.chat-area-messages {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 5px;
+}
