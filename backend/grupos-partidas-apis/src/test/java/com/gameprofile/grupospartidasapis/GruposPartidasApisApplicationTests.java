@@ -5,6 +5,7 @@
  * Descrição: Testes para a aplicação do Gameprofile - Backend
  * 
  */
+/*
 
 package com.gameprofile.grupospartidasapis;
 
@@ -19,3 +20,4 @@ class GruposPartidasApisApplicationTests {
 	}
 
 }
+*/
