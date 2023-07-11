@@ -1,0 +1,39 @@
+.home-group-card{
+    padding: 20px;
+}
+
+.home-group-card h1 {
+    color: black;
+    font-size: 1.4rem;
+    font-family: 'Saira', sans-serif;
+}
+
+.home-group-card p {
+    color: black;
+    font-size: 1.1rem;
+    margin: 10px 0px;
+    font-family: 'Inter', sans-serif;
+}
+
+.home-group-card .lanes-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.home-group-card .lanes-section img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.home-group-card .submenu{
+    display: flex;
+    flex-direction: row;
+}
+
+.home-group-card .button-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+}

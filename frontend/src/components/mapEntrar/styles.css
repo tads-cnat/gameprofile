@@ -11,8 +11,7 @@
 #map-entrar .position-box{
     height: 50px;
     width: 50px;
-    background-color: green;
-    border-radius: 25px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,4 +48,12 @@
 #map-entrar #atirador{
     left: 80%;
     top: 70%;
+}
+
+#map-entrar .ocupado {
+    background-color: #c70606;
+}
+
+#map-entrar .livre {
+    background-color: green;
 }

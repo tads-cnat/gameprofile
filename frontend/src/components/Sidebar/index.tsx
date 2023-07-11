@@ -2,12 +2,9 @@ import Logo from "../../assets/logo/logo.svg";
 
 // importando icones
 import Home from "../../assets/sidebarIcons/Home.svg";
-import Grupos from "../../assets/sidebarIcons/list.svg";
-import Groupo from "../../assets/sidebarIcons/group.svg";
-import Ajustes from "../../assets/sidebarIcons/Ajustes.svg";
 import CriarGrupo from "../../assets/sidebarIcons/CriarGrupo.svg";
 import Sair from "../../assets/sidebarIcons/Sair.svg";
-import Noturno from "../../assets/sidebarIcons/Noturno.svg";
+import Chat from "../../assets/sidebarIcons/Chat.svg";
 
 import Tooltip from "@mui/material/Tooltip";
 
@@ -49,34 +46,12 @@ const Sidebar = () => {
             </Link>
           </div>
         </Tooltip>
-        <Tooltip title="Grupos" placement="right">
-          <div id="Grupos" className={`sidebar-menu-item ${page === "Grupos" ? 'selected' : ''} `} onClick={divClickedHandler}>
-            <Link to="/app/grupos">
+        <Tooltip title="Chat" placement="right">
+          <div id="Chat" className={`sidebar-menu-item ${page === "Chat" ? 'selected' : ''} `} onClick={divClickedHandler}>
+            <Link to="/app/chat">
               <img
-                src={Grupos}
-                alt="Grupos"
-                className="sidebar-menu-item-icon"
-              />
-            </Link>
-          </div>
-        </Tooltip>
-        <Tooltip title="Grupo" placement="right">
-          <div id="Grupo" className={`sidebar-menu-item ${page === "Grupo" ? 'selected' : ''} `} onClick={divClickedHandler}>
-            <Link to="/app/grupo/1">
-              <img
-                src={Groupo}
-                alt="Grupo"
-                className="sidebar-menu-item-icon"
-              />
-            </Link>
-          </div>
-        </Tooltip>
-        <Tooltip title="Ajustes" placement="right">
-          <div id="Ajustes" className={`sidebar-menu-item ${page === "Ajustes" ? 'selected' : ''} `} onClick={divClickedHandler}>
-            <Link to="/app/ajustes">
-              <img
-                src={Ajustes}
-                alt="Ajustes"
+                src={Chat}
+                alt="Chat"
                 className="sidebar-menu-item-icon"
               />
             </Link>
@@ -95,12 +70,13 @@ const Sidebar = () => {
       </div>
 
       <div className="sidebar-footer">
-        <div className="sidebar-menu-item">
-          <img src={Sair} alt="Sair" className="sidebar-menu-item-icon" />
-        </div>
-        <div className="sidebar-menu-item">
-          <img src={Noturno} alt="Noturno" className="sidebar-menu-item-icon" />
-        </div>
+        <Tooltip title="Sair" placement="right">
+          <div id="criar-grupo" className={`sidebar-menu-item ${page === "Sair" ? 'selected' : ''} `} onClick={divClickedHandler}>
+            <Link to="/">
+              <img src={Sair} alt="Sair" className="sidebar-menu-item-icon" />
+            </Link>
+          </div>
+        </Tooltip>
       </div>
     </div>
   );

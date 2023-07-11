@@ -1,17 +1,17 @@
 #map-criar{
     position: sticky;
-    width: 700px;
+    width: 100%;
 }
 
 #map-criar img{
-    height: calc(700px * 0,78);
-    width: 700px;
+    height: calc(100% * 0,78);
+    width: 100%;
 
 }
 #map-criar .position-box{
     display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
+    /* align-items: center;
+    justify-content: center; */
     position: absolute;
 }
 
@@ -19,7 +19,7 @@
     height: 50px;
     width: 50px;
     background-color: var(--main-black );
-    border-radius: 25px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,4 +66,11 @@
 #map-criar #atirador{
     left: 80%;
     top: 70%;
+}
+
+#map-criar img.selected{
+    scale: 2;
+    padding: 3px;
+    background-color: green;
+    border-radius: 5px;
 }

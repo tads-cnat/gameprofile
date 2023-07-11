@@ -1,3 +1,20 @@
+#create-group{
+    display: flex;
+    max-height: 100%;
+    width: calc(100% - 100px);
+    margin-left: 100px;
+}
+
+#create-box{
+    min-width: 500px;
+    width: 500px;
+    height: calc(100vh - 60px);
+    overflow-y: scroll;
+}
+#map{
+    width: 100%;
+}
+
 .red-text{
     color: red;
 }
@@ -10,24 +27,28 @@
 
 #button-purple{
     background-color: var(--main-primary);
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+#button-create{
+    display: flex;
+    justify-content: center;
 }
 
 #create-group .form-group{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 100%;
 }
 #create-group h1{
-    margin-top: 30px;
-    margin-bottom: 30px;
     color: var(--main-dark );
-    text-align: center;
+    text-align: left;
 }
 
 #create-group .container-map{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin-top: 50px;
     margin-bottom: 30px;
 }
@@ -39,9 +60,64 @@
     
 }
 
-#select-position {
+#create-group #select-position {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    font-weight: bold;    
 }
 
+#create-group .select-position-item {
+    height: 40px;
+    width: 130px;
+    border: 1px solid var(--main-primary);
+    border-radius: 10px;
+    color: var(--main-primary);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#create-group .select-position-item:hover {
+    cursor: pointer;
+}
+
+#create-group .select-position-item.selected {
+    background-color: var(--main-primary);
+    color: white;
+}
+
+#create-group .button-criar {
+    width: 100%;
+    color: white;
+    font-weight: bold;
+}
+
+.img-description{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.img-description img{
+    padding: 15px;
+}
+
+.img-description img:hover{
+    cursor: pointer;
+}
+
+.img-description img.selected{
+    background-color: #b9b9b9;
+    border-radius: 10%;
+}
+
+.text-description{
+    background-color: #b9b9b9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
 

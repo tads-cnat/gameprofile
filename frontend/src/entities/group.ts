@@ -1,14 +1,17 @@
 export interface Group {
-    idGrupo: number,
+    id: number,
     nome: string,
-    data: string,
-    horario: string,
-    bloqueado: boolean,
+    posicaoEscolhida: string | null,
     ranqueada: boolean,
-    idCriador: number,
-    topo: number | null,
-    selva: number | null,
-    meio: number | null,
-    atirador: number | null,
-    suporte: number | null
+    bloqueado: boolean,
+    criador: {
+        id: number,
+        idLol: number,
+        email: string,
+        nome: string,
+        nickName: string,
+        nascimento: string,
+        entrouEm: string,
+        editadoEm: string,
+    },
 }

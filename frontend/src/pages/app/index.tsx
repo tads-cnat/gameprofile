@@ -1,13 +1,12 @@
-import React from 'react';
-import Sidebar from '../../components/Sidebar';
 import { Outlet } from 'react-router';
 
 import './styles.css';
+import { Navbar } from '../../components/navbar';
 
 const App = () => {
   return (
     <div className='App'>
-        <Sidebar />
+        <Navbar />
         <Outlet />
     </div>
   );

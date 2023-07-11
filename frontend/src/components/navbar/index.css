@@ -1,0 +1,25 @@
+#navbar {
+    background-color: white;
+    height: 60px;
+    border-bottom: 2px solid var(--main-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#navbar .image-container {
+    display: flex;
+    align-items: center;
+}
+
+#navbar .image-container .navbar-icon {
+    height: 25px;
+}
+
+#navbar img {
+    width: 40px;
+}

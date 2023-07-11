@@ -8,6 +8,7 @@ import Grupos from './pages/app/Grupos'
 import Grupo from './pages/app/Grupo'
 import Ajustes from './pages/app/Ajustes'
 import CreateGroup from './pages/app/CreateGroup'
+import Chat from './pages/app/Chat'
 
 //router import
 import {createBrowserRouter,RouterProvider} from "react-router-dom";
@@ -35,6 +36,7 @@ const Routes = () => {
                 {path: 'grupos', element: <Grupos/>},
                 {path: 'grupo/:id', element: <Grupo/>},
                 {path: 'ajustes', element: <Ajustes/>},
+                {path: 'chat', element: <Chat />},
                 {path: 'criar-grupo', element: <CreateGroup/>},
             ]
         },
