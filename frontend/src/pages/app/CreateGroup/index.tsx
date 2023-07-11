@@ -7,7 +7,7 @@ import Selva from "../../../assets/lanes/dark/selva.svg";
 import Meio from "../../../assets/lanes/dark/meio.svg";
 import Suporte from "../../../assets/lanes/dark/suporte.svg";
 import Atirador from "../../../assets/lanes/dark/atirador.svg";
-import CriarGrupo from "../../../assets/sidebarIcons/CriarGrupo.svg";
+import Seta from "../../../assets/sidebarIcons/Seta.svg";
 
 import { Link, useNavigate } from 'react-router-dom';
 import MapCriar from '../../../components/mapCriar';
@@ -73,7 +73,7 @@ const CreateGroup: React.FC = () =>{
         <div style={{display: "flex", maxWidth: "100%", marginTop: "60px"}}>
             <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%", position: "fixed",top: "0", width: "100px" }}>
                 <Link to="/app" className="button-navigation">
-                    <img src={CriarGrupo} alt="Criar grupo" />
+                    <img src={Seta} alt="Criar grupo" />
                 </Link>
             </div>
         
@@ -85,18 +85,25 @@ const CreateGroup: React.FC = () =>{
                     <h1 className="text-3xl font-bold">Crie seu grupo!</h1>
                     <p className="subTitle text-gray-100">Escolher sua Posição e o Tipo de Partida.</p>
                     <div className="form-group">
-                        <label className="text-2xl text-dark">Nome do Grupo:<span className="red-text">*</span></label>
+                        <div style={{ display: "flex", justifyContent: "space-between", alignContent: "center" }}>
+                            <label className="text-2xl text-dark mb-2">Nome do Grupo:</label>
+                            <p style={{ marginTop: "7px" }}>obrigatório*</p>
+                        </div>
                         <input 
                             type="text" 
                             name="nome" 
-                            placeholder='Insira o nome do grupo...' 
+                            placeholder='Ex: Grupo LOL' 
                             id="nome-grupo" 
+                            style={{fontSize: "16px"}}
                             className='text-xl bg-gray-700 rounded text-gray-200 p-3 w-100' 
                             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNome(e.target.value)}
                             required/>
                     </div>
 
-                    <label className="text-2xl text-dark mt-5">Escolha sua posição:<span className="red-text">*</span></label>
+                    <div className='mt-5' style={{ display: "flex", justifyContent: "space-between", alignContent: "center" }}>
+                        <label className="text-2xl text-dark mb-2">Escolha sua rota:</label>
+                        <p style={{ marginTop: "7px" }}>obrigatório*</p>
+                    </div>
                     <div className='img-description'>
 
                         <img className={description === "Topo" ? "selected" : ""} src={Topo} onClick={() => changeDescription("Topo")}/>
@@ -115,7 +122,10 @@ const CreateGroup: React.FC = () =>{
 
                     </div>
 
-                    <label className="text-2xl text-dark mt-5">Escolha sua posição:<span className="red-text">*</span></label>
+                    <div className='mt-5' style={{ display: "flex", justifyContent: "space-between", alignContent: "center" }}>
+                        <label className="text-2xl text-dark">Escolha sua posição:</label>
+                        <p style={{ marginTop: "7px" }}>obrigatório*</p>
+                    </div>
                     <label className='flex flex-row align-middle mt-2' id='select-position'>
                         <span onClick={() => setRanked(true)} className={`select-position-item ${ranked ? "selected" : ""}`}>Ranqueada</span>
                         <span onClick={() => setRanked(false)} className={`select-position-item ${!ranked ? "selected" : ""}`}>Casual</span>

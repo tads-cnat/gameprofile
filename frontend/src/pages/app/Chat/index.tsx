@@ -4,7 +4,7 @@ import ChatArea from '../../../components/ChatArea';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import CriarGrupo from "../../../assets/sidebarIcons/CriarGrupo.svg";
+import Seta from "../../../assets/sidebarIcons/Seta.svg";
 
 interface ChatProps { }
 
@@ -119,7 +119,7 @@ const Chat = (props: ChatProps) => {
         <div style={{display: "flex", maxWidth: "100%", marginTop: "60px"}}>
             <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%", position: "fixed",top: "0", width: "100px" }}>
                 <Link to="/app" className="button-navigation">
-                    <img src={CriarGrupo} alt="Criar grupo" />
+                    <img src={Seta} alt="Criar grupo" />
                 </Link>
             </div>
             <div className="app-area" id="chat">
