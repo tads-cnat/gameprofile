@@ -11,6 +11,7 @@ import { ReactElement, useEffect, useState } from "react";
 import axios from "axios";
 import api from "../../services/api/api.json";
 import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 type MapEntrarType = {
     group: Group | null
@@ -21,6 +22,7 @@ type Posicoes = "TOPO" | "SELVA" | "MEIO" | "SUPORTE" | "ATIRADOR";
 const idJogador = 2;
 
 const MapEntrar = ({group}: MapEntrarType): ReactElement => {
+    const navigate = useNavigate();
     const [posicoes, setPosicoes] = useState<Posicoes[]>([])
     const [posicaoEscolhida, setPosicaoEscolhida] = useState<Posicoes | null>(null);
 
@@ -55,15 +57,16 @@ const MapEntrar = ({group}: MapEntrarType): ReactElement => {
                 jogador: {
                     id: idJogador
                 },
-                posicaoEscolhida: "MEIO"
+                posicaoEscolhida: posicaoEscolhida
             };
     
-            const response = await axios.post(api.api_url + "posicaogrupo/entrar", body, {
+            await axios.post(api.api_url + "posicaogrupo/entrar", body, {
                 headers: {
                   "Content-Type": "application/json",
                 },
             })
-            console.log(response);
+
+            navigate("/app/chat")
         } catch (error) {
             console.log(error);
         }
@@ -72,7 +75,7 @@ const MapEntrar = ({group}: MapEntrarType): ReactElement => {
     return(
         <div>
             <div id="map-entrar">
-                <p>{group?.nome}</p>
+                <p style={{margin: "10px", color: "#247ba0", fontWeight: "bold"}}>Grupo: {group?.nome}</p>
                 <img src={Maplol} alt="mapLol" />
                 <div 
                     id="topo"
@@ -120,9 +123,9 @@ const MapEntrar = ({group}: MapEntrarType): ReactElement => {
                     <img src={Atirador} alt="Atirador" />
                 </div>
             </div>
-            <div>
-                <p>Posição escolhida: <span>{posicaoEscolhida || ""}</span></p>
-                <Button onClick={entrarGrupo} variant="contained">Entrar</Button>
+            <div style={{display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "10px"}}>
+                <p style={{fontWeight: "bold"}}>Posição escolhida: <span style={{color: "#777"}}>{posicaoEscolhida || "-"}</span></p>
+                <Button disabled={!posicaoEscolhida} onClick={entrarGrupo} variant="contained">Entrar</Button>
             </div>
         </div> 
     )
