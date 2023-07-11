@@ -29,3 +29,17 @@ export async function getGroups(): Promise<Group[]> {
         return Promise.reject(new Error("Não foi possível buscar os grupos"));
     }
 }
+
+export async function getPosicoes(): Promise<any[]> {
+    try {
+        const response = await axios.get(api.api_url + "posicaogrupo", {
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+
+        return Promise.resolve(response.data)
+    } catch (error) {
+        return Promise.reject(new Error("Não foi possível buscar as posições"));
+    }
+}

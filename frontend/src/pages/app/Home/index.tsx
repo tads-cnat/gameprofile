@@ -2,7 +2,7 @@ import Box from '@mui/material/Box';
 import { useEffect, useState } from 'react';
 import { getPlayer } from '../../../services/api/player';
 import { Player } from '../../../entities/player';
-import { getGroups } from '../../../services/api/groups';
+import { getGroups, getPosicoes } from '../../../services/api/groups';
 import { Group } from '../../../entities/group';
 import "./index.css"
 import Carousel from "react-multi-carousel";
@@ -70,6 +70,8 @@ const carroselList = [
     },
 ]
 
+const idJogador = 2;
+
 const Home = () => {
     const [user, setUser] = useState<Player>(initialState);
     const [groups, setGroups] = useState<Group[]>([]);
@@ -84,13 +86,18 @@ const Home = () => {
 
     useEffect(() => {
         const getData = async (): Promise<void> => {
-            const [_user, _groups] = await Promise.all([
-                getPlayer(2),
+            const [_user, _groups, posicoes] = await Promise.all([
+                getPlayer(idJogador),
                 getGroups(),
+                getPosicoes()
             ])
 
+            const gruposQueNaoCriei = _groups.filter(group => group.criador.id !== idJogador)
+            const gruposQueEntrei = posicoes.filter(posicao => posicao.jogador.id === idJogador).map(item => item.grupo.id)
+            const gruposQuePossoEntrar = gruposQueNaoCriei.filter(grupo => !gruposQueEntrei.includes(grupo.id));
+            
             setUser(_user);
-            setGroups(_groups)
+            setGroups(gruposQuePossoEntrar)
         }
 
         getData()
