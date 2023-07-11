@@ -1,10 +1,11 @@
 import './styles.css'
 import ChatGroupItem from '../../../components/ChatGroupItem';
 import ChatArea from '../../../components/ChatArea';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import Seta from "../../../assets/sidebarIcons/Seta.svg";
+import { getGroups, getPosicoes } from '../../../services/api/groups';
 
 interface ChatProps { }
 
@@ -27,72 +28,80 @@ type chatModel = {
     messages: messageModel[]
 };
 
-const initialGroupChats: chatModel[] = [
+const messages: messageModel[] = [
     {
         id: 1,
-        name: "LOUD",
-        lastMessage: "esta foi a ultima mensagem do grupo!",
-        lastMessageUser: "Tinowns",
-        lastMessageTime: "50 min",
-        avatar: "https://source.boringavatars.com/beam/120/Stefan?colors=264653,f4a261,e76f51",
-        messages: [
-            {
-                id: 1,
-                userId: 1,
-                userName: 'Dina',
-                avatar: `https://ui-avatars.com/api/?name=${'Giovanna'}`,
-                message: 'Olá amigos!',
-                timestamp: '10:00',
-            },
-            {
-                id: 2,
-                userId: 1,
-                userName: 'Dina',
-                avatar: `https://ui-avatars.com/api/?name=${'Giovanna'}`,
-                message: 'Que horas vai ser nosso treino de segunda?',
-                timestamp: '10:00',
-            },
-            {
-                id: 3,
-                userId: 2,
-                userName: 'Giovanna',
-                avatar: `https://ui-avatars.com/api/?name=${'Dina'}`,
-                message: 'Olá',
-                timestamp: '10:00',
-            },
-            {
-                id: 4,
-                userId: 2,
-                userName: 'Giovanna',
-                avatar: `https://ui-avatars.com/api/?name=${'Dina'}`,
-                message: 'Não sei, tava marcado pra 10h',
-                timestamp: '10:00',
-            },
-        ]
+        userId: 1,
+        userName: 'Dina',
+        avatar: `https://ui-avatars.com/api/?name=${'Giovanna'}`,
+        message: 'Olá amigos!',
+        timestamp: '10:00',
     },
     {
         id: 2,
-        name: "LOUD Academy",
-        lastMessage: "esta foi a ultima mensagem do grupo!",
-        lastMessageUser: "Robo",
-        lastMessageTime: "3 d",
-        avatar: "https://source.boringavatars.com/bauhaus/120/Stefan?colors=264653,2a9d8f,e9c46a",
-        messages: []
+        userId: 1,
+        userName: 'Dina',
+        avatar: `https://ui-avatars.com/api/?name=${'Giovanna'}`,
+        message: 'Que horas vai ser nosso treino de segunda?',
+        timestamp: '10:00',
     },
     {
         id: 3,
-        name: "LOUD Trainer",
-        lastMessage: "esta foi a ultima mensagem do grupo!",
-        lastMessageUser: "Ceos",
-        lastMessageTime: "2 sem",
-        avatar: "https://source.boringavatars.com/pixel/120/Stefan?colors=26a653,2a1d8f,79646a",
-        messages: []
-    }
-];
+        userId: 2,
+        userName: 'Giovanna',
+        avatar: `https://ui-avatars.com/api/?name=${'Dina'}`,
+        message: 'Olá',
+        timestamp: '10:00',
+    },
+    {
+        id: 4,
+        userId: 2,
+        userName: 'Giovanna',
+        avatar: `https://ui-avatars.com/api/?name=${'Dina'}`,
+        message: 'Não sei, tava marcado pra 10h',
+        timestamp: '10:00',
+    },
+]
+
+const idJogador = 2;
 
 const Chat = (props: ChatProps) => {
     const [selectedGroupChat, setSelectedGroupChat] = useState<any>();
-    const [groupChats, setGroupChats] = useState<chatModel[]>(initialGroupChats);
+    const [groupChats, setGroupChats] = useState<chatModel[]>([]);
+
+    useEffect(() => {
+        const getData = async (): Promise<void> => {
+            const [groups, posicoes] = await Promise.all([
+                getGroups(),
+                getPosicoes()
+            ])
+
+            const gruposQueCriei = groups.filter(group => group.criador.id == idJogador)
+            const gruposQueEntrei = posicoes.filter(posicao => posicao.jogador.id === idJogador).map(item => item.grupo)
+            
+            const meusGrupos = [...gruposQueCriei, ...gruposQueEntrei]
+
+            console.log(gruposQueCriei);
+            console.log(gruposQueEntrei);
+            
+            const result: chatModel[]  = meusGrupos.map(grupo => ({
+                id: grupo.id,
+                name: grupo.nome,
+                lastMessage: "esta foi a ultima mensagem do grupo!",
+                lastMessageUser: "Tinowns",
+                lastMessageTime: "10 min",
+                avatar: "https://source.boringavatars.com/beam/120/Stefan?colors=909a92,3543d0",
+                messages: []
+            }))
+
+            if(result.length) {
+                result[0].messages = messages;
+                setGroupChats(result);
+            }
+        }
+
+        getData()
+    }, [])
 
 
     const onMessage = (message: string, id: number): void => {
