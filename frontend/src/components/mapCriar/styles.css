@@ -19,7 +19,7 @@
     height: 50px;
     width: 50px;
     background-color: var(--main-black );
-    border-radius: 25px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,5 +70,7 @@
 
 #map-criar img.selected{
     scale: 2;
-    background-color: black;
+    padding: 3px;
+    background-color: green;
+    border-radius: 5px;
 }

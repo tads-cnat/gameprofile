@@ -8,6 +8,8 @@
 #create-box{
     min-width: 500px;
     width: 500px;
+    height: calc(100vh - 60px);
+    overflow-y: scroll;
 }
 #map{
     width: 100%;

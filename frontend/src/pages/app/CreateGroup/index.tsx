@@ -130,7 +130,7 @@ const CreateGroup: React.FC = () =>{
                     </form>            
                 </Box>
 
-                <div className='mt-10 map'>   
+                <div className='map'>   
                     <MapCriar currentPosition={description} onMapChange={(position) => changeDescription(position)} />
                 </div>
             </div>
