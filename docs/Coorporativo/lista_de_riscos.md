@@ -19,7 +19,7 @@
 |:----------------------------------------------:|:------:|:--------:|:---:|:--------:|:------------------------------------------------------------:|:-------------------------:|:----:|
 |Atraso na integração quebrada entre front e back|MODERADO|MUITO ALTO|ALTO |MITIGAR   |Reunir todo o grupo para encontrar uma melhor solução, e definir prazos|Equipe do back-end|ABERTO|
 |Refatoração do front com base nas heurísticas   |BAIXO   |MÉDIO     |MÉDIO|MITIGAR   |Reunir toda a equipe para unir conhecimento e encontrar a uma solução|Equipe de front-end |ABERTO|
-|Conflitos de comunicação entre na equipe        |MODERADO|ALTO      |ALTO |MITIGAR   |Fazer daily regularmente em horáros vagos ou entre as aulas   |Gerente                    |ABERTO|
+|Conflitos de comunicação entre na equipe        |MODERADO|ALTO      |ALTO |MITIGAR   |Fazer daily regularmente em horários vagos ou entre as aulas   |Gerente                    |ABERTO|
 |Não cumprir prazos de entrega                   |MODERADO|MODERADO  |ALTO |EVITAR    |Manter uma boa comunicação e monitorar alterações via GitHub  |Gerente                    |ABERTO|
 |Falha/Erro na Azure                             |MODERADO|MODERADO  |ALTO |MITIGAR   |Realizar testes e monitorar com frequência                    |Equipe de infraestrtutura  |ABERTO|
 |Falhas no fluxo do front-end                    |ALTO    |ALTO      |ALTO |MITIGAR   |Acertar com a equipe do back-end os requisitos que o front precisa|Equipe de font-end     |ABERTO|
