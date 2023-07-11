@@ -13,7 +13,11 @@
 
 </div>
 
+<div align="center">
+  
 ## Lista de riscos
+
+</div>
 
 |Descrição                                     |Probabilidade|Impacto|Risco|Estratégia|Resposta                                                      |Responsável                |Status|
 |:----------------------------------------------:|:------:|:--------:|:---:|:--------:|:------------------------------------------------------------:|:-------------------------:|:----:|
@@ -31,16 +35,24 @@
 | Ataque de negação de serviço (DDOS)            |MODERADO|ALTO      |ALTO | MITIGAR  | Criar camadas adicionais de segurança para evitar exposição de dados aos invasores |Equipe de segurança cibernética|ABERTO|
 | Lentidão devido a quantidade incomum de acessos|MODERADO|ALTO      |ALTO | MITIGAR  | Aumentar a renderização                                      |Equipe do backend          |ABERTO|
 
+<div align="center">
+  
 ## Metodologia
 
-<div style="text-align: justify"> 
+</div>
+
+<div align="justify">
 🔴 <b>Risco Alto</b>: Entendemos como complexo de ser resolvido e com grande chance de comprometer a entrega planejada.
 </div>
+
 <br>
-<div style="text-align: justify">
+
+<div align="justify">
 🟠 <b>Risco Médio</b>: Apesar de complexo, pode ser contornado com adaptações dentro do prazo.
 </div>
+
 <br>
-<div style="text-align: justify">
+
+<div align="justify">
 🟢 <b>Risco Baixo</b>: Estima-se que há grande chance de ser solucionado no prazo. Todos os riscos foram alinhados a nossa expectativa e de entrega dentro do prazo e quando comparados a probabilidade de acontecer conseguimos extrair o impacto que ele pode nos causar.
 </div>
