@@ -31,7 +31,7 @@
 |Desistência de membro da equipe                 |MODERADO|MODERADO  |MÉDIO|ACEITAR   |Reorganizar atividades com equipe restante                    |Gerente                    |ABERTO|
 |Pouca experiência em Docker dentre os membros da equipe|ALTO|ALTO   |ALTO |MITIGAR   |Encontrar bons materiais de estudo que possam servir de guia  |Equipe                     |ABERTO|
 |Mudança de membro da equipe                     |MODERADO|MODERADO  |MÉDIO|ACEITAR   |Ver habilidades e interesse do novo membro para distribuir tarefas|Gerente                |ABERTO|
-|Escopo muito abrangente referente a idea geral do projeto|ALTO    |ALTO      |ALTO |MITIGAR   |Redefinir escopo junto com a equipe e orientadore    |Gerente                   |FECHADO|
+|Escopo muito abrangente referente a idea geral do projeto|ALTO    |ALTO      |ALTO |MITIGAR   |Redefinir escopo junto com a equipe e orientadores    |Gerente                   |FECHADO|
 | Ataque de negação de serviço (DDOS)            |MODERADO|ALTO      |ALTO | MITIGAR  | Criar camadas adicionais de segurança para evitar exposição de dados aos invasores |Equipe de segurança cibernética|ABERTO|
 | Lentidão devido a quantidade incomum de acessos|MODERADO|ALTO      |ALTO | MITIGAR  | Aumentar a renderização                                      |Equipe do backend          |ABERTO|
 
