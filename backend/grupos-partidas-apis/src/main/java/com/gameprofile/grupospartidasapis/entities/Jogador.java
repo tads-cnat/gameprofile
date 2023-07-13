@@ -1,23 +1,20 @@
 package com.gameprofile.grupospartidasapis.entities;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
-import org.springframework.format.annotation.DateTimeFormat;
-
 
 
 @Entity
 @Builder
 @ToString
 @Data
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
+@AllArgsConstructor
+@NoArgsConstructor
 public class Jogador implements Comparable<Jogador>{
     @Id
     @Column
