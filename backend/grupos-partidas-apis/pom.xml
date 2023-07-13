@@ -14,11 +14,34 @@
 	<name>grupos-partidas-apis</name>
 	<description>APIs de interação com as tabelas grupos, partidas e jogador_grupo</description>
 	<properties>
+	    <springdoc.version>2.1.0</springdoc.version>
 		<java.version>17</java.version>
 		<maven-pmd-plugin.version>3.20.0</maven-pmd-plugin.version>
 		<spotbugs-maven-plugin.version>4.7.3.4</spotbugs-maven-plugin.version>
 	</properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+                <version>${springdoc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-common</artifactId>
+                <version>${springdoc.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 	<dependencies>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-common</artifactId>
+        </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
