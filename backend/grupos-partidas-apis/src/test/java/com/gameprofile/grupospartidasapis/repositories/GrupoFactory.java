@@ -1,4 +1,4 @@
-/*package test.com.gameprofile.grupospartidasapis.repositories;
+package test.com.gameprofile.grupospartidasapis.repositories;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -24,5 +24,3 @@ public class GrupoFactory {
         return grupo;
     }
 }
-
-*/

@@ -13,6 +13,7 @@ RUN mvn dependency:go-offline
 COPY . .
 
 RUN mvn package
+RUN mvn test
 
 ENV JAVA_OPTS="-Dserver.port=8080"
 
