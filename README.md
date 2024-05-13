@@ -48,32 +48,32 @@ ___
     <td align="center"><a href="https://github.com/dinapgomes">
         <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/74661038?v=4" width="100px;" alt=""/>
         <br />
-        <a href="https://github.com/alcides07"><b>Dina Gomes</b></a>
+        <a href="https://github.com/dinapgomes"><b>Dina Gomes</b></a>
     </td>
     <td align="center"><a href="https://github.com/Franklin-Barbosa">
       <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/43481761?v=4" width="100px;" alt=""/>
       <br />
-      <a href="https://github.com/erick003"><b>Franklin Barbosa</b></a>
+      <a href="https://github.com/Franklin-Barbosa"><b>Franklin Barbosa</b></a>
     </td>
     <td align="center"><a href="https://github.com/150901">
         <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/126298005?v=4" width="100px;" alt=""/>
         <br />
-        <a href="https://github.com/diogoodiego"><b>Giovanna Melo</b></a>
+        <a href="https://github.com/150901"><b>Giovanna Melo</b></a>
     </td>
     <td align="center"><a href="https://github.com/LazaroDamasceno">
         <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/62726118?v=4" width="100px;" alt=""/>
         <br />
-        <a href="https://github.com/IsraelKleber"><b>Lazaro Damasceno</b></a>
+        <a href="https://github.com/LazaroDamasceno"><b>Lazaro Damasceno</b></a>
     </td>
     <td align="center"><a href="https://github.com/patrickmf">
         <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/61290998?v=4" width="100px;" alt=""/>
         <br />
-        <a href="https://github.com/Livia-Rachell"><b>Patrick Matheus</b></a>
+        <a href="https://github.com/patrickmf"><b>Patrick Matheus</b></a>
     </td>
     <td align="center"><a href="https://github.com/Ruan-Franklin">
         <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/94229859?v=4" width="100px;" alt=""/>
         <br />
-        <a href="https://github.com/matRaph"><b>Ruan Franklin</b></a>
+        <a href="https://github.com/Ruan-Franklin"><b>Ruan Franklin</b></a>
     </td>
   </tr>
 </table>
